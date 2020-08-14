@@ -5,9 +5,9 @@ Apache Struts 2 漏洞WiKi
 
 ### 效果图
 
-![img](https://l0ki-town.oss-cn-beijing.aliyuncs.com/l0ki.top/image-20200814132436305.png)
+![img1](https://l0ki-town.oss-cn-beijing.aliyuncs.com/l0ki.top/image-20200814132436305.png)
 
-![img](https://l0ki-town.oss-cn-beijing.aliyuncs.com/l0ki.top/image-20200814132436305.png)
+![img2](https://l0ki-town.oss-cn-beijing.aliyuncs.com/l0ki.top/image-20200814132436305.png)
 
 **用于学习、记录、不断更新s20day**
 
