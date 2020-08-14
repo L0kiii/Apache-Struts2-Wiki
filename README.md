@@ -1,7 +1,11 @@
 # Apache-Struts-2-Wiki
 Apache Struts 2 漏洞WiKi
 
-爬取`https://cwiki.apache.org/confluence/display/ww/ `html页面
+`@author: L0ki`
+
+`@blog: https://l0ki.top`
+
+爬取html页面`cwiki.apache.org/confluence/display/ww/ `
 
 ### 效果图
 
