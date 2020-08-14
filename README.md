@@ -1,6 +1,8 @@
 # Apache-Struts-2-Wiki
 Apache Struts 2 漏洞WiKi
 
+已经更新至☞`https://github.com/L0kiii/Apache-Struts2-Wiki/wiki`
+
 `@author: L0ki`
 
 `@blog: https://l0ki.top`
