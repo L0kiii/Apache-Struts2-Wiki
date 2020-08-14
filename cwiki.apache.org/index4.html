@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Date-Revision-yyyymmdd" content="20140918">
+  <meta http-equiv="Content-Language" content="en">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Plugins</title>
+
+  <link href="static/css/css-SourceSansPro300400600700400.css" rel="stylesheet" type="text/css">
+  <link href="static/css/font-awesome.css" rel="stylesheet">
+  <link href="static/css/main.css" rel="stylesheet">
+  <link href="static/css/custom.css" rel="stylesheet">
+  <link href="static/css/github-theme.css" rel="stylesheet">
+
+  <script src="static/js/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="static/js/bootstrap1.js"></script>
+  <script type="text/javascript" src="static/js/community.js"></script>
+</head>
+<body>
+
+<a href="javascript:;" class="github-ribbon">
+  <img style="position: absolute; right: 0; border: 0;" src="static/picture/forkme_right_red_aa0000.png" alt="Fork me on GitHub">
+</a>
+
+<header>
+  <nav>
+    <div role="navigation" class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target="#struts-menu" class="navbar-toggle">
+            Menu
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="javascript:;" class="navbar-brand logo"><img src="static/picture/struts-logo.svg"></a>
+        </div>
+        <div id="struts-menu" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                Home<b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="javascript:;">Welcome</a></li>
+                <li><a href="javascript:;">Download</a></li>
+                <li><a href="javascript:;">Releases</a></li>
+                <li><a href="javascript:;">Announcements</a></li>
+                <li><a href="javascript:;">License</a></li>
+                <li><a href="javascript:;">Thanks!</a></li>
+                <li><a href="javascript:;">Sponsorship</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                Support<b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="javascript:;">User Mailing List</a></li>
+                <li><a href="ww.html">Issue Tracker</a></li>
+                <li><a href="javascript:;">Reporting Security Issues</a></li>
+                <li class="divider"></li>
+                <li><a href="javascript:;">Version Notes</a></li>
+                <li><a href="SecurityBulletins.html">Security Bulletins</a></li>
+                <li class="divider"></li>
+                <li><a href="javascript:;">Maven Project Info</a></li>
+                <li><a href="javascript:;">Struts Core Dependencies</a></li>
+                <li><a href="javascript:;">Plugin Dependencies</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                Documentation<b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="javascript:;">Birds Eye</a></li>
+                <li><a href="javascript:;">Key Technologies</a></li>
+                <li><a href="javascript:;">Kickstart FAQ</a></li>
+                <li><a href="home.html">Wiki</a></li>
+                <li class="divider"></li>
+                <li><a href="javascript:;">Getting Started</a></li>
+                <li><a href="javascript:;">Security Guide</a></li>
+                <li><a href="javascript:;">Core Developers Guide</a></li>
+                <li><a href="javascript:;">Tag Developers Guide</a></li>
+                <li><a href="index3.html">Maven Archetypes</a></li>
+                <li><a href="">Plugins</a></li>
+                <li><a href="javascript:;">Struts Core API</a></li>
+                <li><a href="javascript:;">Tag reference</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="javascript:;">Plugin registry</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                Contributing<b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="javascript:;">You at Struts</a></li>
+                <li><a href="javascript:;">How to Help FAQ</a></li>
+                <li><a href="javascript:;">Development Lists</a></li>
+                <li class="divider"></li>
+                <li><a href="javascript:;">Submitting patches</a></li>
+                <li><a href="javascript:;">Source Code and Builds</a></li>
+                <li><a href="javascript:;">Coding standards</a></li>
+                <li><a href="javascript:;">Contributors Guide</a></li>
+                <li class="divider"></li>
+                <li><a href="javascript:;">Release Guidelines</a></li>
+                <li><a href="javascript:;">PMC Charter</a></li>
+                <li><a href="javascript:;">Volunteers</a></li>
+                <li><a href="javascript:;">Source Repository</a></li>
+                <li><a href="javascript:;">Updating the website</a></li>
+              </ul>
+            </li>
+            <li class="apache"><a href="index1.html"><img src="static/picture/apache.png"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<article class="container">
+  <section class="col-md-12">
+    <a class="edit-on-gh" href="javascript:;" title="Edit this page on GitHub">Edit on GitHub</a>
+    
+    <h1 id="plugin-developers-guide">Plugin Developers Guide</h1>
+
+<p>Apache Struts 2 provides a simple <a href="javascript:;">plugin architecture</a> so that developers can extend the framework just 
+by adding a JAR to the application’s classpath. Since plugins are contained in a JAR, they are easy to share with others. 
+Several plugins are bundled with the framework, and others are available from third-party sources.</p>
+
+<ul>
+  <li><a href="javascript:;">Plugins</a></li>
+  <li><a href="javascript:;">Extending an Application with Custom Plugins</a></li>
+</ul>
+
+<h2 id="bundled-plugins">Bundled Plugins</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="javascript:;">Bean Validation Plugin</a> (2.5+)<br><a href="javascript:;">CDI (JSR 299) Plugin</a> (2.3.1+)<br><a href="javascript:;">Codebehind Plugin</a> (&lt; 2.5)<br><a href="javascript:;">Config Browser Plugin</a><br><a href="javascript:;">Convention Plugin</a> (2.1.3+)<br><a href="javascript:;">DWR Plugin</a><br><a href="javascript:;">Embedded JSP Plugin</a> (2.1.7+)<br><a href="javascript:;">JasperReports Plugin</a><br><a href="javascript:;">Java 8 Support Plugin</a> (2.3.21 - 2.5.2)<br><a href="javascript:;">Javatemplates Plugin</a> (2.1.3+)<br><a href="javascript:;">JFreeChart Plugin</a><br><a href="javascript:;">JSF Plugin</a>( &lt; 2.5)<br><a href="javascript:;">JSON Plugin</a>  (2.1.7+)<br><a href="javascript:;">JUnit Plugin</a></td>
+      <td><a href="javascript:;">OVal Plugin</a> (2.1.7+)<br><a href="javascript:;">OSGi Plugin</a> (2.1.7+)<br><a href="javascript:;">Plexus Plugin</a><br><a href="javascript:;">Portlet Plugin</a><br><a href="javascript:;">Portlet Tiles Plugin</a> (2.3.5+)<br><a href="javascript:;">REST Plugin</a> (2.1.1+)<br>Deprecated: <a href="javascript:;">SiteGraph Plugin</a><br><a href="javascript:;">SiteMesh Plugin</a><br><a href="javascript:;">Spring Plugin</a><br><a href="javascript:;">Struts 1 Plugin</a>( &lt; 2.5)<br><a href="javascript:;">TestNG Plugin</a><br><a href="javascript:;">Tiles Plugin</a><br><a href="javascript:;">Tiles 3 Plugin</a>  (&lt; 2.5)</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>For a complete list of bundled and third-party plugins, visit the <a href="javascript:;">Plugin Registry</a>.</p>
+</blockquote>
+
+  </section>
+</article>
+
+
+<footer class="container">
+  <div class="col-md-12">
+    Copyright &copy; 2000-2018 <a href="index1.html">The Apache Software Foundation </a>.
+    All Rights Reserved.
+  </div>
+  <div class="col-md-12">
+    Apache Struts, Struts, Apache, the Apache feather logo, and the Apache Struts project logos are
+    trademarks of The Apache Software Foundation.
+  </div>
+  <div class="col-md-12">Logo and website design donated by <a href="javascript:;">SoftwareMill</a>.</div>
+</footer>
+
+<script>!function (d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (!d.getElementById(id)) {
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }
+}(document, "script", "twitter-wjs");</script>
+<script src="static/js/platform.js" async="async" defer="defer"></script>
+
+<div id="fb-root"></div>
+
+<script>(function (d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+</body>
+</html>

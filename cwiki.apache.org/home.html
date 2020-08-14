@@ -1,0 +1,716 @@
+    
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+                            <title>Home - Apache Struts 2 Wiki - Apache Software Foundation</title>
+    
+        
+
+                        
+    
+                        
+    
+
+                
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=IE7">
+<meta charset="UTF-8">
+<meta id="confluence-context-path" name="confluence-context-path" content="/confluence">
+<meta id="confluence-base-url" name="confluence-base-url" content="https://cwiki.apache.org/confluence">
+
+    <meta id="atlassian-token" name="atlassian-token" content="e0c8a14877f32b75dca7962438bb3f22f30e8b39">
+
+
+<meta id="confluence-space-key" name="confluence-space-key" content="WW">
+<script type="text/javascript">
+        var contextPath = '/confluence';
+</script>
+
+    
+
+    <meta name="confluence-request-time" content="1595839923143">
+        
+    
+        
+            <meta name="ajs-use-keyboard-shortcuts" content="true">
+            <meta name="ajs-is-confluence-admin" content="false">
+            <meta name="ajs-connection-timeout" content="10000">
+            <script type="text/x-template" title="gliffy-webpanel-footer">
+        <div class="gliffy-webpanel-footer"><span>This Confluence installation runs a Free Gliffy License - Evaluate the <a href="http://www.gliffy.com/products/confluence-plugin/">Gliffy Confluence Plugin</a> for your Wiki!</span></div>
+</script>
+
+
+            <style>.ia-fixed-sidebar, .ia-splitter-left {width: 285px;}.theme-default .ia-splitter #main {margin-left: 285px;}.ia-fixed-sidebar {visibility: hidden;}</style>
+            <meta name="ajs-discovered-plugin-features" content="$discoveredList">
+            <meta name="ajs-keyboardshortcut-hash" content="244b3b2851a4a758ccc0304672ffd8c1">
+            
+    
+    
+            <meta name="ajs-page-title" content="Home">
+            <meta name="ajs-latest-published-page-title" content="Home">
+            <meta name="ajs-space-name" content="Apache Struts 2 Wiki">
+            <meta name="ajs-page-id" content="14153">
+            <meta name="ajs-latest-page-id" content="14153">
+            <meta name="ajs-content-type" content="page">
+            <meta name="ajs-parent-page-id" content="">
+            <meta name="ajs-space-key" content="WW">
+            <meta name="ajs-max-number-editors" content="12">
+            <meta name="ajs-macro-placeholder-timeout" content="5000">
+            <meta name="ajs-jira-metadata-count" content="0">
+            <meta name="ajs-from-page-title" content="">
+            <meta name="ajs-can-remove-page" content="false">
+            <meta name="ajs-can-remove-page-hierarchy" content="false">
+            <meta name="ajs-browse-page-tree-mode" content="view">
+            <meta name="ajs-shared-drafts" content="true">
+            <meta name="ajs-context-path" content="/confluence">
+            <meta name="ajs-base-url" content="https://cwiki.apache.org/confluence">
+            <meta name="ajs-version-number" content="7.5.0">
+            <meta name="ajs-build-number" content="8501">
+            <meta name="ajs-remote-user" content="">
+            <meta name="ajs-remote-user-key" content="">
+            <meta name="ajs-remote-user-has-licensed-access" content="false">
+            <meta name="ajs-remote-user-has-browse-users-permission" content="false">
+            <meta name="ajs-current-user-fullname" content="">
+            <meta name="ajs-current-user-avatar-url" content="">
+            <meta name="ajs-current-user-avatar-uri-reference" content="/confluence/images/icons/profilepics/anonymous.svg">
+            <meta name="ajs-static-resource-url-prefix" content="/confluence/s/962fig/8501/fded9f91818631c3677be93247bf5ae6723a1c8d/_">
+            <meta name="ajs-global-settings-attachment-max-size" content="20971520">
+            <meta name="ajs-global-settings-quick-search-enabled" content="true">
+            <meta name="ajs-user-locale" content="zh_CN">
+            <meta name="ajs-enabled-dark-features" content="site-wide.shared-drafts,site-wide.synchrony,clc.quick.create,confluence.view.edit.transition,cql.search.screen,confluence-inline-comments-resolved,http.session.registrar,frontend.editor.v4,nps.survey.inline.dialog,confluence.efi.onboarding.new.templates,frontend.editor.v4.compatibility,atlassian.cdn.static.assets,pdf-preview,previews.sharing,previews.versions,file-annotations,collaborative-audit-log,confluence.efi.onboarding.rich.space.content,previews.conversion-service,editor.ajax.save,graphql,read.only.mode,previews.trigger-all-file-types,lucene.caching.filter,attachment.extracted.text.extractor,confluence.table.resizable,notification.batch,previews.sharing.pushstate,confluence-inline-comments-rich-editor,site-wide.synchrony.opt-in,file-annotations.likes,gatekeeper-ui-v2,v2.content.name.searcher,mobile.supported.version,pulp,confluence-inline-comments,quick-reload-inline-comments-flags,confluence-inline-comments-dangling-comment">
+            <meta name="ajs-atl-token" content="e0c8a14877f32b75dca7962438bb3f22f30e8b39">
+            <meta name="ajs-confluence-flavour" content="VANILLA">
+            <meta name="ajs-user-date-pattern" content="yyyy-M-d">
+            <meta name="ajs-access-mode" content="READ_WRITE">
+            <meta name="ajs-render-mode" content="READ_WRITE">
+            <meta name="ajs-date.format" content="MMM dd, yyyy">
+    
+    
+    
+
+<link rel="search" type="application/opensearchdescription+xml" href="/confluence/opensearch/osd.action" title="Apache Software Foundation">
+    
+                    
+            <meta name="ajs-create-issue-metadata-show-discovery" content="false">
+            
+
+    <script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-plugin:context-path.context-path"]="\u0022\u005C/confluence\u0022";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-feature-discovery-plugin:confluence-feature-discovery-plugin-resources.test-mode"]="false";
+WRM._unparsedData["com.atlassian.confluence.plugins.synchrony-interop:synchrony-status-banner-loader.synchrony-status"]="false";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:policy-update-init.policy-update-data-provider"]="false";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:programmatic-analytics-init.programmatic-analytics-data-provider"]="false";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.applinks-help-paths"]="{\u0022entries\u0022:{\u0022applinks.docs.root\u0022:\u0022https://confluence.atlassian.com/display/APPLINKS-060/\u0022,\u0022applinks.docs.diagnostics.troubleshoot.sslunmatched\u0022:\u0022SSL+and+application+link+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthsignatureinvalid\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthtimestamprefused\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.delete.entity.link\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.adding.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.administration.guide\u0022:\u0022Application+Links+Documentation\u0022,\u0022applinks.docs.oauth.security\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.troubleshoot.application.links\u0022:\u0022Troubleshoot+application+links\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unknownerror\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.trusted.apps\u0022:\u0022Configuring+Trusted+Applications+authentication+for+an+application+link\u0022,\u0022applinks.docs.diagnostics.troubleshoot.authlevelunsupported\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.ssluntrusted\u0022:\u0022SSL+and+application+link+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unknownhost\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.delete.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.link.applications\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthproblem\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.migration\u0022:\u0022Update+application+links+to+use+OAuth\u0022,\u0022applinks.docs.relocate.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.administering.entity.links\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.upgrade.application.link\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.diagnostics.troubleshoot.connectionrefused\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.oauth\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.insufficient.remote.permission\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.configuring.application.link.auth\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.diagnostics\u0022:\u0022Application+links+diagnostics\u0022,\u0022applinks.docs.configured.authentication.types\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.adding.entity.link\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unexpectedresponse\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.basic\u0022:\u0022Configuring+Basic+HTTP+Authentication+for+an+Application+Link\u0022,\u0022applinks.docs.diagnostics.troubleshoot.authlevelmismatch\u0022:\u0022OAuth+troubleshooting+guide\u0022}}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.applinks-types"]="{\u0022crowd\u0022:\u0022\u4eba\u7fa4\u0022,\u0022confluence\u0022:\u0022Confluence\u0022,\u0022fecru\u0022:\u0022Fisheye / Crucible\u0022,\u0022stash\u0022:\u0022\u6682\u5b58\u0022,\u0022jira\u0022:\u0022Jira\u0022,\u0022refapp\u0022:\u0022\u76f8\u5173\u5e94\u7528\u7a0b\u5e8f\u0022,\u0022bamboo\u0022:\u0022\u7af9\u0022,\u0022generic\u0022:\u0022\u901a\u7528\u5e94\u7528\u7a0b\u5e8f\u0022}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.entity-types"]="{\u0022singular\u0022:{\u0022refapp.charlie\u0022:\u0022Charlie\u0022,\u0022fecru.project\u0022:\u0022Crucible\u9879\u76ee\u0022,\u0022fecru.repository\u0022:\u0022FishEye \u4ed3\u5e93\u0022,\u0022stash.project\u0022:\u0022Stash \u9879\u76ee\u0022,\u0022generic.entity\u0022:\u0022\u901a\u7528\u9879\u76ee\u0022,\u0022confluence.space\u0022:\u0022Confluence\u7a7a\u95f4\u0022,\u0022bamboo.project\u0022:\u0022Bamboo\u9879\u76ee\u0022,\u0022jira.project\u0022:\u0022Jira \u9879\u76ee\u0022},\u0022plural\u0022:{\u0022refapp.charlie\u0022:\u0022\u67e5\u7406\u65af\u0022,\u0022fecru.project\u0022:\u0022Crucible\u9879\u76ee\u0022,\u0022fecru.repository\u0022:\u0022FishEye \u4ed3\u5e93\u96c6\u0022,\u0022stash.project\u0022:\u0022Stash\u9879\u76ee\u0022,\u0022generic.entity\u0022:\u0022\u901a\u7528\u9879\u76ee\u0022,\u0022confluence.space\u0022:\u0022Confluence\u7a7a\u95f4\u0022,\u0022bamboo.project\u0022:\u0022Bamboo\u9879\u76ee\u0022,\u0022jira.project\u0022:\u0022Jira \u9879\u76ee\u0022}}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.authentication-types"]="{\u0022com.atlassian.applinks.api.auth.types.BasicAuthenticationProvider\u0022:\u0022\u57fa\u672c\u8bbf\u95ee\u0022,\u0022com.atlassian.applinks.api.auth.types.TrustedAppsAuthenticationProvider\u0022:\u0022\u4fe1\u4efb\u7684\u5e94\u7528\u65e0\u6548\u0022,\u0022com.atlassian.applinks.api.auth.types.CorsAuthenticationProvider\u0022:\u0022\u6b4c\u73e5\u0022,\u0022com.atlassian.applinks.api.auth.types.OAuthAuthenticationProvider\u0022:\u0022Oauth\u0022,\u0022com.atlassian.applinks.api.auth.types.TwoLeggedOAuthAuthenticationProvider\u0022:\u0022Oauth\u0022,\u0022com.atlassian.applinks.api.auth.types.TwoLeggedOAuthWithImpersonationAuthenticationProvider\u0022:\u0022Oauth\u0022}";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-license-banner:confluence-license-banner-resources.license-details"]="{\u0022daysBeforeLicenseExpiry\u0022:0,\u0022daysBeforeMaintenanceExpiry\u0022:0,\u0022showLicenseExpiryBanner\u0022:false,\u0022showMaintenanceExpiryBanner\u0022:false,\u0022renewUrl\u0022:null,\u0022salesUrl\u0022:null}";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-search-ui-plugin:confluence-search-ui-plugin-resources.i18n-data"]="{\u0022search.ui.recent.link.text\u0022:\u0022\u67e5\u770b\u66f4\u591a\u6700\u8fd1\u8bbf\u95ee\u0022,\u0022search.ui.filter.space.category.input.label\u0022:\u0022\u67e5\u627e\u7a7a\u95f4\u7c7b\u522b\u2026\u2026\u0022,\u0022search.ui.filter.clear.selected\u0022:\u0022\u6e05\u9664\u6240\u9009\u9879\u76ee\u0022,\u0022search.ui.search.results.empty\u0022:\u0022\u6211\u4eec\u627e\u4e0d\u5230\u4efb\u4f55\u5339\u914d\u201c{0}\u201d\u7684\u5185\u5bb9\u3002\u0022,\u0022search.ui.content.name.search.items.panel.load.all.top.items.button.text\u0022:\u0022\u663e\u793a\u66f4\u591a\u5e94\u7528\u7ed3\u679c......\u0022,\u0022search.ui.filter.space.archive.label\u0022:\u0022\u641c\u7d22\u5df2\u7ecf\u5f52\u6863\u7684\u7a7a\u95f4\u0022,\u0022search.ui.filter.label\u0022:\u0022\u7b5b\u9009\u5668\u0022,\u0022search.ui.filter.contributor.button.text\u0022:\u0022\u8d21\u732e\u8005\u0022,\u0022search.ui.filter.date.all.text\u0022:\u0022\u968f\u65f6\u0022,\u0022search.ui.filter.space.current.label\u0022:\u0022\u5f53\u524d\u0022,\u0022search.ui.clear.input.button.text\u0022:\u0022\u6e05\u9664\u6587\u672c\u0022,\u0022help.search.ui.link.title\u0022:\u0022\u641c\u7d22\u6280\u5de7\u0022,\u0022search.ui.search.results.clear.button\u0022:\u0022\u6e05\u7a7a\u7b5b\u9009\u5668\u3002\u0022,\u0022search.ui.filter.date.hour.text\u0022:\u0022\u8fc7\u53bb\u4e00\u5929\u0022,\u0022search.ui.filters.heading\u0022:\u0022\u7b5b\u9009\u65b9\u5f0f\u0022,\u0022search.ui.filter.label.input.label\u0022:\u0022\u67e5\u627e\u6807\u7b7e\u2026\u2026\u0022,\u0022search.ui.filter.date.month.text\u0022:\u0022\u8fc7\u53bb\u4e00\u4e2a\u6708\u0022,\u0022search.ui.recent.items.anonymous\u0022:\u0022\u5f00\u59cb\u63a2\u7d22\u3002 \u60a8\u7684\u641c\u7d22\u7ed3\u679c\u5c06\u663e\u793a\u5728\u6b64\u5904\u3002\u0022,\u0022search.ui.input.label\u0022:\u0022\u641c\u7d22\u0022,\u0022search.ui.search.result\u0022:\u0022{0,choice,1#{0}\u4e2a\u641c\u7d22\u7ed3\u679c|1\u005Cu003c{0}\u4e2a\u641c\u7d22\u7ed3\u679c}\u0022,\u0022search.ui.infinite.scroll.button.text\u0022:\u0022\u66f4\u591a\u7ed3\u679c\u0022,\u0022search.ui.filter.date.button.text\u0022:\u0022\u65e5\u671f\u0022,\u0022search.ui.filter.date.week.text\u0022:\u0022\u8fc7\u53bb\u4e00\u5468\u0022,\u0022search.ui.filter.label.button.text\u0022:\u0022\u6807\u7b7e\u0022,\u0022search.ui.input.alert\u0022:\u0022\u6309\u56de\u8f66\u952e(Enter)\u641c\u7d22\u0022,\u0022search.ui.filter.no.result.text\u0022:\u0022\u6211\u4eec\u627e\u4e0d\u5230\u4efb\u4f55\u7b26\u5408\u60a8\u641c\u7d22\u6761\u4ef6\u7684\u5185\u5bb9\u0022,\u0022search.ui.result.subtitle.calendar\u0022:\u0022\u56e2\u961f\u65e5\u7a0b\u8868\u0022,\u0022search.ui.filter.date.heading\u0022:\u0022\u4e0a\u6b21\u4fee\u6539\u0022,\u0022search.ui.result.subtitle.user\u0022:\u0022\u7528\u6237\u8d44\u6599\u0022,\u0022search.ui.filter.contributor.input.label\u0022:\u0022\u67e5\u627e\u4eba\u5458\u2026\u2026\u0022,\u0022search.ui.filter.content.type.button.text\u0022:\u0022\u7c7b\u578b\u0022,\u0022search.ui.filter.space.input.label\u0022:\u0022\u67e5\u627e\u7a7a\u95f4\u0022,\u0022search.ui.filter.date.year.text\u0022:\u0022\u8fc7\u53bb\u4e00\u5e74\u0022,\u0022search.ui.filter.space.button.text\u0022:\u0022\u7a7a\u95f4\u0022,\u0022search.ui.advanced.search.link.text\u0022:\u0022\u9ad8\u7ea7\u641c\u7d22\u0022,\u0022search.ui.generic.error\u0022:\u0022\u51fa\u9519\u4e86\u3002\u5237\u65b0\u9875\u9762\uff0c\u6216\u8005\u5982\u679c\u6301\u7eed\u53d1\u751f\u8fd9\u79cd\u60c5\u51b5\uff0c\u8bf7\u8054\u7cfb\u60a8\u7684\u7ba1\u7406\u5458\u3002\u0022,\u0022search.ui.recent.spaces\u0022:\u0022\u6700\u8fd1\u7a7a\u95f4\u0022,\u0022search.ui.search.results.clear.line2\u0022:\u0022\u8bf7\u5c1d\u8bd5\u4e0d\u540c\u7684\u641c\u7d22\u5173\u952e\u5b57\u6216\u8005\u0022,\u0022search.ui.filter.space.category.button.text\u0022:\u0022\u7a7a\u95f4\u7c7b\u522b\u0022,\u0022search.ui.search.results.clear.line1\u0022:\u0022\u627e\u4e0d\u5230\u5339\u914d\u7684\u641c\u7d22\u7ed3\u679c\u0022,\u0022search.ui.content.name.search.items.panel.load.all.top.items.admin.button.text\u0022:\u0022\u663e\u793a\u66f4\u591a\u8bbe\u7f6e\u548c\u5e94\u7528\u7ed3\u679c...\u0022,\u0022search.ui.recent.pages\u0022:\u0022\u6700\u8fd1\u8bbf\u95ee\u0022,\u0022search.ui.search.result.anonymous\u0022:\u0022{0,choice,1#{0}\u4e2a\u641c\u7d22\u7ed3\u679c| 1 \u005Cu003c{0}\u4e2a\u641c\u7d22\u7ed3\u679c}\u3002 \u60a8\u6709\u5e10\u6237\u5417\uff1f{1}\u767b\u5f55{2}\u641c\u7d22\u66f4\u591a\u7ed3\u679c\u3002\u0022,\u0022search.ui.recent.items.empty\u0022:\u0022\u5f00\u59cb\u63a2\u7d22\u3002 \u60a8\u6700\u8fd1\u8bbf\u95ee\u8fc7\u7684\u9875\u9762\u548c\u7a7a\u95f4\u5c06\u663e\u793a\u5728\u6b64\u5904\u3002\u0022,\u0022search.ui.result.subtitle.space\u0022:\u0022\u7a7a\u95f4\u0022,\u0022search.ui.filter.space.init.heading\u0022:\u0022\u6700\u8fd1\u7a7a\u95f4\u0022}";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script>
+<link type="text/css" rel="stylesheet" href="static/css/batch.css" data-wrm-key="_super" data-wrm-batch-type="context" media="all">
+<link type="text/css" rel="stylesheet" href="static/css/batch-true_true_true.css" data-wrm-key="atl.confluence.plugins.pagetree-desktop,main,viewcontent,atl.general,page,atl.comments,-_super" data-wrm-batch-type="context" media="all">
+<script type="text/javascript" src="static/js/batch-zh-CN.js" data-wrm-key="_super" data-wrm-batch-type="context" data-initially-rendered=""></script>
+<script type="text/javascript" src="static/js/batch-true_true_true_zh-CN.js" data-wrm-key="atl.confluence.plugins.pagetree-desktop,main,viewcontent,atl.general,page,atl.comments,-_super" data-wrm-batch-type="context" data-initially-rendered=""></script>
+
+    
+
+        
+    
+
+        
+        <meta name="ajs-site-title" content="Apache Software Foundation">
+            
+    
+
+    
+                <link rel="canonical" href="">
+        <link rel="shortlink" href="https://cwiki.apache.org/confluence/x/STc">
+    <meta name="wikilink" content="[WW:Home]">
+    <meta name="page-version" content="332">
+    <meta name="ajs-page-version" content="332">
+
+</head>
+
+    
+<body id="com-atlassian-confluence" class="theme-default  aui-layout aui-theme-default">
+
+        
+            <div id='stp-licenseStatus-banner'></div>
+    <ul id="assistive-skip-links" class="assistive">
+    <li><a href="#title-heading">转至内容</a></li>
+    <li><a href="#breadcrumbs">转至导航栏</a></li>
+    <li><a href="#header-menu-bar">转至主菜单</a></li>
+    <li><a href="#navigation">转至动作菜单</a></li>
+    <li><a href="#quick-search-query">转至快速搜索</a></li>
+</ul>
+<div id="page">
+<div id="full-height-container">
+    <div id="header-precursor">
+        <div class="cell">
+            
+                            </div>
+    </div>
+        
+
+
+
+
+
+<header id="header" role="banner">
+    <nav class="aui-header aui-dropdown2-trigger-group" role="navigation"><div class="aui-header-inner"><div class="aui-header-before"><a class=" aui-dropdown2-trigger app-switcher-trigger" aria-controls="app-switcher" aria-haspopup="true" role="button" tabindex="0" data-aui-trigger="" href="#app-switcher"><span class="aui-icon aui-icon-small aui-iconfont-appswitcher">已链接应用程序</span></a><div id="app-switcher" class="aui-dropdown2 aui-style-default" role="menu" aria-hidden="true" data-is-switcher="true" data-environment="{&quot;isUserAdmin&quot;:false,&quot;isAppSuggestionAvailable&quot;:false,&quot;isSiteAdminUser&quot;:false}"><div role="application"><div class="app-switcher-loading">正在上传和乱码；</div></div></div></div><div class="aui-header-primary"><h1 id="logo" class="aui-header-logo aui-header-logo-confluence"><a href="index.html"><span class="aui-header-logo-device">Apache Software Foundation</span></a></h1><ul class="aui-nav">
+                            <li>
+            
+        
+        
+<a id="space-directory-link" href="view.html" class=" aui-nav-imagelink" title="空间">
+            <span>空间</span>
+    </a>
+        </li>
+                                <li class="aui-buttons">
+            </li>
+</ul>
+</div><div class="aui-header-secondary"><ul class="aui-nav">
+                        <li>
+        <div id="search-ui" class="aui-quicksearch dont-default-focus header-quicksearch"><input id="quick-search-query" aria-label="搜索" placeholder="搜索" type="text"><div id="quick-search-alert" role="alert">按回车键(Enter)搜索</div><aui-spinner size="small"></aui-spinner></div>
+    </li>
+        <li>
+            
+        <a id="help-menu-link" class="aui-nav-link aui-dropdown2-trigger aui-dropdown2-trigger-arrowless" href="#" aria-haspopup="true" aria-owns="help-menu-link-content" title="帮助">
+        <span class="aui-icon aui-icon-small aui-iconfont-question-filled">帮助</span>
+    </a>
+    <nav id="help-menu-link-content" class="aui-dropdown2 aui-style-default" aria-hidden="true">
+                    <div class="aui-dropdown2-section">
+                                <ul id="help-menu-link-leading" class="aui-list-truncate section-leading first">
+                                            <li>
+        
+            
+<a id="confluence-help-link" href="javascript:;" class="    " title="访问Confluence文档首页" target="_blank">
+        在线帮助
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="keyboard-shortcuts-link" href="confluence.html" class="    " title="查看可用的键盘快捷方式">
+        快捷键
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="feed-builder-link" href="configurerssfeed.html" class="    " title="创建个性化的 RSS源。">
+        RSS源建立器
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="whats-new-menu-link" href="javascript:;" class="    " title="">
+        新功能
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="gadget-directory-link" href="confluence.html" class="   user-item administration-link " title="浏览小工具">
+        可用的小工具
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="confluence-about-link" href="aboutconfluencepage.html" class="    " title="获取关于Confluence的更多信息">
+        关于Confluence
+</a>
+</li>
+                                    </ul>
+            </div>
+            </nav>
+    
+    </li>
+        <li>
+                
+    
+    </li>
+        <li>
+            
+    </li>
+        <li>
+                                            <li>
+        
+            
+<a id="login-link" href="login-2fdisplay2fww2fhome.html" class="   user-item login-link " title="">
+        登录
+</a>
+</li>
+                        <li>
+    
+            
+<a id="signup-link" href="signup.html" class="   user-item signup-link " title="">
+        注册
+</a>
+</li>
+                        
+    
+    </ul>
+</div></div><!-- .aui-header-inner--></nav><!-- .aui-header -->
+    <br class="clear">
+</header>
+    
+
+    
+    	<div class="ia-splitter">
+    		<div class="ia-splitter-left">
+    			<div class="ia-fixed-sidebar">
+                                            
+                            <div class="acs-side-bar ia-scrollable-section"><div class="acs-side-bar-space-info tipsy-enabled" data-configure-tooltip="编辑空间详情"><div class="avatar"><div class="space-logo" data-key="WW" data-name="Apache Struts 2 Wiki" data-entity-type="confluence.space"><div class="avatar-img-container"><div class="avatar-img-wrapper"><a href="" title="Apache Struts 2 Wiki"><img class="avatar-img" src="static/picture/default-space-logo.svg" alt="Apache Struts 2 Wiki"></a></div></div></div></div><div class="space-information-container"><div class="name"><a href="" title="Apache Struts 2 Wiki">Apache Struts 2 Wiki</a></div><div class="flyout-handle icon aui-icon aui-icon-small aui-iconfont-edit"></div></div></div><div class="acs-side-bar-content"><div class="acs-nav-wrapper"><div class="acs-nav" data-has-create-permission="false" data-quick-links-state="null" data-page-tree-state="null" data-nav-type="pages"><div class="acs-nav-sections"><div class="quick-links-wrapper"></div></div></div></div><div class="ia-secondary-container tipsy-enabled" data-tree-type="pages"><div class="ia-secondary-header"><h5 class="ia-secondary-header-title pages"><span class="label">子页面</span></h5></div><div class="ia-secondary-parent-content"><ul class="parent ia-secondary-header-title wiki"><li class="parent-item"><a class="parent-item-link" href="pages-ww.html" title="页面"><span class="icon"></span><span class="label">页面</span></a></li></ul></div><div class="ia-secondary-current-content"><ul class="ia-secondary-currentPage-title wiki current-item"><li><span class="icon"></span><span class="label">Home</span></li></ul></div><div class="ia-secondary-content"><div class="contextual-nav-child-pages"><ul class="children"><li class="child-item" data-page-id="120724140"><span class="icon"></span><a href="actionchaining.html" title="ActionChaining"><span class="label">ActionChaining</span></a></li><li class="child-item" data-page-id="120724141"><span class="icon"></span><a href="actioncontext.html" title="ActionContext"><span class="label">ActionContext</span></a></li><li class="child-item" data-page-id="120724142"><span class="icon"></span><a href="actionerrorsandactionmessages.html" title="ActionErrorsAndActionMessages"><span class="label">ActionErrorsAndActionMessages</span></a></li></ul><ul class="more-children"><li class="child-item" data-page-id="120724143"><span class="icon"></span><a href="actionform.html" title="ActionForm"><span class="label">ActionForm</span></a></li><li class="child-item" data-page-id="120724144"><span class="icon"></span><a href="actionforms.html" title="ActionForms"><span class="label">ActionForms</span></a></li><li class="child-item" data-page-id="120724145"><span class="icon"></span><a href="actionforward.html" title="ActionForward"><span class="label">ActionForward</span></a></li><li class="child-item" data-page-id="120724146"><span class="icon"></span><a href="actionmapping.html" title="ActionMapping"><span class="label">ActionMapping</span></a></li><li class="child-item" data-page-id="120724147"><span class="icon"></span><a href="actionservlet.html" title="ActionServlet"><span class="label">ActionServlet</span></a></li><li class="child-item" data-page-id="120724148"><span class="icon"></span><a href="ajaxstruts.html" title="AjaxStruts"><span class="label">AjaxStruts</span></a></li><li class="child-item" data-page-id="120724151"><span class="icon"></span><a href="appfuse.html" title="AppFuse"><span class="label">AppFuse</span></a></li><li class="child-item" data-page-id="120724152"><span class="icon"></span><a href="applicationsecurity.html" title="ApplicationSecurity"><span class="label">ApplicationSecurity</span></a></li><li class="child-item" data-page-id="120724153"><span class="icon"></span><a href="beanpropertynames.html" title="BeanPropertyNames"><span class="label">BeanPropertyNames</span></a></li><li class="child-item" data-page-id="120724154"><span class="icon"></span><a href="browserbackandsecurity.html" title="BrowserBackAndSecurity"><span class="label">BrowserBackAndSecurity</span></a></li><li class="child-item" data-page-id="120724155"><span class="icon"></span><a href="buildingshale.html" title="BuildingShale"><span class="label">BuildingShale</span></a></li><li class="child-item" data-page-id="120724158"><span class="icon"></span><a href="categoryhomepage.html" title="CategoryHomepage"><span class="label">CategoryHomepage</span></a></li><li class="child-item" data-page-id="120724159"><span class="icon"></span><a href="commentpageforcritiques.html" title="CommentPageForCritiques"><span class="label">CommentPageForCritiques</span></a></li><li class="child-item" data-page-id="120724160"><span class="icon"></span><a href="comparisonusingnestedtagvsj.html" title="Comparison using nested tag vs JSTL for nested objects on form"><span class="label">Comparison using nested tag vs JSTL for nested objects on form</span></a></li><li class="child-item" data-page-id="120724161"><span class="icon"></span><a href="composablerequestprocessor.html" title="ComposableRequestProcessor"><span class="label">ComposableRequestProcessor</span></a></li><li class="child-item" data-page-id="120724163"><span class="icon"></span><a href="contentmanagement.html" title="ContentManagement"><span class="label">ContentManagement</span></a></li><li class="child-item" data-page-id="120724164"><span class="icon"></span><a href="daorelated.html" title="DaoRelated"><span class="label">DaoRelated</span></a></li><li class="child-item" data-page-id="120724179"><span class="icon"></span><a href="databasemessageresourceshowto.html" title="DatabaseMessageResourcesHowto"><span class="label">DatabaseMessageResourcesHowto</span></a></li><li class="child-item" data-page-id="120724166"><span class="icon"></span><a href="dataentryform.html" title="DataEntryForm"><span class="label">DataEntryForm</span></a></li><li class="child-item" data-page-id="120724183"><span class="icon"></span><a href="debuggingshaleclay.html" title="DebuggingShaleClay"><span class="label">DebuggingShaleClay</span></a></li><li class="child-item" data-page-id="120724185"><span class="icon"></span><a href="definepita.html" title="DefinePita"><span class="label">DefinePita</span></a></li><li class="child-item" data-page-id="120724186"><span class="icon"></span><a href="definetroll.html" title="DefineTroll"><span class="label">DefineTroll</span></a></li><li class="child-item" data-page-id="120724187"><span class="icon"></span><a href="denisbalazuc.html" title="DenisBalazuc"><span class="label">DenisBalazuc</span></a></li><li class="child-item" data-page-id="75958375"><span class="icon"></span><a href="deprecatedguides.html" title="Deprecated Guides"><span class="label">Deprecated Guides</span></a></li><li class="child-item" data-page-id="120724189"><span class="icon"></span><a href="developintelligence.html" title="DevelopIntelligence"><span class="label">DevelopIntelligence</span></a></li><li class="child-item" data-page-id="120724194"><span class="icon"></span><a href="eddiebush.html" title="EddieBush"><span class="label">EddieBush</span></a></li><li class="child-item" data-page-id="120724195"><span class="icon"></span><a href="errorcannotretrievemappingforact.html" title="ErrorCannotRetrieveMappingForAction"><span class="label">ErrorCannotRetrieveMappingForAction</span></a></li><li class="child-item" data-page-id="120724196"><span class="icon"></span><a href="eventactiondispatcher.html" title="EventActionDispatcher"><span class="label">EventActionDispatcher</span></a></li><li class="child-item" data-page-id="120724197"><span class="icon"></span><a href="exposedbeanproperties.html" title="ExposedBeanProperties"><span class="label">ExposedBeanProperties</span></a></li><li class="child-item" data-page-id="14182"><span class="icon"></span><a href="faqs.html" title="FAQs"><span class="label">FAQs</span></a></li><li class="child-item" data-page-id="120724198"><span class="icon"></span><a href="formview.html" title="FormView"><span class="label">FormView</span></a></li><li class="child-item" data-page-id="120724199"><span class="icon"></span><a href="fortunecookies.html" title="FortuneCookies"><span class="label">FortuneCookies</span></a></li><li class="child-item" data-page-id="120724200"><span class="icon"></span><a href="forwardingwithdifferentparameter.html" title="ForwardingWithDifferentParameter"><span class="label">ForwardingWithDifferentParameter</span></a></li><li class="child-item" data-page-id="120724201"><span class="icon"></span><a href="frontpage.html" title="FrontPage"><span class="label">FrontPage</span></a></li><li class="child-item" data-page-id="120724202"><span class="icon"></span><a href="geraldori.html" title="GeraldoRi"><span class="label">GeraldoRi</span></a></li><li class="child-item" data-page-id="14237"><span class="icon"></span><a href="guides.html" title="Guides"><span class="label">Guides</span></a></li><li class="child-item" data-page-id="120724203"><span class="icon"></span><a href="hdiv.html" title="HDIV"><span class="label">HDIV</span></a></li><li class="child-item" data-page-id="120724215"><span class="icon"></span><a href="homepage.html" title="HomePage"><span class="label">HomePage</span></a></li><li class="child-item" data-page-id="120724219"><span class="icon"></span><a href="homepagetemplate.html" title="HomepageTemplate"><span class="label">HomepageTemplate</span></a></li><li class="child-item" data-page-id="120724222"><span class="icon"></span><a href="intellijidea.html" title="IntellijIDEA"><span class="label">IntellijIDEA</span></a></li><li class="child-item" data-page-id="120724223"><span class="icon"></span><a href="issuesandsolutions.html" title="IssuesAndSolutions"><span class="label">IssuesAndSolutions</span></a></li><li class="child-item" data-page-id="120724229"><span class="icon"></span><a href="jamesmitchell.html" title="JamesMitchell"><span class="label">JamesMitchell</span></a></li><li class="child-item" data-page-id="120724230"><span class="icon"></span><a href="javabeans.html" title="JavaBeans"><span class="label">JavaBeans</span></a></li><li class="child-item" data-page-id="120724231"><span class="icon"></span><a href="javamail.html" title="JavaMail"><span class="label">JavaMail</span></a></li><li class="child-item" data-page-id="120724232"><span class="icon"></span><a href="javascript.html" title="JavaScript"><span class="label">JavaScript</span></a></li><li class="child-item" data-page-id="120724224"><span class="icon"></span><a href="jstltags.html" title="JSTLTags"><span class="label">JSTLTags</span></a></li><li class="child-item" data-page-id="120724227"><span class="icon"></span><a href="jstltagsbeanmessage.html" title="JSTLTagsBeanMessage"><span class="label">JSTLTagsBeanMessage</span></a></li><li class="child-item" data-page-id="120724228"><span class="icon"></span><a href="jstltagsnested.html" title="JSTLTagsNested"><span class="label">JSTLTagsNested</span></a></li><li class="child-item" data-page-id="120724233"><span class="icon"></span><a href="katherinehale.html" title="KatherineHale"><span class="label">KatherineHale</span></a></li><li class="child-item" data-page-id="120724234"><span class="icon"></span><a href="kishoresenji.html" title="KishoreSenji"><span class="label">KishoreSenji</span></a></li><li class="child-item" data-page-id="120724235"><span class="icon"></span><a href="lazylist.html" title="LazyList"><span class="label">LazyList</span></a></li><li class="child-item" data-page-id="120724236"><span class="icon"></span><a href="localspellingwords.html" title="LocalSpellingWords"><span class="label">LocalSpellingWords</span></a></li><li class="child-item" data-page-id="120724240"><span class="icon"></span><a href="lookupdispatchaction.html" title="LookupDispatchAction"><span class="label">LookupDispatchAction</span></a></li><li class="child-item" data-page-id="120724244"><span class="icon"></span><a href="migrationstrategy.html" title="MigrationStrategy"><span class="label">MigrationStrategy</span></a></li><li class="child-item" data-page-id="120724250"><span class="icon"></span><a href="migrationtools.html" title="MigrationTools"><span class="label">MigrationTools</span></a></li><li class="child-item" data-page-id="120724253"><span class="icon"></span><a href="moduleconfigimpl.html" title="ModuleConfigImpl"><span class="label">ModuleConfigImpl</span></a></li><li class="child-item" data-page-id="120724254"><span class="icon"></span><a href="netbeans.html" title="NetBeans"><span class="label">NetBeans</span></a></li><li class="child-item" data-page-id="120724255"><span class="icon"></span><a href="newwindowfromaction.html" title="NewWindowFromAction"><span class="label">NewWindowFromAction</span></a></li><li class="child-item" data-page-id="135860374"><span class="icon"></span><a href="olddocumentation.html" title="Old Documentation"><span class="label">Old Documentation</span></a></li><li class="child-item" data-page-id="120724256"><span class="icon"></span><a href="openwindowfromaction.html" title="OpenWindowFromAction"><span class="label">OpenWindowFromAction</span></a></li><li class="child-item" data-page-id="74009"><span class="icon"></span><a href="otherresources.html" title="Other Resources"><span class="label">Other Resources</span></a></li><li class="child-item" data-page-id="120724257"><span class="icon"></span><a href="paulbrowne.html" title="PaulBrowne"><span class="label">PaulBrowne</span></a></li><li class="child-item" data-page-id="120724258"><span class="icon"></span><a href="poweredby.html" title="PoweredBy"><span class="label">PoweredBy</span></a></li><li class="child-item" data-page-id="120724259"><span class="icon"></span><a href="preinitializeactionform.html" title="PreInitializeActionForm"><span class="label">PreInitializeActionForm</span></a></li><li class="child-item" data-page-id="120724260"><span class="icon"></span><a href="pttuanzhang.html" title="Pttuanzhang"><span class="label">Pttuanzhang</span></a></li><li class="child-item" data-page-id="120724262"><span class="icon"></span><a href="recentchanges.html" title="RecentChanges"><span class="label">RecentChanges</span></a></li><li class="child-item" data-page-id="120724263"><span class="icon"></span><a href="requestprocessor.html" title="RequestProcessor"><span class="label">RequestProcessor</span></a></li><li class="child-item" data-page-id="120724261"><span class="icon"></span><a href="rtexpr.html" title="RT Expr"><span class="label">RT Expr</span></a></li><li class="child-item" data-page-id="120724273"><span class="icon"></span><a href="saf1roughspots.html" title="SAF1RoughSpots"><span class="label">SAF1RoughSpots</span></a></li><li class="child-item" data-page-id="120724282"><span class="icon"></span><a href="scriptsfromjava.html" title="ScriptsFromJava"><span class="label">ScriptsFromJava</span></a></li><li class="child-item" data-page-id="61758"><span class="icon"></span><a href="SecurityBulletins.html" title="Security Bulletins"><span class="label">Security Bulletins</span></a></li><li class="child-item" data-page-id="120724284"><span class="icon"></span><a href="servingpdfdocuments.html" title="ServingPdfDocuments"><span class="label">ServingPdfDocuments</span></a></li><li class="child-item" data-page-id="120724285"><span class="icon"></span><a href="servletversions.html" title="ServletVersions"><span class="label">ServletVersions</span></a></li><li class="child-item" data-page-id="120724286"><span class="icon"></span><a href="setupitems.html" title="SetupItems"><span class="label">SetupItems</span></a></li><li class="child-item" data-page-id="120724288"><span class="icon"></span><a href="shale.html" title="Shale"><span class="label">Shale</span></a></li><li class="child-item" data-page-id="120724298"><span class="icon"></span><a href="shalerelease100.html" title="ShaleRelease100"><span class="label">ShaleRelease100</span></a></li><li class="child-item" data-page-id="120724299"><span class="icon"></span><a href="shalerelease101.html" title="ShaleRelease101"><span class="label">ShaleRelease101</span></a></li><li class="child-item" data-page-id="120724303"><span class="icon"></span><a href="shalerelease102.html" title="ShaleRelease102"><span class="label">ShaleRelease102</span></a></li><li class="child-item" data-page-id="120724307"><span class="icon"></span><a href="shalereleaseplans.html" title="ShaleReleasePlans"><span class="label">ShaleReleasePlans</span></a></li><li class="child-item" data-page-id="120724310"><span class="icon"></span><a href="shaleremoting.html" title="ShaleRemoting"><span class="label">ShaleRemoting</span></a></li><li class="child-item" data-page-id="120724311"><span class="icon"></span><a href="shaletestframework.html" title="ShaleTestFramework"><span class="label">ShaleTestFramework</span></a></li><li class="child-item" data-page-id="120724312"><span class="icon"></span><a href="shalevalidation.html" title="ShaleValidation"><span class="label">ShaleValidation</span></a></li><li class="child-item" data-page-id="120724313"><span class="icon"></span><a href="snapshotguide11.html" title="SnapshotGuide11"><span class="label">SnapshotGuide11</span></a></li><li class="child-item" data-page-id="120724314"><span class="icon"></span><a href="statemanagement.html" title="StateManagement"><span class="label">StateManagement</span></a></li><li class="child-item" data-page-id="120724315"><span class="icon"></span><a href="struts13xbuildingfromsource.html" title="Struts13xBuildingFromSource"><span class="label">Struts13xBuildingFromSource</span></a></li><li class="child-item" data-page-id="120724316"><span class="icon"></span><a href="struts14roadmap.html" title="Struts14Roadmap"><span class="label">Struts14Roadmap</span></a></li><li class="child-item" data-page-id="120724317"><span class="icon"></span><a href="strutsaction1planning.html" title="StrutsAction1Planning"><span class="label">StrutsAction1Planning</span></a></li><li class="child-item" data-page-id="120724318"><span class="icon"></span><a href="strutsaction2.html" title="StrutsAction2"><span class="label">StrutsAction2</span></a></li><li class="child-item" data-page-id="120724319"><span class="icon"></span><a href="strutsactionrelease131.html" title="StrutsActionRelease131"><span class="label">StrutsActionRelease131</span></a></li><li class="child-item" data-page-id="120724320"><span class="icon"></span><a href="strutsactionrelease132.html" title="StrutsActionRelease132"><span class="label">StrutsActionRelease132</span></a></li><li class="child-item" data-page-id="120724321"><span class="icon"></span><a href="strutsactionrelease133.html" title="StrutsActionRelease133"><span class="label">StrutsActionRelease133</span></a></li><li class="child-item" data-page-id="120724322"><span class="icon"></span><a href="strutsactionrelease134.html" title="StrutsActionRelease134"><span class="label">StrutsActionRelease134</span></a></li><li class="child-item" data-page-id="120724323"><span class="icon"></span><a href="strutsactionrelease135.html" title="StrutsActionRelease135"><span class="label">StrutsActionRelease135</span></a></li><li class="child-item" data-page-id="120724328"><span class="icon"></span><a href="strutsactionrelease200.html" title="StrutsActionRelease200"><span class="label">StrutsActionRelease200</span></a></li><li class="child-item" data-page-id="120724332"><span class="icon"></span><a href="strutsandjstl.html" title="StrutsAndJSTL"><span class="label">StrutsAndJSTL</span></a></li><li class="child-item" data-page-id="120724338"><span class="icon"></span><a href="strutsandmaven.html" title="StrutsAndMaven"><span class="label">StrutsAndMaven</span></a></li><li class="child-item" data-page-id="120724339"><span class="icon"></span><a href="strutsandportlets.html" title="StrutsAndPortlets"><span class="label">StrutsAndPortlets</span></a></li><li class="child-item" data-page-id="120724340"><span class="icon"></span><a href="strutsandspring.html" title="StrutsAndSpring"><span class="label">StrutsAndSpring</span></a></li><li class="child-item" data-page-id="120724341"><span class="icon"></span><a href="strutsarchives.html" title="StrutsArchives"><span class="label">StrutsArchives</span></a></li><li class="child-item" data-page-id="120724342"><span class="icon"></span><a href="strutsarticles.html" title="StrutsArticles"><span class="label">StrutsArticles</span></a></li><li class="child-item" data-page-id="120724344"><span class="icon"></span><a href="strutsbackbutton.html" title="StrutsBackButton"><span class="label">StrutsBackButton</span></a></li><li class="child-item" data-page-id="120724348"><span class="icon"></span><a href="strutsbeginnervalidatorframework.html" title="StrutsBeginnerValidatorFramework"><span class="label">StrutsBeginnerValidatorFramework</span></a></li><li class="child-item" data-page-id="120724349"><span class="icon"></span><a href="strutsbenefits.html" title="StrutsBenefits"><span class="label">StrutsBenefits</span></a></li><li class="child-item" data-page-id="120724350"><span class="icon"></span><a href="strutsbook.html" title="StrutsBook"><span class="label">StrutsBook</span></a></li><li class="child-item" data-page-id="120724351"><span class="icon"></span><a href="strutsbookpraveen.html" title="StrutsBook praveen"><span class="label">StrutsBook praveen</span></a></li><li class="child-item" data-page-id="120724353"><span class="icon"></span><a href="strutsbooks.html" title="StrutsBooks"><span class="label">StrutsBooks</span></a></li><li class="child-item" data-page-id="120724356"><span class="icon"></span><a href="strutsbuildingfromsource.html" title="StrutsBuildingFromSource"><span class="label">StrutsBuildingFromSource</span></a></li><li class="child-item" data-page-id="120724357"><span class="icon"></span><a href="strutsbuildingfromsourceusingecl.html" title="StrutsBuildingFromSourceUsingEclipse"><span class="label">StrutsBuildingFromSourceUsingEclipse</span></a></li><li class="child-item" data-page-id="120724358"><span class="icon"></span><a href="strutsbuildingfromsourcewithecli.html" title="StrutsBuildingFromSourceWithEclipseMavenSubversion"><span class="label">StrutsBuildingFromSourceWithEclipseMavenSubversion</span></a></li><li class="child-item" data-page-id="120724359"><span class="icon"></span><a href="strutscatalog.html" title="StrutsCatalog"><span class="label">StrutsCatalog</span></a></li><li class="child-item" data-page-id="120724360"><span class="icon"></span><a href="strutscatalogbaseaction.html" title="StrutsCatalogBaseAction"><span class="label">StrutsCatalogBaseAction</span></a></li><li class="child-item" data-page-id="120724373"><span class="icon"></span><a href="strutscatalogdispatchutil.html" title="StrutsCatalogDispatchUtil"><span class="label">StrutsCatalogDispatchUtil</span></a></li><li class="child-item" data-page-id="120724363"><span class="icon"></span><a href="strutscatalogdtoimplementation.html" title="StrutsCatalogDTOImplementation"><span class="label">StrutsCatalogDTOImplementation</span></a></li><li class="child-item" data-page-id="120724379"><span class="icon"></span><a href="strutscatalogerrortypes.html" title="StrutsCatalogErrorTypes"><span class="label">StrutsCatalogErrorTypes</span></a></li><li class="child-item" data-page-id="120724380"><span class="icon"></span><a href="strutscatalogfivemultiplebuttons.html" title="StrutsCatalogFiveMultipleButtonSolutions"><span class="label">StrutsCatalogFiveMultipleButtonSolutions</span></a></li><li class="child-item" data-page-id="120724381"><span class="icon"></span><a href="strutscataloghidingimagesandothe.html" title="StrutsCatalogHidingImagesAndOtherResourcesUnderWEBINF"><span class="label">StrutsCatalogHidingImagesAndOtherResourcesUnderWEBINF</span></a></li><li class="child-item" data-page-id="120724382"><span class="icon"></span><a href="strutscataloghidingpagesunderweb.html" title="StrutsCatalogHidingPagesUnderWEBINF"><span class="label">StrutsCatalogHidingPagesUnderWEBINF</span></a></li><li class="child-item" data-page-id="120724383"><span class="icon"></span><a href="strutscataloghtmlrewrite.html" title="StrutsCatalogHtmlRewrite"><span class="label">StrutsCatalogHtmlRewrite</span></a></li><li class="child-item" data-page-id="120724384"><span class="icon"></span><a href="strutscataloginstrumentableforms.html" title="StrutsCatalogInstrumentableForms"><span class="label">StrutsCatalogInstrumentableForms</span></a></li><li class="child-item" data-page-id="120724385"><span class="icon"></span><a href="strutscataloglazylist.html" title="StrutsCatalogLazyList"><span class="label">StrutsCatalogLazyList</span></a></li><li class="child-item" data-page-id="120724386"><span class="icon"></span><a href="strutscataloglinkonlytoactions.html" title="StrutsCatalogLinkOnlyToActions"><span class="label">StrutsCatalogLinkOnlyToActions</span></a></li><li class="child-item" data-page-id="120724387"><span class="icon"></span><a href="strutscatalogmappedbeans.html" title="StrutsCatalogMappedBeans"><span class="label">StrutsCatalogMappedBeans</span></a></li><li class="child-item" data-page-id="120724388"><span class="icon"></span><a href="strutscatalogmultiplebuttonsolut.html" title="StrutsCatalogMultipleButtonSolutions"><span class="label">StrutsCatalogMultipleButtonSolutions</span></a></li><li class="child-item" data-page-id="120724389"><span class="icon"></span><a href="strutscatalogmultipleimagebutton.html" title="StrutsCatalogMultipleImageButtonsWithNoJavaScript"><span class="label">StrutsCatalogMultipleImageButtonsWithNoJavaScript</span></a></li><li class="child-item" data-page-id="120724390"><span class="icon"></span><a href="strutscatalogmultipleimagetagssi.html" title="StrutsCatalogMultipleImageTagsSimplified"><span class="label">StrutsCatalogMultipleImageTagsSimplified</span></a></li><li class="child-item" data-page-id="120724395"><span class="icon"></span><a href="strutscatalogpreconditions.html" title="StrutsCatalogPreconditions"><span class="label">StrutsCatalogPreconditions</span></a></li><li class="child-item" data-page-id="120724402"><span class="icon"></span><a href="strutscatalogsegmentapplications.html" title="StrutsCatalogSegmentApplications"><span class="label">StrutsCatalogSegmentApplications</span></a></li><li class="child-item" data-page-id="120724406"><span class="icon"></span><a href="strutscatalogvariablescreenfield.html" title="StrutsCatalogVariableScreenFields"><span class="label">StrutsCatalogVariableScreenFields</span></a></li><li class="child-item" data-page-id="120724408"><span class="icon"></span><a href="strutscatalogvariousbuttonsoluti.html" title="StrutsCatalogVariousButtonSolutions"><span class="label">StrutsCatalogVariousButtonSolutions</span></a></li><li class="child-item" data-page-id="120724409"><span class="icon"></span><a href="strutschain.html" title="StrutsChain"><span class="label">StrutsChain</span></a></li><li class="child-item" data-page-id="120724410"><span class="icon"></span><a href="strutsclassicrelease130.html" title="StrutsClassicRelease130"><span class="label">StrutsClassicRelease130</span></a></li><li class="child-item" data-page-id="120724411"><span class="icon"></span><a href="strutsclassicrelease130notes.html" title="StrutsClassicRelease130Notes"><span class="label">StrutsClassicRelease130Notes</span></a></li><li class="child-item" data-page-id="120724412"><span class="icon"></span><a href="strutscodeaudits.html" title="StrutsCodeAudits"><span class="label">StrutsCodeAudits</span></a></li><li class="child-item" data-page-id="120724413"><span class="icon"></span><a href="strutscommitters.html" title="StrutsCommitters"><span class="label">StrutsCommitters</span></a></li><li class="child-item" data-page-id="120724414"><span class="icon"></span><a href="strutsconsultants.html" title="StrutsConsultants"><span class="label">StrutsConsultants</span></a></li><li class="child-item" data-page-id="120724415"><span class="icon"></span><a href="strutscontinuum.html" title="StrutsContinuum"><span class="label">StrutsContinuum</span></a></li><li class="child-item" data-page-id="120724416"><span class="icon"></span><a href="strutsdeprecatedactionerrors.html" title="StrutsDeprecatedActionErrors"><span class="label">StrutsDeprecatedActionErrors</span></a></li><li class="child-item" data-page-id="120724417"><span class="icon"></span><a href="strutsdesignpatterns.html" title="StrutsDesignPatterns"><span class="label">StrutsDesignPatterns</span></a></li><li class="child-item" data-page-id="120724418"><span class="icon"></span><a href="strutsdeveloperpages.html" title="StrutsDeveloperPages"><span class="label">StrutsDeveloperPages</span></a></li><li class="child-item" data-page-id="120724419"><span class="icon"></span><a href="strutsdocbuildingapps.html" title="StrutsDocBuildingApps"><span class="label">StrutsDocBuildingApps</span></a></li><li class="child-item" data-page-id="120724420"><span class="icon"></span><a href="strutsdoccomments.html" title="StrutsDocComments"><span class="label">StrutsDocComments</span></a></li><li class="child-item" data-page-id="120724421"><span class="icon"></span><a href="strutsdocconfiguring.html" title="StrutsDocConfiguring"><span class="label">StrutsDocConfiguring</span></a></li><li class="child-item" data-page-id="120724422"><span class="icon"></span><a href="strutsdoccontroller.html" title="StrutsDocController"><span class="label">StrutsDocController</span></a></li><li class="child-item" data-page-id="120724426"><span class="icon"></span><a href="strutsdocdatabase.html" title="StrutsDocDatabase"><span class="label">StrutsDocDatabase</span></a></li><li class="child-item" data-page-id="120724431"><span class="icon"></span><a href="strutsdocindex.html" title="StrutsDocIndex"><span class="label">StrutsDocIndex</span></a></li><li class="child-item" data-page-id="120724436"><span class="icon"></span><a href="strutsdoclearning.html" title="StrutsDocLearning"><span class="label">StrutsDocLearning</span></a></li><li class="child-item" data-page-id="120724441"><span class="icon"></span><a href="strutsdocnewbie.html" title="StrutsDocNewbie"><span class="label">StrutsDocNewbie</span></a></li><li class="child-item" data-page-id="120724443"><span class="icon"></span><a href="strutsdoctiles.html" title="StrutsDocTiles"><span class="label">StrutsDocTiles</span></a></li><li class="child-item" data-page-id="120724445"><span class="icon"></span><a href="strutsdocview.html" title="StrutsDocView"><span class="label">StrutsDocView</span></a></li><li class="child-item" data-page-id="120724448"><span class="icon"></span><a href="strutseclipse.html" title="StrutsEclipse"><span class="label">StrutsEclipse</span></a></li><li class="child-item" data-page-id="120724449"><span class="icon"></span><a href="strutseclipse31.html" title="StrutsEclipse31"><span class="label">StrutsEclipse31</span></a></li><li class="child-item" data-page-id="120724446"><span class="icon"></span><a href="strutsegen.html" title="StrutsEGen"><span class="label">StrutsEGen</span></a></li><li class="child-item" data-page-id="120724447"><span class="icon"></span><a href="strutselearning.html" title="StrutsELearning"><span class="label">StrutsELearning</span></a></li><li class="child-item" data-page-id="120724450"><span class="icon"></span><a href="strutsfaces.html" title="StrutsFaces"><span class="label">StrutsFaces</span></a></li><li class="child-item" data-page-id="120724451"><span class="icon"></span><a href="strutsfacesrelease101.html" title="StrutsFacesRelease101"><span class="label">StrutsFacesRelease101</span></a></li><li class="child-item" data-page-id="120724452"><span class="icon"></span><a href="strutsfiledownload.html" title="StrutsFileDownload"><span class="label">StrutsFileDownload</span></a></li><li class="child-item" data-page-id="120724454"><span class="icon"></span><a href="strutsfileupload.html" title="StrutsFileUpload"><span class="label">StrutsFileUpload</span></a></li><li class="child-item" data-page-id="120724455"><span class="icon"></span><a href="strutsformbeans.html" title="StrutsFormBeans"><span class="label">StrutsFormBeans</span></a></li><li class="child-item" data-page-id="120724457"><span class="icon"></span><a href="strutsfunstuff.html" title="StrutsFunStuff"><span class="label">StrutsFunStuff</span></a></li><li class="child-item" data-page-id="120724463"><span class="icon"></span><a href="strutsgmail.html" title="StrutsGmail"><span class="label">StrutsGmail</span></a></li><li class="child-item" data-page-id="120724471"><span class="icon"></span><a href="strutshaiku.html" title="StrutsHaiku"><span class="label">StrutsHaiku</span></a></li><li class="child-item" data-page-id="120724475"><span class="icon"></span><a href="strutshowtousenightlybuild.html" title="StrutsHowToUseNightlyBuild"><span class="label">StrutsHowToUseNightlyBuild</span></a></li><li class="child-item" data-page-id="120724476"><span class="icon"></span><a href="strutshtmloptionsinternationaliz.html" title="StrutsHtmlOptionsInternationalization"><span class="label">StrutsHtmlOptionsInternationalization</span></a></li><li class="child-item" data-page-id="120724477"><span class="icon"></span><a href="strutsidea5.html" title="StrutsIDEA5"><span class="label">StrutsIDEA5</span></a></li><li class="child-item" data-page-id="120724479"><span class="icon"></span><a href="strutsideajar.html" title="StrutsIdeaJar"><span class="label">StrutsIdeaJar</span></a></li><li class="child-item" data-page-id="120724478"><span class="icon"></span><a href="strutsideguides.html" title="StrutsIDEGuides"><span class="label">StrutsIDEGuides</span></a></li><li class="child-item" data-page-id="120724480"><span class="icon"></span><a href="strutsinitialization.html" title="StrutsInitialization"><span class="label">StrutsInitialization</span></a></li><li class="child-item" data-page-id="120724481"><span class="icon"></span><a href="strutsjavaone2006.html" title="StrutsJavaOne2006"><span class="label">StrutsJavaOne2006</span></a></li><li class="child-item" data-page-id="120724482"><span class="icon"></span><a href="strutsjericho.html" title="StrutsJericho"><span class="label">StrutsJericho</span></a></li><li class="child-item" data-page-id="120724483"><span class="icon"></span><a href="strutsjobjar.html" title="StrutsJobJar"><span class="label">StrutsJobJar</span></a></li><li class="child-item" data-page-id="120724484"><span class="icon"></span><a href="strutsjumptoanchor.html" title="StrutsJumpToAnchor"><span class="label">StrutsJumpToAnchor</span></a></li><li class="child-item" data-page-id="120724485"><span class="icon"></span><a href="strutslibraries.html" title="StrutsLibraries"><span class="label">StrutsLibraries</span></a></li><li class="child-item" data-page-id="120724486"><span class="icon"></span><a href="strutslimerick.html" title="StrutsLimerick"><span class="label">StrutsLimerick</span></a></li><li class="child-item" data-page-id="120724487"><span class="icon"></span><a href="strutslogging.html" title="StrutsLogging"><span class="label">StrutsLogging</span></a></li><li class="child-item" data-page-id="120724488"><span class="icon"></span><a href="strutsmaintenance.html" title="StrutsMaintenance"><span class="label">StrutsMaintenance</span></a></li><li class="child-item" data-page-id="120724489"><span class="icon"></span><a href="strutsmaintenanceeditors.html" title="StrutsMaintenanceEditors"><span class="label">StrutsMaintenanceEditors</span></a></li><li class="child-item" data-page-id="120724490"><span class="icon"></span><a href="strutsmaintenancegump.html" title="StrutsMaintenanceGump"><span class="label">StrutsMaintenanceGump</span></a></li><li class="child-item" data-page-id="120724502"><span class="icon"></span><a href="strutsmaintenancesvn.html" title="StrutsMaintenanceSvn"><span class="label">StrutsMaintenanceSvn</span></a></li><li class="child-item" data-page-id="120724505"><span class="icon"></span><a href="strutsmaintenancesvnapps.html" title="StrutsMaintenanceSvnApps"><span class="label">StrutsMaintenanceSvnApps</span></a></li><li class="child-item" data-page-id="120724507"><span class="icon"></span><a href="strutsmaintenancevalidwhenparser.html" title="StrutsMaintenanceValidWhenParser"><span class="label">StrutsMaintenanceValidWhenParser</span></a></li><li class="child-item" data-page-id="120724508"><span class="icon"></span><a href="strutsmaintenancewebsite.html" title="StrutsMaintenanceWebsite"><span class="label">StrutsMaintenanceWebsite</span></a></li><li class="child-item" data-page-id="120724509"><span class="icon"></span><a href="strutsmanualactionclasses.html" title="StrutsManualActionClasses"><span class="label">StrutsManualActionClasses</span></a></li><li class="child-item" data-page-id="120724514"><span class="icon"></span><a href="strutsmanualactionwebcomponent.html" title="StrutsManualActionWebComponent"><span class="label">StrutsManualActionWebComponent</span></a></li><li class="child-item" data-page-id="120724518"><span class="icon"></span><a href="strutsmanualactionwebcomponentas.html" title="StrutsManualActionWebComponentAsync"><span class="label">StrutsManualActionWebComponentAsync</span></a></li><li class="child-item" data-page-id="120724520"><span class="icon"></span><a href="strutsmaven2plan.html" title="StrutsMaven2Plan"><span class="label">StrutsMaven2Plan</span></a></li><li class="child-item" data-page-id="120724521"><span class="icon"></span><a href="strutsmavenrelease.html" title="StrutsMavenRelease"><span class="label">StrutsMavenRelease</span></a></li><li class="child-item" data-page-id="120724522"><span class="icon"></span><a href="strutsmaximumnumberoftagsperpage.html" title="StrutsMaximumNumberOfTagsPerPage"><span class="label">StrutsMaximumNumberOfTagsPerPage</span></a></li><li class="child-item" data-page-id="120724523"><span class="icon"></span><a href="strutsmerrychristmas.html" title="StrutsMerryChristmas"><span class="label">StrutsMerryChristmas</span></a></li><li class="child-item" data-page-id="120724524"><span class="icon"></span><a href="strutsmessageresourcesdoc.html" title="StrutsMessageResourcesDoc"><span class="label">StrutsMessageResourcesDoc</span></a></li><li class="child-item" data-page-id="120724525"><span class="icon"></span><a href="strutsmessageresourcesfromdataba.html" title="StrutsMessageResourcesFromDatabase"><span class="label">StrutsMessageResourcesFromDatabase</span></a></li><li class="child-item" data-page-id="120724526"><span class="icon"></span><a href="strutsminimalinstall.html" title="StrutsMinimalInstall"><span class="label">StrutsMinimalInstall</span></a></li><li class="child-item" data-page-id="120724527"><span class="icon"></span><a href="strutsmodel2.html" title="StrutsModel2"><span class="label">StrutsModel2</span></a></li><li class="child-item" data-page-id="120724531"><span class="icon"></span><a href="strutsmultipleactionforms.html" title="StrutsMultipleActionForms"><span class="label">StrutsMultipleActionForms</span></a></li><li class="child-item" data-page-id="120724532"><span class="icon"></span><a href="strutsmyfavoriteide.html" title="StrutsMyFavoriteIDE"><span class="label">StrutsMyFavoriteIDE</span></a></li><li class="child-item" data-page-id="120724533"><span class="icon"></span><a href="strutsnavigationbasics.html" title="StrutsNavigationBasics"><span class="label">StrutsNavigationBasics</span></a></li><li class="child-item" data-page-id="120724537"><span class="icon"></span><a href="strutsnetbeans.html" title="StrutsNetBeans"><span class="label">StrutsNetBeans</span></a></li><li class="child-item" data-page-id="120724545"><span class="icon"></span><a href="strutsnetbeans50.html" title="StrutsNetBeans50"><span class="label">StrutsNetBeans50</span></a></li><li class="child-item" data-page-id="120724551"><span class="icon"></span><a href="strutsnewfaqs.html" title="StrutsNewFaqs"><span class="label">StrutsNewFaqs</span></a></li><li class="child-item" data-page-id="27832363"><span class="icon"></span><a href="strutsnext.html" title="Struts Next"><span class="label">Struts Next</span></a></li><li class="child-item" data-page-id="120724553"><span class="icon"></span><a href="strutsoverdrive.html" title="StrutsOverDrive"><span class="label">StrutsOverDrive</span></a></li><li class="child-item" data-page-id="120724554"><span class="icon"></span><a href="strutspleasewait.html" title="StrutsPleaseWait"><span class="label">StrutsPleaseWait</span></a></li><li class="child-item" data-page-id="120724555"><span class="icon"></span><a href="strutsplugins.html" title="StrutsPlugins"><span class="label">StrutsPlugins</span></a></li><li class="child-item" data-page-id="120724556"><span class="icon"></span><a href="strutspoetry.html" title="StrutsPoetry"><span class="label">StrutsPoetry</span></a></li><li class="child-item" data-page-id="120724557"><span class="icon"></span><a href="strutsprojectpages.html" title="StrutsProjectPages"><span class="label">StrutsProjectPages</span></a></li><li class="child-item" data-page-id="120724558"><span class="icon"></span><a href="strutsquickstart.html" title="StrutsQuickStart"><span class="label">StrutsQuickStart</span></a></li><li class="child-item" data-page-id="120724565"><span class="icon"></span><a href="strutsquickstart4.html" title="StrutsQuickStart4"><span class="label">StrutsQuickStart4</span></a></li><li class="child-item" data-page-id="120724579"><span class="icon"></span><a href="strutsrelease122.html" title="StrutsRelease122"><span class="label">StrutsRelease122</span></a></li><li class="child-item" data-page-id="120724583"><span class="icon"></span><a href="strutsrelease123.html" title="StrutsRelease123"><span class="label">StrutsRelease123</span></a></li><li class="child-item" data-page-id="120724584"><span class="icon"></span><a href="strutsrelease124.html" title="StrutsRelease124"><span class="label">StrutsRelease124</span></a></li><li class="child-item" data-page-id="120724585"><span class="icon"></span><a href="strutsrelease125.html" title="StrutsRelease125"><span class="label">StrutsRelease125</span></a></li><li class="child-item" data-page-id="120724586"><span class="icon"></span><a href="strutsrelease126.html" title="StrutsRelease126"><span class="label">StrutsRelease126</span></a></li><li class="child-item" data-page-id="120724587"><span class="icon"></span><a href="javascript:;" title="StrutsRelease127"><span class="label">StrutsRelease127</span></a></li><li class="child-item" data-page-id="120724588"><span class="icon"></span><a href="javascript:;" title="StrutsRelease128"><span class="label">StrutsRelease128</span></a></li><li class="child-item" data-page-id="120724589"><span class="icon"></span><a href="javascript:;" title="StrutsRelease129"><span class="label">StrutsRelease129</span></a></li><li class="child-item" data-page-id="120724591"><span class="icon"></span><a href="javascript:;" title="StrutsRelease135"><span class="label">StrutsRelease135</span></a></li><li class="child-item" data-page-id="120724592"><span class="icon"></span><a href="javascript:;" title="StrutsRelease136"><span class="label">StrutsRelease136</span></a></li><li class="child-item" data-page-id="120724593"><span class="icon"></span><a href="javascript:;" title="StrutsRelease137"><span class="label">StrutsRelease137</span></a></li><li class="child-item" data-page-id="120724594"><span class="icon"></span><a href="javascript:;" title="StrutsRelease138"><span class="label">StrutsRelease138</span></a></li><li class="child-item" data-page-id="120724595"><span class="icon"></span><a href="javascript:;" title="StrutsRelease139"><span class="label">StrutsRelease139</span></a></li><li class="child-item" data-page-id="120724590"><span class="icon"></span><a href="javascript:;" title="StrutsRelease1310"><span class="label">StrutsRelease1310</span></a></li><li class="child-item" data-page-id="120724600"><span class="icon"></span><a href="javascript:;" title="StrutsReleasePlans"><span class="label">StrutsReleasePlans</span></a></li><li class="child-item" data-page-id="120724607"><span class="icon"></span><a href="javascript:;" title="StrutsReloadingConfig"><span class="label">StrutsReloadingConfig</span></a></li><li class="child-item" data-page-id="120724608"><span class="icon"></span><a href="javascript:;" title="StrutsRememberMeCookie"><span class="label">StrutsRememberMeCookie</span></a></li><li class="child-item" data-page-id="120724610"><span class="icon"></span><a href="javascript:;" title="StrutsScriptingRelease100"><span class="label">StrutsScriptingRelease100</span></a></li><li class="child-item" data-page-id="120724611"><span class="icon"></span><a href="javascript:;" title="StrutsScriptingRelease101"><span class="label">StrutsScriptingRelease101</span></a></li><li class="child-item" data-page-id="120724612"><span class="icon"></span><a href="javascript:;" title="StrutsSellMeOnTiles"><span class="label">StrutsSellMeOnTiles</span></a></li><li class="child-item" data-page-id="120724613"><span class="icon"></span><a href="javascript:;" title="StrutsShale"><span class="label">StrutsShale</span></a></li><li class="child-item" data-page-id="120724614"><span class="icon"></span><a href="javascript:;" title="StrutsShortTermPlans"><span class="label">StrutsShortTermPlans</span></a></li><li class="child-item" data-page-id="120724615"><span class="icon"></span><a href="javascript:;" title="StrutsSmartNavigation"><span class="label">StrutsSmartNavigation</span></a></li><li class="child-item" data-page-id="120724616"><span class="icon"></span><a href="javascript:;" title="StrutsSolutions"><span class="label">StrutsSolutions</span></a></li><li class="child-item" data-page-id="120724617"><span class="icon"></span><a href="javascript:;" title="StrutsState"><span class="label">StrutsState</span></a></li><li class="child-item" data-page-id="120724618"><span class="icon"></span><a href="javascript:;" title="StrutsStupidUriTricks"><span class="label">StrutsStupidUriTricks</span></a></li><li class="child-item" data-page-id="120724619"><span class="icon"></span><a href="javascript:;" title="StrutsSubprojects"><span class="label">StrutsSubprojects</span></a></li><li class="child-item" data-page-id="120724620"><span class="icon"></span><a href="javascript:;" title="StrutsTaglibHtmlBase"><span class="label">StrutsTaglibHtmlBase</span></a></li><li class="child-item" data-page-id="120724621"><span class="icon"></span><a href="javascript:;" title="StrutsTaglibHtmlLink"><span class="label">StrutsTaglibHtmlLink</span></a></li><li class="child-item" data-page-id="120724622"><span class="icon"></span><a href="javascript:;" title="StrutsTaglibRelease131"><span class="label">StrutsTaglibRelease131</span></a></li><li class="child-item" data-page-id="120724623"><span class="icon"></span><a href="javascript:;" title="StrutsTags"><span class="label">StrutsTags</span></a></li><li class="child-item" data-page-id="120724629"><span class="icon"></span><a href="javascript:;" title="StrutsTerminology"><span class="label">StrutsTerminology</span></a></li><li class="child-item" data-page-id="120724631"><span class="icon"></span><a href="javascript:;" title="StrutsTestCase"><span class="label">StrutsTestCase</span></a></li><li class="child-item" data-page-id="120724634"><span class="icon"></span><a href="javascript:;" title="StrutsTi"><span class="label">StrutsTi</span></a></li><li class="child-item" data-page-id="120724650"><span class="icon"></span><a href="javascript:;" title="StrutsTools"><span class="label">StrutsTools</span></a></li><li class="child-item" data-page-id="120724651"><span class="icon"></span><a href="javascript:;" title="StrutsTraining"><span class="label">StrutsTraining</span></a></li><li class="child-item" data-page-id="120724652"><span class="icon"></span><a href="javascript:;" title="StrutsTutorials"><span class="label">StrutsTutorials</span></a></li><li class="child-item" data-page-id="120724653"><span class="icon"></span><a href="javascript:;" title="StrutsUniversity"><span class="label">StrutsUniversity</span></a></li><li class="child-item" data-page-id="120724654"><span class="icon"></span><a href="javascript:;" title="StrutsUpgrade"><span class="label">StrutsUpgrade</span></a></li><li class="child-item" data-page-id="120724655"><span class="icon"></span><a href="javascript:;" title="StrutsUpgradeNotes10to12"><span class="label">StrutsUpgradeNotes10to12</span></a></li><li class="child-item" data-page-id="120724674"><span class="icon"></span><a href="javascript:;" title="StrutsUpgradeNotes12to13"><span class="label">StrutsUpgradeNotes12to13</span></a></li><li class="child-item" data-page-id="120724663"><span class="icon"></span><a href="javascript:;" title="StrutsUpgradeNotes124to127"><span class="label">StrutsUpgradeNotes124to127</span></a></li><li class="child-item" data-page-id="120724667"><span class="icon"></span><a href="javascript:;" title="StrutsUpgradeNotes127to128"><span class="label">StrutsUpgradeNotes127to128</span></a></li><li class="child-item" data-page-id="120724673"><span class="icon"></span><a href="javascript:;" title="StrutsUpgradeNotes128to129"><span class="label">StrutsUpgradeNotes128to129</span></a></li><li class="child-item" data-page-id="120724675"><span class="icon"></span><a href="javascript:;" title="StrutsUpload"><span class="label">StrutsUpload</span></a></li><li class="child-item" data-page-id="120724676"><span class="icon"></span><a href="javascript:;" title="StrutsUseCases"><span class="label">StrutsUseCases</span></a></li><li class="child-item" data-page-id="120724677"><span class="icon"></span><a href="javascript:;" title="StrutsUserMailingList"><span class="label">StrutsUserMailingList</span></a></li><li class="child-item" data-page-id="120724678"><span class="icon"></span><a href="javascript:;" title="StrutsUtils"><span class="label">StrutsUtils</span></a></li><li class="child-item" data-page-id="120724679"><span class="icon"></span><a href="javascript:;" title="StrutsWebIslands"><span class="label">StrutsWebIslands</span></a></li><li class="child-item" data-page-id="120724681"><span class="icon"></span><a href="javascript:;" title="StrutsWebLinks"><span class="label">StrutsWebLinks</span></a></li><li class="child-item" data-page-id="120724682"><span class="icon"></span><a href="javascript:;" title="StrutsWebService"><span class="label">StrutsWebService</span></a></li><li class="child-item" data-page-id="120724683"><span class="icon"></span><a href="javascript:;" title="StrutsWebsiteConversion"><span class="label">StrutsWebsiteConversion</span></a></li><li class="child-item" data-page-id="120724684"><span class="icon"></span><a href="javascript:;" title="StrutsWhiteboard"><span class="label">StrutsWhiteboard</span></a></li><li class="child-item" data-page-id="120724685"><span class="icon"></span><a href="javascript:;" title="StrutsWhyOnlyOneInstanceOfActionClass"><span class="label">StrutsWhyOnlyOneInstanceOfActionClass</span></a></li><li class="child-item" data-page-id="120724688"><span class="icon"></span><a href="javascript:;" title="StrutsWikiTips"><span class="label">StrutsWikiTips</span></a></li><li class="child-item" data-page-id="120724695"><span class="icon"></span><a href="javascript:;" title="StrutsXssVulnerability"><span class="label">StrutsXssVulnerability</span></a></li><li class="child-item" data-page-id="120724703"><span class="icon"></span><a href="javascript:;" title="Sunilsharma"><span class="label">Sunilsharma</span></a></li><li class="child-item" data-page-id="120724705"><span class="icon"></span><a href="javascript:;" title="TedHusted"><span class="label">TedHusted</span></a></li><li class="child-item" data-page-id="120724706"><span class="icon"></span><a href="javascript:;" title="TilesTlpResolution"><span class="label">TilesTlpResolution</span></a></li><li class="child-item" data-page-id="120724707"><span class="icon"></span><a href="javascript:;" title="TilesTool"><span class="label">TilesTool</span></a></li><li class="child-item" data-page-id="120724708"><span class="icon"></span><a href="javascript:;" title="TilesTopLevel"><span class="label">TilesTopLevel</span></a></li><li class="child-item" data-page-id="13978"><span class="icon"></span><a href="javascript:;" title="Tutorials"><span class="label">Tutorials</span></a></li><li class="child-item" data-page-id="120724709"><span class="icon"></span><a href="javascript:;" title="UsingMyFacesWithShaleClay"><span class="label">UsingMyFacesWithShaleClay</span></a></li><li class="child-item" data-page-id="120724710"><span class="icon"></span><a href="javascript:;" title="UsingPopupComponent"><span class="label">UsingPopupComponent</span></a></li><li class="child-item" data-page-id="120724711"><span class="icon"></span><a href="javascript:;" title="ValidatorActionForms"><span class="label">ValidatorActionForms</span></a></li><li class="child-item" data-page-id="120724712"><span class="icon"></span><a href="javascript:;" title="ValidatorComment"><span class="label">ValidatorComment</span></a></li><li class="child-item" data-page-id="120724713"><span class="icon"></span><a href="javascript:;" title="ValidatorDatesFormatting"><span class="label">ValidatorDatesFormatting</span></a></li><li class="child-item" data-page-id="120724714"><span class="icon"></span><a href="javascript:;" title="ValidatorDispatchAction"><span class="label">ValidatorDispatchAction</span></a></li><li class="child-item" data-page-id="120724715"><span class="icon"></span><a href="javascript:;" title="ValidatorFAQ"><span class="label">ValidatorFAQ</span></a></li><li class="child-item" data-page-id="120724716"><span class="icon"></span><a href="javascript:;" title="ValidatorMinimumSteps"><span class="label">ValidatorMinimumSteps</span></a></li><li class="child-item" data-page-id="120724717"><span class="icon"></span><a href="javascript:;" title="ValidatorNoClassDefFound"><span class="label">ValidatorNoClassDefFound</span></a></li><li class="child-item" data-page-id="120724725"><span class="icon"></span><a href="javascript:;" title="ValidatorTool"><span class="label">ValidatorTool</span></a></li><li class="child-item" data-page-id="120724733"><span class="icon"></span><a href="javascript:;" title="WebWork2Incubator"><span class="label">WebWork2Incubator</span></a></li><li class="child-item" data-page-id="120724736"><span class="icon"></span><a href="javascript:;" title="WhyChain"><span class="label">WhyChain</span></a></li><li class="child-item" data-page-id="120724739"><span class="icon"></span><a href="javascript:;" title="WikiFiles"><span class="label">WikiFiles</span></a></li><li class="child-item" data-page-id="120724742"><span class="icon"></span><a href="javascript:;" title="WildcardsForActionMappings"><span class="label">WildcardsForActionMappings</span></a></li></ul><a class="more-children-link" href=""><span class="icon"></span><span class="label">282更多子页面</span></a></div></div></div></div><div class="hidden"><a href="pages-ww.html" id="space-pages-link"></a><script type="text/x-template" title="logo-config-content"><h2>空间详情</h2><div class="personal-space-logo-hint">您的个人头像被作为您的个人空间的logo使用。<a href="/confluence/users/profile/editmyprofilepicture.action" target="_blank">更改您的个人头像</a>.</div></script></div></div><div class="space-tools-section"><div id="space-tools-menu-additional-items" class="hidden"><div data-label="浏览页面" data-class="" data-href="/confluence/pages/reorderpages.action?key=WW">浏览页面</div></div><button id="space-tools-menu-trigger" class=" aui-dropdown2-trigger aui-button aui-button-subtle tipsy-enabled aui-dropdown2-trigger-arrowless " aria-controls="space-tools-menu" aria-haspopup="true" role="button" data-aui-trigger=""><span class="aui-icon aui-icon-small aui-iconfont-configure">设置</span><span class="aui-button-label">空间管理</span><span class="aui-icon "></span></button><div id="space-tools-menu" class="aui-dropdown2 aui-style-default space-tools-dropdown" role="menu" aria-hidden="true" data-aui-alignment="top left"><div role="application"></div></div><a class="expand-collapse-trigger aui-icon aui-icon-small aui-iconfont-chevron-double-left"></a></div>
+                    
+                        			</div>
+    		</div>
+        <!-- \#header -->
+
+            
+    
+        <div id="main" class=" aui-page-panel">
+                        <div id="main-header">
+                        
+    <div id="navigation" class="content-navigation view">
+                    <ul class="ajs-menu-bar">
+                                            
+        <li class="normal ajs-menu-item">
+        <a id="action-menu-link" class="action aui-dropdown2-trigger-arrowless aui-button aui-button-subtle ajs-menu-title aui-dropdown2-trigger" href="#" aria-haspopup="true" aria-label="更多选项" aria-owns="action-menu" data-container="#navigation">
+            <span>
+                                    <span class="aui-icon aui-icon-small aui-iconfont-more" aria-label="更多选项"></span>
+                                
+            </span>
+        </a>         <div id="action-menu" class="aui-dropdown2 aui-style-default" aria-hidden="true">
+                            <div class="aui-dropdown2-section">
+                    <ul id="action-menu-primary" class="section-primary first">
+                                                    <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="view-attachments-link" href="javascript:;" rel="nofollow" class="action-view-attachments" accesskey="t" title="查看附件">
+                        <span>
+                                <u>t</u>附件(0)
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="action-view-history-link" href="javascript:;" rel="nofollow" class="action-view-history" title="">
+                        <span>
+                                页面历史
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="who-can-view-button-ak-button" href="confluence.html" rel="nofollow" class="who-can-view-link" title="">
+                        <span>
+                                可以查看的人
+            </span>        </a>
+    </li>
+                                        </ul>
+                </div>
+                            <div class="aui-dropdown2-section">
+                    <ul id="action-menu-secondary" class="section-secondary">
+                                                    <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="view-resolved-comments" href="confluence.html" rel="nofollow" class="" title="">
+                        <span>
+                                已解决评论
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="view-page-info-link" href="javascript:;" rel="nofollow" class="action-view-info" title="">
+                        <span>
+                                页面信息
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="view-in-hierarchy-link" href="reorderpages-ww_14153.html#selectedPageInHierarchy" rel="nofollow" class="" title="">
+                        <span>
+                                以层级方式查看
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="action-view-source-link" href="viewpagesrc-14153.html" rel="nofollow" class="action-view-source popup-link" title="">
+                        <span>
+                                查看页面源代码
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="delete-all-comments-link-link" href="javascript:;" rel="nofollow" class="" title="">
+                        <span>
+                                Delete comments
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="action-export-pdf-link" href="javascript:;" rel="nofollow" class="" title="">
+                        <span>
+                                导出为PDF
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="com-k15t-confluence-scroll-epub-launcher" href="javascript:;" rel="nofollow" class="" title="">
+                        <span>
+                                Export to EPUB
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="action-export-word-link" href="javascript:;" rel="nofollow" class="action-export-word" title="">
+                        <span>
+                                导出为Word
+            </span>        </a>
+    </li>
+                                        </ul>
+                </div>
+                    </div>
+    </li>
+            </ul>
+    </div>
+
+            
+            <div id="title-heading" class="pagetitle with-breadcrumbs">
+                
+                                    <div id="breadcrumb-section">
+                        
+    
+    
+    <ol id="breadcrumbs">
+                                        
+                        
+        <li class="first">
+                        
+                            <span class=""><a href="pages-ww.html">页面</a></span>
+                                                                    </li></ol>
+
+
+                    </div>
+                
+                
+        <a href="#page-banner-end" class="assistive">跳到banner的尾部</a>
+<div id="page-banner-start" class="assistive"></div>
+
+                    
+            <div id="page-metadata-banner"><ul class="banner"><li id="system-content-items" class="noprint"><a href="" title="未限制" id="content-metadata-page-restrictions-hidden" class="hidden"></a></li><li class="page-metadata-item noprinthas-button" id="content-metadata-jira-wrapper"><a href="" title="" id="content-metadata-jira" class="aui-button aui-button-subtle content-metadata-jira tipsy-disabled hidden"><span>JIRA 链接</span></a></li></ul></div>
+            
+
+<a href="#page-banner-start" class="assistive">回到标题开始</a>
+<div id="page-banner-end" class="assistive"></div>
+    
+
+                <h1 id="title-text" class="with-breadcrumbs">
+                                                <a href="">Home</a>
+                                    </h1>
+            </div>
+        </div><!-- \#main-header -->
+        
+        
+
+        <div id="sidebar-container">
+                                                </div><!-- \#sidebar-container -->
+
+        
+    
+
+        
+
+
+
+
+            
+    
+
+                                
+    
+
+    
+    
+        
+    
+    
+                    
+    
+
+    
+
+    
+            
+        
+
+    
+    
+
+    
+            
+        
+
+
+
+    
+<div id="content" class="page view">
+    
+
+
+<div id="action-messages">
+                        </div>
+
+
+
+            <script type="text/x-template" title="searchResultsGrid">
+    <table class="aui">
+        <thead>
+            <tr class="header">
+                <th class="search-result-title">页面标题</th>
+                <th class="search-result-space">空间</th>
+                <th class="search-result-date">更新于</th>
+            </tr>
+        </thead>
+    </table>
+</script>
+<script type="text/x-template" title="searchResultsGridCount">
+    <p class="search-result-count">{0}</p>
+</script>
+<script type="text/x-template" title="searchResultsGridRow">
+    <tr class="search-result">
+        <td class="search-result-title"><a href="{1}" class="content-type-{2}"><span>{0}</span></a></td>
+        <td class="search-result-space"><a class="space" href="/confluence/display/{4}/" title="{3}">{3}</a></td>
+        <td class="search-result-date"><span class="date" title="{6}">{5}</span></td>
+    </tr>
+</script>
+        
+    
+            
+
+        
+                            
+    
+
+                    
+
+        
+        <a href="#page-metadata-end" class="assistive">转至元数据结尾</a>
+<div id="page-metadata-start" class="assistive"></div>
+
+    <div class="page-metadata">
+        <ul>
+            <li class="page-metadata-modification-info">
+                
+        
+    
+        
+    
+        
+            
+            由<span class='author'>     <span class="unknown-user">未知用户 (savaki)</span></span>创建, 最终由<span class='editor'>     <a href="~lukaszlenart.html" class="url fn">Lukasz Lenart</a></span>修改于 <a class='last-modified' title='查看变更' href='javascript:;'>十一月 11, 2019</a>
+                </li>
+        </ul>
+    </div>
+
+
+<a href="#page-metadata-start" class="assistive">转至元数据起始</a>
+<div id="page-metadata-end" class="assistive"></div>
+
+        
+                                            
+        <div id="main-content" class="wiki-content">
+                           
+        <div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p>This Wiki is just a source of Migration Guide - mostly Version Notes of new releases, and our Security Bulletins.</p></div></div><p>Apache Struts 2 is an elegant, extensible framework for building enterprise-ready Java web applications. <a href="downloads.html" class="external-link" rel="nofollow">Distributions of Struts 2</a> are available as a free download under the Apache License.</p><ul><li>For more about the Apache Struts project itself, visit the <a href="index2.html" class="external-link" rel="nofollow">project web site</a>.</li><li><strong>Quickstart</strong> with <a href="index3.html" class="external-link" rel="nofollow">Struts 2 Maven Archetypes</a>.</li><li>Struts 2 is extended using <a href="index4.html" class="external-link" rel="nofollow">Plugins</a>. A list of available plugins is available at the <a href="javascript:;">Struts 2 Plugin Registry</a>.</li><li>Tired of XML-based configurations, or need some extra agility? Try the <a href="index5.html" class="external-link" rel="nofollow">Convention Plugin</a> or its RESTful cousin, the <a href="index6.html" class="external-link" rel="nofollow">REST Plugin</a>.</li><li>Interested in books, articles, and presentations about Struts? Check out some <a href="otherresources.html">Other Resources</a>.</li><li>For other community-supported Struts resources, visit the <a href="javascript:;" class="external-link" rel="nofollow">Struts 2 Wiki</a>.</li></ul><p>The documentation is grouped into four areas.</p><div class="table-wrap"><table class="wrapped confluenceTable"><colgroup><col><col></colgroup><tbody><tr><th class="confluenceTh"><p><a href="javascript:;">Migration Guide</a></p></th><td class="confluenceTd"><p>Getting here from there.</p></td></tr><tr><th class="confluenceTh"><p><a href="SecurityBulletins.html">Security Bulletins</a></p></th><td class="confluenceTd"><p>Our security bulletins explain any security issues and their solutions</p></td></tr><tr><th colspan="1" class="confluenceTh"><a href="olddocumentation.html">Old Documentation</a></th><td colspan="1" class="confluenceTd">Previous version of our documentation, mostly outdated!</td></tr></tbody></table></div><h2 id="Home-CommunityWiki">Community Wiki</h2><p>The <a href="javascript:;">Struts 2 Community Wiki</a> is an additional resource. It is not distributed with Struts 2, and contributions to the community wiki do not require a CLA.</p><h2 id="Home-QuickLinks">Quick Links</h2><ul><li><a href="index2.html" class="external-link" rel="nofollow">Apache Struts Home</a></li><li><a href="downloads.html" class="external-link" rel="nofollow">Distributions</a></li><li><a href="javascript:;" class="external-link" rel="nofollow">Project FAQ</a></li><li><a href="mail.html" class="external-link" rel="nofollow">Mailing lists</a></li><li><a href="ww.html" class="external-link" rel="nofollow">Issue Tracking (JIRA)</a></li><li><a href="" rel="nofollow">Struts 2 Wiki space</a></li></ul>
+
+                
+        
+    
+        </div>
+
+                        
+    
+
+
+
+<div id="labels-section" class="pageSection group">
+    <div class="labels-section-content content-column" entityid="14153" entitytype="page">
+	<div class="labels-content">
+		
+    <ul class="label-list label-list-right ">
+                    
+        <li class="aui-label " data-label-id="341"><a class="aui-label-split-main" href="struts2.html" rel="tag">struts2</a></li><li class="aui-label " data-label-id="28213323"><a class="aui-label-split-main" href="javascript:;" rel="tag">wiki</a></li><li class="aui-label " data-label-id="621"><a class="aui-label-split-main" href="javascript:;" rel="tag">documentation</a></li>
+            </ul>
+
+    </div>
+</div>
+</div>
+        
+		
+            
+
+
+
+
+            
+        
+
+
+
+
+
+
+
+
+                        
+    
+<div id="comments-section" class="pageSection group">
+        
+    
+
+
+
+</div>
+        
+
+
+                
+    
+            
+</div>
+
+    
+
+    
+
+
+
+
+    
+    
+
+    
+    
+    
+
+
+    
+<div id="space-tools-web-items" class="hidden">
+                <div data-label="概览" data-href="/confluence/spaces/viewspacesummary.action?key=WW">概览</div>
+            <div data-label="内容工具" data-href="/confluence/pages/reorderpages.action?key=WW">内容工具</div>
+            <div data-label="应用" data-href="/confluence/spaces/snippeterrors.action?key=WW">应用</div>
+    </div>
+        
+
+
+
+            </div><!-- \#main -->
+            
+    
+    
+        
+            
+            
+
+<div id="footer" role="contentinfo">
+    <section class="footer-body">
+
+                                                            <p class="license license-opensource">
+                    本站点免费授予 Apache Software Foundation<b> Atlassian Confluence 开源项目授权</b>。<a href="javascript:;">今天开始评估 Confluence</a>。<br>
+                </p>
+                    
+        
+
+        <ul id="poweredby">
+            <li class="noprint">基于 <a href="javascript:;" class="hover-footer-link" rel="nofollow">Atlassian Confluence</a> <span id='footer-build-information'>7.5.0</span> 技术构建</li>
+            <li class="print-only">由 Atlassian 合流7.5.0 打印</li>
+            <li class="noprint"><a href="javascript:;" class="hover-footer-link" rel="nofollow">报告缺陷</a></li>
+            <li class="noprint"><a href="javascript:;" class="hover-footer-link" rel="nofollow">Atlassian 新闻</a></li>
+        </ul>
+
+        
+
+        <div id="footer-logo"><a href="javascript:;" rel="nofollow">Atlassian</a></div>
+
+                    
+        
+    </section>
+</div>
+
+    
+</div>
+
+</div><!-- \#full-height-container -->
+</div><!-- \#page -->
+
+    <span style="display:none;" id="confluence-server-performance">{"serverDuration": 98, "requestCorrelationId": "5f6964d9293dd41b"}</span>
+</body>
+</html>
+    

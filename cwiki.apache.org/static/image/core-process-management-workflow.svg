@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="636px" height="192px" viewBox="0 0 636 192" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Business _ Process Management Horizontal Copy_nobg_aligntop_fitted</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Business-_-Process-Management-Horizontal-Copy" sketch:type="MSArtboardGroup">
+            <g id="Status-(Flex)" sketch:type="MSLayerGroup" transform="translate(0.000000, 80.000000)">
+                <rect id="BG" fill="#3572B0" sketch:type="MSShapeGroup" x="0" y="0" width="63" height="30" rx="5"></rect>
+                <text id="7:10:7:10" sketch:type="MSTextLayer" font-family="Arial" font-size="14" font-weight="bold" sketch:alignment="middle" fill="#FFFFFF">
+                    <tspan x="11.6621094" y="20">OPEN</tspan>
+                </text>
+            </g>
+            <g id="Status-(Flex)-Copy-2" sketch:type="MSLayerGroup" transform="translate(107.000000, 4.000000)">
+                <rect id="BG" fill="#14892C" sketch:type="MSShapeGroup" x="0" y="0" width="107" height="30" rx="5"></rect>
+                <text id="7:10:7:10" sketch:type="MSTextLayer" font-family="Arial" font-size="14" font-weight="bold" sketch:alignment="middle" fill="#FFFFFF">
+                    <tspan x="10.3344727" y="20">CANCELLED</tspan>
+                </text>
+            </g>
+            <g id="Status-(Flex)-Copy-5" sketch:type="MSLayerGroup" transform="translate(425.000000, 80.000000)">
+                <rect id="BG" fill="#14892C" sketch:type="MSShapeGroup" x="0" y="0" width="99" height="30" rx="5"></rect>
+                <text id="7:10:7:10" sketch:type="MSTextLayer" font-family="Arial" font-size="14" font-weight="bold" sketch:alignment="middle" fill="#FFFFFF">
+                    <tspan x="10.2138672" y="20">APPROVED</tspan>
+                </text>
+            </g>
+            <g id="Status-(Flex)-Copy-7" sketch:type="MSLayerGroup" transform="translate(564.000000, 80.000000)">
+                <rect id="BG" fill="#14892C" sketch:type="MSShapeGroup" x="0" y="0" width="61" height="30" rx="5"></rect>
+                <text id="7:10:7:10" sketch:type="MSTextLayer" font-family="Arial" font-size="14" font-weight="bold" sketch:alignment="middle" fill="#FFFFFF">
+                    <tspan x="10.2758789" y="20">DONE</tspan>
+                </text>
+            </g>
+            <g id="Status-(Flex)-Copy-6" sketch:type="MSLayerGroup" transform="translate(274.000000, 156.000000)">
+                <rect id="BG" fill="#14892C" sketch:type="MSShapeGroup" x="0" y="0" width="95" height="30" rx="5"></rect>
+                <text id="7:10:7:10" sketch:type="MSTextLayer" font-family="Arial" font-size="14" font-weight="bold" sketch:alignment="middle" fill="#FFFFFF">
+                    <tspan x="10.1586914" y="20">REJECTED</tspan>
+                </text>
+            </g>
+            <path d="M68,96 L91.5,96" id="Transition-path" stroke="#CCCCCC" stroke-width="3" sketch:type="MSShapeGroup"></path>
+            <path id="Transition-path-decoration-1" d="M91.5,96 L80.7,93 L80.7,99 L91.5,96 Z" stroke="#CCCCCC" stroke-width="3"></path>
+            <path d="M158.5,75 L158.5,44.5" id="Transition-path-Copy-4" stroke="#CCCCCC" stroke-width="3" sketch:type="MSShapeGroup"></path>
+            <path id="Transition-path-Copy-4-decoration-1" d="M158.5,44.5 L155.5,55.3 L161.5,55.3 L158.5,44.5 Z" stroke="#CCCCCC" stroke-width="3"></path>
+            <path d="M224,96 L247.5,96" id="Transition-path-Copy" stroke="#CCCCCC" stroke-width="3" sketch:type="MSShapeGroup"></path>
+            <path id="Transition-path-Copy-decoration-1" d="M247.5,96 L236.7,93 L236.7,99 L247.5,96 Z" stroke="#CCCCCC" stroke-width="3"></path>
+            <path d="M391,96 L414.5,96" id="Transition-path-Copy-2" stroke="#CCCCCC" stroke-width="3" sketch:type="MSShapeGroup"></path>
+            <path id="Transition-path-Copy-2-decoration-1" d="M414.5,96 L403.7,93 L403.7,99 L414.5,96 Z" stroke="#CCCCCC" stroke-width="3"></path>
+            <path d="M529,96 L552.5,96" id="Transition-path-Copy-3" stroke="#CCCCCC" stroke-width="3" sketch:type="MSShapeGroup"></path>
+            <path id="Transition-path-Copy-3-decoration-1" d="M552.5,96 L541.7,93 L541.7,99 L552.5,96 Z" stroke="#CCCCCC" stroke-width="3"></path>
+            <g id="Status-(Flex)-Copy-3" sketch:type="MSLayerGroup" transform="translate(101.000000, 80.000000)">
+                <rect id="BG" fill="#F6C342" sketch:type="MSShapeGroup" x="0" y="0" width="118" height="30" rx="5"></rect>
+                <text id="7:10:7:10" sketch:type="MSTextLayer" font-family="Arial" font-size="14" font-weight="bold" sketch:alignment="middle" fill="#333333">
+                    <tspan x="10.3793945" y="20">IN PROGRESS</tspan>
+                </text>
+            </g>
+            <g id="Status-(Flex)-Copy-4" sketch:type="MSLayerGroup" transform="translate(257.000000, 80.000000)">
+                <rect id="BG" fill="#F6C342" sketch:type="MSShapeGroup" x="0" y="0" width="129" height="30" rx="5"></rect>
+                <text id="7:10:7:10" sketch:type="MSTextLayer" font-family="Arial" font-size="14" font-weight="bold" sketch:alignment="middle" fill="#333333">
+                    <tspan x="10.0517578" y="20">UNDER REVIEW</tspan>
+                </text>
+            </g>
+            <path d="M101.285253,18.8951231 L38.7511805,18.8951231 C35.4423518,18.8951231 32.7600162,21.587308 32.7600162,24.8854561 L32.7600162,68.9689218" id="Path-24" stroke="#CCCCCC" stroke-width="3" sketch:type="MSShapeGroup"></path>
+            <path id="Path-24-decoration-1" d="M32.7600162,68.9689218 L35.7600162,58.1689218 L29.7600162,58.1689218 L32.7600162,68.9689218 Z" stroke="#CCCCCC" stroke-width="3"></path>
+            <path d="M268.718188,171.230325 L162.921458,171.230325 C159.613059,171.230325 156.931072,168.544679 156.931072,165.229754 L156.931072,121.278151" id="Path-34" stroke="#CCCCCC" stroke-width="3" sketch:type="MSShapeGroup"></path>
+            <path id="Path-34-decoration-1" d="M156.931072,121.278151 L153.931072,132.078151 L159.931072,132.078151 L156.931072,121.278151 Z" stroke="#CCCCCC" stroke-width="3"></path>
+            <path d="M321.864966,115.61018 L321.864966,145.77758" id="Path-34" stroke="#CCCCCC" stroke-width="3" sketch:type="MSShapeGroup"></path>
+            <path id="Path-34-decoration-1" d="M321.864966,145.77758 L324.864966,134.97758 L318.864966,134.97758 L321.864966,145.77758 Z" stroke="#CCCCCC" stroke-width="3"></path>
+        </g>
+    </g>
+</svg>

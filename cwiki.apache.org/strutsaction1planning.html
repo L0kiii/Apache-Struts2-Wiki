@@ -1,0 +1,969 @@
+    
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+                            <title>StrutsAction1Planning - Apache Struts 2 Wiki - Apache Software Foundation</title>
+    
+        
+
+                        
+    
+                        
+    
+
+                
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=IE7">
+<meta charset="UTF-8">
+<meta id="confluence-context-path" name="confluence-context-path" content="/confluence">
+<meta id="confluence-base-url" name="confluence-base-url" content="https://cwiki.apache.org/confluence">
+
+    <meta id="atlassian-token" name="atlassian-token" content="8f59a23e1d6cf4c7266da1b814a1b4676861594b">
+
+
+<meta id="confluence-space-key" name="confluence-space-key" content="WW">
+<script type="text/javascript">
+        var contextPath = '/confluence';
+</script>
+
+    
+
+    <meta name="confluence-request-time" content="1595840006468">
+        
+    
+        
+            <meta name="ajs-use-keyboard-shortcuts" content="true">
+            <meta name="ajs-is-confluence-admin" content="false">
+            <meta name="ajs-connection-timeout" content="10000">
+            <script type="text/x-template" title="gliffy-webpanel-footer">
+        <div class="gliffy-webpanel-footer"><span>This Confluence installation runs a Free Gliffy License - Evaluate the <a href="http://www.gliffy.com/products/confluence-plugin/">Gliffy Confluence Plugin</a> for your Wiki!</span></div>
+</script>
+
+
+            <style>.ia-fixed-sidebar, .ia-splitter-left {width: 285px;}.theme-default .ia-splitter #main {margin-left: 285px;}.ia-fixed-sidebar {visibility: hidden;}</style>
+            <meta name="ajs-discovered-plugin-features" content="$discoveredList">
+            <meta name="ajs-keyboardshortcut-hash" content="244b3b2851a4a758ccc0304672ffd8c1">
+            
+    
+    
+            <meta name="ajs-page-title" content="StrutsAction1Planning">
+            <meta name="ajs-latest-published-page-title" content="StrutsAction1Planning">
+            <meta name="ajs-space-name" content="Apache Struts 2 Wiki">
+            <meta name="ajs-page-id" content="120724317">
+            <meta name="ajs-latest-page-id" content="120724317">
+            <meta name="ajs-content-type" content="page">
+            <meta name="ajs-parent-page-title" content="Home">
+            <meta name="ajs-parent-page-id" content="14153">
+            <meta name="ajs-space-key" content="WW">
+            <meta name="ajs-max-number-editors" content="12">
+            <meta name="ajs-macro-placeholder-timeout" content="5000">
+            <meta name="ajs-jira-metadata-count" content="-1">
+            <meta name="ajs-from-page-title" content="">
+            <meta name="ajs-can-remove-page" content="false">
+            <meta name="ajs-can-remove-page-hierarchy" content="false">
+            <meta name="ajs-browse-page-tree-mode" content="view">
+            <meta name="ajs-shared-drafts" content="true">
+            <meta name="ajs-context-path" content="/confluence">
+            <meta name="ajs-base-url" content="https://cwiki.apache.org/confluence">
+            <meta name="ajs-version-number" content="7.5.0">
+            <meta name="ajs-build-number" content="8501">
+            <meta name="ajs-remote-user" content="">
+            <meta name="ajs-remote-user-key" content="">
+            <meta name="ajs-remote-user-has-licensed-access" content="false">
+            <meta name="ajs-remote-user-has-browse-users-permission" content="false">
+            <meta name="ajs-current-user-fullname" content="">
+            <meta name="ajs-current-user-avatar-url" content="">
+            <meta name="ajs-current-user-avatar-uri-reference" content="/confluence/images/icons/profilepics/anonymous.svg">
+            <meta name="ajs-static-resource-url-prefix" content="/confluence/s/962fig/8501/fded9f91818631c3677be93247bf5ae6723a1c8d/_">
+            <meta name="ajs-global-settings-attachment-max-size" content="20971520">
+            <meta name="ajs-global-settings-quick-search-enabled" content="true">
+            <meta name="ajs-user-locale" content="zh_CN">
+            <meta name="ajs-enabled-dark-features" content="site-wide.shared-drafts,site-wide.synchrony,clc.quick.create,confluence.view.edit.transition,cql.search.screen,confluence-inline-comments-resolved,http.session.registrar,frontend.editor.v4,nps.survey.inline.dialog,confluence.efi.onboarding.new.templates,frontend.editor.v4.compatibility,atlassian.cdn.static.assets,pdf-preview,previews.sharing,previews.versions,file-annotations,collaborative-audit-log,confluence.efi.onboarding.rich.space.content,previews.conversion-service,editor.ajax.save,graphql,read.only.mode,previews.trigger-all-file-types,lucene.caching.filter,attachment.extracted.text.extractor,confluence.table.resizable,notification.batch,previews.sharing.pushstate,confluence-inline-comments-rich-editor,site-wide.synchrony.opt-in,file-annotations.likes,gatekeeper-ui-v2,v2.content.name.searcher,mobile.supported.version,pulp,confluence-inline-comments,quick-reload-inline-comments-flags,confluence-inline-comments-dangling-comment">
+            <meta name="ajs-atl-token" content="8f59a23e1d6cf4c7266da1b814a1b4676861594b">
+            <meta name="ajs-confluence-flavour" content="VANILLA">
+            <meta name="ajs-user-date-pattern" content="yyyy-M-d">
+            <meta name="ajs-access-mode" content="READ_WRITE">
+            <meta name="ajs-render-mode" content="READ_WRITE">
+            <meta name="ajs-date.format" content="MMM dd, yyyy">
+    
+    
+    
+
+<link rel="search" type="application/opensearchdescription+xml" href="/confluence/opensearch/osd.action" title="Apache Software Foundation">
+    
+                    
+            <meta name="ajs-create-issue-metadata-show-discovery" content="false">
+            
+
+    <script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-plugin:context-path.context-path"]="\u0022\u005C/confluence\u0022";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-feature-discovery-plugin:confluence-feature-discovery-plugin-resources.test-mode"]="false";
+WRM._unparsedData["com.atlassian.confluence.plugins.synchrony-interop:synchrony-status-banner-loader.synchrony-status"]="false";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:policy-update-init.policy-update-data-provider"]="false";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:programmatic-analytics-init.programmatic-analytics-data-provider"]="false";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.applinks-help-paths"]="{\u0022entries\u0022:{\u0022applinks.docs.root\u0022:\u0022https://confluence.atlassian.com/display/APPLINKS-060/\u0022,\u0022applinks.docs.diagnostics.troubleshoot.sslunmatched\u0022:\u0022SSL+and+application+link+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthsignatureinvalid\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthtimestamprefused\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.delete.entity.link\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.adding.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.administration.guide\u0022:\u0022Application+Links+Documentation\u0022,\u0022applinks.docs.oauth.security\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.troubleshoot.application.links\u0022:\u0022Troubleshoot+application+links\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unknownerror\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.trusted.apps\u0022:\u0022Configuring+Trusted+Applications+authentication+for+an+application+link\u0022,\u0022applinks.docs.diagnostics.troubleshoot.authlevelunsupported\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.ssluntrusted\u0022:\u0022SSL+and+application+link+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unknownhost\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.delete.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.link.applications\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthproblem\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.migration\u0022:\u0022Update+application+links+to+use+OAuth\u0022,\u0022applinks.docs.relocate.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.administering.entity.links\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.upgrade.application.link\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.diagnostics.troubleshoot.connectionrefused\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.oauth\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.insufficient.remote.permission\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.configuring.application.link.auth\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.diagnostics\u0022:\u0022Application+links+diagnostics\u0022,\u0022applinks.docs.configured.authentication.types\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.adding.entity.link\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unexpectedresponse\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.basic\u0022:\u0022Configuring+Basic+HTTP+Authentication+for+an+Application+Link\u0022,\u0022applinks.docs.diagnostics.troubleshoot.authlevelmismatch\u0022:\u0022OAuth+troubleshooting+guide\u0022}}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.applinks-types"]="{\u0022crowd\u0022:\u0022\u4eba\u7fa4\u0022,\u0022confluence\u0022:\u0022Confluence\u0022,\u0022fecru\u0022:\u0022Fisheye / Crucible\u0022,\u0022stash\u0022:\u0022\u6682\u5b58\u0022,\u0022jira\u0022:\u0022Jira\u0022,\u0022refapp\u0022:\u0022\u76f8\u5173\u5e94\u7528\u7a0b\u5e8f\u0022,\u0022bamboo\u0022:\u0022\u7af9\u0022,\u0022generic\u0022:\u0022\u901a\u7528\u5e94\u7528\u7a0b\u5e8f\u0022}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.entity-types"]="{\u0022singular\u0022:{\u0022refapp.charlie\u0022:\u0022Charlie\u0022,\u0022fecru.project\u0022:\u0022Crucible\u9879\u76ee\u0022,\u0022fecru.repository\u0022:\u0022FishEye \u4ed3\u5e93\u0022,\u0022stash.project\u0022:\u0022Stash \u9879\u76ee\u0022,\u0022generic.entity\u0022:\u0022\u901a\u7528\u9879\u76ee\u0022,\u0022confluence.space\u0022:\u0022Confluence\u7a7a\u95f4\u0022,\u0022bamboo.project\u0022:\u0022Bamboo\u9879\u76ee\u0022,\u0022jira.project\u0022:\u0022Jira \u9879\u76ee\u0022},\u0022plural\u0022:{\u0022refapp.charlie\u0022:\u0022\u67e5\u7406\u65af\u0022,\u0022fecru.project\u0022:\u0022Crucible\u9879\u76ee\u0022,\u0022fecru.repository\u0022:\u0022FishEye \u4ed3\u5e93\u96c6\u0022,\u0022stash.project\u0022:\u0022Stash\u9879\u76ee\u0022,\u0022generic.entity\u0022:\u0022\u901a\u7528\u9879\u76ee\u0022,\u0022confluence.space\u0022:\u0022Confluence\u7a7a\u95f4\u0022,\u0022bamboo.project\u0022:\u0022Bamboo\u9879\u76ee\u0022,\u0022jira.project\u0022:\u0022Jira \u9879\u76ee\u0022}}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.authentication-types"]="{\u0022com.atlassian.applinks.api.auth.types.BasicAuthenticationProvider\u0022:\u0022\u57fa\u672c\u8bbf\u95ee\u0022,\u0022com.atlassian.applinks.api.auth.types.TrustedAppsAuthenticationProvider\u0022:\u0022\u4fe1\u4efb\u7684\u5e94\u7528\u65e0\u6548\u0022,\u0022com.atlassian.applinks.api.auth.types.CorsAuthenticationProvider\u0022:\u0022\u6b4c\u73e5\u0022,\u0022com.atlassian.applinks.api.auth.types.OAuthAuthenticationProvider\u0022:\u0022Oauth\u0022,\u0022com.atlassian.applinks.api.auth.types.TwoLeggedOAuthAuthenticationProvider\u0022:\u0022Oauth\u0022,\u0022com.atlassian.applinks.api.auth.types.TwoLeggedOAuthWithImpersonationAuthenticationProvider\u0022:\u0022Oauth\u0022}";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-license-banner:confluence-license-banner-resources.license-details"]="{\u0022daysBeforeLicenseExpiry\u0022:0,\u0022daysBeforeMaintenanceExpiry\u0022:0,\u0022showLicenseExpiryBanner\u0022:false,\u0022showMaintenanceExpiryBanner\u0022:false,\u0022renewUrl\u0022:null,\u0022salesUrl\u0022:null}";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-search-ui-plugin:confluence-search-ui-plugin-resources.i18n-data"]="{\u0022search.ui.recent.link.text\u0022:\u0022\u67e5\u770b\u66f4\u591a\u6700\u8fd1\u8bbf\u95ee\u0022,\u0022search.ui.filter.space.category.input.label\u0022:\u0022\u67e5\u627e\u7a7a\u95f4\u7c7b\u522b\u2026\u2026\u0022,\u0022search.ui.filter.clear.selected\u0022:\u0022\u6e05\u9664\u6240\u9009\u9879\u76ee\u0022,\u0022search.ui.search.results.empty\u0022:\u0022\u6211\u4eec\u627e\u4e0d\u5230\u4efb\u4f55\u5339\u914d\u201c{0}\u201d\u7684\u5185\u5bb9\u3002\u0022,\u0022search.ui.content.name.search.items.panel.load.all.top.items.button.text\u0022:\u0022\u663e\u793a\u66f4\u591a\u5e94\u7528\u7ed3\u679c......\u0022,\u0022search.ui.filter.space.archive.label\u0022:\u0022\u641c\u7d22\u5df2\u7ecf\u5f52\u6863\u7684\u7a7a\u95f4\u0022,\u0022search.ui.filter.label\u0022:\u0022\u7b5b\u9009\u5668\u0022,\u0022search.ui.filter.contributor.button.text\u0022:\u0022\u8d21\u732e\u8005\u0022,\u0022search.ui.filter.date.all.text\u0022:\u0022\u968f\u65f6\u0022,\u0022search.ui.filter.space.current.label\u0022:\u0022\u5f53\u524d\u0022,\u0022search.ui.clear.input.button.text\u0022:\u0022\u6e05\u9664\u6587\u672c\u0022,\u0022help.search.ui.link.title\u0022:\u0022\u641c\u7d22\u6280\u5de7\u0022,\u0022search.ui.search.results.clear.button\u0022:\u0022\u6e05\u7a7a\u7b5b\u9009\u5668\u3002\u0022,\u0022search.ui.filter.date.hour.text\u0022:\u0022\u8fc7\u53bb\u4e00\u5929\u0022,\u0022search.ui.filters.heading\u0022:\u0022\u7b5b\u9009\u65b9\u5f0f\u0022,\u0022search.ui.filter.label.input.label\u0022:\u0022\u67e5\u627e\u6807\u7b7e\u2026\u2026\u0022,\u0022search.ui.filter.date.month.text\u0022:\u0022\u8fc7\u53bb\u4e00\u4e2a\u6708\u0022,\u0022search.ui.recent.items.anonymous\u0022:\u0022\u5f00\u59cb\u63a2\u7d22\u3002 \u60a8\u7684\u641c\u7d22\u7ed3\u679c\u5c06\u663e\u793a\u5728\u6b64\u5904\u3002\u0022,\u0022search.ui.input.label\u0022:\u0022\u641c\u7d22\u0022,\u0022search.ui.search.result\u0022:\u0022{0,choice,1#{0}\u4e2a\u641c\u7d22\u7ed3\u679c|1\u005Cu003c{0}\u4e2a\u641c\u7d22\u7ed3\u679c}\u0022,\u0022search.ui.infinite.scroll.button.text\u0022:\u0022\u66f4\u591a\u7ed3\u679c\u0022,\u0022search.ui.filter.date.button.text\u0022:\u0022\u65e5\u671f\u0022,\u0022search.ui.filter.date.week.text\u0022:\u0022\u8fc7\u53bb\u4e00\u5468\u0022,\u0022search.ui.filter.label.button.text\u0022:\u0022\u6807\u7b7e\u0022,\u0022search.ui.input.alert\u0022:\u0022\u6309\u56de\u8f66\u952e(Enter)\u641c\u7d22\u0022,\u0022search.ui.filter.no.result.text\u0022:\u0022\u6211\u4eec\u627e\u4e0d\u5230\u4efb\u4f55\u7b26\u5408\u60a8\u641c\u7d22\u6761\u4ef6\u7684\u5185\u5bb9\u0022,\u0022search.ui.result.subtitle.calendar\u0022:\u0022\u56e2\u961f\u65e5\u7a0b\u8868\u0022,\u0022search.ui.filter.date.heading\u0022:\u0022\u4e0a\u6b21\u4fee\u6539\u0022,\u0022search.ui.result.subtitle.user\u0022:\u0022\u7528\u6237\u8d44\u6599\u0022,\u0022search.ui.filter.contributor.input.label\u0022:\u0022\u67e5\u627e\u4eba\u5458\u2026\u2026\u0022,\u0022search.ui.filter.content.type.button.text\u0022:\u0022\u7c7b\u578b\u0022,\u0022search.ui.filter.space.input.label\u0022:\u0022\u67e5\u627e\u7a7a\u95f4\u0022,\u0022search.ui.filter.date.year.text\u0022:\u0022\u8fc7\u53bb\u4e00\u5e74\u0022,\u0022search.ui.filter.space.button.text\u0022:\u0022\u7a7a\u95f4\u0022,\u0022search.ui.advanced.search.link.text\u0022:\u0022\u9ad8\u7ea7\u641c\u7d22\u0022,\u0022search.ui.generic.error\u0022:\u0022\u51fa\u9519\u4e86\u3002\u5237\u65b0\u9875\u9762\uff0c\u6216\u8005\u5982\u679c\u6301\u7eed\u53d1\u751f\u8fd9\u79cd\u60c5\u51b5\uff0c\u8bf7\u8054\u7cfb\u60a8\u7684\u7ba1\u7406\u5458\u3002\u0022,\u0022search.ui.recent.spaces\u0022:\u0022\u6700\u8fd1\u7a7a\u95f4\u0022,\u0022search.ui.search.results.clear.line2\u0022:\u0022\u8bf7\u5c1d\u8bd5\u4e0d\u540c\u7684\u641c\u7d22\u5173\u952e\u5b57\u6216\u8005\u0022,\u0022search.ui.filter.space.category.button.text\u0022:\u0022\u7a7a\u95f4\u7c7b\u522b\u0022,\u0022search.ui.search.results.clear.line1\u0022:\u0022\u627e\u4e0d\u5230\u5339\u914d\u7684\u641c\u7d22\u7ed3\u679c\u0022,\u0022search.ui.content.name.search.items.panel.load.all.top.items.admin.button.text\u0022:\u0022\u663e\u793a\u66f4\u591a\u8bbe\u7f6e\u548c\u5e94\u7528\u7ed3\u679c...\u0022,\u0022search.ui.recent.pages\u0022:\u0022\u6700\u8fd1\u8bbf\u95ee\u0022,\u0022search.ui.search.result.anonymous\u0022:\u0022{0,choice,1#{0}\u4e2a\u641c\u7d22\u7ed3\u679c| 1 \u005Cu003c{0}\u4e2a\u641c\u7d22\u7ed3\u679c}\u3002 \u60a8\u6709\u5e10\u6237\u5417\uff1f{1}\u767b\u5f55{2}\u641c\u7d22\u66f4\u591a\u7ed3\u679c\u3002\u0022,\u0022search.ui.recent.items.empty\u0022:\u0022\u5f00\u59cb\u63a2\u7d22\u3002 \u60a8\u6700\u8fd1\u8bbf\u95ee\u8fc7\u7684\u9875\u9762\u548c\u7a7a\u95f4\u5c06\u663e\u793a\u5728\u6b64\u5904\u3002\u0022,\u0022search.ui.result.subtitle.space\u0022:\u0022\u7a7a\u95f4\u0022,\u0022search.ui.filter.space.init.heading\u0022:\u0022\u6700\u8fd1\u7a7a\u95f4\u0022}";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script>
+<link type="text/css" rel="stylesheet" href="static/css/batch.css" data-wrm-key="_super" data-wrm-batch-type="context" media="all">
+<link type="text/css" rel="stylesheet" href="static/css/batch-true_true_true.css" data-wrm-key="atl.confluence.plugins.pagetree-desktop,main,viewcontent,atl.general,page,atl.comments,-_super" data-wrm-batch-type="context" media="all">
+<script type="text/javascript" src="static/js/batch-zh-CN.js" data-wrm-key="_super" data-wrm-batch-type="context" data-initially-rendered=""></script>
+<script type="text/javascript" src="static/js/batch-true_true_true_zh-CN.js" data-wrm-key="atl.confluence.plugins.pagetree-desktop,main,viewcontent,atl.general,page,atl.comments,-_super" data-wrm-batch-type="context" data-initially-rendered=""></script>
+
+    
+
+        
+    
+
+        
+        <meta name="ajs-site-title" content="Apache Software Foundation">
+            
+    
+
+    
+                <link rel="canonical" href="">
+        <link rel="shortlink" href="https://cwiki.apache.org/confluence/x/XRsyBw">
+    <meta name="wikilink" content="[WW:StrutsAction1Planning]">
+    <meta name="page-version" content="38">
+    <meta name="ajs-page-version" content="38">
+
+</head>
+
+    
+<body id="com-atlassian-confluence" class="theme-default  aui-layout aui-theme-default">
+
+        
+            <div id='stp-licenseStatus-banner'></div>
+    <ul id="assistive-skip-links" class="assistive">
+    <li><a href="#title-heading">转至内容</a></li>
+    <li><a href="#breadcrumbs">转至导航栏</a></li>
+    <li><a href="#header-menu-bar">转至主菜单</a></li>
+    <li><a href="#navigation">转至动作菜单</a></li>
+    <li><a href="#quick-search-query">转至快速搜索</a></li>
+</ul>
+<div id="page">
+<div id="full-height-container">
+    <div id="header-precursor">
+        <div class="cell">
+            
+                            </div>
+    </div>
+        
+
+
+
+
+
+<header id="header" role="banner">
+    <nav class="aui-header aui-dropdown2-trigger-group" role="navigation"><div class="aui-header-inner"><div class="aui-header-before"><a class=" aui-dropdown2-trigger app-switcher-trigger" aria-controls="app-switcher" aria-haspopup="true" role="button" tabindex="0" data-aui-trigger="" href="#app-switcher"><span class="aui-icon aui-icon-small aui-iconfont-appswitcher">已链接应用程序</span></a><div id="app-switcher" class="aui-dropdown2 aui-style-default" role="menu" aria-hidden="true" data-is-switcher="true" data-environment="{&quot;isUserAdmin&quot;:false,&quot;isAppSuggestionAvailable&quot;:false,&quot;isSiteAdminUser&quot;:false}"><div role="application"><div class="app-switcher-loading">正在上传和乱码；</div></div></div></div><div class="aui-header-primary"><h1 id="logo" class="aui-header-logo aui-header-logo-confluence"><a href="index.html"><span class="aui-header-logo-device">Apache Software Foundation</span></a></h1><ul class="aui-nav">
+                            <li>
+            
+        
+        
+<a id="space-directory-link" href="view.html" class=" aui-nav-imagelink" title="空间">
+            <span>空间</span>
+    </a>
+        </li>
+                                <li class="aui-buttons">
+            </li>
+</ul>
+</div><div class="aui-header-secondary"><ul class="aui-nav">
+                        <li>
+        <div id="search-ui" class="aui-quicksearch dont-default-focus header-quicksearch"><input id="quick-search-query" aria-label="搜索" placeholder="搜索" type="text"><div id="quick-search-alert" role="alert">按回车键(Enter)搜索</div><aui-spinner size="small"></aui-spinner></div>
+    </li>
+        <li>
+            
+        <a id="help-menu-link" class="aui-nav-link aui-dropdown2-trigger aui-dropdown2-trigger-arrowless" href="#" aria-haspopup="true" aria-owns="help-menu-link-content" title="帮助">
+        <span class="aui-icon aui-icon-small aui-iconfont-question-filled">帮助</span>
+    </a>
+    <nav id="help-menu-link-content" class="aui-dropdown2 aui-style-default" aria-hidden="true">
+                    <div class="aui-dropdown2-section">
+                                <ul id="help-menu-link-leading" class="aui-list-truncate section-leading first">
+                                            <li>
+        
+            
+<a id="confluence-help-link" href="javascript:;" class="    " title="访问Confluence文档首页" target="_blank">
+        在线帮助
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="keyboard-shortcuts-link" href="confluence.html" class="    " title="查看可用的键盘快捷方式">
+        快捷键
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="feed-builder-link" href="configurerssfeed.html" class="    " title="创建个性化的 RSS源。">
+        RSS源建立器
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="whats-new-menu-link" href="javascript:;" class="    " title="">
+        新功能
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="gadget-directory-link" href="confluence.html" class="   user-item administration-link " title="浏览小工具">
+        可用的小工具
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="confluence-about-link" href="aboutconfluencepage.html" class="    " title="获取关于Confluence的更多信息">
+        关于Confluence
+</a>
+</li>
+                                    </ul>
+            </div>
+            </nav>
+    
+    </li>
+        <li>
+                
+    
+    </li>
+        <li>
+            
+    </li>
+        <li>
+                                            <li>
+        
+            
+<a id="login-link" href="javascript:;" class="   user-item login-link " title="">
+        登录
+</a>
+</li>
+                        <li>
+    
+            
+<a id="signup-link" href="signup.html" class="   user-item signup-link " title="">
+        注册
+</a>
+</li>
+                        
+    
+    </ul>
+</div></div><!-- .aui-header-inner--></nav><!-- .aui-header -->
+    <br class="clear">
+</header>
+    
+
+    
+    	<div class="ia-splitter">
+    		<div class="ia-splitter-left">
+    			<div class="ia-fixed-sidebar">
+                                            
+                            <div class="acs-side-bar ia-scrollable-section"><div class="acs-side-bar-space-info tipsy-enabled" data-configure-tooltip="编辑空间详情"><div class="avatar"><div class="space-logo" data-key="WW" data-name="Apache Struts 2 Wiki" data-entity-type="confluence.space"><div class="avatar-img-container"><div class="avatar-img-wrapper"><a href="home.html" title="Apache Struts 2 Wiki"><img class="avatar-img" src="static/picture/default-space-logo.svg" alt="Apache Struts 2 Wiki"></a></div></div></div></div><div class="space-information-container"><div class="name"><a href="home.html" title="Apache Struts 2 Wiki">Apache Struts 2 Wiki</a></div><div class="flyout-handle icon aui-icon aui-icon-small aui-iconfont-edit"></div></div></div><div class="acs-side-bar-content"><div class="acs-nav-wrapper"><div class="acs-nav" data-has-create-permission="false" data-quick-links-state="null" data-page-tree-state="null" data-nav-type="pages"><div class="acs-nav-sections"><div class="quick-links-wrapper"></div></div></div></div><div class="ia-secondary-container tipsy-enabled" data-tree-type="pages"><div class="ia-secondary-header"><h5 class="ia-secondary-header-title pages"><span class="label">子页面</span></h5></div><div class="ia-secondary-parent-content"><ul class="parent ia-secondary-header-title wiki"><li class="parent-item"><a class="parent-item-link" href="home.html" title="Home"><span class="icon"></span><span class="label">Home</span></a></li></ul></div><div class="ia-secondary-current-content"><ul class="ia-secondary-currentPage-title wiki current-item"><li><span class="icon"></span><span class="label">StrutsAction1Planning</span></li></ul></div><div class="ia-secondary-content"><div class="contextual-nav-child-pages"></div></div></div></div><div class="hidden"><a href="pages-ww.html" id="space-pages-link"></a><script type="text/x-template" title="logo-config-content"><h2>空间详情</h2><div class="personal-space-logo-hint">您的个人头像被作为您的个人空间的logo使用。<a href="/confluence/users/profile/editmyprofilepicture.action" target="_blank">更改您的个人头像</a>.</div></script></div></div><div class="space-tools-section"><div id="space-tools-menu-additional-items" class="hidden"><div data-label="浏览页面" data-class="" data-href="/confluence/pages/reorderpages.action?key=WW">浏览页面</div></div><button id="space-tools-menu-trigger" class=" aui-dropdown2-trigger aui-button aui-button-subtle tipsy-enabled aui-dropdown2-trigger-arrowless " aria-controls="space-tools-menu" aria-haspopup="true" role="button" data-aui-trigger=""><span class="aui-icon aui-icon-small aui-iconfont-configure">设置</span><span class="aui-button-label">空间管理</span><span class="aui-icon "></span></button><div id="space-tools-menu" class="aui-dropdown2 aui-style-default space-tools-dropdown" role="menu" aria-hidden="true" data-aui-alignment="top left"><div role="application"></div></div><a class="expand-collapse-trigger aui-icon aui-icon-small aui-iconfont-chevron-double-left"></a></div>
+                    
+                        			</div>
+    		</div>
+        <!-- \#header -->
+
+            
+    
+        <div id="main" class=" aui-page-panel">
+                        <div id="main-header">
+                        
+    <div id="navigation" class="content-navigation view">
+                    <ul class="ajs-menu-bar">
+                                            
+        <li class="normal ajs-menu-item">
+        <a id="action-menu-link" class="action aui-dropdown2-trigger-arrowless aui-button aui-button-subtle ajs-menu-title aui-dropdown2-trigger" href="#" aria-haspopup="true" aria-label="更多选项" aria-owns="action-menu" data-container="#navigation">
+            <span>
+                                    <span class="aui-icon aui-icon-small aui-iconfont-more" aria-label="更多选项"></span>
+                                
+            </span>
+        </a>         <div id="action-menu" class="aui-dropdown2 aui-style-default" aria-hidden="true">
+                            <div class="aui-dropdown2-section">
+                    <ul id="action-menu-primary" class="section-primary first">
+                                                    <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="view-attachments-link" href="javascript:;" rel="nofollow" class="action-view-attachments" accesskey="t" title="查看附件">
+                        <span>
+                                <u>t</u>附件(0)
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="action-view-history-link" href="javascript:;" rel="nofollow" class="action-view-history" title="">
+                        <span>
+                                页面历史
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="who-can-view-button-ak-button" href="confluence.html" rel="nofollow" class="who-can-view-link" title="">
+                        <span>
+                                可以查看的人
+            </span>        </a>
+    </li>
+                                        </ul>
+                </div>
+                            <div class="aui-dropdown2-section">
+                    <ul id="action-menu-secondary" class="section-secondary">
+                                                    <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="view-resolved-comments" href="confluence.html" rel="nofollow" class="" title="">
+                        <span>
+                                已解决评论
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="view-page-info-link" href="javascript:;" rel="nofollow" class="action-view-info" title="">
+                        <span>
+                                页面信息
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="view-in-hierarchy-link" href="javascript:;" rel="nofollow" class="" title="">
+                        <span>
+                                以层级方式查看
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="action-view-source-link" href="javascript:;" rel="nofollow" class="action-view-source popup-link" title="">
+                        <span>
+                                查看页面源代码
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="delete-all-comments-link-link" href="javascript:;" rel="nofollow" class="" title="">
+                        <span>
+                                Delete comments
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="action-export-pdf-link" href="javascript:;" rel="nofollow" class="" title="">
+                        <span>
+                                导出为PDF
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="com-k15t-confluence-scroll-epub-launcher" href="javascript:;" rel="nofollow" class="" title="">
+                        <span>
+                                Export to EPUB
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="action-export-word-link" href="javascript:;" rel="nofollow" class="action-export-word" title="">
+                        <span>
+                                导出为Word
+            </span>        </a>
+    </li>
+                                        </ul>
+                </div>
+                    </div>
+    </li>
+            </ul>
+    </div>
+
+            
+            <div id="title-heading" class="pagetitle with-breadcrumbs">
+                
+                                    <div id="breadcrumb-section">
+                        
+    
+    
+    <ol id="breadcrumbs">
+                                        
+                        
+        <li class="first">
+                        
+                            <span class=""><a href="pages-ww.html">页面</a></span>
+                                                                                    
+                        
+        <li>
+                        
+                            <span class=""><a href="home.html">Home</a></span>
+                                                                    </li></ol>
+
+
+                    </div>
+                
+                
+        <a href="#page-banner-end" class="assistive">跳到banner的尾部</a>
+<div id="page-banner-start" class="assistive"></div>
+
+                    
+            <div id="page-metadata-banner"><ul class="banner"><li id="system-content-items" class="noprint"><a href="" title="未限制" id="content-metadata-page-restrictions-hidden" class="hidden"></a></li><li class="page-metadata-item noprinthas-button" id="content-metadata-jira-wrapper"><a href="" title="" id="content-metadata-jira" class="aui-button aui-button-subtle content-metadata-jira tipsy-disabled hidden"><span>JIRA 链接</span></a></li></ul></div>
+            
+
+<a href="#page-banner-start" class="assistive">回到标题开始</a>
+<div id="page-banner-end" class="assistive"></div>
+    
+
+                <h1 id="title-text" class="with-breadcrumbs">
+                                                <a href="">StrutsAction1Planning</a>
+                                    </h1>
+            </div>
+        </div><!-- \#main-header -->
+        
+        
+
+        <div id="sidebar-container">
+                                                </div><!-- \#sidebar-container -->
+
+        
+    
+
+        
+
+
+
+
+            
+    
+
+                                
+    
+
+    
+    
+        
+    
+    
+                    
+    
+
+    
+
+    
+            
+        
+
+    
+    
+
+    
+            
+        
+
+
+
+    
+<div id="content" class="page view">
+    
+
+
+<div id="action-messages">
+                        </div>
+
+
+
+            <script type="text/x-template" title="searchResultsGrid">
+    <table class="aui">
+        <thead>
+            <tr class="header">
+                <th class="search-result-title">页面标题</th>
+                <th class="search-result-space">空间</th>
+                <th class="search-result-date">更新于</th>
+            </tr>
+        </thead>
+    </table>
+</script>
+<script type="text/x-template" title="searchResultsGridCount">
+    <p class="search-result-count">{0}</p>
+</script>
+<script type="text/x-template" title="searchResultsGridRow">
+    <tr class="search-result">
+        <td class="search-result-title"><a href="{1}" class="content-type-{2}"><span>{0}</span></a></td>
+        <td class="search-result-space"><a class="space" href="/confluence/display/{4}/" title="{3}">{3}</a></td>
+        <td class="search-result-date"><span class="date" title="{6}">{5}</span></td>
+    </tr>
+</script>
+        
+    
+            
+
+        
+                            
+    
+
+                    
+
+        
+        <a href="#page-metadata-end" class="assistive">转至元数据结尾</a>
+<div id="page-metadata-start" class="assistive"></div>
+
+    <div class="page-metadata">
+        <ul>
+            <li class="page-metadata-modification-info">
+                
+        
+    
+        
+    
+        
+            
+            由<span class='author'>     <a href="javascript:;" class="url fn">ASF Infrabot</a></span>创建, 最后修改于<a class='last-modified' title='查看变更' href='javascript:;'>七月 01, 2019</a>
+                </li>
+        </ul>
+    </div>
+
+
+<a href="#page-metadata-start" class="assistive">转至元数据起始</a>
+<div id="page-metadata-end" class="assistive"></div>
+
+        
+                                            
+        <div id="main-content" class="wiki-content">
+                           
+        <h1 id="StrutsAction1Planning-StrutsActionFramework1Planning">Struts Action Framework 1 Planning</h1>
+
+<p>This page collects ideas and discussion on what could be included in future releases of Struts Action 1.  This page is a whiteboard, meaning no one has committed to anything and therefore its purpose is to share information and brainstorm.</p>
+
+<h2 id="StrutsAction1Planning-1.3.xandbeyond">1.3.x and beyond</h2>
+
+<p>The 1.3.x series utilizes Struts Chain as the default request processor and adds an &quot;extends&quot; attribute to all the configuration elements (a la Tiles). We would also like to add a Ant-style properties file to make variable substitutions within the XML elements. The substitution feature is supported by Spring and iBATIS, among others. Substitutions are a useful way to configure applications and reduce redundancy.</p>
+
+<h2 id="StrutsAction1Planning-ExperimentalMembers">Experimental Members</h2>
+
+<p>To lay the groundwork for future changes, three &quot;experimental&quot; classes and interfaces are being added to the framework so that early adopters can experiment with using Struts Chain to develop applications. We do consider these members experimental, and they are subject to change, based on our experience using them with our own applications.</p>
+
+<p><strong>ActionCommand</strong> - A Chain Command-like interface with one method:</p>
+<div class="preformatted panel conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="noformat"><div class="preformattedContent panelContent">
+<pre>void execute(ActionContext context)
+</pre>
+</div></div>
+
+<p>Support for conventional Actions would stay in place, but as an alternative, a class could implement <a class="unresolved" href="#">ActionCommand</a> and unbind itself from the HTTP API.</p>
+
+<p><strong>ActionContext</strong> - A Chain Context that implements the logical Action class API.</p>
+
+<p>Existing code could be converted by changing references to context.* and so forth. The context could be constructed by the Request Processor, as an optional Command in the Chain, so that it could be exposed this through thread-local, opening the door for POJO actions that don't implement a particular interface.</p>
+
+<p><strong>ViewContext (pending)</strong> - A Chain Context that implements the logical &quot;Velocity Tools&quot; API.</p>
+
+<p>In a later release, when the new members stabilize, we could move the taglib dependencies from the servlet contexts to the ViewContext. View technologies could then look exclusively to the ViewContext rather than poke around in the various servlet contexts. (Of course, support for the original architecture would remain for some time, to give third party libraries the chance to migrate.)</p>
+
+<p>After having a chance to work with ActionContext and ViewContext ourselves, we could introduce more support for these members in a later release. But for 1.3.x, they could be marked &quot;experimental&quot;.</p>
+
+<p>The Commons Chain WebContext we now pass around Struts Chain could be called the &quot;StrutsContext&quot; to differentiate it from the ActionContext and ViewContext.</p>
+
+<p>(Are we now starting to call everything &quot;Context&quot; instead of &quot;Action&quot;? Not really. We use the &quot;Context&quot; suffix when a member extends Chain Context. This convention is unlike the current &quot;Action&quot; soup, since &quot;Context&quot; is a suffix that identifies a member's &quot;family&quot; history.)</p>
+
+<p>Another experimental member is the catalog element, which could be used to to support using a Chain of ActionCommands in lieu of an Action.</p>
+
+<h2 id="StrutsAction1Planning-StrutsActionFramework1.4.xconsiderations">Struts Action Framework 1.4.x considerations</h2>
+
+<p>One we get past 1.3.x, there are some other things that we might consider.</p>
+
+<p>Consider combining DTDs. Right now, using &quot;standard&quot; extensions like Tiles and Validator mean using more than one configuration file. While using multiple configurations files can be a good thing, we should also try and support the idea of having a single configuration file. This might not work-out for Tiles, but we might be able to at least integrate the Validator configuration with the DynaForm configuration.</p>
+
+<p>Consider refactoring for Spring. We identified the need for adding a IOC container to Struts some time ago, but stalled on the point of which to use. Since then, Spring has gained a lot of momentum. Spring is used by the MyFaces and Beehive teams, and its on the radar for Shale. There is already a Struts-Spring component in the Spring distribution and other common ground.</p>
+
+<p>2007-02-09: Struts 1.3 has been branched. 1.3.x maintenance branch has been branched out. The HEAD represents future 1.4 version and is open for improvements.</p>
+
+<h3 id="StrutsAction1Planning-CodeIssues">Code Issues</h3>
+
+<ol>
+	<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup">[MichaelJ] <strong>Consider the option to call all lifecycle functions explicitly</strong> from an action class, allow to disable automatic form population.
+<br class="atl-forced-newline"></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+	<ul>
+		<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup">[FrankZ] I personally would not want to see the auto-population and validation and such go away.  I think them being declarative is a powerful notion.  I DO however agree that a developer should be able to turn them off declaratively and do it all manually.
+<br class="atl-forced-newline"></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+		<li>Implemented on 2007-02-09: ActionForm autopopulation is now configurable from an action mapping via &quot;populate&quot; attribute. Automatic call to ActionForm.reset is now configurable from an action mapping via &quot;reset&quot; attribute. See <a href="javascript:;" class="external-link" rel="nofollow">http://svn.apache.org/viewvc?view=rev&amp;revision=505640</a>
+<br class="atl-forced-newline"></li>
+	</ul>
+	</li>
+	<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup"><strong>The ability to switch off auto-form population</strong>  [FrankZ] The idea here is that Struts would still instantiate an ActionForm and call reset(), but that's it.  This can be useful if you want to use an ActionForm only as an output object, but want to handle input manually.  This came up for me converting a non-Struts app to Struts, where there was no notion of an ActionForm in the previous framework.</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+	<ul>
+		<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup">[MichaelJ] +1 I even had the <span class="nobr"><a href="javascript:;" class="external-link" rel="nofollow">ticket<sup><img class="rendericon" src="static/picture/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></sup></a></span> opened for this issue, but as Martin Cooper pointed out, this can be achieved simply by not associating the form with setup action. On the other hand, having form name explicitly in the action mapping makes config file more readable.</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+		<li>Implemented on 2007-02-09: (see previous bullet)
+<br class="atl-forced-newline"></li>
+	</ul>
+	</li>
+	<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup"><strong>Base Action class should implement event handling a.k.a. dispatching</strong> [MichaelJ] If event is recognized for an action, it is dispatched to a corresponding method. If event is not found in the request, then execute() is called like for a regular action.
+<br class="atl-forced-newline"></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+	<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup"><strong>Built-in support for RAP (Redirect After Post) pattern</strong> [FrankZ] I'm not sure how best to accomplish this, but this should be a very easy thing for a developer to do, the framework should do any required heavy lifting.  Again, not so much a rough spot as it is something I think a lot of people would appreciate.</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+	<ul>
+		<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup">[MichaelJ] To simplify redirect-after-post pattern, Struts must implement Flash scope, that is, the scope that survives after redirect, but is automatically cleaned up after redirected request finishes. Currently similar pattern is applied to the messages queued to session scope.
+<br class="atl-forced-newline"></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+	</ul>
+	</li>
+	<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup"><strong>Pure POJO ActionForms</strong>  [FrankZ] An ActionForm should not need to extend ActionForm.  The framework would have to be smart enough to not call validate() and such in that case.  This would allow for the Action to be the ActionForm as well, and this is really the underlying goal because many people view them being separate as a rough spot.</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+	<ul>
+		<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup">[MichaelJ] Definite +1
+<br class="atl-forced-newline"></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+	</ul>
+	</li>
+	<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup"><strong>Built-in AJAX support</strong>  [FrankZ] I am not entirely sure what the best form for this is, although I believe the <span class="nobr"><a href="javascript:;" class="external-link" rel="nofollow">AjaxTags<sup><img class="rendericon" src="static/picture/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></sup></a></span> paradigm still has a great deal of merit.  In any case, in today's world, not offering some degree of AJAX out of the box is probably a rough spot for many.</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+	<ul>
+		<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup">[MichaelJ] I believe that I can combine my <span class="nobr"><a href="javascript:;" class="external-link" rel="nofollow">JSP Controls Tag Library<sup><img class="rendericon" src="static/picture/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></sup></a></span> with Tiles, building a real component subframework on top of Struts, having built-in Ajax features as well (actually, AHAH. It is coarse-grained in-place update of a component within a composite page.) I believe that it can coexist nicely with more finegrained approach of AjaxTags.
+<br class="atl-forced-newline"></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+	</ul>
+	</li>
+	<li>Implement scope that lasts beyond one roundtrip, but shorter than session (a.k.a. <a class="unresolved" href="#">RolloverScope</a>, Conversation scope, Flash scope).
+<br class="atl-forced-newline"></li>
+</ol>
+
+
+<h3 id="StrutsAction1Planning-BestPracticesIssues">Best Practices Issues</h3>
+
+<ol>
+	<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup"><strong>Dispatch-type actions should be more front-and-center</strong>  [MichaelJ] Dispatch-action style request processing should become a cornerstone technique instead of &quot;yet another way of doing things&quot;. It works especially well in data entry form processing or menu processing. See <a href="dataentryform.html" title="DataEntryForm">DataEntryForm</a>.</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+	<ul>
+		<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup">[FrankZ] As an oft-stated opponent, GENERALLY, of Dispatch-type Actions, I wouldn't be thrilled with this being sold as a &quot;best practice&quot;.  I would have no problem with it being described in more detail and the pluses and minuses stated for people to be able to make a more informed decision either way.
+<br class="atl-forced-newline"></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+	</ul>
+	</li>
+	<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup"><strong>Preference for session-scoped ActionForms</strong>  [MichaelJ] Best practices should explain that there is nothing wrong in having session-scoped action forms. Best practices should teach how to build stateful web resources.</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+	<ul>
+		<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup">[FrankZ] -1.  Saying there is &quot;nothing wrong&quot; with it, I do not believe is true.  Speaking as someone who works all day in a large distributed enterprise environment, I am very well aware of the pitfalls of storing things in session and in letting session get too big.  I'm not saying I never store anything in session, of course I do! <img class="emoticon" src="static/picture/smile.png" height="16" width="16" align="absmiddle" alt="" border="0">  But I think people need to know the positives and negatives of doing so and decide what is appropriate in a given use case rather than being told this or that is a &quot;best practice&quot;.</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+		<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup">[MichaelJ] My original wording did not have &quot;preference&quot;. What I am saying is that session-scoped forms should not be a taboo, and their benefits (as well as pitfalls) should be clearly explained.</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+		<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup">[MichaelJ] After Rollover scope is implemented it should be preferred over session scope for redirect-after-post and other multi-request but relatively short term interactions.
+<br class="atl-forced-newline"></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+	</ul>
+	</li>
+</ol>
+
+
+<h2 id="StrutsAction1Planning-StrutsActionFramework1.5.xconsiderations">Struts Action Framework 1.5.x considerations</h2>
+
+<p>Based on our own work with the &quot;experimental&quot; members introduced in 1.3.x, we might consider some other changes.</p>
+
+<p><strong>Consider a &quot;smart&quot; action type</strong>. The idea is that a command in Struts chain could look at the type indicated by the ActionMapping so both Action classes and ActionCommand implementations are supported. People could then mix-and-match Actions with ActionCommands (or even chains of ActionCommands). We might even try placing an ActionCommand interface on ActionForm, so people could skip having a seperate Action or ActionCommand class. The ActionForm could do it all.</p>
+
+<p><strong>Consider a &quot;populate&quot; method on ActionForm</strong>. From an OOP standpoint, it might be cleaner if an ActionForm populated itself rather than rely on a &quot;god&quot; class to populate it from the outside.</p>
+
+<p><strong>Consider a &quot;FormContext&quot; mechanism</strong>. Rather than &quot;throw-away&quot; a request-based ActionForm, the object could be seralized as a hidden-field or session-object and restored on the next request. Many other frameworks support this behavior now. Struts would have a slightly different spin, since we look at the form as an named entity rather than as an anonymous aggregation of other objects.</p>
+
+<ol>
+	<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup"><strong>Building stateful components</strong>  [MichaelJ] Best practices should teach how to build stateful and independent web components with Struts.
+<br class="atl-forced-newline"></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+	<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup"><strong>ActionForm as true I/O buffer</strong>  [MichaelJ] ActionForm should be used as I/O buffer instead of simply collecting user input from request.</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+	<ul>
+		<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup">[FrankZ] Could you explain this further?  I'm not at all clear on what you mean.</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+		<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup">[MichaelJ] This is what 60% of Struts users do anyway. I guess you do it as well. You have actionform associated with input action. You submit a form, actionform is populated. In case of error or whatnot you render the same JSP page and pull the data from the actionform, it is already there, saved for you by Struts. I use this all the time for data entry use case, but this does not seem to be an officially endorsed and advertised practice.
+<br class="atl-forced-newline"></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+	</ul>
+	</li>
+</ol>
+
+
+<h2 id="StrutsAction1Planning-StrutsActionFramework1.6.xconsiderations">Struts Action Framework 1.6.x considerations</h2>
+
+<p><strong>Consider multiple controllers</strong>. One reason we introduced modules was because &quot;there can only be one&quot; Struts controller in an application. With the context-based changes we making, we might be able to introduce a mechanism to support a collection of Struts controllers, each identified by its servlet or filter name, each with it's own URI pattern. The key to being able to do something like this is for view members to look to the ViewContext rather than the various servlet contexts. Each Struts controller would place the appropriate ViewContext in its own requests.</p>
+
+<p><strong>Consider an alternate configuration file</strong>. There are idiosyncrasies in the element/attribute names of the struts-config which often confuse new developers. By either supporting alternative configuration loaders, or applying a stylesheet to a XML configuration, we could support both the &quot;classic&quot; and a new configuration (based on something like Struts Jericho ).</p>
+
+<h2 id="StrutsAction1Planning-Portlet(JSR-168)Whiteboard">Portlet (JSR-168) Whiteboard</h2>
+
+<p>There are three major issues with supporting JSR-168 (and probably a bunch of smaller ones as well):</p>
+
+<ul>
+	<li>The framework APIs assume servlet API objects (ServletContext, ServletRequest, ServletResponse), whereas JSR-168 talks about PortletContext, PortletRequest, and PortletResponse. We'd either need to change the calling sequence for Action.execute() – problematic for backwards compatibility – or fake it somehow in a portlet environment.</li>
+	<li>The lifecycle of a portlet request is actually divided into two chunks – processing and then rendering. From a Struts perspective, that means making sure that the first part of the request processor pipeline need to happen in the &quot;process&quot; part, and the forwarding to the resulting page needs to happen in the &quot;render&quot; part.</li>
+	<li>Today, Struts owns the process of calculating URLs for pages and actions. Because it's in a webapp, it knows exactly what to do for the developer. However, in a portlet container it's actually the portal server that manages URLs, so a Struts-based portlet would need to interact with the portlet APIs for this purpose.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>A strong goal should be that an application should be usable either as a webapp or as a portlet, with few (ideally no) changes. Therefore, we should build whatever it takes to support this into the standard framework distribution, which could then be used in both environments.</p>
+
+<h2 id="StrutsAction1Planning-Otherconsiderations">Other considerations</h2>
+
+<h2 id="StrutsAction1Planning-CodeIssues.1">Code Issues</h2>
+
+<ol>
+	<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup">[MichaelJ] <strong>Consider bringing <span class="nobr"><a href="javascript:;" class="external-link" rel="nofollow">FormDef<sup><img class="rendericon" src="static/picture/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></sup></a></span> into Struts core</strong> and recommend using dynaforms with nested business objects as a best practice. Reason: I/O conversion is the suckiest part of Struts 1.
+<br class="atl-forced-newline"></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+	<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup">[MichaelJ] <strong>Deprecate automatic validation</strong>. Newbies always stumble upon the fact that their action class is not called when validation fails. Instead, promote explicit validation.</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+	<ul>
+		<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup">[FrankZ] Definite -1 from me.  Again, I'm +1 to being able to turn it on and off, but I very much believe it should be there.  Perhaps there is some room for better logging in the cases you mention?
+<br class="atl-forced-newline"></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+	</ul>
+	</li>
+	<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup">[MichaelJ] <strong>Deprecate &quot;input&quot; attribute</strong> of &quot;action&quot; tag in struts-config.xml. At least, rename it to &quot;error&quot; or something. A frequent misconception is to think that the lifecycle starts with displaying an &quot;input&quot; page, which is obviously not true.</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+	<ul>
+		<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup">[FrankZ] +0.  I don't disagree with you at all, and I think there are probably other things that could similarly be changed.  However, I think it is very important that anything done with Struts 1 be evolutionary and take backwards-compatibility into consideration in a big way.  I think if you want revolution you go for Struts 2 (a minor revolution in that it's theoretically still compatible) or Shale.
+<br class="atl-forced-newline"></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+	</ul>
+	</li>
+	<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup">[MichaelJ] <strong>Add &quot;form&quot; attribute</strong> with the same meaning as &quot;name&quot; attribute; deprecate &quot;name&quot;.</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+	<ul>
+		<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup">[FrankZ] +0.  Same comment as the above point.
+<br class="atl-forced-newline"></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+	</ul>
+	</li>
+	<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup">[FrankZ] <strong>Actions should be instantiated for each request</strong>, therefore removing the thread safety concerns that exist today.</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+	<ul>
+		<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup">[MichaelJ] -0. Not sure that this bothers me anymore, especially if dynaforms will be adopted as standard practice. In this case a dynaform would be a container for a nested business object. I would rather combine Action and ActionForm and have an option to choose scope just right now a scope can be chosen for an ActionForm. That is, I am against strictly per-request actions.
+<br class="atl-forced-newline"></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+	</ul>
+	</li>
+	<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup"><strong>Custom attributes on tags</strong>  [FrankZ] All Struts tags that render HTML should allow for arbitrary attributes.  I again propose a &quot;specCompliant&quot; attribute on the &lt;html:html&gt; tag.  When true, no arbitrary attributes are allowed (this would be the default if the attribute is not present).  If false, any attribute can be added.  This has been a hassle for me a couple of times where I wanted to store some custom information on a tag for client-side purposes.</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+	<ul>
+		<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup">[MichaelJ] +1
+<br class="atl-forced-newline"></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+	</ul>
+	</li>
+	<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup"><strong>Built-in dependency injection</strong> [FrankZ] This should be modeled after what is offered in JSF.  If we took the code from the DependencyFilter in <span class="nobr"><a href="javascript:;" class="external-link" rel="nofollow">Java Web Parts<sup><img class="rendericon" src="static/picture/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></sup></a></span>, added in true injection (shouldn't be a terribly big deal), I believe we would have even better capabilities than in JSF.  Spring is of course still out there for those that need/want more!  This may not be so much a rough spot as just a fairly low-hanging piece of fruit (because most of the work is already done by virtue of leveraging DependencyFilter) that I think people would appreciate having.
+<br class="atl-forced-newline"></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+	<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup"><strong>ThreadLocal ActionContext</strong> [FrankZ] Yes, I think this is one place we should flat-out rip off Webwork <img class="emoticon" src="static/picture/smile.png" height="16" width="16" align="absmiddle" alt="" border="0">  Backwards-compatibility would have to be considered, but I'd like Actions to have to deal with a single object, and for that object to be accessible via the ThreadLocal mechanism.  This should also open the door for POJO Actions.
+<br class="atl-forced-newline"></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+	<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup"><strong>Pre and post-processing abilities</strong> [FrankZ] A developer should be able to specify a class and method to call before and after an Action executes, on a per-mapping basis.  This should be independant of modifying a chain.  Should just amount to adding the appropriate config file changes and two commands to the default chain.  This is for handling things like common setup of view-type Actions, etc.</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+	<ul>
+		<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup">[MichaelJ] +0. I prefer having 1:1 correspondence between mapping and action class. With autopopulation out of the way, I can call whatever I want right in the beginning and at the end of execute() method. Same thing, but simpler, I think.
+<br class="atl-forced-newline"></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+	</ul>
+	</li>
+	<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup"><strong>MAYBE roll StrutsWS into Struts</strong> [FrankZ] Heck, I'm not even sure *I* would +1 this idea!  Might be worth considering at least.
+<br class="atl-forced-newline">
+<br class="atl-forced-newline"></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+</ol>
+
+
+<h2 id="StrutsAction1Planning-DocumentationIssues">Documentation Issues</h2>
+
+<ol>
+	<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup"><strong>Chain documentation</strong>  [MichaelJ] Struts 1.3.x introduces the concept of chain of commands, but there is no comprehensive documentation on how this new architecture can be used for initial request processing (as a substitute to solid <a href="requestprocessor.html" title="RequestProcessor">RequestProcessor</a>) as well as for business processing (using Commands instead of Actions, etc).
+<br class="atl-forced-newline"></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+	<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup"><strong>Taglib docs are confusing</strong>  [MichaelJ] Taglib reference uses too many words for simple things. Words like &quot;attribute&quot;, &quot;value&quot;, &quot;property&quot; used in different contexts, which does not help much in understanding how the tags really work.  Also, Taglib docs should show one best way of doing things instead of saying that one can use this, or this or this in combination with this.
+<br class="atl-forced-newline"></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+	<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup"><strong>Visual representation of tags that render widgets</strong>  [MichaelJ] Tags that render widgets should have examples and pictures. Here is some initial work in attempt to improve this: <span class="error">[StrutsWidgets]</span>.
+<br class="atl-forced-newline"></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+</ol>
+
+
+<h2 id="StrutsAction1Planning-BestPracticesIssues.1">Best Practices Issues</h2>
+
+<ol>
+	<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup"><strong>Focus on best and most common approaches</strong>  [MichaelJ] Instead of having several ways to do things, Struts 1 should focus on one best and the most common way, even if it involves a couple more lines of code. Less is more.
+<br class="atl-forced-newline"></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+	<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup"><strong>Webresource-centered approach</strong>  [MichaelJ] Up until now Struts 1 best practices center around a View, usually a JSP page. Instead, best practices should teach the webresource-centered approach.</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+	<ul>
+		<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup">[FrankZ] Speaking for myself, I would need to see a good definition of this approach before I was +/- on it.  I have never seen a clear explanation that made me say &quot;oh yeah, I see, that's better!&quot;</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+		<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup">[MichaelJ] Check out <a href="dataentryform.html" title="DataEntryForm">DataEntryForm</a>. Well, it uses dispatching action and session-scoped form, but if you look at it from 10000 ft, it gives the idea of what web resource is about. Basically, it is one-two actions, one form and one or more JSPs. A resource does NEVER forwards to a JSP page that does not belong to the resource. In the best case we can have nice and simple 1:M relationship between action and JSPs.
+<br class="atl-forced-newline"></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+	</ul>
+	</li>
+	<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup"><strong>Use of nested properties</strong>  [MichaelJ] Emphasize using of nested properties, using business objects as nested properties, using dynaforms holding business objects.
+<br class="atl-forced-newline"></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+</ol>
+
+
+<h2 id="StrutsAction1Planning-RelevantProposals">Relevant Proposals</h2>
+
+<ul>
+	<li>Commons Chain of Responsiblity package</li>
+	<li>Struts Chain Request Processor</li>
+	<li>Struts Classic Release Plan 1.3.0</li>
+	<li>struts-faces taglib</li>
+	<li>Struts Jericho</li>
+	<li>Struts Shale</li>
+	<li>Struts Ti</li>
+	<li>Struts OverDrive</li>
+</ul>
+
+                
+        
+    
+        </div>
+
+                        
+    
+
+
+
+<div id="labels-section" class="pageSection group">
+    <div class="labels-section-content content-column" entityid="120724317" entitytype="page">
+	<div class="labels-content">
+		
+    <ul class="label-list label-list-right ">
+            <li class="no-labels-message">
+            无标签
+        </li>
+            </ul>
+
+    </div>
+</div>
+</div>
+        
+		
+            
+
+
+
+
+            
+        
+
+
+
+
+
+
+
+
+                        
+    
+<div id="comments-section" class="pageSection group">
+        
+    
+
+
+
+</div>
+        
+
+
+                
+    
+            
+</div>
+
+    
+
+    
+
+
+
+
+    
+    
+
+    
+    
+    
+
+
+    
+<div id="space-tools-web-items" class="hidden">
+                <div data-label="概览" data-href="/confluence/spaces/viewspacesummary.action?key=WW">概览</div>
+            <div data-label="内容工具" data-href="/confluence/pages/reorderpages.action?key=WW">内容工具</div>
+            <div data-label="应用" data-href="/confluence/spaces/snippeterrors.action?key=WW">应用</div>
+    </div>
+        
+
+
+
+            </div><!-- \#main -->
+            
+    
+    
+        
+            
+            
+
+<div id="footer" role="contentinfo">
+    <section class="footer-body">
+
+                                                            <p class="license license-opensource">
+                    本站点免费授予 Apache Software Foundation<b> Atlassian Confluence 开源项目授权</b>。<a href="javascript:;">今天开始评估 Confluence</a>。<br>
+                </p>
+                    
+        
+
+        <ul id="poweredby">
+            <li class="noprint">基于 <a href="javascript:;" class="hover-footer-link" rel="nofollow">Atlassian Confluence</a> <span id='footer-build-information'>7.5.0</span> 技术构建</li>
+            <li class="print-only">由 Atlassian 合流7.5.0 打印</li>
+            <li class="noprint"><a href="javascript:;" class="hover-footer-link" rel="nofollow">报告缺陷</a></li>
+            <li class="noprint"><a href="javascript:;" class="hover-footer-link" rel="nofollow">Atlassian 新闻</a></li>
+        </ul>
+
+        
+
+        <div id="footer-logo"><a href="javascript:;" rel="nofollow">Atlassian</a></div>
+
+                    
+        
+    </section>
+</div>
+
+    
+</div>
+
+</div><!-- \#full-height-container -->
+</div><!-- \#page -->
+
+    <span style="display:none;" id="confluence-server-performance">{"serverDuration": 136, "requestCorrelationId": "667314baf370dab0"}</span>
+</body>
+</html>
+    

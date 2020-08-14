@@ -1,0 +1,1269 @@
+    
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+                            <title>HDIV - Apache Struts 2 Wiki - Apache Software Foundation</title>
+    
+        
+
+                        
+    
+                        
+    
+
+                
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=IE7">
+<meta charset="UTF-8">
+<meta id="confluence-context-path" name="confluence-context-path" content="/confluence">
+<meta id="confluence-base-url" name="confluence-base-url" content="https://cwiki.apache.org/confluence">
+
+    <meta id="atlassian-token" name="atlassian-token" content="45556f9fa09240d8434bc92e3ba005c7e9c96eec">
+
+
+<meta id="confluence-space-key" name="confluence-space-key" content="WW">
+<script type="text/javascript">
+        var contextPath = '/confluence';
+</script>
+
+    
+
+    <meta name="confluence-request-time" content="1595839971707">
+        
+    
+        
+            <meta name="ajs-use-keyboard-shortcuts" content="true">
+            <meta name="ajs-is-confluence-admin" content="false">
+            <meta name="ajs-connection-timeout" content="10000">
+            <script type="text/x-template" title="gliffy-webpanel-footer">
+        <div class="gliffy-webpanel-footer"><span>This Confluence installation runs a Free Gliffy License - Evaluate the <a href="http://www.gliffy.com/products/confluence-plugin/">Gliffy Confluence Plugin</a> for your Wiki!</span></div>
+</script>
+
+
+            <style>.ia-fixed-sidebar, .ia-splitter-left {width: 285px;}.theme-default .ia-splitter #main {margin-left: 285px;}.ia-fixed-sidebar {visibility: hidden;}</style>
+            <meta name="ajs-discovered-plugin-features" content="$discoveredList">
+            <meta name="ajs-keyboardshortcut-hash" content="244b3b2851a4a758ccc0304672ffd8c1">
+            
+    
+    
+            <meta name="ajs-page-title" content="HDIV">
+            <meta name="ajs-latest-published-page-title" content="HDIV">
+            <meta name="ajs-space-name" content="Apache Struts 2 Wiki">
+            <meta name="ajs-page-id" content="120724203">
+            <meta name="ajs-latest-page-id" content="120724203">
+            <meta name="ajs-content-type" content="page">
+            <meta name="ajs-parent-page-title" content="Home">
+            <meta name="ajs-parent-page-id" content="14153">
+            <meta name="ajs-space-key" content="WW">
+            <meta name="ajs-max-number-editors" content="12">
+            <meta name="ajs-macro-placeholder-timeout" content="5000">
+            <meta name="ajs-jira-metadata-count" content="-1">
+            <meta name="ajs-from-page-title" content="">
+            <meta name="ajs-can-remove-page" content="false">
+            <meta name="ajs-can-remove-page-hierarchy" content="false">
+            <meta name="ajs-browse-page-tree-mode" content="view">
+            <meta name="ajs-shared-drafts" content="true">
+            <meta name="ajs-context-path" content="/confluence">
+            <meta name="ajs-base-url" content="https://cwiki.apache.org/confluence">
+            <meta name="ajs-version-number" content="7.5.0">
+            <meta name="ajs-build-number" content="8501">
+            <meta name="ajs-remote-user" content="">
+            <meta name="ajs-remote-user-key" content="">
+            <meta name="ajs-remote-user-has-licensed-access" content="false">
+            <meta name="ajs-remote-user-has-browse-users-permission" content="false">
+            <meta name="ajs-current-user-fullname" content="">
+            <meta name="ajs-current-user-avatar-url" content="">
+            <meta name="ajs-current-user-avatar-uri-reference" content="/confluence/images/icons/profilepics/anonymous.svg">
+            <meta name="ajs-static-resource-url-prefix" content="/confluence/s/962fig/8501/fded9f91818631c3677be93247bf5ae6723a1c8d/_">
+            <meta name="ajs-global-settings-attachment-max-size" content="20971520">
+            <meta name="ajs-global-settings-quick-search-enabled" content="true">
+            <meta name="ajs-user-locale" content="zh_CN">
+            <meta name="ajs-enabled-dark-features" content="site-wide.shared-drafts,site-wide.synchrony,clc.quick.create,confluence.view.edit.transition,cql.search.screen,confluence-inline-comments-resolved,http.session.registrar,frontend.editor.v4,nps.survey.inline.dialog,confluence.efi.onboarding.new.templates,frontend.editor.v4.compatibility,atlassian.cdn.static.assets,pdf-preview,previews.sharing,previews.versions,file-annotations,collaborative-audit-log,confluence.efi.onboarding.rich.space.content,previews.conversion-service,editor.ajax.save,graphql,read.only.mode,previews.trigger-all-file-types,lucene.caching.filter,attachment.extracted.text.extractor,confluence.table.resizable,notification.batch,previews.sharing.pushstate,confluence-inline-comments-rich-editor,site-wide.synchrony.opt-in,file-annotations.likes,gatekeeper-ui-v2,v2.content.name.searcher,mobile.supported.version,pulp,confluence-inline-comments,quick-reload-inline-comments-flags,confluence-inline-comments-dangling-comment">
+            <meta name="ajs-atl-token" content="45556f9fa09240d8434bc92e3ba005c7e9c96eec">
+            <meta name="ajs-confluence-flavour" content="VANILLA">
+            <meta name="ajs-user-date-pattern" content="yyyy-M-d">
+            <meta name="ajs-access-mode" content="READ_WRITE">
+            <meta name="ajs-render-mode" content="READ_WRITE">
+            <meta name="ajs-date.format" content="MMM dd, yyyy">
+    
+    
+    
+
+<link rel="search" type="application/opensearchdescription+xml" href="/confluence/opensearch/osd.action" title="Apache Software Foundation">
+    
+                    
+            <meta name="ajs-create-issue-metadata-show-discovery" content="false">
+            
+
+    <script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-plugin:context-path.context-path"]="\u0022\u005C/confluence\u0022";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-feature-discovery-plugin:confluence-feature-discovery-plugin-resources.test-mode"]="false";
+WRM._unparsedData["com.atlassian.confluence.plugins.synchrony-interop:synchrony-status-banner-loader.synchrony-status"]="false";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:policy-update-init.policy-update-data-provider"]="false";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:programmatic-analytics-init.programmatic-analytics-data-provider"]="false";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.applinks-help-paths"]="{\u0022entries\u0022:{\u0022applinks.docs.root\u0022:\u0022https://confluence.atlassian.com/display/APPLINKS-060/\u0022,\u0022applinks.docs.diagnostics.troubleshoot.sslunmatched\u0022:\u0022SSL+and+application+link+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthsignatureinvalid\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthtimestamprefused\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.delete.entity.link\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.adding.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.administration.guide\u0022:\u0022Application+Links+Documentation\u0022,\u0022applinks.docs.oauth.security\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.troubleshoot.application.links\u0022:\u0022Troubleshoot+application+links\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unknownerror\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.trusted.apps\u0022:\u0022Configuring+Trusted+Applications+authentication+for+an+application+link\u0022,\u0022applinks.docs.diagnostics.troubleshoot.authlevelunsupported\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.ssluntrusted\u0022:\u0022SSL+and+application+link+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unknownhost\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.delete.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.link.applications\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthproblem\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.migration\u0022:\u0022Update+application+links+to+use+OAuth\u0022,\u0022applinks.docs.relocate.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.administering.entity.links\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.upgrade.application.link\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.diagnostics.troubleshoot.connectionrefused\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.oauth\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.insufficient.remote.permission\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.configuring.application.link.auth\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.diagnostics\u0022:\u0022Application+links+diagnostics\u0022,\u0022applinks.docs.configured.authentication.types\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.adding.entity.link\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unexpectedresponse\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.basic\u0022:\u0022Configuring+Basic+HTTP+Authentication+for+an+Application+Link\u0022,\u0022applinks.docs.diagnostics.troubleshoot.authlevelmismatch\u0022:\u0022OAuth+troubleshooting+guide\u0022}}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.applinks-types"]="{\u0022crowd\u0022:\u0022\u4eba\u7fa4\u0022,\u0022confluence\u0022:\u0022Confluence\u0022,\u0022fecru\u0022:\u0022Fisheye / Crucible\u0022,\u0022stash\u0022:\u0022\u6682\u5b58\u0022,\u0022jira\u0022:\u0022Jira\u0022,\u0022refapp\u0022:\u0022\u76f8\u5173\u5e94\u7528\u7a0b\u5e8f\u0022,\u0022bamboo\u0022:\u0022\u7af9\u0022,\u0022generic\u0022:\u0022\u901a\u7528\u5e94\u7528\u7a0b\u5e8f\u0022}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.entity-types"]="{\u0022singular\u0022:{\u0022refapp.charlie\u0022:\u0022Charlie\u0022,\u0022fecru.project\u0022:\u0022Crucible\u9879\u76ee\u0022,\u0022fecru.repository\u0022:\u0022FishEye \u4ed3\u5e93\u0022,\u0022stash.project\u0022:\u0022Stash \u9879\u76ee\u0022,\u0022generic.entity\u0022:\u0022\u901a\u7528\u9879\u76ee\u0022,\u0022confluence.space\u0022:\u0022Confluence\u7a7a\u95f4\u0022,\u0022bamboo.project\u0022:\u0022Bamboo\u9879\u76ee\u0022,\u0022jira.project\u0022:\u0022Jira \u9879\u76ee\u0022},\u0022plural\u0022:{\u0022refapp.charlie\u0022:\u0022\u67e5\u7406\u65af\u0022,\u0022fecru.project\u0022:\u0022Crucible\u9879\u76ee\u0022,\u0022fecru.repository\u0022:\u0022FishEye \u4ed3\u5e93\u96c6\u0022,\u0022stash.project\u0022:\u0022Stash\u9879\u76ee\u0022,\u0022generic.entity\u0022:\u0022\u901a\u7528\u9879\u76ee\u0022,\u0022confluence.space\u0022:\u0022Confluence\u7a7a\u95f4\u0022,\u0022bamboo.project\u0022:\u0022Bamboo\u9879\u76ee\u0022,\u0022jira.project\u0022:\u0022Jira \u9879\u76ee\u0022}}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.authentication-types"]="{\u0022com.atlassian.applinks.api.auth.types.BasicAuthenticationProvider\u0022:\u0022\u57fa\u672c\u8bbf\u95ee\u0022,\u0022com.atlassian.applinks.api.auth.types.TrustedAppsAuthenticationProvider\u0022:\u0022\u4fe1\u4efb\u7684\u5e94\u7528\u65e0\u6548\u0022,\u0022com.atlassian.applinks.api.auth.types.CorsAuthenticationProvider\u0022:\u0022\u6b4c\u73e5\u0022,\u0022com.atlassian.applinks.api.auth.types.OAuthAuthenticationProvider\u0022:\u0022Oauth\u0022,\u0022com.atlassian.applinks.api.auth.types.TwoLeggedOAuthAuthenticationProvider\u0022:\u0022Oauth\u0022,\u0022com.atlassian.applinks.api.auth.types.TwoLeggedOAuthWithImpersonationAuthenticationProvider\u0022:\u0022Oauth\u0022}";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-license-banner:confluence-license-banner-resources.license-details"]="{\u0022daysBeforeLicenseExpiry\u0022:0,\u0022daysBeforeMaintenanceExpiry\u0022:0,\u0022showLicenseExpiryBanner\u0022:false,\u0022showMaintenanceExpiryBanner\u0022:false,\u0022renewUrl\u0022:null,\u0022salesUrl\u0022:null}";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-search-ui-plugin:confluence-search-ui-plugin-resources.i18n-data"]="{\u0022search.ui.recent.link.text\u0022:\u0022\u67e5\u770b\u66f4\u591a\u6700\u8fd1\u8bbf\u95ee\u0022,\u0022search.ui.filter.space.category.input.label\u0022:\u0022\u67e5\u627e\u7a7a\u95f4\u7c7b\u522b\u2026\u2026\u0022,\u0022search.ui.filter.clear.selected\u0022:\u0022\u6e05\u9664\u6240\u9009\u9879\u76ee\u0022,\u0022search.ui.search.results.empty\u0022:\u0022\u6211\u4eec\u627e\u4e0d\u5230\u4efb\u4f55\u5339\u914d\u201c{0}\u201d\u7684\u5185\u5bb9\u3002\u0022,\u0022search.ui.content.name.search.items.panel.load.all.top.items.button.text\u0022:\u0022\u663e\u793a\u66f4\u591a\u5e94\u7528\u7ed3\u679c......\u0022,\u0022search.ui.filter.space.archive.label\u0022:\u0022\u641c\u7d22\u5df2\u7ecf\u5f52\u6863\u7684\u7a7a\u95f4\u0022,\u0022search.ui.filter.label\u0022:\u0022\u7b5b\u9009\u5668\u0022,\u0022search.ui.filter.contributor.button.text\u0022:\u0022\u8d21\u732e\u8005\u0022,\u0022search.ui.filter.date.all.text\u0022:\u0022\u968f\u65f6\u0022,\u0022search.ui.filter.space.current.label\u0022:\u0022\u5f53\u524d\u0022,\u0022search.ui.clear.input.button.text\u0022:\u0022\u6e05\u9664\u6587\u672c\u0022,\u0022help.search.ui.link.title\u0022:\u0022\u641c\u7d22\u6280\u5de7\u0022,\u0022search.ui.search.results.clear.button\u0022:\u0022\u6e05\u7a7a\u7b5b\u9009\u5668\u3002\u0022,\u0022search.ui.filter.date.hour.text\u0022:\u0022\u8fc7\u53bb\u4e00\u5929\u0022,\u0022search.ui.filters.heading\u0022:\u0022\u7b5b\u9009\u65b9\u5f0f\u0022,\u0022search.ui.filter.label.input.label\u0022:\u0022\u67e5\u627e\u6807\u7b7e\u2026\u2026\u0022,\u0022search.ui.filter.date.month.text\u0022:\u0022\u8fc7\u53bb\u4e00\u4e2a\u6708\u0022,\u0022search.ui.recent.items.anonymous\u0022:\u0022\u5f00\u59cb\u63a2\u7d22\u3002 \u60a8\u7684\u641c\u7d22\u7ed3\u679c\u5c06\u663e\u793a\u5728\u6b64\u5904\u3002\u0022,\u0022search.ui.input.label\u0022:\u0022\u641c\u7d22\u0022,\u0022search.ui.search.result\u0022:\u0022{0,choice,1#{0}\u4e2a\u641c\u7d22\u7ed3\u679c|1\u005Cu003c{0}\u4e2a\u641c\u7d22\u7ed3\u679c}\u0022,\u0022search.ui.infinite.scroll.button.text\u0022:\u0022\u66f4\u591a\u7ed3\u679c\u0022,\u0022search.ui.filter.date.button.text\u0022:\u0022\u65e5\u671f\u0022,\u0022search.ui.filter.date.week.text\u0022:\u0022\u8fc7\u53bb\u4e00\u5468\u0022,\u0022search.ui.filter.label.button.text\u0022:\u0022\u6807\u7b7e\u0022,\u0022search.ui.input.alert\u0022:\u0022\u6309\u56de\u8f66\u952e(Enter)\u641c\u7d22\u0022,\u0022search.ui.filter.no.result.text\u0022:\u0022\u6211\u4eec\u627e\u4e0d\u5230\u4efb\u4f55\u7b26\u5408\u60a8\u641c\u7d22\u6761\u4ef6\u7684\u5185\u5bb9\u0022,\u0022search.ui.result.subtitle.calendar\u0022:\u0022\u56e2\u961f\u65e5\u7a0b\u8868\u0022,\u0022search.ui.filter.date.heading\u0022:\u0022\u4e0a\u6b21\u4fee\u6539\u0022,\u0022search.ui.result.subtitle.user\u0022:\u0022\u7528\u6237\u8d44\u6599\u0022,\u0022search.ui.filter.contributor.input.label\u0022:\u0022\u67e5\u627e\u4eba\u5458\u2026\u2026\u0022,\u0022search.ui.filter.content.type.button.text\u0022:\u0022\u7c7b\u578b\u0022,\u0022search.ui.filter.space.input.label\u0022:\u0022\u67e5\u627e\u7a7a\u95f4\u0022,\u0022search.ui.filter.date.year.text\u0022:\u0022\u8fc7\u53bb\u4e00\u5e74\u0022,\u0022search.ui.filter.space.button.text\u0022:\u0022\u7a7a\u95f4\u0022,\u0022search.ui.advanced.search.link.text\u0022:\u0022\u9ad8\u7ea7\u641c\u7d22\u0022,\u0022search.ui.generic.error\u0022:\u0022\u51fa\u9519\u4e86\u3002\u5237\u65b0\u9875\u9762\uff0c\u6216\u8005\u5982\u679c\u6301\u7eed\u53d1\u751f\u8fd9\u79cd\u60c5\u51b5\uff0c\u8bf7\u8054\u7cfb\u60a8\u7684\u7ba1\u7406\u5458\u3002\u0022,\u0022search.ui.recent.spaces\u0022:\u0022\u6700\u8fd1\u7a7a\u95f4\u0022,\u0022search.ui.search.results.clear.line2\u0022:\u0022\u8bf7\u5c1d\u8bd5\u4e0d\u540c\u7684\u641c\u7d22\u5173\u952e\u5b57\u6216\u8005\u0022,\u0022search.ui.filter.space.category.button.text\u0022:\u0022\u7a7a\u95f4\u7c7b\u522b\u0022,\u0022search.ui.search.results.clear.line1\u0022:\u0022\u627e\u4e0d\u5230\u5339\u914d\u7684\u641c\u7d22\u7ed3\u679c\u0022,\u0022search.ui.content.name.search.items.panel.load.all.top.items.admin.button.text\u0022:\u0022\u663e\u793a\u66f4\u591a\u8bbe\u7f6e\u548c\u5e94\u7528\u7ed3\u679c...\u0022,\u0022search.ui.recent.pages\u0022:\u0022\u6700\u8fd1\u8bbf\u95ee\u0022,\u0022search.ui.search.result.anonymous\u0022:\u0022{0,choice,1#{0}\u4e2a\u641c\u7d22\u7ed3\u679c| 1 \u005Cu003c{0}\u4e2a\u641c\u7d22\u7ed3\u679c}\u3002 \u60a8\u6709\u5e10\u6237\u5417\uff1f{1}\u767b\u5f55{2}\u641c\u7d22\u66f4\u591a\u7ed3\u679c\u3002\u0022,\u0022search.ui.recent.items.empty\u0022:\u0022\u5f00\u59cb\u63a2\u7d22\u3002 \u60a8\u6700\u8fd1\u8bbf\u95ee\u8fc7\u7684\u9875\u9762\u548c\u7a7a\u95f4\u5c06\u663e\u793a\u5728\u6b64\u5904\u3002\u0022,\u0022search.ui.result.subtitle.space\u0022:\u0022\u7a7a\u95f4\u0022,\u0022search.ui.filter.space.init.heading\u0022:\u0022\u6700\u8fd1\u7a7a\u95f4\u0022}";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script>
+<link type="text/css" rel="stylesheet" href="static/css/batch.css" data-wrm-key="_super" data-wrm-batch-type="context" media="all">
+<link type="text/css" rel="stylesheet" href="static/css/batch-true_true_true.css" data-wrm-key="atl.confluence.plugins.pagetree-desktop,main,viewcontent,atl.general,page,atl.comments,-_super" data-wrm-batch-type="context" media="all">
+<script type="text/javascript" src="static/js/batch-zh-CN.js" data-wrm-key="_super" data-wrm-batch-type="context" data-initially-rendered=""></script>
+<script type="text/javascript" src="static/js/batch-true_true_true_zh-CN.js" data-wrm-key="atl.confluence.plugins.pagetree-desktop,main,viewcontent,atl.general,page,atl.comments,-_super" data-wrm-batch-type="context" data-initially-rendered=""></script>
+
+    
+
+        
+    
+
+        
+        <meta name="ajs-site-title" content="Apache Software Foundation">
+            
+    
+
+    
+                <link rel="canonical" href="">
+        <link rel="shortlink" href="https://cwiki.apache.org/confluence/x/6xoyBw">
+    <meta name="wikilink" content="[WW:HDIV]">
+    <meta name="page-version" content="1">
+    <meta name="ajs-page-version" content="1">
+
+</head>
+
+    
+<body id="com-atlassian-confluence" class="theme-default  aui-layout aui-theme-default">
+
+        
+            <div id='stp-licenseStatus-banner'></div>
+    <ul id="assistive-skip-links" class="assistive">
+    <li><a href="#title-heading">转至内容</a></li>
+    <li><a href="#breadcrumbs">转至导航栏</a></li>
+    <li><a href="#header-menu-bar">转至主菜单</a></li>
+    <li><a href="#navigation">转至动作菜单</a></li>
+    <li><a href="#quick-search-query">转至快速搜索</a></li>
+</ul>
+<div id="page">
+<div id="full-height-container">
+    <div id="header-precursor">
+        <div class="cell">
+            
+                            </div>
+    </div>
+        
+
+
+
+
+
+<header id="header" role="banner">
+    <nav class="aui-header aui-dropdown2-trigger-group" role="navigation"><div class="aui-header-inner"><div class="aui-header-before"><a class=" aui-dropdown2-trigger app-switcher-trigger" aria-controls="app-switcher" aria-haspopup="true" role="button" tabindex="0" data-aui-trigger="" href="#app-switcher"><span class="aui-icon aui-icon-small aui-iconfont-appswitcher">已链接应用程序</span></a><div id="app-switcher" class="aui-dropdown2 aui-style-default" role="menu" aria-hidden="true" data-is-switcher="true" data-environment="{&quot;isUserAdmin&quot;:false,&quot;isAppSuggestionAvailable&quot;:false,&quot;isSiteAdminUser&quot;:false}"><div role="application"><div class="app-switcher-loading">正在上传和乱码；</div></div></div></div><div class="aui-header-primary"><h1 id="logo" class="aui-header-logo aui-header-logo-confluence"><a href="index.html"><span class="aui-header-logo-device">Apache Software Foundation</span></a></h1><ul class="aui-nav">
+                            <li>
+            
+        
+        
+<a id="space-directory-link" href="view.html" class=" aui-nav-imagelink" title="空间">
+            <span>空间</span>
+    </a>
+        </li>
+                                <li class="aui-buttons">
+            </li>
+</ul>
+</div><div class="aui-header-secondary"><ul class="aui-nav">
+                        <li>
+        <div id="search-ui" class="aui-quicksearch dont-default-focus header-quicksearch"><input id="quick-search-query" aria-label="搜索" placeholder="搜索" type="text"><div id="quick-search-alert" role="alert">按回车键(Enter)搜索</div><aui-spinner size="small"></aui-spinner></div>
+    </li>
+        <li>
+            
+        <a id="help-menu-link" class="aui-nav-link aui-dropdown2-trigger aui-dropdown2-trigger-arrowless" href="#" aria-haspopup="true" aria-owns="help-menu-link-content" title="帮助">
+        <span class="aui-icon aui-icon-small aui-iconfont-question-filled">帮助</span>
+    </a>
+    <nav id="help-menu-link-content" class="aui-dropdown2 aui-style-default" aria-hidden="true">
+                    <div class="aui-dropdown2-section">
+                                <ul id="help-menu-link-leading" class="aui-list-truncate section-leading first">
+                                            <li>
+        
+            
+<a id="confluence-help-link" href="javascript:;" class="    " title="访问Confluence文档首页" target="_blank">
+        在线帮助
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="keyboard-shortcuts-link" href="confluence.html" class="    " title="查看可用的键盘快捷方式">
+        快捷键
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="feed-builder-link" href="configurerssfeed.html" class="    " title="创建个性化的 RSS源。">
+        RSS源建立器
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="whats-new-menu-link" href="javascript:;" class="    " title="">
+        新功能
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="gadget-directory-link" href="confluence.html" class="   user-item administration-link " title="浏览小工具">
+        可用的小工具
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="confluence-about-link" href="aboutconfluencepage.html" class="    " title="获取关于Confluence的更多信息">
+        关于Confluence
+</a>
+</li>
+                                    </ul>
+            </div>
+            </nav>
+    
+    </li>
+        <li>
+                
+    
+    </li>
+        <li>
+            
+    </li>
+        <li>
+                                            <li>
+        
+            
+<a id="login-link" href="javascript:;" class="   user-item login-link " title="">
+        登录
+</a>
+</li>
+                        <li>
+    
+            
+<a id="signup-link" href="signup.html" class="   user-item signup-link " title="">
+        注册
+</a>
+</li>
+                        
+    
+    </ul>
+</div></div><!-- .aui-header-inner--></nav><!-- .aui-header -->
+    <br class="clear">
+</header>
+    
+
+    
+    	<div class="ia-splitter">
+    		<div class="ia-splitter-left">
+    			<div class="ia-fixed-sidebar">
+                                            
+                            <div class="acs-side-bar ia-scrollable-section"><div class="acs-side-bar-space-info tipsy-enabled" data-configure-tooltip="编辑空间详情"><div class="avatar"><div class="space-logo" data-key="WW" data-name="Apache Struts 2 Wiki" data-entity-type="confluence.space"><div class="avatar-img-container"><div class="avatar-img-wrapper"><a href="home.html" title="Apache Struts 2 Wiki"><img class="avatar-img" src="static/picture/default-space-logo.svg" alt="Apache Struts 2 Wiki"></a></div></div></div></div><div class="space-information-container"><div class="name"><a href="home.html" title="Apache Struts 2 Wiki">Apache Struts 2 Wiki</a></div><div class="flyout-handle icon aui-icon aui-icon-small aui-iconfont-edit"></div></div></div><div class="acs-side-bar-content"><div class="acs-nav-wrapper"><div class="acs-nav" data-has-create-permission="false" data-quick-links-state="null" data-page-tree-state="null" data-nav-type="pages"><div class="acs-nav-sections"><div class="quick-links-wrapper"></div></div></div></div><div class="ia-secondary-container tipsy-enabled" data-tree-type="pages"><div class="ia-secondary-header"><h5 class="ia-secondary-header-title pages"><span class="label">子页面</span></h5></div><div class="ia-secondary-parent-content"><ul class="parent ia-secondary-header-title wiki"><li class="parent-item"><a class="parent-item-link" href="home.html" title="Home"><span class="icon"></span><span class="label">Home</span></a></li></ul></div><div class="ia-secondary-current-content"><ul class="ia-secondary-currentPage-title wiki current-item"><li><span class="icon"></span><span class="label">HDIV</span></li></ul></div><div class="ia-secondary-content"><div class="contextual-nav-child-pages"></div></div></div></div><div class="hidden"><a href="pages-ww.html" id="space-pages-link"></a><script type="text/x-template" title="logo-config-content"><h2>空间详情</h2><div class="personal-space-logo-hint">您的个人头像被作为您的个人空间的logo使用。<a href="/confluence/users/profile/editmyprofilepicture.action" target="_blank">更改您的个人头像</a>.</div></script></div></div><div class="space-tools-section"><div id="space-tools-menu-additional-items" class="hidden"><div data-label="浏览页面" data-class="" data-href="/confluence/pages/reorderpages.action?key=WW">浏览页面</div></div><button id="space-tools-menu-trigger" class=" aui-dropdown2-trigger aui-button aui-button-subtle tipsy-enabled aui-dropdown2-trigger-arrowless " aria-controls="space-tools-menu" aria-haspopup="true" role="button" data-aui-trigger=""><span class="aui-icon aui-icon-small aui-iconfont-configure">设置</span><span class="aui-button-label">空间管理</span><span class="aui-icon "></span></button><div id="space-tools-menu" class="aui-dropdown2 aui-style-default space-tools-dropdown" role="menu" aria-hidden="true" data-aui-alignment="top left"><div role="application"></div></div><a class="expand-collapse-trigger aui-icon aui-icon-small aui-iconfont-chevron-double-left"></a></div>
+                    
+                        			</div>
+    		</div>
+        <!-- \#header -->
+
+            
+    
+        <div id="main" class=" aui-page-panel">
+                        <div id="main-header">
+                        
+    <div id="navigation" class="content-navigation view">
+                    <ul class="ajs-menu-bar">
+                                            
+        <li class="normal ajs-menu-item">
+        <a id="action-menu-link" class="action aui-dropdown2-trigger-arrowless aui-button aui-button-subtle ajs-menu-title aui-dropdown2-trigger" href="#" aria-haspopup="true" aria-label="更多选项" aria-owns="action-menu" data-container="#navigation">
+            <span>
+                                    <span class="aui-icon aui-icon-small aui-iconfont-more" aria-label="更多选项"></span>
+                                
+            </span>
+        </a>         <div id="action-menu" class="aui-dropdown2 aui-style-default" aria-hidden="true">
+                            <div class="aui-dropdown2-section">
+                    <ul id="action-menu-primary" class="section-primary first">
+                                                    <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="view-attachments-link" href="javascript:;" rel="nofollow" class="action-view-attachments" accesskey="t" title="查看附件">
+                        <span>
+                                <u>t</u>附件(3)
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="action-view-history-link" href="javascript:;" rel="nofollow" class="action-view-history" title="">
+                        <span>
+                                页面历史
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="who-can-view-button-ak-button" href="confluence.html" rel="nofollow" class="who-can-view-link" title="">
+                        <span>
+                                可以查看的人
+            </span>        </a>
+    </li>
+                                        </ul>
+                </div>
+                            <div class="aui-dropdown2-section">
+                    <ul id="action-menu-secondary" class="section-secondary">
+                                                    <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="view-resolved-comments" href="confluence.html" rel="nofollow" class="" title="">
+                        <span>
+                                已解决评论
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="view-page-info-link" href="javascript:;" rel="nofollow" class="action-view-info" title="">
+                        <span>
+                                页面信息
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="view-in-hierarchy-link" href="javascript:;" rel="nofollow" class="" title="">
+                        <span>
+                                以层级方式查看
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="action-view-source-link" href="javascript:;" rel="nofollow" class="action-view-source popup-link" title="">
+                        <span>
+                                查看页面源代码
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="delete-all-comments-link-link" href="javascript:;" rel="nofollow" class="" title="">
+                        <span>
+                                Delete comments
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="action-export-pdf-link" href="javascript:;" rel="nofollow" class="" title="">
+                        <span>
+                                导出为PDF
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="com-k15t-confluence-scroll-epub-launcher" href="javascript:;" rel="nofollow" class="" title="">
+                        <span>
+                                Export to EPUB
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="action-export-word-link" href="javascript:;" rel="nofollow" class="action-export-word" title="">
+                        <span>
+                                导出为Word
+            </span>        </a>
+    </li>
+                                        </ul>
+                </div>
+                    </div>
+    </li>
+            </ul>
+    </div>
+
+            
+            <div id="title-heading" class="pagetitle with-breadcrumbs">
+                
+                                    <div id="breadcrumb-section">
+                        
+    
+    
+    <ol id="breadcrumbs">
+                                        
+                        
+        <li class="first">
+                        
+                            <span class=""><a href="pages-ww.html">页面</a></span>
+                                                                                    
+                        
+        <li>
+                        
+                            <span class=""><a href="home.html">Home</a></span>
+                                                                    </li></ol>
+
+
+                    </div>
+                
+                
+        <a href="#page-banner-end" class="assistive">跳到banner的尾部</a>
+<div id="page-banner-start" class="assistive"></div>
+
+                    
+            <div id="page-metadata-banner"><ul class="banner"><li id="system-content-items" class="noprint"><a href="" title="未限制" id="content-metadata-page-restrictions-hidden" class="hidden"></a><a href="javascript:;" title="3 个附件" id="content-metadata-attachments" class="aui-icon aui-icon-small aui-iconfont-attachment"></a></li><li class="page-metadata-item noprinthas-button" id="content-metadata-jira-wrapper"><a href="" title="" id="content-metadata-jira" class="aui-button aui-button-subtle content-metadata-jira tipsy-disabled hidden"><span>JIRA 链接</span></a></li></ul></div>
+            
+
+<a href="#page-banner-start" class="assistive">回到标题开始</a>
+<div id="page-banner-end" class="assistive"></div>
+    
+
+                <h1 id="title-text" class="with-breadcrumbs">
+                                                <a href="">HDIV</a>
+                                    </h1>
+            </div>
+        </div><!-- \#main-header -->
+        
+        
+
+        <div id="sidebar-container">
+                                                </div><!-- \#sidebar-container -->
+
+        
+    
+
+        
+
+
+
+
+            
+    
+
+                                
+    
+
+    
+    
+        
+    
+    
+                    
+    
+
+    
+
+    
+            
+        
+
+    
+    
+
+    
+            
+        
+
+
+
+    
+<div id="content" class="page view">
+    
+
+
+<div id="action-messages">
+                        </div>
+
+
+
+            <script type="text/x-template" title="searchResultsGrid">
+    <table class="aui">
+        <thead>
+            <tr class="header">
+                <th class="search-result-title">页面标题</th>
+                <th class="search-result-space">空间</th>
+                <th class="search-result-date">更新于</th>
+            </tr>
+        </thead>
+    </table>
+</script>
+<script type="text/x-template" title="searchResultsGridCount">
+    <p class="search-result-count">{0}</p>
+</script>
+<script type="text/x-template" title="searchResultsGridRow">
+    <tr class="search-result">
+        <td class="search-result-title"><a href="{1}" class="content-type-{2}"><span>{0}</span></a></td>
+        <td class="search-result-space"><a class="space" href="/confluence/display/{4}/" title="{3}">{3}</a></td>
+        <td class="search-result-date"><span class="date" title="{6}">{5}</span></td>
+    </tr>
+</script>
+        
+    
+            
+
+        
+                            
+    
+
+                    
+
+        
+        <a href="#page-metadata-end" class="assistive">转至元数据结尾</a>
+<div id="page-metadata-start" class="assistive"></div>
+
+    <div class="page-metadata">
+        <ul>
+            <li class="page-metadata-modification-info">
+                
+        
+    
+        
+    
+        
+            
+            由<span class='author'>     <a href="javascript:;" class="url fn">ASF Infrabot</a></span>创建于<a class='last-modified' title='查看变更' href='javascript:;'>七月 01, 2019</a>
+                </li>
+        </ul>
+    </div>
+
+
+<a href="#page-metadata-start" class="assistive">转至元数据起始</a>
+<div id="page-metadata-end" class="assistive"></div>
+
+        
+                                            
+        <div id="main-content" class="wiki-content">
+                           
+        <p>This page is to discuss the possible options of integrating HDIV with Struts.</p>
+
+<p><a href="javascript:;" class="external-link" rel="nofollow">The original email chain can be found here.</a></p>
+
+<p>Talking points</p>
+
+<h1 id="HDIV-SPIornativeintegration?">SPI or native integration?</h1>
+
+<p><strong>Matt Raible:</strong> HDIV seems to solve a problem that most web application developers don't know they have. By &quot;natively&quot;, I mean it's part of the core and you can't make your application less secure by ripping it out. It is Apache licensed after all. If rolling it into the core isn't an option, it would be nice if it was easier to integrate. Instead of requiring new tag libraries, it'd be nice if tag libraries (and Velocity/FreeMarker macros) were &quot;HDIV aware&quot;. If an HDIV JAR/Plugin is on the classpath - use it.</p>
+
+<p><strong>Paul Benedict:</strong> I wouldn't want to fork the project because I am not a security expert. I couldn't maintain it well even though I want to integrate it. Also, I don't know if HDIV has aspirations outside of Struts which would make an SPI much more palatable. I am not strongly in favor of belonging to the core. I think the feature should be optional, but I wouldn't also object if it was put of the core with the option to turn on/off. </p>
+
+<p><strong>Martin Cooper:</strong> Which security package(s) would you want to work with in addition to HDIV? I firmly believe that you need at least two candidates in order to successfully design an SPI. Otherwise you run a very high risk of designing an SPI that can really only be successfully used by the one candidate you designed it around. </p>
+
+<p><strong>HDIV team:</strong> We think it's better to use a SPI. From our point of view the SPI it's an extension point that could be interesting for many projects, not only for security projects. For example if you use webflow in a Struts application you have to add flow execution key parameters by hand and that could be easily solved by implementing a SPI.</p>
+
+<p>Of course, if we use the SPI it's not necessary to extend struts' tld making it easier to integrate HDIV.</p>
+
+<p>In addition to that if you use the SPI you can activate or desactivate updating Struts configuration. By default Struts can use an empty implementation of the SPI. </p>
+
+<p>HDIV can be very useful for many applications but not for others. For example if you have a public web page where it's necessary to be indexable, you shouldn't use HDIV because all links are dynamic and related with web session (the same problem of JSF but in this case you can desactivate it). </p>
+
+<p>About Paul Benedict's comment (&quot;I don't know if HDIV has aspirations outside of Struts which would make an SPI much more palatable&quot;), the target of HDIV is the integration with all web frameworks that need this type of security functionalities. So far we have developed HDIV versions for:</p>
+
+<ul>
+	<li>Struts 1</li>
+	<li>Struts 2</li>
+	<li>Spring MVC</li>
+	<li>JSTL</li>
+	<li><a class="unresolved" href="#">WebWork</a> (not published)</li>
+	<li>Stripes (not published)</li>
+	<li>JSF (not published)
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>Some of them are still under development, but they will be published in a few months. In consecuence, it will be useful if the SPI it's generic and works with all web frameworks. But thinking about the implementation and library dependencies maybe it would be better if each framework had it's own interface, similar to interceptors concept in many frameworks but in this case related with tag libraries. Anyway, we could create a first release supporting commented frameworks.</p>
+
+<p><strong>Martin Cooper:</strong> Please re-read my comment. I am not arguing against an SPI per se. My point is that, without some other security framework in mind in addition to HDIV, it is very unlikely that you will be able to design an SPI that can successfully be used by any other security framework.</p>
+
+<p>Also, given the list of frameworks that you already support, don't you already have an internal API, so that the bulk of your code is common for all frameworks, and you just have a small shim to specialise it for each framework? If that's the case, then how much value is there in having a shared SPI just within Struts? You really need all of the frameworks to implement that SPI, not just Struts, in order to get rid of your per-framework shims, in which case you really want to engage all of the frameworks in the SPI design, not just the Struts team.</p>
+
+<p><strong>HDIV team:</strong> From our point of view, although we find interesting to define a common interface for all the frameworks, our primary goal is to add new extension points to Struts' API so that Struts' users can use it in a transparent way, without having to copy any source code.</p>
+
+<p>The real problem is similar to what happens in Struts 1 with the <a href="requestprocessor.html">RequestProcessor</a>: when you need to intercept a request's life cycle, many times you are forced to extend the <a href="requestprocessor.html">RequestProcessor</a> and copy parts of the existing code next to the extension. This problem was solved in Struts2, because each step of the life cycle is implemented by a different interceptor.</p>
+
+<p>Actually, we want to add extension points to the HTML creation process.</p>
+
+<p>When implementing HDIV for Struts, we had to extend tags and copy parts of the Struts' source code in order to fulfil HDIV's objectives. For us, these are the main reasons why an interface should be created:</p>
+
+<ol>
+	<li>Avoid having to extend tags and copy source code. Also avoids creating a new version for the extension for each Struts' version.
+<br class="atl-forced-newline">
+ 2. Provide extension points that could be used by any framework.
+<br class="atl-forced-newline">
+ 3. Eliminate the direct dependency between Struts and HDIV.
+<br class="atl-forced-newline">
+<br class="atl-forced-newline"></li>
+</ol>
+
+
+<p>If we integrate HDIV natively in the tags, without using an interface, we eliminate an extension point that could be required by other frameworks or by Struts itself. Nowadays, we don´t know who and how will require this interface (the automatization of the webflow's flow execution key could be an example), but from a designer point of view it is always better to define an interface that could change from version to version.</p>
+
+<p>There should be two different implementations of this interface: the one provided by HDIV and the one provided by Struts. Struts' implementation would keep the current tag behaviour and HDIV's one would add security functionalities.</p>
+
+<p>In our opinion, HDIV's implementation should be configured by default in order to make the application safer. If the developers don't require HDIV they could modify the configuration and use the empty implementation provided by Struts.</p>
+
+<p>So, although we find using an interface a better solution, we don´t have any problem if the final decision is to include it natively in the code.</p>
+
+<h1 id="HDIV-Performance">Performance</h1>
+
+<p><strong>Ted Husted:</strong> It's unusual that a feature such as this comes without penality. If HDIV were native, what would be the performance cost? Complexity cost? </p>
+
+<p><strong>HDIV team:</strong> In our opinion the performance offered by HDIV is acceptable and it could be activated by default, but we have to take into account that it generates a problem with the pages indexation (all links are dynamic and related with web session). Consequently we think it's better if the HDIV activation it's optional. </p>
+
+<p>Another discussion is if it has to be activated by default or not. From a security point of view it's better if HDIV is activated by default. We agree with Matt Raible when he says that HDIV &quot;solves a problem that most web application developers don't know they have&quot;. In our experience we have seen that even experimented developers don't know they have. </p>
+
+<p>For more information about HDIV performance see <a href="javascript:;" class="external-link" rel="nofollow">hdiv-performance.pdf</a></p>
+
+<h1 id="HDIV-Validation">Validation</h1>
+
+<p><strong>Martin Cooper:</strong> How does HDIV's editable content validation interact with the validation mechanisms that we already have built into Struts? Is someone using HDIV with Struts going to be writing their validations using HDIV's format, Commons Validator's format, or both?</p>
+
+<p><strong>HDIV team:</strong> Editable data validation offered by HDIV it's integrated with struts’ validator. HDIV creates validation errors within HDIV's validation filter and they are added within HDIV <a class="unresolved" href="#">RequestProccessor</a>. The errors generated by HDIV are generated with the same format of Struts and they are visualized in the same way as usual errors using Struts tags ( html:errors,logic:messagesPresent, etc.).</p>
+
+<p>For more information about it see <a href="javascript:;" class="external-link" rel="nofollow">HDIV reference (chapter-7.1.2.4.2)</a>.</p>
+
+<h1 id="HDIV-Usability">Usability</h1>
+
+<p><strong>Martin Cooper:</strong> How much of the functionality of HDIV is only available for people using JSP with tag libraries? If I'm using Velocity, or not using server-side presentation at all, how much of HDIV do I lose?</p>
+
+<p><strong>HDIV team:</strong> The core API of HDIV (hdiv-core) is not related with a concrete technology and it’s possible to use it with any technology. Although we haven’t implemented it for Struts 1 the integration of Velocity and Freemarker it's included in Struts 2 version, see Struts 2 example application, within (struts2-showcase-2.0.x) ui-tags section.</p>
+
+<p><strong>Martin Cooper:</strong> If I am not using any server-side presentation technology at all, which parts of HDIV do I lose? Which can I still use?</p>
+
+<p><strong>HDIV team:</strong> If no presentation framework is used (or the one used is not supported by HDIV), the only way to use HDIV is to consume the base API offered by HDIV core  (hdiv-core). That is, the program which generates the HTML code should consume the methods offered by the <a href="javascript:;" class="external-link" rel="nofollow">IDataComposer</a> interface.</p>
+
+<p>Obviously, in this case the use of HDIV is not transparent as it is when we use the extended tags. Anyway, the validation phase made by the HDIV filter doesn't change in any case.</p>
+
+
+<h1 id="HDIV-SPI(ParameterProcessing)Integration">SPI (ParameterProcessing) Integration</h1>
+
+<p><strong>HDIV team:</strong> As we mentioned earlier, from our point of view it is more adecuate to integrate HDIV with Struts via SPI due to the following reasons:</p>
+
+<ul>
+	<li>We avoid a direct dependency between Struts and HDIV.</li>
+	<li>Offers an extension point for Struts tags that can be used for other projects apart from the ones related with security or HDIV.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>The new extension point provided by the SPI offers these functionalities:</p>
+<ul>
+	<li>Add new parameters to forms and links</li>
+	<li>Modify the value of the parameters</li>
+	<li>Modify the name of the parameters
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>The SPI could be used for both Struts 1 and Struts 2. Being defined in a so high level it could be used for any web framework, although this  <br>
+would be a secondary objective.</p>
+
+<p>In order to support the SPI option, we have developed the following software components:<br>
+	1.	SPI<br>
+	2.	Struts 1.3.8 tags' version using the SPI<br>
+	3.	Two implementations of the SPI: empty and HDIV's implementation<br>
+	4.	Web application using these new components: struts-examples</p>
+
+<p>The SPI, the new version of SPI-consuming tags and the empty SPI implementation would be part of Struts, without any HDIV dependency. In the case of Struts 2, a new version of tags must be implemented. We could implement it if necessary. As an additional information, we describe more deeply each of the developed components:</p>
+
+
+<h4 id="HDIV-1.SPI">1.SPI</h4>
+<p>It is consumed by the HTML tags in order to offer extension points and extend tag's core behaviour. Thus, we avoid extending each tag separately. The name of the SPI is <a class="unresolved" href="#">ParameterProcessing</a> and this is its definition:</p>
+
+
+<div class="preformatted panel conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="noformat"><div class="preformattedContent panelContent">
+<pre>
+package org.apache.struts.config;
+
+import java.util.Map;
+import javax.servlet.http.HttpServletRequest;
+
+/**
+ * &lt;p&gt;
+ * It is consumed by the HTML tags in order to offer extension points and extend
+ * tag's core behaviour.
+ * &lt;/p&gt;
+ * &lt;p&gt;
+ * Struts will distribute one implementation of this interface maintaining
+ * present behaviour: org.apache.struts.config.impl.EmptyParameterProcessing. It
+ * doesn't process any form or link parameter, leaving values as they are
+ * received as parameters.
+ * &lt;/p&gt;
+ * &lt;p&gt;
+ * By default, Struts will be configured to use HDIV's implementation
+ * (org.hdiv.config.impl.HDIVParameterProcessing) which guarantees data integrity
+ * and confidentiality.
+ * &lt;/p&gt;
+ * 
+ * @author hdiv.org
+ */
+public interface ParameterProcessing {
+
+	/**
+	 * Init method.
+	 * 
+	 * @param request The servlet request we are processing
+	 */
+	public void init(HttpServletRequest request);
+
+	/**
+	 * &lt;p&gt;
+	 * It is called by each form of the html page returned by the server. The
+	 * value returned by this method will be the value assigned to the form's
+	 * &quot;action&quot; attribute.
+	 * &lt;/p&gt;
+	 * 
+	 * @param action Action value.
+	 * @return Returns the value of form´s &quot;action&quot; attribute
+	 */
+	public String processStartForm(String action);
+
+	/**
+	 * &lt;p&gt;
+	 * It is called each time the &quot;name&quot; attribute of the form parameter needs
+	 * to be rendered. The value returned by this method will be the value
+	 * assigned to the form's &quot;name&quot; attribute.
+	 * &lt;/p&gt;
+	 * 
+	 * @param name HTTP parameter name
+	 * @param type parameter's type (select, radio, hidden, etc.). Most of the
+	 * times the value for this parameter is the value of the tag's &quot;type&quot;
+	 * attribute. Sometimes it is needed to explicitly indicate the type
+	 * parameter, because some HTML tags lack it.
+	 * @return Value for the &quot;name&quot; attribute for the &lt;code&gt;name&lt;/code&gt;
+	 * parameter.
+	 */
+	public String processFormParameterName(String name, String type);
+	
+/**
+	 * &lt;p&gt;
+	 * It is called each time the &quot;value&quot; attribute of the form parameter needs
+	 * to be rendered. The value returned by this method will be the value
+	 * assigned to the form's &quot;value&quot; attribute.
+	 * &lt;/p&gt;
+	 * &lt;p&gt;
+	 * In the default implementation configured by Struts, it generates a new
+	 * encoded value for the parameter &lt;code&gt;name&lt;/code&gt; and the value
+	 * &lt;code&gt;value&lt;/code&gt; passed as parameters. The returned value guarantees
+	 * the confidentiality in the cipher and memory strategies if
+	 * confidentiality is activated.
+	 * &lt;/p&gt;
+	 * 
+	 * @param name HTTP parameter name
+	 * @param value parameter's value
+	 * @param type parameter's type (select, radio, hidden, etc.). Most of the
+	 * times the value for this parameter is the value of the tag's &quot;type&quot;
+	 * attribute. Sometimes it is needed to explicitly indicate the type
+	 * parameter, because some HTML tags lack it.
+	 * @return Value for the &quot;value&quot; attribute of the form's &lt;code&gt;name&lt;/code&gt;
+	 * parameter
+	 */
+	public String processFormParameterValue(String name, String value, String type);
+
+	/**
+	 * &lt;p&gt;
+	 * It is invoked before the form is closed and it returns the extra
+	 * parameters, the ones not defined using HTML tags, that must be added to
+	 * the form. For instance, parameters for controlling the application's
+	 * flow, random token to avoid CSRF attacks, etc.
+	 * &lt;/p&gt;
+	 * &lt;p&gt;
+	 * In the default implementation configured by Struts, the HDIV parameter
+	 * that guarantees data integrity and random token to avoid CSRF attacks are
+	 * returned. If our application uses Spring Web Flow, we can add the
+	 * &lt;code&gt;_flowExecutionKey&lt;/code&gt; parameter to the forms and links
+	 * automatically by using the hdiv-webflow-x.x library. See HDIV's
+	 * repository: &lt;a href=&quot;http://repo1.maven.org/maven2/org/hdiv/&quot;&gt;HDIV
+	 * (Central Repository)&lt;/a&gt;
+	 * &lt;/p&gt;
+	 * 
+	 * @return Returns parameters' map that we need to add to form as new
+	 * fields.
+	 */
+	public Map getExtraFormParameters();
+
+	/**
+	 * &lt;p&gt;
+	 * It is invoked each time the &quot;href&quot; attribute of a url generated by the
+	 * &lt;code&gt;link&lt;/code&gt;, &lt;code&gt;frame&lt;/code&gt;, &lt;code&gt;redirect&lt;/code&gt; and
+	 * &lt;code&gt;forward&lt;/code&gt; tags needs to be rendered.
+	 * &lt;/p&gt;
+	 * &lt;p&gt;
+	 * In the default implementation configured by Struts, it generates new
+	 * encoded values for the &lt;code&gt;url&lt;/code&gt; parameters only if
+	 * confidentiality is activated, and adds HDIV's parameter and a random
+	 * token parameter to avoid data tampering and CSRF attacks respectively.
+	 * &lt;/p&gt;
+	 * 
+	 * @param url request url
+	 * @param charEncoding character encoding
+	 * @return url Processed url
+	 */
+	public String processURL(String url, String charEncoding);
+
+}
+
+</pre>
+</div></div>
+
+
+<p>Source code: <a href="javascript:;" data-linked-resource-id="120724209" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="struts-core-1.3.8-ParameterProcessing-sources" data-linked-resource-content-type="application/octet-stream" data-linked-resource-container-id="120724203" data-linked-resource-container-version="1">struts-core-1.3.8-ParameterProcessing-sources</a></p>
+
+<h4 id="HDIV-2.Struts1.3.8tags&#39;versionusingtheSPI">2.Struts 1.3.8 tags' version using the SPI</h4>
+
+<p>We have modified Struts 1.3.8 HTML and LOGIC (redirect and forward) tags by adding calls to the SPI methods. We have implemented tags so that each time the attributes &quot;name&quot; or &quot;value&quot; need to be rendered they call SPI methods which process these values and obtain the processed value. Let's see an example with the tag &quot;hidden&quot;. Keep in mind that this tag extends <a class="unresolved" href="#">BaseFieldTag</a> class which renderizes the HTML of the hidden field.</p>
+
+<div class="preformatted panel conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="noformat"><div class="preformattedContent panelContent">
+<pre>
+/**
+ * Custom tag for input fields of type &quot;hidden&quot;.
+ *
+ * @version hdiv.org
+ */
+public class HiddenTag extends BaseFieldTag {
+
+...
+/**
+ * @return Returns the value to be rendered in the “name” attribute.
+ * @throws JspException if a JSP exception has occurred
+ * @version hdiv.org
+ */	
+    public String processName() throws JspException {    	   	
+        return processFormParameterName(prepareName(), this.type);        
+    }
+    
+	/**
+	 * @return Returns the value to be rendered in the “value” attribute.
+	 * @throws JspException if a JSP exception has occurred
+	 * @version hdiv.org
+	 */
+    public String processValue() throws JspException {
+    	return processFormParameterValue(prepareName(), prepareValue(), this.type);   
+    }  
+
+...
+}
+
+</pre>
+</div></div>
+
+<div class="preformatted panel conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="noformat"><div class="preformattedContent panelContent">
+<pre>
+/**
+ * Convenience base class for the various input tags for text fields.
+ *
+ * @version hdiv.org
+ */
+public abstract class BaseFieldTag extends BaseInputTag {
+
+...
+	
+    /**
+     * Renders a fully formed &lt;input&gt; element.
+     * @throws JspException
+     */
+    protected String renderInputElement() throws JspException {
+        StringBuffer results = new StringBuffer(&quot;&lt;input&quot;);
+        prepareAttribute(results, &quot;type&quot;, this.type);
+
+        prepareAttribute(results, &quot;name&quot;, processName());  &lt;---- new implementation
+
+        prepareAttribute(results, &quot;accesskey&quot;, getAccesskey());
+        prepareAttribute(results, &quot;accept&quot;, getAccept());
+        prepareAttribute(results, &quot;maxlength&quot;, getMaxlength());
+        prepareAttribute(results, &quot;size&quot;, getCols());
+        prepareAttribute(results, &quot;tabindex&quot;, getTabindex());
+
+        prepareAttribute(results, &quot;value&quot;, this.formatValue(processValue()));  &lt;---- new implementation
+      
+        results.append(this.prepareEventHandlers());
+        results.append(this.prepareStyles());
+        prepareOtherAttributes(results);
+        results.append(this.getElementClose());
+        return results.toString();
+    }
+	/**
+	 * @return Returns the value to be rendered in the “value” attribute.
+	 * @throws JspException if a JSP exception has occurred
+	 * @version hdiv.org
+	 */	
+public abstract String processValue() throws JspException;
+	/**
+	 * @return Returns the value to be rendered in the “name” attribute.
+	 * @throws JspException if a JSP exception has occurred
+	 * @version hdiv.org
+	 */	
+	public abstract String processName() throws JspException;  
+	...
+}
+
+</pre>
+</div></div>
+
+<div class="preformatted panel conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="noformat"><div class="preformattedContent panelContent">
+<pre>/**
+ * Base class for tags that render form elements capable of including JavaScript
+ * event handlers and/or CSS Style attributes. This class does not implement the
+ * doStartTag() or doEndTag() methods. Subclasses should provide appropriate
+ * implementations of these.
+ * 
+ * @version hdiv.org
+ */
+public abstract class BaseHandlerTag extends BodyTagSupport {
+
+...
+	
+public String processFormParameterValue(String name, String value, String type) {
+
+ParameterProcessing paramProcessing = TagUtils.getInstance().getParameterProcessing(pageContext);
+	return paramProcessing.processFormParameterValue(name, value, type);
+}
+	
+public String processFormParameterName(String name, String type) {
+
+ParameterProcessing paramProcessing = TagUtils.getInstance().getParameterProcessing(pageContext);
+return paramProcessing.processURL(url, charEncoding);
+}	
+	
+	...
+}
+
+</pre>
+</div></div>
+
+<div class="preformatted panel conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="noformat"><div class="preformattedContent panelContent">
+<pre>/**
+ * Base class for tags that render form elements capable of including JavaScript
+ * event handlers and/or CSS Style attributes. This class does not implement the
+ * doStartTag() or doEndTag() methods. Subclasses should provide appropriate
+ * implementations of these.
+ * 
+ * @version hdiv.org
+ */
+public class TagUtils {
+
+...
+
+    /**
+     * &lt;p&gt;Returns the ParameterProcessing class on the specified module.&lt;/p&gt;
+     *
+     * @param pageContext PageContext we are operating in
+     * @return Returns the ParameterProcessing class on the specified module.
+     * @author hdiv.org
+     */
+    public ParameterProcessing getParameterProcessing(PageContext pageContext) {    	
+    	
+        ModuleConfig config = getInstance().getModuleConfig(pageContext);                        
+      String paramProcessingClass = config.getControllerConfig().getParameterProcessingClass();
+        	
+       return (ParameterProcessing) pageContext.getAttribute(paramProcessingClass,
+                    PageContext.REQUEST_SCOPE);        	
+}  
+
+</pre>
+</div></div>
+
+<p>We always invoke methods from the SPI to obtain the values of the attributes &quot;name&quot; and &quot;value&quot; using processName() and processValue() methods. This is the main rule that we have followed for all the tags. As we can see in the definition of the SPI, there are methods to be invoked in other cases, for example in the beginning and in the end of a form or when generating an url; For these cases &quot;form&quot; and &quot;link&quot; tags have been implemented. Let's see   the implementation of the tag &quot;form&quot;:</p>
+
+<div class="preformatted panel conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="noformat"><div class="preformattedContent panelContent">
+<pre>public class FormTag extends TagSupport {
+
+	...
+	
+	/**
+	 * Renders the action attribute
+	 */
+protected void renderAction(StringBuffer results) {
+
+	String calcAction = (this.action == null ? postbackAction : this.action);
+	HttpServletResponse response = (HttpServletResponse) this.pageContext.getResponse();
+
+	String url = response.encodeURL(TagUtils.getInstance().getActionMappingURL(calcAction, this.pageContext));
+
+	results.append(&quot; action=\&quot;&quot;);
+	results.append(processStartForm(url)); &lt;---- new implementation
+	results.append(&quot;\&quot;&quot;);
+}
+	
+public String processStartForm(String action) {
+
+ParameterProcessing paramProcessing = TagUtils.getInstance().getParameterProcessing(pageContext);
+	return paramProcessing.processStartForm(action);
+}	
+	
+public int doEndTag() throws JspException {
+	renderExtraParams();
+	...
+}		
+	
+/**
+ * Adds fields to form
+ * @throws JspException
+ * @author hdiv.org
+ */
+public void renderExtraParams() throws JspException {
+
+ParameterProcessing paramProcessing = TagUtils.getInstance().getParameterProcessing(pageContext);
+	Map extraParams = paramProcessing.getExtraFormParameters();
+
+	if (extraParams != null) {
+		for (Iterator iter = extraParams.entrySet().iterator(); iter.hasNext();) {
+			Map.Entry entry = (Map.Entry) iter.next();
+			String key = (String) entry.getKey();
+			String val = (String) entry.getValue();
+			TagUtils.getInstance().write(pageContext, renderField(key, val));
+		}
+	}
+}
+
+	/**
+	 * Renders an HTML &lt;b&gt;&amp;lt;input&amp;gt;&lt;/b&gt; element of type hidden.
+	 * 
+	 * @param name hidden parameter name
+	 * @param value value
+	 * @return HTML &lt;b&gt;&amp;lt;input&amp;gt;&lt;/b&gt; element of type hidden
+	 * @author hdiv.org
+	 */
+	public String renderField(String name, String value) {
+		StringBuffer sb = new StringBuffer();
+		sb.append(&quot;&lt;input type=\&quot;hidden\&quot;&quot;);
+		renderAttribute(sb, &quot;name&quot;, name);
+		renderAttribute(sb, &quot;value&quot;, value);
+		sb.append(&quot;&gt;\n&quot;);
+
+		return sb.toString();
+	}	
+	
+	...
+}
+</pre>
+</div></div>
+
+
+<p>In this case, we invoke <strong>processStartForm</strong> method to get the value for the &quot;action&quot; attribute in the form. And before the end of the form, we invoke <strong>getExtraFormParameters</strong> method to get the extra parameters to be added to the form. For instance, parameters for controlling the application's flow like <em>flowExecutionKey in Spring Web Flow, random token to avoid CSRF attacks, and _HDIV_STATE</em> parameter to guarantee integrity and confidentiality.</p>
+
+<p>Source code: <a href="javascript:;" data-linked-resource-id="120724204" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="struts-taglib-1.3.8-ParameterProcessing-sources" data-linked-resource-content-type="application/octet-stream" data-linked-resource-container-id="120724203" data-linked-resource-container-version="1">struts-taglib-1.3.8-ParameterProcessing-sources</a> </p>
+
+
+<h4 id="HDIV-3.TwoimplementationsoftheSPI">3.	Two implementations of the SPI</h4>
+
+<ul>
+	<li>empty (EmptyParameterProcessing): it maintains the Struts' present behaviour.</li>
+	<li>HDIV (HDIVParameterProcesing): it guarantees data integrity and confidentiality.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>In order to configure the SPI implementation, we must define the name of the class in the parameterProcessingClass attribute of the controller. Thus, the SPI implementation to use is defined for each module, making it possible to define different implementations for different modules. <strong>By default</strong>, if we don't define any value for this new attribute, the <strong>HDIV’s implementation will be used</strong>, which guarantees data integrity and confidentiality.</p>
+<ul>
+	<li>struts-config-1_3.dtd file has been modified by adding the new &quot;parameterProcessingClass&quot; attribute.
+<br class="atl-forced-newline">
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>See the example in point 4  to get more information about this configuration.</p>
+
+<p><a href="actionservlet.html">ActionServlet</a>: The servlet has been modified to make it create a new instance of the SPI for each request made using the class defined in the controller.</p>
+
+<h4 id="HDIV-4.Webapplicationusingthesenewcomponents:struts-examples">4.	Web application using these new components: struts-examples</h4>
+
+<p>We have configured the struts-examples application ( <a href="javascript:;" data-linked-resource-id="120724207" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="struts-examples-1.3.8.war" data-nice-type="Java Archive" data-linked-resource-content-type="application/octet-stream" data-linked-resource-container-id="120724203" data-linked-resource-container-version="1">struts-examples-1.3.8.war</a> )provided with the Struts 1.3.8 distribution to make it use different SPI implementations.</p>
+<ul>
+	<li>Default SPI configuration: No implementation has been configured for “/exercise”, “/upload” and “/hdiv” modules. This means that SPI’s default implementation (HDIVParameterProcessing) will be used, which guarantees data integrity  and confidentiality.
+<br class="atl-forced-newline">
+<br class="atl-forced-newline"></li>
+	<li>We have configured for “/validation” and “/attacks” modules SPI's empty implementation to maintain Struts' present behaviour.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<div class="preformatted panel conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="noformat"><div class="preformattedContent panelContent">
+<pre>&lt;controller parameterProcessingClass=&quot;org.apache.struts.config.impl.EmptyParameterProcessing&quot;&gt;
+</pre>
+</div></div>
+
+                
+        
+    
+        </div>
+
+                        
+    
+
+
+
+<div id="labels-section" class="pageSection group">
+    <div class="labels-section-content content-column" entityid="120724203" entitytype="page">
+	<div class="labels-content">
+		
+    <ul class="label-list label-list-right ">
+            <li class="no-labels-message">
+            无标签
+        </li>
+            </ul>
+
+    </div>
+</div>
+</div>
+        
+		
+            
+
+
+
+
+            
+        
+
+
+
+
+
+
+
+
+                        
+    
+<div id="comments-section" class="pageSection group">
+        
+    
+
+
+
+</div>
+        
+
+
+                
+    
+            
+</div>
+
+    
+
+    
+
+
+
+
+    
+    
+
+    
+    
+    
+
+
+    
+<div id="space-tools-web-items" class="hidden">
+                <div data-label="概览" data-href="/confluence/spaces/viewspacesummary.action?key=WW">概览</div>
+            <div data-label="内容工具" data-href="/confluence/pages/reorderpages.action?key=WW">内容工具</div>
+            <div data-label="应用" data-href="/confluence/spaces/snippeterrors.action?key=WW">应用</div>
+    </div>
+        
+
+
+
+            </div><!-- \#main -->
+            
+    
+    
+        
+            
+            
+
+<div id="footer" role="contentinfo">
+    <section class="footer-body">
+
+                                                            <p class="license license-opensource">
+                    本站点免费授予 Apache Software Foundation<b> Atlassian Confluence 开源项目授权</b>。<a href="javascript:;">今天开始评估 Confluence</a>。<br>
+                </p>
+                    
+        
+
+        <ul id="poweredby">
+            <li class="noprint">基于 <a href="javascript:;" class="hover-footer-link" rel="nofollow">Atlassian Confluence</a> <span id='footer-build-information'>7.5.0</span> 技术构建</li>
+            <li class="print-only">由 Atlassian 合流7.5.0 打印</li>
+            <li class="noprint"><a href="javascript:;" class="hover-footer-link" rel="nofollow">报告缺陷</a></li>
+            <li class="noprint"><a href="javascript:;" class="hover-footer-link" rel="nofollow">Atlassian 新闻</a></li>
+        </ul>
+
+        
+
+        <div id="footer-logo"><a href="javascript:;" rel="nofollow">Atlassian</a></div>
+
+                    
+        
+    </section>
+</div>
+
+    
+</div>
+
+</div><!-- \#full-height-container -->
+</div><!-- \#page -->
+
+    <span style="display:none;" id="confluence-server-performance">{"serverDuration": 71, "requestCorrelationId": "01c4d5dc979ef871"}</span>
+</body>
+</html>
+    

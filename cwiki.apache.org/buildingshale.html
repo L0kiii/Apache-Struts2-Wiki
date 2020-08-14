@@ -1,0 +1,945 @@
+    
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+                            <title>BuildingShale - Apache Struts 2 Wiki - Apache Software Foundation</title>
+    
+        
+
+                        
+    
+                        
+    
+
+                
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=IE7">
+<meta charset="UTF-8">
+<meta id="confluence-context-path" name="confluence-context-path" content="/confluence">
+<meta id="confluence-base-url" name="confluence-base-url" content="https://cwiki.apache.org/confluence">
+
+    <meta id="atlassian-token" name="atlassian-token" content="8c6ff6025e98fca3d8210d9c2cec162d5450aa7e">
+
+
+<meta id="confluence-space-key" name="confluence-space-key" content="WW">
+<script type="text/javascript">
+        var contextPath = '/confluence';
+</script>
+
+    
+
+    <meta name="confluence-request-time" content="1595839955068">
+        
+    
+        
+            <meta name="ajs-use-keyboard-shortcuts" content="true">
+            <meta name="ajs-is-confluence-admin" content="false">
+            <meta name="ajs-connection-timeout" content="10000">
+            <script type="text/x-template" title="gliffy-webpanel-footer">
+        <div class="gliffy-webpanel-footer"><span>This Confluence installation runs a Free Gliffy License - Evaluate the <a href="http://www.gliffy.com/products/confluence-plugin/">Gliffy Confluence Plugin</a> for your Wiki!</span></div>
+</script>
+
+
+            <style>.ia-fixed-sidebar, .ia-splitter-left {width: 285px;}.theme-default .ia-splitter #main {margin-left: 285px;}.ia-fixed-sidebar {visibility: hidden;}</style>
+            <meta name="ajs-discovered-plugin-features" content="$discoveredList">
+            <meta name="ajs-keyboardshortcut-hash" content="244b3b2851a4a758ccc0304672ffd8c1">
+            
+    
+    
+            <meta name="ajs-page-title" content="BuildingShale">
+            <meta name="ajs-latest-published-page-title" content="BuildingShale">
+            <meta name="ajs-space-name" content="Apache Struts 2 Wiki">
+            <meta name="ajs-page-id" content="120724155">
+            <meta name="ajs-latest-page-id" content="120724155">
+            <meta name="ajs-content-type" content="page">
+            <meta name="ajs-parent-page-title" content="Home">
+            <meta name="ajs-parent-page-id" content="14153">
+            <meta name="ajs-space-key" content="WW">
+            <meta name="ajs-max-number-editors" content="12">
+            <meta name="ajs-macro-placeholder-timeout" content="5000">
+            <meta name="ajs-jira-metadata-count" content="-1">
+            <meta name="ajs-from-page-title" content="">
+            <meta name="ajs-can-remove-page" content="false">
+            <meta name="ajs-can-remove-page-hierarchy" content="false">
+            <meta name="ajs-browse-page-tree-mode" content="view">
+            <meta name="ajs-shared-drafts" content="true">
+            <meta name="ajs-context-path" content="/confluence">
+            <meta name="ajs-base-url" content="https://cwiki.apache.org/confluence">
+            <meta name="ajs-version-number" content="7.5.0">
+            <meta name="ajs-build-number" content="8501">
+            <meta name="ajs-remote-user" content="">
+            <meta name="ajs-remote-user-key" content="">
+            <meta name="ajs-remote-user-has-licensed-access" content="false">
+            <meta name="ajs-remote-user-has-browse-users-permission" content="false">
+            <meta name="ajs-current-user-fullname" content="">
+            <meta name="ajs-current-user-avatar-url" content="">
+            <meta name="ajs-current-user-avatar-uri-reference" content="/confluence/images/icons/profilepics/anonymous.svg">
+            <meta name="ajs-static-resource-url-prefix" content="/confluence/s/962fig/8501/fded9f91818631c3677be93247bf5ae6723a1c8d/_">
+            <meta name="ajs-global-settings-attachment-max-size" content="20971520">
+            <meta name="ajs-global-settings-quick-search-enabled" content="true">
+            <meta name="ajs-user-locale" content="zh_CN">
+            <meta name="ajs-enabled-dark-features" content="site-wide.shared-drafts,site-wide.synchrony,clc.quick.create,confluence.view.edit.transition,cql.search.screen,confluence-inline-comments-resolved,http.session.registrar,frontend.editor.v4,nps.survey.inline.dialog,confluence.efi.onboarding.new.templates,frontend.editor.v4.compatibility,atlassian.cdn.static.assets,pdf-preview,previews.sharing,previews.versions,file-annotations,collaborative-audit-log,confluence.efi.onboarding.rich.space.content,previews.conversion-service,editor.ajax.save,graphql,read.only.mode,previews.trigger-all-file-types,lucene.caching.filter,attachment.extracted.text.extractor,confluence.table.resizable,notification.batch,previews.sharing.pushstate,confluence-inline-comments-rich-editor,site-wide.synchrony.opt-in,file-annotations.likes,gatekeeper-ui-v2,v2.content.name.searcher,mobile.supported.version,pulp,confluence-inline-comments,quick-reload-inline-comments-flags,confluence-inline-comments-dangling-comment">
+            <meta name="ajs-atl-token" content="8c6ff6025e98fca3d8210d9c2cec162d5450aa7e">
+            <meta name="ajs-confluence-flavour" content="VANILLA">
+            <meta name="ajs-user-date-pattern" content="yyyy-M-d">
+            <meta name="ajs-access-mode" content="READ_WRITE">
+            <meta name="ajs-render-mode" content="READ_WRITE">
+            <meta name="ajs-date.format" content="MMM dd, yyyy">
+    
+    
+    
+
+<link rel="search" type="application/opensearchdescription+xml" href="/confluence/opensearch/osd.action" title="Apache Software Foundation">
+    
+                    
+            <meta name="ajs-create-issue-metadata-show-discovery" content="false">
+            
+
+    <script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-plugin:context-path.context-path"]="\u0022\u005C/confluence\u0022";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-feature-discovery-plugin:confluence-feature-discovery-plugin-resources.test-mode"]="false";
+WRM._unparsedData["com.atlassian.confluence.plugins.synchrony-interop:synchrony-status-banner-loader.synchrony-status"]="false";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:policy-update-init.policy-update-data-provider"]="false";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:programmatic-analytics-init.programmatic-analytics-data-provider"]="false";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.applinks-help-paths"]="{\u0022entries\u0022:{\u0022applinks.docs.root\u0022:\u0022https://confluence.atlassian.com/display/APPLINKS-060/\u0022,\u0022applinks.docs.diagnostics.troubleshoot.sslunmatched\u0022:\u0022SSL+and+application+link+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthsignatureinvalid\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthtimestamprefused\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.delete.entity.link\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.adding.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.administration.guide\u0022:\u0022Application+Links+Documentation\u0022,\u0022applinks.docs.oauth.security\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.troubleshoot.application.links\u0022:\u0022Troubleshoot+application+links\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unknownerror\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.trusted.apps\u0022:\u0022Configuring+Trusted+Applications+authentication+for+an+application+link\u0022,\u0022applinks.docs.diagnostics.troubleshoot.authlevelunsupported\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.ssluntrusted\u0022:\u0022SSL+and+application+link+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unknownhost\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.delete.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.link.applications\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthproblem\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.migration\u0022:\u0022Update+application+links+to+use+OAuth\u0022,\u0022applinks.docs.relocate.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.administering.entity.links\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.upgrade.application.link\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.diagnostics.troubleshoot.connectionrefused\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.oauth\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.insufficient.remote.permission\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.configuring.application.link.auth\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.diagnostics\u0022:\u0022Application+links+diagnostics\u0022,\u0022applinks.docs.configured.authentication.types\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.adding.entity.link\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unexpectedresponse\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.basic\u0022:\u0022Configuring+Basic+HTTP+Authentication+for+an+Application+Link\u0022,\u0022applinks.docs.diagnostics.troubleshoot.authlevelmismatch\u0022:\u0022OAuth+troubleshooting+guide\u0022}}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.applinks-types"]="{\u0022crowd\u0022:\u0022\u4eba\u7fa4\u0022,\u0022confluence\u0022:\u0022Confluence\u0022,\u0022fecru\u0022:\u0022Fisheye / Crucible\u0022,\u0022stash\u0022:\u0022\u6682\u5b58\u0022,\u0022jira\u0022:\u0022Jira\u0022,\u0022refapp\u0022:\u0022\u76f8\u5173\u5e94\u7528\u7a0b\u5e8f\u0022,\u0022bamboo\u0022:\u0022\u7af9\u0022,\u0022generic\u0022:\u0022\u901a\u7528\u5e94\u7528\u7a0b\u5e8f\u0022}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.entity-types"]="{\u0022singular\u0022:{\u0022refapp.charlie\u0022:\u0022Charlie\u0022,\u0022fecru.project\u0022:\u0022Crucible\u9879\u76ee\u0022,\u0022fecru.repository\u0022:\u0022FishEye \u4ed3\u5e93\u0022,\u0022stash.project\u0022:\u0022Stash \u9879\u76ee\u0022,\u0022generic.entity\u0022:\u0022\u901a\u7528\u9879\u76ee\u0022,\u0022confluence.space\u0022:\u0022Confluence\u7a7a\u95f4\u0022,\u0022bamboo.project\u0022:\u0022Bamboo\u9879\u76ee\u0022,\u0022jira.project\u0022:\u0022Jira \u9879\u76ee\u0022},\u0022plural\u0022:{\u0022refapp.charlie\u0022:\u0022\u67e5\u7406\u65af\u0022,\u0022fecru.project\u0022:\u0022Crucible\u9879\u76ee\u0022,\u0022fecru.repository\u0022:\u0022FishEye \u4ed3\u5e93\u96c6\u0022,\u0022stash.project\u0022:\u0022Stash\u9879\u76ee\u0022,\u0022generic.entity\u0022:\u0022\u901a\u7528\u9879\u76ee\u0022,\u0022confluence.space\u0022:\u0022Confluence\u7a7a\u95f4\u0022,\u0022bamboo.project\u0022:\u0022Bamboo\u9879\u76ee\u0022,\u0022jira.project\u0022:\u0022Jira \u9879\u76ee\u0022}}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.authentication-types"]="{\u0022com.atlassian.applinks.api.auth.types.BasicAuthenticationProvider\u0022:\u0022\u57fa\u672c\u8bbf\u95ee\u0022,\u0022com.atlassian.applinks.api.auth.types.TrustedAppsAuthenticationProvider\u0022:\u0022\u4fe1\u4efb\u7684\u5e94\u7528\u65e0\u6548\u0022,\u0022com.atlassian.applinks.api.auth.types.CorsAuthenticationProvider\u0022:\u0022\u6b4c\u73e5\u0022,\u0022com.atlassian.applinks.api.auth.types.OAuthAuthenticationProvider\u0022:\u0022Oauth\u0022,\u0022com.atlassian.applinks.api.auth.types.TwoLeggedOAuthAuthenticationProvider\u0022:\u0022Oauth\u0022,\u0022com.atlassian.applinks.api.auth.types.TwoLeggedOAuthWithImpersonationAuthenticationProvider\u0022:\u0022Oauth\u0022}";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-license-banner:confluence-license-banner-resources.license-details"]="{\u0022daysBeforeLicenseExpiry\u0022:0,\u0022daysBeforeMaintenanceExpiry\u0022:0,\u0022showLicenseExpiryBanner\u0022:false,\u0022showMaintenanceExpiryBanner\u0022:false,\u0022renewUrl\u0022:null,\u0022salesUrl\u0022:null}";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-search-ui-plugin:confluence-search-ui-plugin-resources.i18n-data"]="{\u0022search.ui.recent.link.text\u0022:\u0022\u67e5\u770b\u66f4\u591a\u6700\u8fd1\u8bbf\u95ee\u0022,\u0022search.ui.filter.space.category.input.label\u0022:\u0022\u67e5\u627e\u7a7a\u95f4\u7c7b\u522b\u2026\u2026\u0022,\u0022search.ui.filter.clear.selected\u0022:\u0022\u6e05\u9664\u6240\u9009\u9879\u76ee\u0022,\u0022search.ui.search.results.empty\u0022:\u0022\u6211\u4eec\u627e\u4e0d\u5230\u4efb\u4f55\u5339\u914d\u201c{0}\u201d\u7684\u5185\u5bb9\u3002\u0022,\u0022search.ui.content.name.search.items.panel.load.all.top.items.button.text\u0022:\u0022\u663e\u793a\u66f4\u591a\u5e94\u7528\u7ed3\u679c......\u0022,\u0022search.ui.filter.space.archive.label\u0022:\u0022\u641c\u7d22\u5df2\u7ecf\u5f52\u6863\u7684\u7a7a\u95f4\u0022,\u0022search.ui.filter.label\u0022:\u0022\u7b5b\u9009\u5668\u0022,\u0022search.ui.filter.contributor.button.text\u0022:\u0022\u8d21\u732e\u8005\u0022,\u0022search.ui.filter.date.all.text\u0022:\u0022\u968f\u65f6\u0022,\u0022search.ui.filter.space.current.label\u0022:\u0022\u5f53\u524d\u0022,\u0022search.ui.clear.input.button.text\u0022:\u0022\u6e05\u9664\u6587\u672c\u0022,\u0022help.search.ui.link.title\u0022:\u0022\u641c\u7d22\u6280\u5de7\u0022,\u0022search.ui.search.results.clear.button\u0022:\u0022\u6e05\u7a7a\u7b5b\u9009\u5668\u3002\u0022,\u0022search.ui.filter.date.hour.text\u0022:\u0022\u8fc7\u53bb\u4e00\u5929\u0022,\u0022search.ui.filters.heading\u0022:\u0022\u7b5b\u9009\u65b9\u5f0f\u0022,\u0022search.ui.filter.label.input.label\u0022:\u0022\u67e5\u627e\u6807\u7b7e\u2026\u2026\u0022,\u0022search.ui.filter.date.month.text\u0022:\u0022\u8fc7\u53bb\u4e00\u4e2a\u6708\u0022,\u0022search.ui.recent.items.anonymous\u0022:\u0022\u5f00\u59cb\u63a2\u7d22\u3002 \u60a8\u7684\u641c\u7d22\u7ed3\u679c\u5c06\u663e\u793a\u5728\u6b64\u5904\u3002\u0022,\u0022search.ui.input.label\u0022:\u0022\u641c\u7d22\u0022,\u0022search.ui.search.result\u0022:\u0022{0,choice,1#{0}\u4e2a\u641c\u7d22\u7ed3\u679c|1\u005Cu003c{0}\u4e2a\u641c\u7d22\u7ed3\u679c}\u0022,\u0022search.ui.infinite.scroll.button.text\u0022:\u0022\u66f4\u591a\u7ed3\u679c\u0022,\u0022search.ui.filter.date.button.text\u0022:\u0022\u65e5\u671f\u0022,\u0022search.ui.filter.date.week.text\u0022:\u0022\u8fc7\u53bb\u4e00\u5468\u0022,\u0022search.ui.filter.label.button.text\u0022:\u0022\u6807\u7b7e\u0022,\u0022search.ui.input.alert\u0022:\u0022\u6309\u56de\u8f66\u952e(Enter)\u641c\u7d22\u0022,\u0022search.ui.filter.no.result.text\u0022:\u0022\u6211\u4eec\u627e\u4e0d\u5230\u4efb\u4f55\u7b26\u5408\u60a8\u641c\u7d22\u6761\u4ef6\u7684\u5185\u5bb9\u0022,\u0022search.ui.result.subtitle.calendar\u0022:\u0022\u56e2\u961f\u65e5\u7a0b\u8868\u0022,\u0022search.ui.filter.date.heading\u0022:\u0022\u4e0a\u6b21\u4fee\u6539\u0022,\u0022search.ui.result.subtitle.user\u0022:\u0022\u7528\u6237\u8d44\u6599\u0022,\u0022search.ui.filter.contributor.input.label\u0022:\u0022\u67e5\u627e\u4eba\u5458\u2026\u2026\u0022,\u0022search.ui.filter.content.type.button.text\u0022:\u0022\u7c7b\u578b\u0022,\u0022search.ui.filter.space.input.label\u0022:\u0022\u67e5\u627e\u7a7a\u95f4\u0022,\u0022search.ui.filter.date.year.text\u0022:\u0022\u8fc7\u53bb\u4e00\u5e74\u0022,\u0022search.ui.filter.space.button.text\u0022:\u0022\u7a7a\u95f4\u0022,\u0022search.ui.advanced.search.link.text\u0022:\u0022\u9ad8\u7ea7\u641c\u7d22\u0022,\u0022search.ui.generic.error\u0022:\u0022\u51fa\u9519\u4e86\u3002\u5237\u65b0\u9875\u9762\uff0c\u6216\u8005\u5982\u679c\u6301\u7eed\u53d1\u751f\u8fd9\u79cd\u60c5\u51b5\uff0c\u8bf7\u8054\u7cfb\u60a8\u7684\u7ba1\u7406\u5458\u3002\u0022,\u0022search.ui.recent.spaces\u0022:\u0022\u6700\u8fd1\u7a7a\u95f4\u0022,\u0022search.ui.search.results.clear.line2\u0022:\u0022\u8bf7\u5c1d\u8bd5\u4e0d\u540c\u7684\u641c\u7d22\u5173\u952e\u5b57\u6216\u8005\u0022,\u0022search.ui.filter.space.category.button.text\u0022:\u0022\u7a7a\u95f4\u7c7b\u522b\u0022,\u0022search.ui.search.results.clear.line1\u0022:\u0022\u627e\u4e0d\u5230\u5339\u914d\u7684\u641c\u7d22\u7ed3\u679c\u0022,\u0022search.ui.content.name.search.items.panel.load.all.top.items.admin.button.text\u0022:\u0022\u663e\u793a\u66f4\u591a\u8bbe\u7f6e\u548c\u5e94\u7528\u7ed3\u679c...\u0022,\u0022search.ui.recent.pages\u0022:\u0022\u6700\u8fd1\u8bbf\u95ee\u0022,\u0022search.ui.search.result.anonymous\u0022:\u0022{0,choice,1#{0}\u4e2a\u641c\u7d22\u7ed3\u679c| 1 \u005Cu003c{0}\u4e2a\u641c\u7d22\u7ed3\u679c}\u3002 \u60a8\u6709\u5e10\u6237\u5417\uff1f{1}\u767b\u5f55{2}\u641c\u7d22\u66f4\u591a\u7ed3\u679c\u3002\u0022,\u0022search.ui.recent.items.empty\u0022:\u0022\u5f00\u59cb\u63a2\u7d22\u3002 \u60a8\u6700\u8fd1\u8bbf\u95ee\u8fc7\u7684\u9875\u9762\u548c\u7a7a\u95f4\u5c06\u663e\u793a\u5728\u6b64\u5904\u3002\u0022,\u0022search.ui.result.subtitle.space\u0022:\u0022\u7a7a\u95f4\u0022,\u0022search.ui.filter.space.init.heading\u0022:\u0022\u6700\u8fd1\u7a7a\u95f4\u0022}";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script>
+<link type="text/css" rel="stylesheet" href="static/css/batch.css" data-wrm-key="_super" data-wrm-batch-type="context" media="all">
+<link type="text/css" rel="stylesheet" href="static/css/batch-true_true_true.css" data-wrm-key="atl.confluence.plugins.pagetree-desktop,main,viewcontent,atl.general,page,atl.comments,-_super" data-wrm-batch-type="context" media="all">
+<script type="text/javascript" src="static/js/batch-zh-CN.js" data-wrm-key="_super" data-wrm-batch-type="context" data-initially-rendered=""></script>
+<script type="text/javascript" src="static/js/batch-true_true_true_zh-CN.js" data-wrm-key="atl.confluence.plugins.pagetree-desktop,main,viewcontent,atl.general,page,atl.comments,-_super" data-wrm-batch-type="context" data-initially-rendered=""></script>
+
+    
+
+        
+    
+
+        
+        <meta name="ajs-site-title" content="Apache Software Foundation">
+            
+    
+
+    
+                <link rel="canonical" href="">
+        <link rel="shortlink" href="https://cwiki.apache.org/confluence/x/uxoyBw">
+    <meta name="wikilink" content="[WW:BuildingShale]">
+    <meta name="page-version" content="38">
+    <meta name="ajs-page-version" content="38">
+
+</head>
+
+    
+<body id="com-atlassian-confluence" class="theme-default  aui-layout aui-theme-default">
+
+        
+            <div id='stp-licenseStatus-banner'></div>
+    <ul id="assistive-skip-links" class="assistive">
+    <li><a href="#title-heading">转至内容</a></li>
+    <li><a href="#breadcrumbs">转至导航栏</a></li>
+    <li><a href="#header-menu-bar">转至主菜单</a></li>
+    <li><a href="#navigation">转至动作菜单</a></li>
+    <li><a href="#quick-search-query">转至快速搜索</a></li>
+</ul>
+<div id="page">
+<div id="full-height-container">
+    <div id="header-precursor">
+        <div class="cell">
+            
+                            </div>
+    </div>
+        
+
+
+
+
+
+<header id="header" role="banner">
+    <nav class="aui-header aui-dropdown2-trigger-group" role="navigation"><div class="aui-header-inner"><div class="aui-header-before"><a class=" aui-dropdown2-trigger app-switcher-trigger" aria-controls="app-switcher" aria-haspopup="true" role="button" tabindex="0" data-aui-trigger="" href="#app-switcher"><span class="aui-icon aui-icon-small aui-iconfont-appswitcher">已链接应用程序</span></a><div id="app-switcher" class="aui-dropdown2 aui-style-default" role="menu" aria-hidden="true" data-is-switcher="true" data-environment="{&quot;isUserAdmin&quot;:false,&quot;isAppSuggestionAvailable&quot;:false,&quot;isSiteAdminUser&quot;:false}"><div role="application"><div class="app-switcher-loading">正在上传和乱码；</div></div></div></div><div class="aui-header-primary"><h1 id="logo" class="aui-header-logo aui-header-logo-confluence"><a href="index.html"><span class="aui-header-logo-device">Apache Software Foundation</span></a></h1><ul class="aui-nav">
+                            <li>
+            
+        
+        
+<a id="space-directory-link" href="view.html" class=" aui-nav-imagelink" title="空间">
+            <span>空间</span>
+    </a>
+        </li>
+                                <li class="aui-buttons">
+            </li>
+</ul>
+</div><div class="aui-header-secondary"><ul class="aui-nav">
+                        <li>
+        <div id="search-ui" class="aui-quicksearch dont-default-focus header-quicksearch"><input id="quick-search-query" aria-label="搜索" placeholder="搜索" type="text"><div id="quick-search-alert" role="alert">按回车键(Enter)搜索</div><aui-spinner size="small"></aui-spinner></div>
+    </li>
+        <li>
+            
+        <a id="help-menu-link" class="aui-nav-link aui-dropdown2-trigger aui-dropdown2-trigger-arrowless" href="#" aria-haspopup="true" aria-owns="help-menu-link-content" title="帮助">
+        <span class="aui-icon aui-icon-small aui-iconfont-question-filled">帮助</span>
+    </a>
+    <nav id="help-menu-link-content" class="aui-dropdown2 aui-style-default" aria-hidden="true">
+                    <div class="aui-dropdown2-section">
+                                <ul id="help-menu-link-leading" class="aui-list-truncate section-leading first">
+                                            <li>
+        
+            
+<a id="confluence-help-link" href="javascript:;" class="    " title="访问Confluence文档首页" target="_blank">
+        在线帮助
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="keyboard-shortcuts-link" href="confluence.html" class="    " title="查看可用的键盘快捷方式">
+        快捷键
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="feed-builder-link" href="configurerssfeed.html" class="    " title="创建个性化的 RSS源。">
+        RSS源建立器
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="whats-new-menu-link" href="javascript:;" class="    " title="">
+        新功能
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="gadget-directory-link" href="confluence.html" class="   user-item administration-link " title="浏览小工具">
+        可用的小工具
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="confluence-about-link" href="aboutconfluencepage.html" class="    " title="获取关于Confluence的更多信息">
+        关于Confluence
+</a>
+</li>
+                                    </ul>
+            </div>
+            </nav>
+    
+    </li>
+        <li>
+                
+    
+    </li>
+        <li>
+            
+    </li>
+        <li>
+                                            <li>
+        
+            
+<a id="login-link" href="javascript:;" class="   user-item login-link " title="">
+        登录
+</a>
+</li>
+                        <li>
+    
+            
+<a id="signup-link" href="signup.html" class="   user-item signup-link " title="">
+        注册
+</a>
+</li>
+                        
+    
+    </ul>
+</div></div><!-- .aui-header-inner--></nav><!-- .aui-header -->
+    <br class="clear">
+</header>
+    
+
+    
+    	<div class="ia-splitter">
+    		<div class="ia-splitter-left">
+    			<div class="ia-fixed-sidebar">
+                                            
+                            <div class="acs-side-bar ia-scrollable-section"><div class="acs-side-bar-space-info tipsy-enabled" data-configure-tooltip="编辑空间详情"><div class="avatar"><div class="space-logo" data-key="WW" data-name="Apache Struts 2 Wiki" data-entity-type="confluence.space"><div class="avatar-img-container"><div class="avatar-img-wrapper"><a href="home.html" title="Apache Struts 2 Wiki"><img class="avatar-img" src="static/picture/default-space-logo.svg" alt="Apache Struts 2 Wiki"></a></div></div></div></div><div class="space-information-container"><div class="name"><a href="home.html" title="Apache Struts 2 Wiki">Apache Struts 2 Wiki</a></div><div class="flyout-handle icon aui-icon aui-icon-small aui-iconfont-edit"></div></div></div><div class="acs-side-bar-content"><div class="acs-nav-wrapper"><div class="acs-nav" data-has-create-permission="false" data-quick-links-state="null" data-page-tree-state="null" data-nav-type="pages"><div class="acs-nav-sections"><div class="quick-links-wrapper"></div></div></div></div><div class="ia-secondary-container tipsy-enabled" data-tree-type="pages"><div class="ia-secondary-header"><h5 class="ia-secondary-header-title pages"><span class="label">子页面</span></h5></div><div class="ia-secondary-parent-content"><ul class="parent ia-secondary-header-title wiki"><li class="parent-item"><a class="parent-item-link" href="home.html" title="Home"><span class="icon"></span><span class="label">Home</span></a></li></ul></div><div class="ia-secondary-current-content"><ul class="ia-secondary-currentPage-title wiki current-item"><li><span class="icon"></span><span class="label">BuildingShale</span></li></ul></div><div class="ia-secondary-content"><div class="contextual-nav-child-pages"></div></div></div></div><div class="hidden"><a href="pages-ww.html" id="space-pages-link"></a><script type="text/x-template" title="logo-config-content"><h2>空间详情</h2><div class="personal-space-logo-hint">您的个人头像被作为您的个人空间的logo使用。<a href="/confluence/users/profile/editmyprofilepicture.action" target="_blank">更改您的个人头像</a>.</div></script></div></div><div class="space-tools-section"><div id="space-tools-menu-additional-items" class="hidden"><div data-label="浏览页面" data-class="" data-href="/confluence/pages/reorderpages.action?key=WW">浏览页面</div></div><button id="space-tools-menu-trigger" class=" aui-dropdown2-trigger aui-button aui-button-subtle tipsy-enabled aui-dropdown2-trigger-arrowless " aria-controls="space-tools-menu" aria-haspopup="true" role="button" data-aui-trigger=""><span class="aui-icon aui-icon-small aui-iconfont-configure">设置</span><span class="aui-button-label">空间管理</span><span class="aui-icon "></span></button><div id="space-tools-menu" class="aui-dropdown2 aui-style-default space-tools-dropdown" role="menu" aria-hidden="true" data-aui-alignment="top left"><div role="application"></div></div><a class="expand-collapse-trigger aui-icon aui-icon-small aui-iconfont-chevron-double-left"></a></div>
+                    
+                        			</div>
+    		</div>
+        <!-- \#header -->
+
+            
+    
+        <div id="main" class=" aui-page-panel">
+                        <div id="main-header">
+                        
+    <div id="navigation" class="content-navigation view">
+                    <ul class="ajs-menu-bar">
+                                            
+        <li class="normal ajs-menu-item">
+        <a id="action-menu-link" class="action aui-dropdown2-trigger-arrowless aui-button aui-button-subtle ajs-menu-title aui-dropdown2-trigger" href="#" aria-haspopup="true" aria-label="更多选项" aria-owns="action-menu" data-container="#navigation">
+            <span>
+                                    <span class="aui-icon aui-icon-small aui-iconfont-more" aria-label="更多选项"></span>
+                                
+            </span>
+        </a>         <div id="action-menu" class="aui-dropdown2 aui-style-default" aria-hidden="true">
+                            <div class="aui-dropdown2-section">
+                    <ul id="action-menu-primary" class="section-primary first">
+                                                    <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="view-attachments-link" href="javascript:;" rel="nofollow" class="action-view-attachments" accesskey="t" title="查看附件">
+                        <span>
+                                <u>t</u>附件(0)
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="action-view-history-link" href="javascript:;" rel="nofollow" class="action-view-history" title="">
+                        <span>
+                                页面历史
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="who-can-view-button-ak-button" href="confluence.html" rel="nofollow" class="who-can-view-link" title="">
+                        <span>
+                                可以查看的人
+            </span>        </a>
+    </li>
+                                        </ul>
+                </div>
+                            <div class="aui-dropdown2-section">
+                    <ul id="action-menu-secondary" class="section-secondary">
+                                                    <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="view-resolved-comments" href="confluence.html" rel="nofollow" class="" title="">
+                        <span>
+                                已解决评论
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="view-page-info-link" href="javascript:;" rel="nofollow" class="action-view-info" title="">
+                        <span>
+                                页面信息
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="view-in-hierarchy-link" href="javascript:;" rel="nofollow" class="" title="">
+                        <span>
+                                以层级方式查看
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="action-view-source-link" href="javascript:;" rel="nofollow" class="action-view-source popup-link" title="">
+                        <span>
+                                查看页面源代码
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="delete-all-comments-link-link" href="javascript:;" rel="nofollow" class="" title="">
+                        <span>
+                                Delete comments
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="action-export-pdf-link" href="javascript:;" rel="nofollow" class="" title="">
+                        <span>
+                                导出为PDF
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="com-k15t-confluence-scroll-epub-launcher" href="javascript:;" rel="nofollow" class="" title="">
+                        <span>
+                                Export to EPUB
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="action-export-word-link" href="javascript:;" rel="nofollow" class="action-export-word" title="">
+                        <span>
+                                导出为Word
+            </span>        </a>
+    </li>
+                                        </ul>
+                </div>
+                    </div>
+    </li>
+            </ul>
+    </div>
+
+            
+            <div id="title-heading" class="pagetitle with-breadcrumbs">
+                
+                                    <div id="breadcrumb-section">
+                        
+    
+    
+    <ol id="breadcrumbs">
+                                        
+                        
+        <li class="first">
+                        
+                            <span class=""><a href="pages-ww.html">页面</a></span>
+                                                                                    
+                        
+        <li>
+                        
+                            <span class=""><a href="home.html">Home</a></span>
+                                                                    </li></ol>
+
+
+                    </div>
+                
+                
+        <a href="#page-banner-end" class="assistive">跳到banner的尾部</a>
+<div id="page-banner-start" class="assistive"></div>
+
+                    
+            <div id="page-metadata-banner"><ul class="banner"><li id="system-content-items" class="noprint"><a href="" title="未限制" id="content-metadata-page-restrictions-hidden" class="hidden"></a></li><li class="page-metadata-item noprinthas-button" id="content-metadata-jira-wrapper"><a href="" title="" id="content-metadata-jira" class="aui-button aui-button-subtle content-metadata-jira tipsy-disabled hidden"><span>JIRA 链接</span></a></li></ul></div>
+            
+
+<a href="#page-banner-start" class="assistive">回到标题开始</a>
+<div id="page-banner-end" class="assistive"></div>
+    
+
+                <h1 id="title-text" class="with-breadcrumbs">
+                                                <a href="">BuildingShale</a>
+                                    </h1>
+            </div>
+        </div><!-- \#main-header -->
+        
+        
+
+        <div id="sidebar-container">
+                                                </div><!-- \#sidebar-container -->
+
+        
+    
+
+        
+
+
+
+
+            
+    
+
+                                
+    
+
+    
+    
+        
+    
+    
+                    
+    
+
+    
+
+    
+            
+        
+
+    
+    
+
+    
+            
+        
+
+
+
+    
+<div id="content" class="page view">
+    
+
+
+<div id="action-messages">
+                        </div>
+
+
+
+            <script type="text/x-template" title="searchResultsGrid">
+    <table class="aui">
+        <thead>
+            <tr class="header">
+                <th class="search-result-title">页面标题</th>
+                <th class="search-result-space">空间</th>
+                <th class="search-result-date">更新于</th>
+            </tr>
+        </thead>
+    </table>
+</script>
+<script type="text/x-template" title="searchResultsGridCount">
+    <p class="search-result-count">{0}</p>
+</script>
+<script type="text/x-template" title="searchResultsGridRow">
+    <tr class="search-result">
+        <td class="search-result-title"><a href="{1}" class="content-type-{2}"><span>{0}</span></a></td>
+        <td class="search-result-space"><a class="space" href="/confluence/display/{4}/" title="{3}">{3}</a></td>
+        <td class="search-result-date"><span class="date" title="{6}">{5}</span></td>
+    </tr>
+</script>
+        
+    
+            
+
+        
+                            
+    
+
+                    
+
+        
+        <a href="#page-metadata-end" class="assistive">转至元数据结尾</a>
+<div id="page-metadata-start" class="assistive"></div>
+
+    <div class="page-metadata">
+        <ul>
+            <li class="page-metadata-modification-info">
+                
+        
+    
+        
+    
+        
+            
+            由<span class='author'>     <a href="javascript:;" class="url fn">ASF Infrabot</a></span>创建, 最后修改于<a class='last-modified' title='查看变更' href='javascript:;'>七月 01, 2019</a>
+                </li>
+        </ul>
+    </div>
+
+
+<a href="#page-metadata-start" class="assistive">转至元数据起始</a>
+<div id="page-metadata-end" class="assistive"></div>
+
+        
+                                            
+        <div id="main-content" class="wiki-content">
+                           
+        
+
+
+<h1 id="BuildingShale-BuildingShale">Building Shale</h1>
+
+<p>This page describes the process for downloading and building Shale from the Apache Subversion repository and then the wrinkles in building it for various IDEs</p>
+
+<h2 id="BuildingShale-TheBasics">The Basics</h2>
+<h3 id="BuildingShale-PullingShalefromSVN">Pulling Shale from SVN</h3>
+
+<p>Assuming that you already have a Subversion client installed such as <a href="javascript:;" class="external-link" rel="nofollow">TortoiseSVN</a>. You need to checkout from the following repository URL <a href="javascript:;" class="external-link" rel="nofollow">http://svn.apache.org/repos/asf/struts/shale/trunk/</a>, or from the command line use <strong>svn checkout</strong> with that same URL</p>
+
+<h3 id="BuildingShale-Dependencies">Dependencies</h3>
+
+<p>Shale needs the following libraries, if you are building without an IDE you'll need to have these available. If you are using an IDE to inspect and build the Shale code, then some of these libraries may already be available for you. (See below)</p>
+<div class="table-wrap"><table class="confluenceTable"><tbody>
+<tr>
+<td class="confluenceTd"><p><strong>Library</strong></p></td>
+<td class="confluenceTd"><p><strong>Version</strong></p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p>Servlet Runtime</p></td>
+<td class="confluenceTd"><p>Tomcat 5.0.28 or equivalent</p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p>JSF</p></td>
+<td class="confluenceTd"><p>Reference Implementation 1.1.01</p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p>Commons Chain</p></td>
+<td class="confluenceTd"><p>1.0</p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p>Commons Digester</p></td>
+<td class="confluenceTd"><p>1.6</p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p>Commons Beanutils</p></td>
+<td class="confluenceTd"><p>1.7.0</p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p>Commons Logging</p></td>
+<td class="confluenceTd"><p>1.0.4</p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p>Commons Validator</p></td>
+<td class="confluenceTd"><p>1.1.4</p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p>JUnit</p></td>
+<td class="confluenceTd"><p>3.1.8</p></td>
+</tr>
+</tbody></table></div>
+
+<p> You will also need Ant installed.</p>
+
+<h3 id="BuildingShale-BuildingFromTheCommandLine">Building From The Command Line</h3>
+
+<p>To build the core Shale libraries follow these steps.</p>
+<ol>
+	<li>svn checkout the shale trunk from the url above</li>
+	<li>Copy <strong>build.properties.sample</strong> to <strong>build.properties</strong></li>
+	<li>Edit the build.properties to point to the various libraries as above</li>
+	<li>Execute <strong>ant download-dependencies</strong> which will retrieve the required libraries</li>
+	<li>Execute <strong>ant dist</strong> to build core-library, test-framework, clay-plugin, and use-cases
+<br class="atl-forced-newline"></li>
+</ol>
+
+
+<h3 id="BuildingShale-BuildingShalewithMaven">Building Shale with Maven</h3>
+
+<ul>
+	<li>Instructions (updated 20050901) <a href="javascript:;" class="external-link" rel="nofollow">http://wiki.wsmoak.net/cgi-bin/wiki.pl?ShaleMavenBuild</a></li>
+	<li>Check out <a href="javascript:;" class="external-link" rel="nofollow">http://blogs.sun.com/roller/page/wilfred/20050829</a> if you want to build Shale using Maven.
+<br class="atl-forced-newline"></li>
+	<li>Maven 2 build files (experimental):  <a href="javascript:;" class="external-link" rel="nofollow">http://wiki.wsmoak.net/cgi-bin/wiki.pl?ShaleMaven2</a>
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<h2 id="BuildingShale-IDEs">IDEs</h2>
+
+<h3 id="BuildingShale-JDeveloper10.1.3">JDeveloper 10.1.3</h3>
+
+<p>To get the Ant compile to run successfully in JDeveloper a some extra settings have to be added to the build.properties to override locations defined in the build.xml <em>if</em> you want to use the JSF RI as shipped with JDeveloper and the OC4J servlet API JARs rather than downloading a separate JSF RI and Tomcat.</p>
+
+<p>This assumes the use of JDeveloper 10.1.3 developer preview (J2EE edition).</p>
+
+<p>Note the versions of the various Jakarta Commons libraries shipped in the JDeveloper install are lower than those needed for Shale, so you should separately download <em>beanutils</em>, <em>chain</em>, <em>digester</em> and <em>logging</em> and update your build.properties with the appropriate locations.</p>
+
+<h4 id="BuildingShale-GeneralJDeveloperSetup">General JDeveloper Setup</h4>
+
+<p>Set up JDeveloper to exclude the <strong>.svn</strong> sub-directories from the source view in the navigator.  to do this:</p>
+<ol>
+	<li>From the menu <em>Tools</em> &gt; <em>Properties</em></li>
+	<li>Choose <em>Global Ignore List</em> in the properties tree</li>
+	<li>Go to the <em>New Filter</em> field and add <strong>**/.svn</strong></li>
+	<li>Press <em>Add</em>, then OK.
+<br class="atl-forced-newline"></li>
+</ol>
+
+
+<p>Next, if you want to compile Shale through the normal workspace make/compile rather than Ant, create user libraries to point at the updated versions of the various commons libraries mentioned above.  Use the <em>Tools</em> &gt; <em>Manage Libraries</em> menu option.  It's probably worth doing this in any case, even if you intend to use Ant for building, just so that code insight and so on will work correctly if you want to change the source.</p>
+
+<h4 id="BuildingShale-CreatingaBaseProjectforShale">Creating a Base Project for Shale</h4>
+
+<p>JDeveloper 10.1.3 does not come with an SVN plugin yet so you'll have to pull the source tree from the command line or from a tool like TortoiseSVN.  <br>
+Once you've done this, go ahead and do the following to create a project with the Shale core source.</p>
+<ol>
+	<li>Create a new workspace. Call this something like <strong>Shale</strong> and put it in the root shale directory created by the svn  checkout.</li>
+	<li>Create a new project from source (call the project something like <strong>core-library</strong>) and point it at /core-library/src/java for the source tree. Store the project file in the core-library subdirectory for convenience, although both it and the workspace (jws) file can live outside of the Shale directory structure if you want to keep the  source directories cleaner.</li>
+	<li>Once the project is created, open the project properties and select the <em>Project Content</em> node.  Set the <em>Output Directory</em> field to the <strong>core-library/target/classes</strong> directory rather than the default <em>/classes</em> this will ensure that both the Ant compile target and a JDeveloper compile with both write to the same place and you'll not end up with two sets of class files.</li>
+	<li>Also in the project properties be sure to add the various libraries required for Shale if you might want to edit the code and need code assistance.
+	<ul>
+		<li>Servlet Runtime</li>
+		<li>JSF</li>
+		<li>Commons Logging 1.0.4</li>
+		<li>Commons Chain 1.0</li>
+		<li>Commons Digester 1.6</li>
+		<li>Commons Beanutils 1.7.0<br>
+ 1.#5 Finally copy the build.properties.sample file to build.properties and make the changes outlined in the next section.
+<br class="atl-forced-newline"></li>
+	</ul>
+	</li>
+</ol>
+
+
+<h4 id="BuildingShale-build.propertiesSettings">build.properties Settings</h4>
+
+<ul>
+	<li>The JSF RI jars are in %JDEV_HOME%/jsf-ri</li>
+	<li>The servet and JSP API jars are in %JDEV_HOME%/j2ee/home/lib and have different names from the Tomcat jars</li>
+	<li>The correct version of JUnit is available in %JDEV_HOME%/jdev/extensions/oracle.jdeveloper.junit.10.1.3/junit3.8.1</li>
+</ul>
+
+
+<p>Also add these extra values to your build.properties file to force the use of OC4J and the shipped JSF RI. Substitute the physical location of the JDeveloper Home for %JDEV_HOME%</p>
+<div class="table-wrap"><table class="confluenceTable"><tbody>
+<tr>
+<td class="confluenceTd"><p>jsf-api.jar</p></td>
+<td class="confluenceTd"><p>%JDEV_HOME%/jsf-ri/jsf-api.jar</p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p>jsf-impl.jar</p></td>
+<td class="confluenceTd"><p>%JDEV_HOME%/jsf-ri/jsf-impl.jar</p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p>jsp-api.jar</p></td>
+<td class="confluenceTd"><p>%JDEV_HOME%/j2ee/home/lib/ojsp.jar</p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p>servlet-api.jar</p></td>
+<td class="confluenceTd"><p>%JDEV_HOME%/j2ee/home/lib/servlet.jar</p></td>
+</tr>
+</tbody></table></div>
+
+
+<h4 id="BuildingShale-BuildingShaleinJDeveloper">Building Shale in JDeveloper</h4>
+<p>To build you can simply use the defined Ant targets. Select the build.xml and in the structure pane you'll see the various targets. Either choose run on the build.xml as a whole to run the default <strong>library</strong> target or right mouse click on the required target inside the structure pane and choose run.</p>
+
+<h3 id="BuildingShale-Eclipse3.0.1">Eclipse 3.0.1</h3>
+
+<h4 id="BuildingShale-GeneralEclipseSetup">General Eclipse Setup</h4>
+
+<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup">To make the checkout from the Struts subversion repository simpler it's worth installing the Eclipse Subversion plug-in [Subclipse <span class="nobr"><a href="javascript:;" class="external-link" rel="nofollow">http://subclipse.tigris.org/\<sup><img class="rendericon" src="static/picture/linkext7.gif" height="7" width="7" align="absmiddle" alt="" border="0"></sup></a></span>] if you don't already have it.</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p>
+<ol>
+	<li>Choose <em>Help</em> &gt; <em>Software Updates</em> &gt; <em>Find and Install</em></li>
+	<li>Choose <em>Search for new features to install</em> in the Install wizard dialog.</li>
+	<li>Hit the <strong>New Remote Site</strong> button</li>
+	<li>In the pop up, set the name to <strong>Subclipse Update Site</strong> and the URL to *<a href="javascript:;" class="external-link" rel="nofollow">http://subclipse.tigris.org/update*</a></li>
+	<li>Install the Subclipse plug-in</li>
+</ol>
+
+
+<p>Download the following libraries:</p>
+<ul>
+	<li>JSF Reference implementation from Sun</li>
+	<li>Tomcat 5.0.28</li>
+	<li>Commons Logging 1.0.4</li>
+	<li>Commons Chain 1.0</li>
+	<li>Commons Digester 1.6</li>
+	<li>Commons Beanutils 1.7.0
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<h4 id="BuildingShale-CreatingaBaseProjectforShale.1">Creating a Base Project for Shale</h4>
+
+<p>Follow these steps:</p>
+<ol>
+	<li>Switch to the SVN repository exploring perspective</li>
+	<li>Right mouse click on the Repository navigator and choose <em>New</em> &gt; <em>Repository Location</em> or click the <em>Add SVN Repository</em> button</li>
+	<li>In the Add SVN Repository dialog use _<a href="javascript:;" class="external-link" rel="nofollow">http://svn.apache.org/repos/asf/struts/shale/trunk/_</a> as the URL and _<a href="javascript:;" class="external-link" rel="nofollow">http://svn.apache.org_</a> as the root URL.  (Leave username/password blank.) Click the 'Finish' button.</li>
+	<li>Expand the node in the navigator and choose the <strong>core-library</strong> node</li>
+	<li>Right mouse click and choose <em>Check Out As</em> then <em>Java Project</em></li>
+	<li>Go to the project properties and select the <em>Java Build Path</em> node.</li>
+	<li>Add <em>core-library/src/java</em> as the source folder and remove the existing source folder of Eclipse does not do it for you.</li>
+	<li>In the same dialog set <em>Default output folder</em> to <strong>core-library/target/classes</strong></li>
+	<li>Also in the properties dialog, with the <em>Java Build Path</em> node selected, click on the <em>libraries</em> tab and define libraries for the various packages as defined above.</li>
+	<li><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p><p class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup">[Describe best way to get the build.properties.sample file from the trunk into the core-library project – the only way I could figure out how do it was by creating a build.properies file manually, opening build.properties.sample from svn, then manually copying and pasting the test into the new file. -mlk]</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></li>
+	<li>Finally copy the build.properties.sample file to build.properties and make the changes outlined in the next section.
+<br class="atl-forced-newline"></li>
+</ol>
+
+
+<h4 id="BuildingShale-build.propertiessettings">build.properties settings</h4>
+
+<p>Update the build.properties to point at the homes of the various packages downloaded as above.  The one exception is JUnit which is shipped in the Eclipse Install:</p>
+<div class="table-wrap"><table class="confluenceTable"><tbody>
+<tr>
+<td class="confluenceTd"><p>junit.home</p></td>
+<td class="confluenceTd"><p>%ECLIPSE_HOME%/plugins/org.junit_3.8.1</p></td>
+</tr>
+</tbody></table></div>
+
+
+<h4 id="BuildingShale-BuildingShaleinEclipse">Building Shale in Eclipse</h4>
+<p>To build carry out the following steps.</p>
+<ol>
+	<li>Use <em>Window</em> &gt; <em>Show View</em> &gt; <em>Ant</em></li>
+	<li>In the Ant Window right mouse click or use the icon to add a build file.  Select <strong>build.xml</strong></li>
+	<li>Run the default Ant task from the Ant window, or expand the node and choose a specific task and run that.</li>
+</ol>
+
+                
+        
+    
+        </div>
+
+                        
+    
+
+
+
+<div id="labels-section" class="pageSection group">
+    <div class="labels-section-content content-column" entityid="120724155" entitytype="page">
+	<div class="labels-content">
+		
+    <ul class="label-list label-list-right ">
+            <li class="no-labels-message">
+            无标签
+        </li>
+            </ul>
+
+    </div>
+</div>
+</div>
+        
+		
+            
+
+
+
+
+            
+        
+
+
+
+
+
+
+
+
+                        
+    
+<div id="comments-section" class="pageSection group">
+        
+    
+
+
+
+</div>
+        
+
+
+                
+    
+            
+</div>
+
+    
+
+    
+
+
+
+
+    
+    
+
+    
+    
+    
+
+
+    
+<div id="space-tools-web-items" class="hidden">
+                <div data-label="概览" data-href="/confluence/spaces/viewspacesummary.action?key=WW">概览</div>
+            <div data-label="内容工具" data-href="/confluence/pages/reorderpages.action?key=WW">内容工具</div>
+            <div data-label="应用" data-href="/confluence/spaces/snippeterrors.action?key=WW">应用</div>
+    </div>
+        
+
+
+
+            </div><!-- \#main -->
+            
+    
+    
+        
+            
+            
+
+<div id="footer" role="contentinfo">
+    <section class="footer-body">
+
+                                                            <p class="license license-opensource">
+                    本站点免费授予 Apache Software Foundation<b> Atlassian Confluence 开源项目授权</b>。<a href="javascript:;">今天开始评估 Confluence</a>。<br>
+                </p>
+                    
+        
+
+        <ul id="poweredby">
+            <li class="noprint">基于 <a href="javascript:;" class="hover-footer-link" rel="nofollow">Atlassian Confluence</a> <span id='footer-build-information'>7.5.0</span> 技术构建</li>
+            <li class="print-only">由 Atlassian 合流7.5.0 打印</li>
+            <li class="noprint"><a href="javascript:;" class="hover-footer-link" rel="nofollow">报告缺陷</a></li>
+            <li class="noprint"><a href="javascript:;" class="hover-footer-link" rel="nofollow">Atlassian 新闻</a></li>
+        </ul>
+
+        
+
+        <div id="footer-logo"><a href="javascript:;" rel="nofollow">Atlassian</a></div>
+
+                    
+        
+    </section>
+</div>
+
+    
+</div>
+
+</div><!-- \#full-height-container -->
+</div><!-- \#page -->
+
+    <span style="display:none;" id="confluence-server-performance">{"serverDuration": 79, "requestCorrelationId": "fa4162f9d3f03d48"}</span>
+</body>
+</html>
+    

@@ -1,0 +1,8 @@
+WRMCB=function(e){var c=console;if(c&&c.log&&c.error){c.log('Error running batched script.');c.error(e);}}
+;
+try {
+/* module-key = 'confluence.web.resources:pages-dirview', location = '/includes/js/pages-dirview.js' */
+define("confluence/pages-dirview",["ajs","jquery","confluence/meta","confluence/api/constants"],function(a,c,h,e){var g=function(b){var d="";b.actionErrors&&b.actionErrors.length&&(d=b.actionErrors.join("<br>"),a.log("ajax parameters invalid : "+d));c("#resultsDiv").html(d)};return function(){var b=c("#tree-div").tree({url:e.CONTEXT_PATH+"/pages/children.action",initUrl:e.CONTEXT_PATH+"/pages/children.action?spaceKey="+encodeURIComponent(h.get("space-key"))+"&node=root",parameters:["pageId"],nodeId:"pageId",
+drop:function(){c(this.source).addClass("flash");var d=this.source.pageId,b=this.target.pageId,f=this.position;a.trigger("analytics",{name:"confluence.page.hierarchy.reorder",data:{}});a.safe.post(e.CONTEXT_PATH+"/pages/movepage.action",{pageId:d,position:f,targetId:b},g,"json")},order:function(){c.getJSON(e.CONTEXT_PATH+"/pages/revertpageorder.action",{pageId:this.source.pageId},g)},orderUndo:function(){var a=this.source.pageId,b=c.map(this.orderedChildren,function(a){return a.pageId}).join();c.getJSON(e.CONTEXT_PATH+
+"/pages/setpageorder.action",{pageId:a,orderedChildIds:b},g)},onready:function(){var d;a.params.expandedNodes||(a.params.expandedNodes=[]);a.params.openId&&(d=function(){b.findNodeBy("pageId",a.params.openId).highlight()});for(var c=[],f=0,e=a.params.expandedNodes.length;f<e;f++)c[f]={pageId:a.params.expandedNodes[f]};b.expandPath(c.reverse(),d)}})}});require("confluence/module-exporter").safeRequire("confluence/pages-dirview",function(a){require("ajs").toInit(a)});
+}catch(e){WRMCB(e)};

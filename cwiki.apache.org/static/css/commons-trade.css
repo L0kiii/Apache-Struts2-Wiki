@@ -1,0 +1,15 @@
+div.overlay_wrapper{ 
+    float:left;
+    position:relative; 
+}
+
+div.overlay{
+    position:absolute;
+    bottom:0px;
+}
+
+div.overlay span{ 
+    font-size:14px;
+    color:black;
+    margin:0px;
+}

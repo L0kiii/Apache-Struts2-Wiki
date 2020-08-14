@@ -1,0 +1,1373 @@
+    
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+                            <title>StateManagement - Apache Struts 2 Wiki - Apache Software Foundation</title>
+    
+        
+
+                        
+    
+                        
+    
+
+                
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=IE7">
+<meta charset="UTF-8">
+<meta id="confluence-context-path" name="confluence-context-path" content="/confluence">
+<meta id="confluence-base-url" name="confluence-base-url" content="https://cwiki.apache.org/confluence">
+
+    <meta id="atlassian-token" name="atlassian-token" content="61e53bae03fd72cfa3d9312e12d4e3b36e01adef">
+
+
+<meta id="confluence-space-key" name="confluence-space-key" content="WW">
+<script type="text/javascript">
+        var contextPath = '/confluence';
+</script>
+
+    
+
+    <meta name="confluence-request-time" content="1595840006073">
+        
+    
+        
+            <meta name="ajs-use-keyboard-shortcuts" content="true">
+            <meta name="ajs-is-confluence-admin" content="false">
+            <meta name="ajs-connection-timeout" content="10000">
+            <script type="text/x-template" title="gliffy-webpanel-footer">
+        <div class="gliffy-webpanel-footer"><span>This Confluence installation runs a Free Gliffy License - Evaluate the <a href="http://www.gliffy.com/products/confluence-plugin/">Gliffy Confluence Plugin</a> for your Wiki!</span></div>
+</script>
+
+
+            <style>.ia-fixed-sidebar, .ia-splitter-left {width: 285px;}.theme-default .ia-splitter #main {margin-left: 285px;}.ia-fixed-sidebar {visibility: hidden;}</style>
+            <meta name="ajs-discovered-plugin-features" content="$discoveredList">
+            <meta name="ajs-keyboardshortcut-hash" content="244b3b2851a4a758ccc0304672ffd8c1">
+            
+    
+    
+            <meta name="ajs-page-title" content="StateManagement">
+            <meta name="ajs-latest-published-page-title" content="StateManagement">
+            <meta name="ajs-space-name" content="Apache Struts 2 Wiki">
+            <meta name="ajs-page-id" content="120724314">
+            <meta name="ajs-latest-page-id" content="120724314">
+            <meta name="ajs-content-type" content="page">
+            <meta name="ajs-parent-page-title" content="Home">
+            <meta name="ajs-parent-page-id" content="14153">
+            <meta name="ajs-space-key" content="WW">
+            <meta name="ajs-max-number-editors" content="12">
+            <meta name="ajs-macro-placeholder-timeout" content="5000">
+            <meta name="ajs-jira-metadata-count" content="-1">
+            <meta name="ajs-from-page-title" content="">
+            <meta name="ajs-can-remove-page" content="false">
+            <meta name="ajs-can-remove-page-hierarchy" content="false">
+            <meta name="ajs-browse-page-tree-mode" content="view">
+            <meta name="ajs-shared-drafts" content="true">
+            <meta name="ajs-context-path" content="/confluence">
+            <meta name="ajs-base-url" content="https://cwiki.apache.org/confluence">
+            <meta name="ajs-version-number" content="7.5.0">
+            <meta name="ajs-build-number" content="8501">
+            <meta name="ajs-remote-user" content="">
+            <meta name="ajs-remote-user-key" content="">
+            <meta name="ajs-remote-user-has-licensed-access" content="false">
+            <meta name="ajs-remote-user-has-browse-users-permission" content="false">
+            <meta name="ajs-current-user-fullname" content="">
+            <meta name="ajs-current-user-avatar-url" content="">
+            <meta name="ajs-current-user-avatar-uri-reference" content="/confluence/images/icons/profilepics/anonymous.svg">
+            <meta name="ajs-static-resource-url-prefix" content="/confluence/s/962fig/8501/fded9f91818631c3677be93247bf5ae6723a1c8d/_">
+            <meta name="ajs-global-settings-attachment-max-size" content="20971520">
+            <meta name="ajs-global-settings-quick-search-enabled" content="true">
+            <meta name="ajs-user-locale" content="zh_CN">
+            <meta name="ajs-enabled-dark-features" content="site-wide.shared-drafts,site-wide.synchrony,clc.quick.create,confluence.view.edit.transition,cql.search.screen,confluence-inline-comments-resolved,http.session.registrar,frontend.editor.v4,nps.survey.inline.dialog,confluence.efi.onboarding.new.templates,frontend.editor.v4.compatibility,atlassian.cdn.static.assets,pdf-preview,previews.sharing,previews.versions,file-annotations,collaborative-audit-log,confluence.efi.onboarding.rich.space.content,previews.conversion-service,editor.ajax.save,graphql,read.only.mode,previews.trigger-all-file-types,lucene.caching.filter,attachment.extracted.text.extractor,confluence.table.resizable,notification.batch,previews.sharing.pushstate,confluence-inline-comments-rich-editor,site-wide.synchrony.opt-in,file-annotations.likes,gatekeeper-ui-v2,v2.content.name.searcher,mobile.supported.version,pulp,confluence-inline-comments,quick-reload-inline-comments-flags,confluence-inline-comments-dangling-comment">
+            <meta name="ajs-atl-token" content="61e53bae03fd72cfa3d9312e12d4e3b36e01adef">
+            <meta name="ajs-confluence-flavour" content="VANILLA">
+            <meta name="ajs-user-date-pattern" content="yyyy-M-d">
+            <meta name="ajs-access-mode" content="READ_WRITE">
+            <meta name="ajs-render-mode" content="READ_WRITE">
+            <meta name="ajs-date.format" content="MMM dd, yyyy">
+    
+    
+    
+
+<link rel="search" type="application/opensearchdescription+xml" href="/confluence/opensearch/osd.action" title="Apache Software Foundation">
+    
+                    
+            <meta name="ajs-create-issue-metadata-show-discovery" content="false">
+            
+
+    <script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-plugin:context-path.context-path"]="\u0022\u005C/confluence\u0022";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-feature-discovery-plugin:confluence-feature-discovery-plugin-resources.test-mode"]="false";
+WRM._unparsedData["com.atlassian.confluence.plugins.synchrony-interop:synchrony-status-banner-loader.synchrony-status"]="false";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:policy-update-init.policy-update-data-provider"]="false";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:programmatic-analytics-init.programmatic-analytics-data-provider"]="false";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.applinks-help-paths"]="{\u0022entries\u0022:{\u0022applinks.docs.root\u0022:\u0022https://confluence.atlassian.com/display/APPLINKS-060/\u0022,\u0022applinks.docs.diagnostics.troubleshoot.sslunmatched\u0022:\u0022SSL+and+application+link+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthsignatureinvalid\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthtimestamprefused\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.delete.entity.link\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.adding.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.administration.guide\u0022:\u0022Application+Links+Documentation\u0022,\u0022applinks.docs.oauth.security\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.troubleshoot.application.links\u0022:\u0022Troubleshoot+application+links\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unknownerror\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.trusted.apps\u0022:\u0022Configuring+Trusted+Applications+authentication+for+an+application+link\u0022,\u0022applinks.docs.diagnostics.troubleshoot.authlevelunsupported\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.ssluntrusted\u0022:\u0022SSL+and+application+link+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unknownhost\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.delete.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.link.applications\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthproblem\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.migration\u0022:\u0022Update+application+links+to+use+OAuth\u0022,\u0022applinks.docs.relocate.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.administering.entity.links\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.upgrade.application.link\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.diagnostics.troubleshoot.connectionrefused\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.oauth\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.insufficient.remote.permission\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.configuring.application.link.auth\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.diagnostics\u0022:\u0022Application+links+diagnostics\u0022,\u0022applinks.docs.configured.authentication.types\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.adding.entity.link\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unexpectedresponse\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.basic\u0022:\u0022Configuring+Basic+HTTP+Authentication+for+an+Application+Link\u0022,\u0022applinks.docs.diagnostics.troubleshoot.authlevelmismatch\u0022:\u0022OAuth+troubleshooting+guide\u0022}}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.applinks-types"]="{\u0022crowd\u0022:\u0022\u4eba\u7fa4\u0022,\u0022confluence\u0022:\u0022Confluence\u0022,\u0022fecru\u0022:\u0022Fisheye / Crucible\u0022,\u0022stash\u0022:\u0022\u6682\u5b58\u0022,\u0022jira\u0022:\u0022Jira\u0022,\u0022refapp\u0022:\u0022\u76f8\u5173\u5e94\u7528\u7a0b\u5e8f\u0022,\u0022bamboo\u0022:\u0022\u7af9\u0022,\u0022generic\u0022:\u0022\u901a\u7528\u5e94\u7528\u7a0b\u5e8f\u0022}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.entity-types"]="{\u0022singular\u0022:{\u0022refapp.charlie\u0022:\u0022Charlie\u0022,\u0022fecru.project\u0022:\u0022Crucible\u9879\u76ee\u0022,\u0022fecru.repository\u0022:\u0022FishEye \u4ed3\u5e93\u0022,\u0022stash.project\u0022:\u0022Stash \u9879\u76ee\u0022,\u0022generic.entity\u0022:\u0022\u901a\u7528\u9879\u76ee\u0022,\u0022confluence.space\u0022:\u0022Confluence\u7a7a\u95f4\u0022,\u0022bamboo.project\u0022:\u0022Bamboo\u9879\u76ee\u0022,\u0022jira.project\u0022:\u0022Jira \u9879\u76ee\u0022},\u0022plural\u0022:{\u0022refapp.charlie\u0022:\u0022\u67e5\u7406\u65af\u0022,\u0022fecru.project\u0022:\u0022Crucible\u9879\u76ee\u0022,\u0022fecru.repository\u0022:\u0022FishEye \u4ed3\u5e93\u96c6\u0022,\u0022stash.project\u0022:\u0022Stash\u9879\u76ee\u0022,\u0022generic.entity\u0022:\u0022\u901a\u7528\u9879\u76ee\u0022,\u0022confluence.space\u0022:\u0022Confluence\u7a7a\u95f4\u0022,\u0022bamboo.project\u0022:\u0022Bamboo\u9879\u76ee\u0022,\u0022jira.project\u0022:\u0022Jira \u9879\u76ee\u0022}}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.authentication-types"]="{\u0022com.atlassian.applinks.api.auth.types.BasicAuthenticationProvider\u0022:\u0022\u57fa\u672c\u8bbf\u95ee\u0022,\u0022com.atlassian.applinks.api.auth.types.TrustedAppsAuthenticationProvider\u0022:\u0022\u4fe1\u4efb\u7684\u5e94\u7528\u65e0\u6548\u0022,\u0022com.atlassian.applinks.api.auth.types.CorsAuthenticationProvider\u0022:\u0022\u6b4c\u73e5\u0022,\u0022com.atlassian.applinks.api.auth.types.OAuthAuthenticationProvider\u0022:\u0022Oauth\u0022,\u0022com.atlassian.applinks.api.auth.types.TwoLeggedOAuthAuthenticationProvider\u0022:\u0022Oauth\u0022,\u0022com.atlassian.applinks.api.auth.types.TwoLeggedOAuthWithImpersonationAuthenticationProvider\u0022:\u0022Oauth\u0022}";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-license-banner:confluence-license-banner-resources.license-details"]="{\u0022daysBeforeLicenseExpiry\u0022:0,\u0022daysBeforeMaintenanceExpiry\u0022:0,\u0022showLicenseExpiryBanner\u0022:false,\u0022showMaintenanceExpiryBanner\u0022:false,\u0022renewUrl\u0022:null,\u0022salesUrl\u0022:null}";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-search-ui-plugin:confluence-search-ui-plugin-resources.i18n-data"]="{\u0022search.ui.recent.link.text\u0022:\u0022\u67e5\u770b\u66f4\u591a\u6700\u8fd1\u8bbf\u95ee\u0022,\u0022search.ui.filter.space.category.input.label\u0022:\u0022\u67e5\u627e\u7a7a\u95f4\u7c7b\u522b\u2026\u2026\u0022,\u0022search.ui.filter.clear.selected\u0022:\u0022\u6e05\u9664\u6240\u9009\u9879\u76ee\u0022,\u0022search.ui.search.results.empty\u0022:\u0022\u6211\u4eec\u627e\u4e0d\u5230\u4efb\u4f55\u5339\u914d\u201c{0}\u201d\u7684\u5185\u5bb9\u3002\u0022,\u0022search.ui.content.name.search.items.panel.load.all.top.items.button.text\u0022:\u0022\u663e\u793a\u66f4\u591a\u5e94\u7528\u7ed3\u679c......\u0022,\u0022search.ui.filter.space.archive.label\u0022:\u0022\u641c\u7d22\u5df2\u7ecf\u5f52\u6863\u7684\u7a7a\u95f4\u0022,\u0022search.ui.filter.label\u0022:\u0022\u7b5b\u9009\u5668\u0022,\u0022search.ui.filter.contributor.button.text\u0022:\u0022\u8d21\u732e\u8005\u0022,\u0022search.ui.filter.date.all.text\u0022:\u0022\u968f\u65f6\u0022,\u0022search.ui.filter.space.current.label\u0022:\u0022\u5f53\u524d\u0022,\u0022search.ui.clear.input.button.text\u0022:\u0022\u6e05\u9664\u6587\u672c\u0022,\u0022help.search.ui.link.title\u0022:\u0022\u641c\u7d22\u6280\u5de7\u0022,\u0022search.ui.search.results.clear.button\u0022:\u0022\u6e05\u7a7a\u7b5b\u9009\u5668\u3002\u0022,\u0022search.ui.filter.date.hour.text\u0022:\u0022\u8fc7\u53bb\u4e00\u5929\u0022,\u0022search.ui.filters.heading\u0022:\u0022\u7b5b\u9009\u65b9\u5f0f\u0022,\u0022search.ui.filter.label.input.label\u0022:\u0022\u67e5\u627e\u6807\u7b7e\u2026\u2026\u0022,\u0022search.ui.filter.date.month.text\u0022:\u0022\u8fc7\u53bb\u4e00\u4e2a\u6708\u0022,\u0022search.ui.recent.items.anonymous\u0022:\u0022\u5f00\u59cb\u63a2\u7d22\u3002 \u60a8\u7684\u641c\u7d22\u7ed3\u679c\u5c06\u663e\u793a\u5728\u6b64\u5904\u3002\u0022,\u0022search.ui.input.label\u0022:\u0022\u641c\u7d22\u0022,\u0022search.ui.search.result\u0022:\u0022{0,choice,1#{0}\u4e2a\u641c\u7d22\u7ed3\u679c|1\u005Cu003c{0}\u4e2a\u641c\u7d22\u7ed3\u679c}\u0022,\u0022search.ui.infinite.scroll.button.text\u0022:\u0022\u66f4\u591a\u7ed3\u679c\u0022,\u0022search.ui.filter.date.button.text\u0022:\u0022\u65e5\u671f\u0022,\u0022search.ui.filter.date.week.text\u0022:\u0022\u8fc7\u53bb\u4e00\u5468\u0022,\u0022search.ui.filter.label.button.text\u0022:\u0022\u6807\u7b7e\u0022,\u0022search.ui.input.alert\u0022:\u0022\u6309\u56de\u8f66\u952e(Enter)\u641c\u7d22\u0022,\u0022search.ui.filter.no.result.text\u0022:\u0022\u6211\u4eec\u627e\u4e0d\u5230\u4efb\u4f55\u7b26\u5408\u60a8\u641c\u7d22\u6761\u4ef6\u7684\u5185\u5bb9\u0022,\u0022search.ui.result.subtitle.calendar\u0022:\u0022\u56e2\u961f\u65e5\u7a0b\u8868\u0022,\u0022search.ui.filter.date.heading\u0022:\u0022\u4e0a\u6b21\u4fee\u6539\u0022,\u0022search.ui.result.subtitle.user\u0022:\u0022\u7528\u6237\u8d44\u6599\u0022,\u0022search.ui.filter.contributor.input.label\u0022:\u0022\u67e5\u627e\u4eba\u5458\u2026\u2026\u0022,\u0022search.ui.filter.content.type.button.text\u0022:\u0022\u7c7b\u578b\u0022,\u0022search.ui.filter.space.input.label\u0022:\u0022\u67e5\u627e\u7a7a\u95f4\u0022,\u0022search.ui.filter.date.year.text\u0022:\u0022\u8fc7\u53bb\u4e00\u5e74\u0022,\u0022search.ui.filter.space.button.text\u0022:\u0022\u7a7a\u95f4\u0022,\u0022search.ui.advanced.search.link.text\u0022:\u0022\u9ad8\u7ea7\u641c\u7d22\u0022,\u0022search.ui.generic.error\u0022:\u0022\u51fa\u9519\u4e86\u3002\u5237\u65b0\u9875\u9762\uff0c\u6216\u8005\u5982\u679c\u6301\u7eed\u53d1\u751f\u8fd9\u79cd\u60c5\u51b5\uff0c\u8bf7\u8054\u7cfb\u60a8\u7684\u7ba1\u7406\u5458\u3002\u0022,\u0022search.ui.recent.spaces\u0022:\u0022\u6700\u8fd1\u7a7a\u95f4\u0022,\u0022search.ui.search.results.clear.line2\u0022:\u0022\u8bf7\u5c1d\u8bd5\u4e0d\u540c\u7684\u641c\u7d22\u5173\u952e\u5b57\u6216\u8005\u0022,\u0022search.ui.filter.space.category.button.text\u0022:\u0022\u7a7a\u95f4\u7c7b\u522b\u0022,\u0022search.ui.search.results.clear.line1\u0022:\u0022\u627e\u4e0d\u5230\u5339\u914d\u7684\u641c\u7d22\u7ed3\u679c\u0022,\u0022search.ui.content.name.search.items.panel.load.all.top.items.admin.button.text\u0022:\u0022\u663e\u793a\u66f4\u591a\u8bbe\u7f6e\u548c\u5e94\u7528\u7ed3\u679c...\u0022,\u0022search.ui.recent.pages\u0022:\u0022\u6700\u8fd1\u8bbf\u95ee\u0022,\u0022search.ui.search.result.anonymous\u0022:\u0022{0,choice,1#{0}\u4e2a\u641c\u7d22\u7ed3\u679c| 1 \u005Cu003c{0}\u4e2a\u641c\u7d22\u7ed3\u679c}\u3002 \u60a8\u6709\u5e10\u6237\u5417\uff1f{1}\u767b\u5f55{2}\u641c\u7d22\u66f4\u591a\u7ed3\u679c\u3002\u0022,\u0022search.ui.recent.items.empty\u0022:\u0022\u5f00\u59cb\u63a2\u7d22\u3002 \u60a8\u6700\u8fd1\u8bbf\u95ee\u8fc7\u7684\u9875\u9762\u548c\u7a7a\u95f4\u5c06\u663e\u793a\u5728\u6b64\u5904\u3002\u0022,\u0022search.ui.result.subtitle.space\u0022:\u0022\u7a7a\u95f4\u0022,\u0022search.ui.filter.space.init.heading\u0022:\u0022\u6700\u8fd1\u7a7a\u95f4\u0022}";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script>
+<link type="text/css" rel="stylesheet" href="static/css/batch.css" data-wrm-key="_super" data-wrm-batch-type="context" media="all">
+<link type="text/css" rel="stylesheet" href="static/css/batch-true_true_true.css" data-wrm-key="atl.confluence.plugins.pagetree-desktop,main,viewcontent,atl.general,page,atl.comments,-_super" data-wrm-batch-type="context" media="all">
+<script type="text/javascript" src="static/js/batch-zh-CN.js" data-wrm-key="_super" data-wrm-batch-type="context" data-initially-rendered=""></script>
+<script type="text/javascript" src="static/js/batch-true_true_true_zh-CN.js" data-wrm-key="atl.confluence.plugins.pagetree-desktop,main,viewcontent,atl.general,page,atl.comments,-_super" data-wrm-batch-type="context" data-initially-rendered=""></script>
+
+    
+
+        
+    
+
+        
+        <meta name="ajs-site-title" content="Apache Software Foundation">
+            
+    
+
+    
+                <link rel="canonical" href="">
+        <link rel="shortlink" href="https://cwiki.apache.org/confluence/x/WhsyBw">
+    <meta name="wikilink" content="[WW:StateManagement]">
+    <meta name="page-version" content="1">
+    <meta name="ajs-page-version" content="1">
+
+</head>
+
+    
+<body id="com-atlassian-confluence" class="theme-default  aui-layout aui-theme-default">
+
+        
+            <div id='stp-licenseStatus-banner'></div>
+    <ul id="assistive-skip-links" class="assistive">
+    <li><a href="#title-heading">转至内容</a></li>
+    <li><a href="#breadcrumbs">转至导航栏</a></li>
+    <li><a href="#header-menu-bar">转至主菜单</a></li>
+    <li><a href="#navigation">转至动作菜单</a></li>
+    <li><a href="#quick-search-query">转至快速搜索</a></li>
+</ul>
+<div id="page">
+<div id="full-height-container">
+    <div id="header-precursor">
+        <div class="cell">
+            
+                            </div>
+    </div>
+        
+
+
+
+
+
+<header id="header" role="banner">
+    <nav class="aui-header aui-dropdown2-trigger-group" role="navigation"><div class="aui-header-inner"><div class="aui-header-before"><a class=" aui-dropdown2-trigger app-switcher-trigger" aria-controls="app-switcher" aria-haspopup="true" role="button" tabindex="0" data-aui-trigger="" href="#app-switcher"><span class="aui-icon aui-icon-small aui-iconfont-appswitcher">已链接应用程序</span></a><div id="app-switcher" class="aui-dropdown2 aui-style-default" role="menu" aria-hidden="true" data-is-switcher="true" data-environment="{&quot;isUserAdmin&quot;:false,&quot;isAppSuggestionAvailable&quot;:false,&quot;isSiteAdminUser&quot;:false}"><div role="application"><div class="app-switcher-loading">正在上传和乱码；</div></div></div></div><div class="aui-header-primary"><h1 id="logo" class="aui-header-logo aui-header-logo-confluence"><a href="index.html"><span class="aui-header-logo-device">Apache Software Foundation</span></a></h1><ul class="aui-nav">
+                            <li>
+            
+        
+        
+<a id="space-directory-link" href="view.html" class=" aui-nav-imagelink" title="空间">
+            <span>空间</span>
+    </a>
+        </li>
+                                <li class="aui-buttons">
+            </li>
+</ul>
+</div><div class="aui-header-secondary"><ul class="aui-nav">
+                        <li>
+        <div id="search-ui" class="aui-quicksearch dont-default-focus header-quicksearch"><input id="quick-search-query" aria-label="搜索" placeholder="搜索" type="text"><div id="quick-search-alert" role="alert">按回车键(Enter)搜索</div><aui-spinner size="small"></aui-spinner></div>
+    </li>
+        <li>
+            
+        <a id="help-menu-link" class="aui-nav-link aui-dropdown2-trigger aui-dropdown2-trigger-arrowless" href="#" aria-haspopup="true" aria-owns="help-menu-link-content" title="帮助">
+        <span class="aui-icon aui-icon-small aui-iconfont-question-filled">帮助</span>
+    </a>
+    <nav id="help-menu-link-content" class="aui-dropdown2 aui-style-default" aria-hidden="true">
+                    <div class="aui-dropdown2-section">
+                                <ul id="help-menu-link-leading" class="aui-list-truncate section-leading first">
+                                            <li>
+        
+            
+<a id="confluence-help-link" href="javascript:;" class="    " title="访问Confluence文档首页" target="_blank">
+        在线帮助
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="keyboard-shortcuts-link" href="confluence.html" class="    " title="查看可用的键盘快捷方式">
+        快捷键
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="feed-builder-link" href="configurerssfeed.html" class="    " title="创建个性化的 RSS源。">
+        RSS源建立器
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="whats-new-menu-link" href="javascript:;" class="    " title="">
+        新功能
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="gadget-directory-link" href="confluence.html" class="   user-item administration-link " title="浏览小工具">
+        可用的小工具
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="confluence-about-link" href="aboutconfluencepage.html" class="    " title="获取关于Confluence的更多信息">
+        关于Confluence
+</a>
+</li>
+                                    </ul>
+            </div>
+            </nav>
+    
+    </li>
+        <li>
+                
+    
+    </li>
+        <li>
+            
+    </li>
+        <li>
+                                            <li>
+        
+            
+<a id="login-link" href="javascript:;" class="   user-item login-link " title="">
+        登录
+</a>
+</li>
+                        <li>
+    
+            
+<a id="signup-link" href="signup.html" class="   user-item signup-link " title="">
+        注册
+</a>
+</li>
+                        
+    
+    </ul>
+</div></div><!-- .aui-header-inner--></nav><!-- .aui-header -->
+    <br class="clear">
+</header>
+    
+
+    
+    	<div class="ia-splitter">
+    		<div class="ia-splitter-left">
+    			<div class="ia-fixed-sidebar">
+                                            
+                            <div class="acs-side-bar ia-scrollable-section"><div class="acs-side-bar-space-info tipsy-enabled" data-configure-tooltip="编辑空间详情"><div class="avatar"><div class="space-logo" data-key="WW" data-name="Apache Struts 2 Wiki" data-entity-type="confluence.space"><div class="avatar-img-container"><div class="avatar-img-wrapper"><a href="home.html" title="Apache Struts 2 Wiki"><img class="avatar-img" src="static/picture/default-space-logo.svg" alt="Apache Struts 2 Wiki"></a></div></div></div></div><div class="space-information-container"><div class="name"><a href="home.html" title="Apache Struts 2 Wiki">Apache Struts 2 Wiki</a></div><div class="flyout-handle icon aui-icon aui-icon-small aui-iconfont-edit"></div></div></div><div class="acs-side-bar-content"><div class="acs-nav-wrapper"><div class="acs-nav" data-has-create-permission="false" data-quick-links-state="null" data-page-tree-state="null" data-nav-type="pages"><div class="acs-nav-sections"><div class="quick-links-wrapper"></div></div></div></div><div class="ia-secondary-container tipsy-enabled" data-tree-type="pages"><div class="ia-secondary-header"><h5 class="ia-secondary-header-title pages"><span class="label">子页面</span></h5></div><div class="ia-secondary-parent-content"><ul class="parent ia-secondary-header-title wiki"><li class="parent-item"><a class="parent-item-link" href="home.html" title="Home"><span class="icon"></span><span class="label">Home</span></a></li></ul></div><div class="ia-secondary-current-content"><ul class="ia-secondary-currentPage-title wiki current-item"><li><span class="icon"></span><span class="label">StateManagement</span></li></ul></div><div class="ia-secondary-content"><div class="contextual-nav-child-pages"></div></div></div></div><div class="hidden"><a href="pages-ww.html" id="space-pages-link"></a><script type="text/x-template" title="logo-config-content"><h2>空间详情</h2><div class="personal-space-logo-hint">您的个人头像被作为您的个人空间的logo使用。<a href="/confluence/users/profile/editmyprofilepicture.action" target="_blank">更改您的个人头像</a>.</div></script></div></div><div class="space-tools-section"><div id="space-tools-menu-additional-items" class="hidden"><div data-label="浏览页面" data-class="" data-href="/confluence/pages/reorderpages.action?key=WW">浏览页面</div></div><button id="space-tools-menu-trigger" class=" aui-dropdown2-trigger aui-button aui-button-subtle tipsy-enabled aui-dropdown2-trigger-arrowless " aria-controls="space-tools-menu" aria-haspopup="true" role="button" data-aui-trigger=""><span class="aui-icon aui-icon-small aui-iconfont-configure">设置</span><span class="aui-button-label">空间管理</span><span class="aui-icon "></span></button><div id="space-tools-menu" class="aui-dropdown2 aui-style-default space-tools-dropdown" role="menu" aria-hidden="true" data-aui-alignment="top left"><div role="application"></div></div><a class="expand-collapse-trigger aui-icon aui-icon-small aui-iconfont-chevron-double-left"></a></div>
+                    
+                        			</div>
+    		</div>
+        <!-- \#header -->
+
+            
+    
+        <div id="main" class=" aui-page-panel">
+                        <div id="main-header">
+                        
+    <div id="navigation" class="content-navigation view">
+                    <ul class="ajs-menu-bar">
+                                            
+        <li class="normal ajs-menu-item">
+        <a id="action-menu-link" class="action aui-dropdown2-trigger-arrowless aui-button aui-button-subtle ajs-menu-title aui-dropdown2-trigger" href="#" aria-haspopup="true" aria-label="更多选项" aria-owns="action-menu" data-container="#navigation">
+            <span>
+                                    <span class="aui-icon aui-icon-small aui-iconfont-more" aria-label="更多选项"></span>
+                                
+            </span>
+        </a>         <div id="action-menu" class="aui-dropdown2 aui-style-default" aria-hidden="true">
+                            <div class="aui-dropdown2-section">
+                    <ul id="action-menu-primary" class="section-primary first">
+                                                    <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="view-attachments-link" href="javascript:;" rel="nofollow" class="action-view-attachments" accesskey="t" title="查看附件">
+                        <span>
+                                <u>t</u>附件(0)
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="action-view-history-link" href="javascript:;" rel="nofollow" class="action-view-history" title="">
+                        <span>
+                                页面历史
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="who-can-view-button-ak-button" href="confluence.html" rel="nofollow" class="who-can-view-link" title="">
+                        <span>
+                                可以查看的人
+            </span>        </a>
+    </li>
+                                        </ul>
+                </div>
+                            <div class="aui-dropdown2-section">
+                    <ul id="action-menu-secondary" class="section-secondary">
+                                                    <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="view-resolved-comments" href="confluence.html" rel="nofollow" class="" title="">
+                        <span>
+                                已解决评论
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="view-page-info-link" href="javascript:;" rel="nofollow" class="action-view-info" title="">
+                        <span>
+                                页面信息
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="view-in-hierarchy-link" href="javascript:;" rel="nofollow" class="" title="">
+                        <span>
+                                以层级方式查看
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="action-view-source-link" href="javascript:;" rel="nofollow" class="action-view-source popup-link" title="">
+                        <span>
+                                查看页面源代码
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="delete-all-comments-link-link" href="javascript:;" rel="nofollow" class="" title="">
+                        <span>
+                                Delete comments
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="action-export-pdf-link" href="javascript:;" rel="nofollow" class="" title="">
+                        <span>
+                                导出为PDF
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="com-k15t-confluence-scroll-epub-launcher" href="javascript:;" rel="nofollow" class="" title="">
+                        <span>
+                                Export to EPUB
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="action-export-word-link" href="javascript:;" rel="nofollow" class="action-export-word" title="">
+                        <span>
+                                导出为Word
+            </span>        </a>
+    </li>
+                                        </ul>
+                </div>
+                    </div>
+    </li>
+            </ul>
+    </div>
+
+            
+            <div id="title-heading" class="pagetitle with-breadcrumbs">
+                
+                                    <div id="breadcrumb-section">
+                        
+    
+    
+    <ol id="breadcrumbs">
+                                        
+                        
+        <li class="first">
+                        
+                            <span class=""><a href="pages-ww.html">页面</a></span>
+                                                                                    
+                        
+        <li>
+                        
+                            <span class=""><a href="home.html">Home</a></span>
+                                                                    </li></ol>
+
+
+                    </div>
+                
+                
+        <a href="#page-banner-end" class="assistive">跳到banner的尾部</a>
+<div id="page-banner-start" class="assistive"></div>
+
+                    
+            <div id="page-metadata-banner"><ul class="banner"><li id="system-content-items" class="noprint"><a href="" title="未限制" id="content-metadata-page-restrictions-hidden" class="hidden"></a></li><li class="page-metadata-item noprinthas-button" id="content-metadata-jira-wrapper"><a href="" title="" id="content-metadata-jira" class="aui-button aui-button-subtle content-metadata-jira tipsy-disabled hidden"><span>JIRA 链接</span></a></li></ul></div>
+            
+
+<a href="#page-banner-start" class="assistive">回到标题开始</a>
+<div id="page-banner-end" class="assistive"></div>
+    
+
+                <h1 id="title-text" class="with-breadcrumbs">
+                                                <a href="">StateManagement</a>
+                                    </h1>
+            </div>
+        </div><!-- \#main-header -->
+        
+        
+
+        <div id="sidebar-container">
+                                                </div><!-- \#sidebar-container -->
+
+        
+    
+
+        
+
+
+
+
+            
+    
+
+                                
+    
+
+    
+    
+        
+    
+    
+                    
+    
+
+    
+
+    
+            
+        
+
+    
+    
+
+    
+            
+        
+
+
+
+    
+<div id="content" class="page view">
+    
+
+
+<div id="action-messages">
+                        </div>
+
+
+
+            <script type="text/x-template" title="searchResultsGrid">
+    <table class="aui">
+        <thead>
+            <tr class="header">
+                <th class="search-result-title">页面标题</th>
+                <th class="search-result-space">空间</th>
+                <th class="search-result-date">更新于</th>
+            </tr>
+        </thead>
+    </table>
+</script>
+<script type="text/x-template" title="searchResultsGridCount">
+    <p class="search-result-count">{0}</p>
+</script>
+<script type="text/x-template" title="searchResultsGridRow">
+    <tr class="search-result">
+        <td class="search-result-title"><a href="{1}" class="content-type-{2}"><span>{0}</span></a></td>
+        <td class="search-result-space"><a class="space" href="/confluence/display/{4}/" title="{3}">{3}</a></td>
+        <td class="search-result-date"><span class="date" title="{6}">{5}</span></td>
+    </tr>
+</script>
+        
+    
+            
+
+        
+                            
+    
+
+                    
+
+        
+        <a href="#page-metadata-end" class="assistive">转至元数据结尾</a>
+<div id="page-metadata-start" class="assistive"></div>
+
+    <div class="page-metadata">
+        <ul>
+            <li class="page-metadata-modification-info">
+                
+        
+    
+        
+    
+        
+            
+            由<span class='author'>     <a href="javascript:;" class="url fn">ASF Infrabot</a></span>创建于<a class='last-modified' title='查看变更' href='javascript:;'>七月 01, 2019</a>
+                </li>
+        </ul>
+    </div>
+
+
+<a href="#page-metadata-start" class="assistive">转至元数据起始</a>
+<div id="page-metadata-end" class="assistive"></div>
+
+        
+                                            
+        <div id="main-content" class="wiki-content">
+                           
+        <p>Work in progress!</p>
+
+
+<div class="table-wrap"><table class="confluenceTable"><tbody>
+<tr>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> Client Techniques </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> Server Techniques </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> Client + Server Techniques </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> Cookies </p></td>
+<td class="confluenceTd"><p> URLs </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> HTML form hidden fields </p></td>
+<td class="confluenceTd"><p> Browser Objects </p></td>
+<td class="confluenceTd"><p> Session </p></td>
+<td class="confluenceTd"><p> Database </p></td>
+<td class="confluenceTd"><p> Hidden fields + session </p></td>
+<td class="confluenceTd"><p> Hidden fields + database </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> Query parameters </p></td>
+<td class="confluenceTd"><p> Clean URLs </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> Advantages </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> Can store complex data types </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> Works well in load balancing environments </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> Works well in Ajax applications </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> Disadvantages </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> User can tamper with state information </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> Requires cookies </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> Requires coding </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> Requires redirection </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> Requires Javascript </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> Can store only small amount of data (~2,000 bytes) </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> Increased network traffic and slightly slower response times </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> Requires server resources to save state information </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> Application logic tightly coupled to the user interface implementation </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> Does not work well with redirection </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> +  </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> State can be lost on page reload </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> State can be lost on direct navigation </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> State can be lost when client is idle </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> Neither Advantages Or Disadvantages </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr>
+<td class="confluenceTd"><p> State is not tied to view </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> + </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+</tbody></table></div>
+
+
+<h1 id="StateManagement-Client-SideTechniques">Client-Side Techniques</h1>
+
+<h2 id="StateManagement-Cookies">Cookies</h2>
+<p>Pro:</p>
+<ul>
+	<li>Not visible to a user</li>
+	<li>Can be submitted to originating server only - better security</li>
+	<li>Does not depend on request method (GET or POST) or how request is issued (HTML form, link, direct URL in the address bar)</li>
+	<li>State is not linked to page address, can not get stale when a user navigates back on browser session history.</li>
+	<li>Can have lifetime different from a user session; can be preserved after browser is closed (persistent cookies) or can be removed during user session.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>Neither:</p>
+<ul>
+	<li>State and page address are not related.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>Cons:</p>
+<ul>
+	<li>Does not work if cookies are turned off in a browser.</li>
+	<li>May be percieved as potential privacy concern.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>Best fit: non-critical information about a particular client, session, or application. Usually employed for user profiling, like zip code or preferred language. Also used for &quot;remember me&quot; login.</p>
+
+<p>How Struts can help:</p>
+<ul>
+	<li>Struts does not have functions specific to storing state in cookies.</li>
+	<li>Struts helps to maintain session if cookies are not enabled. Struts automatically calls <code>response.encodeURL()</code> when processing &lt;html:form&gt; and &lt;html:link&gt; tags. This tells server to add session ID to links and HTML forms.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<h2 id="StateManagement-RewrittenURLs">Rewritten URLs</h2>
+
+
+
+<h3 id="StateManagement-Queryparameters">Query parameters</h3>
+
+<p>URL <em>query parameters</em> allow to express a website structure using base path to a resource, in case of Struts that would be an action, and series of query parameters</p>
+
+<p>For example, an online tire store may expose its structure like this:</p>
+<div class="preformatted panel conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="noformat"><div class="preformattedContent panelContent">
+<pre>    www.tirestore.com/vehicle.do?year=2002&amp;make=TOYOTA&amp;model=mr2spyder
+</pre>
+</div></div>
+
+<p>A series of HTML forms may help a user to get to desired location, making the address more detailed from step to step:</p>
+<div class="preformatted panel conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="noformat"><div class="preformattedContent panelContent">
+<pre>Welcome page allows to select search criteria:
+    www.tirestore.com/welcome.do
+
+We choose to search product by vehicle year and make:
+    www.tirestore.com/vehicle.do?year=2002&amp;make=TOYOTA
+
+Then application shows a listbox with applicable model names and allows to select one:
+    www.tirestore.com/vehicle.do?year=2002&amp;make=TOYOTA&amp;model=mr2spyder
+</pre>
+</div></div>
+
+<p>Pro:</p>
+<ul>
+	<li>Easy to create: by submitting a form using GET method, by clicking on a link or by manually editing the resource address.</li>
+	<li>Reloading a page that was previously obtained with GET method does not cause POSTDATA dialog.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>Cons:</p>
+<ul>
+	<li>Can be easily damaged by a user.</li>
+	<li>Exposes data that is sent to the server.</li>
+	<li>Has limited size, usually about 2000 characters.</li>
+	<li>State is lost if a user navigates to an arbitrary page.</li>
+	<li>State is linked to page address, can get stale when a user navigates back on browser session history.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>Neither:</p>
+<ul>
+	<li>State is tied to page address.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>Best fit: applications where the query string only affects the view, like online catalogs or magazines. A page can be reloaded without affecting the server and without POSTDATA messages. Navigating back and forward is not an issue.</p>
+
+<h3 id="StateManagement-CleanURLs">Clean URLs</h3>
+
+<p><em>Clean URLs</em> or <em>cool URLs</em> is a way to express website structure using location path instead of query parameters. Clean URLs work best for static websites. Representing state with clean URLs is less common. It is not convenient either, especially when location is being built as a result of an HTML form submission.</p>
+
+<p>For example, an online tire store may expose its structure like this:</p>
+<div class="preformatted panel conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="noformat"><div class="preformattedContent panelContent">
+<pre>www.tirestore.com/vehicle/2002/toyota/mr2spyder/
+</pre>
+</div></div>
+
+<p>A series of HTML forms may help a user to get to desired location, making the address more detailed from step to step:</p>
+<div class="preformatted panel conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="noformat"><div class="preformattedContent panelContent">
+<pre>Welcome page allows to select search criteria:
+    www.tirestore.com/welcome
+
+We choose to search product by vehicle year and make:
+    www.tirestore.com/vehicle/2002/toyota/
+
+Then application shows a listbox with applicable model names and allows to select one:
+    www.tirestore.com/vehicle/2002/toyota/mr2spyder/
+</pre>
+</div></div>
+
+<p>Pros:</p>
+<ul>
+	<li>URLs may help visualize the site structure.</li>
+	<li>Such URLs are more likely to be saved by search engines and crawling machines.</li>
+	<li>Manually editing URL allows to move &quot;up&quot; and &quot;down&quot; hierarchical structure of an application just like navigating directory structure on a local computer.</li>
+	<li>Underlying technology is not exposed; easier to replace a web framework, harder for hackers to get into.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>Cons:</p>
+<ul>
+	<li>Can be easily damaged by a user.</li>
+	<li>Has limited size, usually about 2000 characters.</li>
+	<li>Creating a clean URL from a browser requires either building it on client using Javascript or building it on server and then using redirect.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>Neither:</p>
+<ul>
+	<li>State is tied to page address.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>Best fit: online catalogs or magazines that have hierarchical structure and should be represented as a static website. May improve site searchability and page rankings.</p>
+
+<p>Additional information:</p>
+<ul>
+	<li><a href="javascript:;" class="external-link" rel="nofollow">Towards Next Generation URLs</a> – contains links to other notable resources, like  Tim Berners Lee's <a href="javascript:;" class="external-link" rel="nofollow">Cool URIs don't change</a> and Jakob Nielsen's <a href="javascript:;" class="external-link" rel="nofollow">URL as UI</a>.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<h2 id="StateManagement-Browserobjects(DOMelements,Javascriptvariables,Flashstorage)">Browser objects (DOM elements, Javascript variables, Flash storage)</h2>
+<p>Pro:</p>
+<ul>
+	<li>Can store complex structures and objects.</li>
+	<li>Depending on application requirements, state can be made relative or non-relative to page address.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>Neither:</p>
+<ul>
+	<li>State and page address are not related.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>Cons:</p>
+<ul>
+	<li>Lost when a page is reloaded unless special care is taken.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>Best fit: Ajax-style Single Page applications.</p>
+
+<p>How Struts can help:</p>
+<ul>
+	<li>Struts does not have built-in features for saving state in client DOM/Javascript objects.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>Additional information:</p>
+<ul>
+	<li><a href="javascript:;" class="external-link" rel="nofollow">Saving Session Across Page Loads Without Cookies, On The Client Side</a> – tutorial by Brad Neuberg
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<h2 id="StateManagement-HTMLformhiddenfields">HTML form hidden fields</h2>
+
+<p>By year, vehicle, make:</p>
+<div class="preformatted panel conf-macro output-block" style="border-width: 1px;" data-hasbody="true" data-macro-name="noformat"><div class="preformattedContent panelContent">
+<pre>&lt;form action=&quot;...&quot;&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;yr&quot; value=&quot;2002&quot;/&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;mk&quot; value=&quot;TOYOTA&quot;/&gt;
+  &lt;input type=&quot;hidden&quot; name=&quot;model&quot; value=&quot;mrspyder&quot;/&gt;
+  ...
+&lt;/form&gt;  
+</pre>
+</div></div>
+
+<p>Pros:</p>
+<ul>
+	<li>No size limitations.</li>
+	<li>URLs are short.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>Neither:</p>
+<ul>
+	<li>State and page address are not directly related.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>Cons:</p>
+<ul>
+	<li>Every page must be an HTTP form to transfer state from page to page.</li>
+	<li>HTTP forms must be submitted with POST method only, hidden fields are not submitted with GET.</li>
+	<li>State is lost on redirection or on direct navigation; breaking out of a predefined page flow is not possible.</li>
+	<li>State information grows while a user moves forward from page to page.</li>
+	<li>Reloading a page or navigating back/forward in browser session history causes a resubmit that is preceded by a user-unfriendly POSTDATA message.</li>
+	<li>The application is unfriendly to search engines.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>When to use: all application pages are based on HTML forms and storing state information in the URL is undesireble.</p>
+
+<p>What to store: non-critical state information, like state of controls and widgets (viewstate).</p>
+
+<p>What to keep in mind: the moment you update the server objects or database, you switch from pure client-based technique to combined client-server tecnhique, which is a totally different beast. Many developers using hidden fields think they use client-based state tracking technique while in fact they are not.</p>
+
+<p>Implications: Application must provide explicit navigational links and buttons so users would not have to use standard browser navigation buttons. Application must recognize and handle double-submit situations. </p>
+
+<p>How Struts can help:</p>
+<ul>
+	<li>Use <a href="javascript:;" class="external-link" rel="nofollow">%3Chtml:form%3E tag</a> to display data entry form, and a single <a href="strutsformbeans.html">ActionForm</a> to handle both render and submit phases of request/response cycle. On render phase Struts renders HTML form fields using values from an ActionForm. On submit phase Struts automatically populates ActionForm properties with values of HTML form fields. This setup ensures that content of form fields is saved and redisplayed automatically. Automatic saving/restoring of HTML form fields is similar to handling <em>postback controls</em> in ASP.NET. Struts does not have notion of <em>non-postback controls</em> like labels or data grids, and does not automatically save such information.</li>
+	<li>Use <a href="javascript:;" class="external-link" rel="nofollow">%3Chtml:hidden%3E tag</a> to store stringified data in an HTML form and to submit it to location specified in &lt;html:form&gt; tag. Struts does not provide built-in functionality to encrypt hidden fields.</li>
+	<li>Use <a href="javascript:;" class="external-link" rel="nofollow">TokenProcessor class</a> to distinguish resubmits.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<h1 id="StateManagement-Server-SideTechniques">Server-Side Techniques</h1>
+
+<h2 id="StateManagement-Serversessionobject">Server session object</h2>
+
+<h3 id="StateManagement-Serversessionobjectonly">Server session object only</h3>
+<p>Pro:</p>
+<ul>
+	<li>Can be tied to model state, not affected by browser state or current page.</li>
+	<li>Allows to separate the concerns, keeping state safely and securely where model resides, while treating browser as an agent providing interface with a user.</li>
+	<li>Developing interactive applications is greatly simplified.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>Neither:</p>
+<ul>
+	<li>State and page address are not related.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>Cons:</p>
+<ul>
+	<li>Session size should be carefully controlled, can affect perfomance.</li>
+	<li>Degrades performance in clustered system.</li>
+	<li>Session object can expire when browser is still open.</li>
+	<li>Leaving a webapp and then navigating to it again by specifying location in the address bar leads to losing state if cookies have not been enabled.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>Best fit: Ajax- and non-Ajax applications that treat server state as primary, and client state is secondary. If discrepancy between view and model occurs, view is synched with the model, not vice versa.</p>
+
+
+<h3 id="StateManagement-Serversessionobject+redirectionaftersubmittinganHTMLform">Server session object + redirection after submitting an HTML form</h3>
+<p>Pro:</p>
+<ul>
+	<li>Clean URLs (with cookies enabled)</li>
+	<li>One URL can be used for one logical page or a series of pages, this makes back/forward navigation easier for a user.</li>
+	<li>POSTDATA dialog is now shown when a user tries to refresh a page.</li>
+	<li>Double submit does not occur when a user tries to refresh a page, or navigates back/forward.</li>
+	<li>Developing interactive applications is greatly simplified.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>Cons:</p>
+<ul>
+	<li>Redirection may increase response time.</li>
+	<li>Can be problematic in clustered systems or with address-translating web servers since the proper redirection location cannot be obtained.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>Best fit: applications that treat server state as primary state source. Non-Ajax Single Page Applications.</p>
+
+<p>How Struts can help:</p>
+<ul>
+	<li>Struts allows to define session scope for an <a href="strutsformbeans.html">ActionForm</a> in <code>struts-config.xml</code> file.</li>
+	<li><a href="eventactiondispatcher.html">EventActionDispatcher</a> helps to structure and simplify the action code, if both input and render request phases are processed by one action.</li>
+	<li><a href="javascript:;">StrutsWebIslands</a> – how single-page web resources (web-islands) can be implemented with Struts, no Ajax.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<h1 id="StateManagement-CombinationClient-ServerTechniques">Combination Client-Server Techniques</h1>
+
+
+<h3 id="StateManagement-HTMLformhiddenfields+database">HTML form hidden fields + database</h3>
+
+<p>This is one of the more popular state management techniques. It is often used in situations where storing complete state information on server is undesired for performance reasons. Hidden fields store intermediate state during, for example, filling out a series of forms like wizard pages. One of the classic examples is web store checkout process. A series of screens ask for name, address, payment information, delivery optins, etc. The last page in the series submits the shopping cart to the server, where it is processed, the inventory is adjusted and user's credit card is charged.</p>
+
+<p>Two different states have been created: client state and server state. At this point these states are synchronized, but what happens if a user clicks Back or Reload button? A Reload button will cause resubmit of the same request, which will cause server code to charge a user's credit card and to adjust warehouse inventory one more time. </p>
+
+<p>Clicking Back button will cause browser to display checkout page with the cart, this page does not represent server state anymore, here you can see that server state and client state got out of sync. Synchonizing server to client is not possible, database update has been committed and cannot be rolled back. What is left is either synchronizing view to server (preferred choice), or throwing exception and bailing out to some safe location like welcome page.</p>
+
+<p>Pros:</p>
+<ul>
+	<li>No size limitations.</li>
+	<li>URLs are short.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>Cons:</p>
+<ul>
+	<li>Every page must be an HTTP form to transfer state from page to page.</li>
+	<li>HTTP forms must be submitted with POST method only, hidden fields are not submitted with GET.</li>
+	<li>State is lost on redirection or on direct navigation; breaking out of a predefined page flow is not possible.</li>
+	<li>State information grows while a user moves forward from page to page.</li>
+	<li>Reloading a page or navigating back/forward in browser session history causes a resubmit that is preceded by a user-unfriendly POSTDATA message.</li>
+	<li>The application is unfriendly to search engines.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<p>When to use: all application pages are based on HTML forms and storing state information in the URL is undesireble.</p>
+
+<p>What to store: non-critical state information, like state of controls and widgets (viewstate).</p>
+
+<p>Implications: With this technique state information is saved on server from time to time (checkpoints). Thus, synchronization between client and server state will be required. Moving back in browser session history should either be prohibited after a &quot;save-to-server&quot; checkpoint, or application must be able to synchronize client and server state. Application must recognize and handle double-submit situations. Application must provide explicit navigational links and buttons so users would not have to use standard browser navigation buttons. </p>
+
+<p>How Struts can help:</p>
+<ul>
+	<li>Use <a href="javascript:;" class="external-link" rel="nofollow">%3Chtml:hidden%3E tag</a> to store hidden field information and to submit it to location specified in &lt;html:form&gt; tag.</li>
+	<li>Use <a href="javascript:;" class="external-link" rel="nofollow">TokenProcessor class</a> to distinguish resubmits.
+<br class="atl-forced-newline"></li>
+</ul>
+
+
+<h2 id="StateManagement-todo,savedforlater">todo, saved for later</h2>
+
+<ul>
+	<li>Same URL can be used for several pages/forms or same URL can be used to redisplay data entry form. In most browsers this allows to reduce number of entries in page history buffer and to provide Single Page Application behavior.
+<br class="atl-forced-newline"></li>
+	<li>If submitting a form changes server state like updating a database, then resubmitting a request can potentially produce cumulative (and wrongful) changes to server state. At this point state is handled both on client and server and its synchronization becomes problematic.
+<br class="atl-forced-newline">
+<br class="atl-forced-newline">
+ Example: a typical ASP.NET <a class="unresolved" href="#">WebForms</a> application.</li>
+</ul>
+
+                
+        
+    
+        </div>
+
+                        
+    
+
+
+
+<div id="labels-section" class="pageSection group">
+    <div class="labels-section-content content-column" entityid="120724314" entitytype="page">
+	<div class="labels-content">
+		
+    <ul class="label-list label-list-right ">
+            <li class="no-labels-message">
+            无标签
+        </li>
+            </ul>
+
+    </div>
+</div>
+</div>
+        
+		
+            
+
+
+
+
+            
+        
+
+
+
+
+
+
+
+
+                        
+    
+<div id="comments-section" class="pageSection group">
+        
+    
+
+
+
+</div>
+        
+
+
+                
+    
+            
+</div>
+
+    
+
+    
+
+
+
+
+    
+    
+
+    
+    
+    
+
+
+    
+<div id="space-tools-web-items" class="hidden">
+                <div data-label="概览" data-href="/confluence/spaces/viewspacesummary.action?key=WW">概览</div>
+            <div data-label="内容工具" data-href="/confluence/pages/reorderpages.action?key=WW">内容工具</div>
+            <div data-label="应用" data-href="/confluence/spaces/snippeterrors.action?key=WW">应用</div>
+    </div>
+        
+
+
+
+            </div><!-- \#main -->
+            
+    
+    
+        
+            
+            
+
+<div id="footer" role="contentinfo">
+    <section class="footer-body">
+
+                                                            <p class="license license-opensource">
+                    本站点免费授予 Apache Software Foundation<b> Atlassian Confluence 开源项目授权</b>。<a href="javascript:;">今天开始评估 Confluence</a>。<br>
+                </p>
+                    
+        
+
+        <ul id="poweredby">
+            <li class="noprint">基于 <a href="javascript:;" class="hover-footer-link" rel="nofollow">Atlassian Confluence</a> <span id='footer-build-information'>7.5.0</span> 技术构建</li>
+            <li class="print-only">由 Atlassian 合流7.5.0 打印</li>
+            <li class="noprint"><a href="javascript:;" class="hover-footer-link" rel="nofollow">报告缺陷</a></li>
+            <li class="noprint"><a href="javascript:;" class="hover-footer-link" rel="nofollow">Atlassian 新闻</a></li>
+        </ul>
+
+        
+
+        <div id="footer-logo"><a href="javascript:;" rel="nofollow">Atlassian</a></div>
+
+                    
+        
+    </section>
+</div>
+
+    
+</div>
+
+</div><!-- \#full-height-container -->
+</div><!-- \#page -->
+
+    <span style="display:none;" id="confluence-server-performance">{"serverDuration": 76, "requestCorrelationId": "7a89a1ec63682578"}</span>
+</body>
+</html>
+    

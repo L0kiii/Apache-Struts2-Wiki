@@ -1,0 +1,988 @@
+    
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+                            <title>File Upload - Apache Struts 2 Wiki - Apache Software Foundation</title>
+    
+        
+
+                        
+    
+                        
+    
+
+                
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=IE7">
+<meta charset="UTF-8">
+<meta id="confluence-context-path" name="confluence-context-path" content="/confluence">
+<meta id="confluence-base-url" name="confluence-base-url" content="https://cwiki.apache.org/confluence">
+
+    <meta id="atlassian-token" name="atlassian-token" content="f62d603e0eb4f4fa0806e72637e424e0858ac43c">
+
+
+<meta id="confluence-space-key" name="confluence-space-key" content="WW">
+<script type="text/javascript">
+        var contextPath = '/confluence';
+</script>
+
+    
+
+    <meta name="confluence-request-time" content="1595840255195">
+        
+    
+        
+            <meta name="ajs-use-keyboard-shortcuts" content="true">
+            <meta name="ajs-is-confluence-admin" content="false">
+            <meta name="ajs-connection-timeout" content="10000">
+            <script type="text/x-template" title="gliffy-webpanel-footer">
+        <div class="gliffy-webpanel-footer"><span>This Confluence installation runs a Free Gliffy License - Evaluate the <a href="http://www.gliffy.com/products/confluence-plugin/">Gliffy Confluence Plugin</a> for your Wiki!</span></div>
+</script>
+
+
+            <style>.ia-fixed-sidebar, .ia-splitter-left {width: 285px;}.theme-default .ia-splitter #main {margin-left: 285px;}.ia-fixed-sidebar {visibility: hidden;}</style>
+            <meta name="ajs-discovered-plugin-features" content="$discoveredList">
+            <meta name="ajs-keyboardshortcut-hash" content="244b3b2851a4a758ccc0304672ffd8c1">
+            
+    
+    
+            <meta name="ajs-page-title" content="File Upload">
+            <meta name="ajs-latest-published-page-title" content="File Upload">
+            <meta name="ajs-space-name" content="Apache Struts 2 Wiki">
+            <meta name="ajs-page-id" content="86602">
+            <meta name="ajs-latest-page-id" content="86602">
+            <meta name="ajs-content-type" content="page">
+            <meta name="ajs-parent-page-title" content="Interceptors">
+            <meta name="ajs-parent-page-id" content="13941">
+            <meta name="ajs-space-key" content="WW">
+            <meta name="ajs-max-number-editors" content="12">
+            <meta name="ajs-macro-placeholder-timeout" content="5000">
+            <meta name="ajs-jira-metadata-count" content="0">
+            <meta name="ajs-from-page-title" content="">
+            <meta name="ajs-can-remove-page" content="false">
+            <meta name="ajs-can-remove-page-hierarchy" content="false">
+            <meta name="ajs-browse-page-tree-mode" content="view">
+            <meta name="ajs-shared-drafts" content="true">
+            <meta name="ajs-context-path" content="/confluence">
+            <meta name="ajs-base-url" content="https://cwiki.apache.org/confluence">
+            <meta name="ajs-version-number" content="7.5.0">
+            <meta name="ajs-build-number" content="8501">
+            <meta name="ajs-remote-user" content="">
+            <meta name="ajs-remote-user-key" content="">
+            <meta name="ajs-remote-user-has-licensed-access" content="false">
+            <meta name="ajs-remote-user-has-browse-users-permission" content="false">
+            <meta name="ajs-current-user-fullname" content="">
+            <meta name="ajs-current-user-avatar-url" content="">
+            <meta name="ajs-current-user-avatar-uri-reference" content="/confluence/images/icons/profilepics/anonymous.svg">
+            <meta name="ajs-static-resource-url-prefix" content="/confluence/s/962fig/8501/fded9f91818631c3677be93247bf5ae6723a1c8d/_">
+            <meta name="ajs-global-settings-attachment-max-size" content="20971520">
+            <meta name="ajs-global-settings-quick-search-enabled" content="true">
+            <meta name="ajs-user-locale" content="zh_CN">
+            <meta name="ajs-enabled-dark-features" content="site-wide.shared-drafts,site-wide.synchrony,clc.quick.create,confluence.view.edit.transition,cql.search.screen,confluence-inline-comments-resolved,http.session.registrar,frontend.editor.v4,nps.survey.inline.dialog,confluence.efi.onboarding.new.templates,frontend.editor.v4.compatibility,atlassian.cdn.static.assets,pdf-preview,previews.sharing,previews.versions,file-annotations,collaborative-audit-log,confluence.efi.onboarding.rich.space.content,previews.conversion-service,editor.ajax.save,graphql,read.only.mode,previews.trigger-all-file-types,lucene.caching.filter,attachment.extracted.text.extractor,confluence.table.resizable,notification.batch,previews.sharing.pushstate,confluence-inline-comments-rich-editor,site-wide.synchrony.opt-in,file-annotations.likes,gatekeeper-ui-v2,v2.content.name.searcher,mobile.supported.version,pulp,confluence-inline-comments,quick-reload-inline-comments-flags,confluence-inline-comments-dangling-comment">
+            <meta name="ajs-atl-token" content="f62d603e0eb4f4fa0806e72637e424e0858ac43c">
+            <meta name="ajs-confluence-flavour" content="VANILLA">
+            <meta name="ajs-user-date-pattern" content="yyyy-M-d">
+            <meta name="ajs-access-mode" content="READ_WRITE">
+            <meta name="ajs-render-mode" content="READ_WRITE">
+            <meta name="ajs-date.format" content="MMM dd, yyyy">
+    
+    
+    
+
+<link rel="search" type="application/opensearchdescription+xml" href="/confluence/opensearch/osd.action" title="Apache Software Foundation">
+    
+                    
+            <meta name="ajs-create-issue-metadata-show-discovery" content="false">
+            
+
+    <script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-plugin:context-path.context-path"]="\u0022\u005C/confluence\u0022";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-feature-discovery-plugin:confluence-feature-discovery-plugin-resources.test-mode"]="false";
+WRM._unparsedData["com.atlassian.confluence.plugins.synchrony-interop:synchrony-status-banner-loader.synchrony-status"]="false";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:policy-update-init.policy-update-data-provider"]="false";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:programmatic-analytics-init.programmatic-analytics-data-provider"]="false";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.applinks-help-paths"]="{\u0022entries\u0022:{\u0022applinks.docs.root\u0022:\u0022https://confluence.atlassian.com/display/APPLINKS-060/\u0022,\u0022applinks.docs.diagnostics.troubleshoot.sslunmatched\u0022:\u0022SSL+and+application+link+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthsignatureinvalid\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthtimestamprefused\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.delete.entity.link\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.adding.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.administration.guide\u0022:\u0022Application+Links+Documentation\u0022,\u0022applinks.docs.oauth.security\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.troubleshoot.application.links\u0022:\u0022Troubleshoot+application+links\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unknownerror\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.trusted.apps\u0022:\u0022Configuring+Trusted+Applications+authentication+for+an+application+link\u0022,\u0022applinks.docs.diagnostics.troubleshoot.authlevelunsupported\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.ssluntrusted\u0022:\u0022SSL+and+application+link+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unknownhost\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.delete.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.link.applications\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.diagnostics.troubleshoot.oauthproblem\u0022:\u0022OAuth+troubleshooting+guide\u0022,\u0022applinks.docs.diagnostics.troubleshoot.migration\u0022:\u0022Update+application+links+to+use+OAuth\u0022,\u0022applinks.docs.relocate.application.link\u0022:\u0022Link+Atlassian+applications+to+work+together\u0022,\u0022applinks.docs.administering.entity.links\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.upgrade.application.link\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.diagnostics.troubleshoot.connectionrefused\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.oauth\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.insufficient.remote.permission\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.configuring.application.link.auth\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.diagnostics\u0022:\u0022Application+links+diagnostics\u0022,\u0022applinks.docs.configured.authentication.types\u0022:\u0022OAuth+security+for+application+links\u0022,\u0022applinks.docs.adding.entity.link\u0022:\u0022Create+links+between+projects\u0022,\u0022applinks.docs.diagnostics.troubleshoot.unexpectedresponse\u0022:\u0022Network+and+connectivity+troubleshooting+guide\u0022,\u0022applinks.docs.configuring.auth.basic\u0022:\u0022Configuring+Basic+HTTP+Authentication+for+an+Application+Link\u0022,\u0022applinks.docs.diagnostics.troubleshoot.authlevelmismatch\u0022:\u0022OAuth+troubleshooting+guide\u0022}}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.applinks-types"]="{\u0022crowd\u0022:\u0022\u4eba\u7fa4\u0022,\u0022confluence\u0022:\u0022Confluence\u0022,\u0022fecru\u0022:\u0022Fisheye / Crucible\u0022,\u0022stash\u0022:\u0022\u6682\u5b58\u0022,\u0022jira\u0022:\u0022Jira\u0022,\u0022refapp\u0022:\u0022\u76f8\u5173\u5e94\u7528\u7a0b\u5e8f\u0022,\u0022bamboo\u0022:\u0022\u7af9\u0022,\u0022generic\u0022:\u0022\u901a\u7528\u5e94\u7528\u7a0b\u5e8f\u0022}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.entity-types"]="{\u0022singular\u0022:{\u0022refapp.charlie\u0022:\u0022Charlie\u0022,\u0022fecru.project\u0022:\u0022Crucible\u9879\u76ee\u0022,\u0022fecru.repository\u0022:\u0022FishEye \u4ed3\u5e93\u0022,\u0022stash.project\u0022:\u0022Stash \u9879\u76ee\u0022,\u0022generic.entity\u0022:\u0022\u901a\u7528\u9879\u76ee\u0022,\u0022confluence.space\u0022:\u0022Confluence\u7a7a\u95f4\u0022,\u0022bamboo.project\u0022:\u0022Bamboo\u9879\u76ee\u0022,\u0022jira.project\u0022:\u0022Jira \u9879\u76ee\u0022},\u0022plural\u0022:{\u0022refapp.charlie\u0022:\u0022\u67e5\u7406\u65af\u0022,\u0022fecru.project\u0022:\u0022Crucible\u9879\u76ee\u0022,\u0022fecru.repository\u0022:\u0022FishEye \u4ed3\u5e93\u96c6\u0022,\u0022stash.project\u0022:\u0022Stash\u9879\u76ee\u0022,\u0022generic.entity\u0022:\u0022\u901a\u7528\u9879\u76ee\u0022,\u0022confluence.space\u0022:\u0022Confluence\u7a7a\u95f4\u0022,\u0022bamboo.project\u0022:\u0022Bamboo\u9879\u76ee\u0022,\u0022jira.project\u0022:\u0022Jira \u9879\u76ee\u0022}}";
+WRM._unparsedData["com.atlassian.applinks.applinks-plugin:applinks-common-exported.authentication-types"]="{\u0022com.atlassian.applinks.api.auth.types.BasicAuthenticationProvider\u0022:\u0022\u57fa\u672c\u8bbf\u95ee\u0022,\u0022com.atlassian.applinks.api.auth.types.TrustedAppsAuthenticationProvider\u0022:\u0022\u4fe1\u4efb\u7684\u5e94\u7528\u65e0\u6548\u0022,\u0022com.atlassian.applinks.api.auth.types.CorsAuthenticationProvider\u0022:\u0022\u6b4c\u73e5\u0022,\u0022com.atlassian.applinks.api.auth.types.OAuthAuthenticationProvider\u0022:\u0022Oauth\u0022,\u0022com.atlassian.applinks.api.auth.types.TwoLeggedOAuthAuthenticationProvider\u0022:\u0022Oauth\u0022,\u0022com.atlassian.applinks.api.auth.types.TwoLeggedOAuthWithImpersonationAuthenticationProvider\u0022:\u0022Oauth\u0022}";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-license-banner:confluence-license-banner-resources.license-details"]="{\u0022daysBeforeLicenseExpiry\u0022:0,\u0022daysBeforeMaintenanceExpiry\u0022:0,\u0022showLicenseExpiryBanner\u0022:false,\u0022showMaintenanceExpiryBanner\u0022:false,\u0022renewUrl\u0022:null,\u0022salesUrl\u0022:null}";
+WRM._unparsedData["com.atlassian.confluence.plugins.confluence-search-ui-plugin:confluence-search-ui-plugin-resources.i18n-data"]="{\u0022search.ui.recent.link.text\u0022:\u0022\u67e5\u770b\u66f4\u591a\u6700\u8fd1\u8bbf\u95ee\u0022,\u0022search.ui.filter.space.category.input.label\u0022:\u0022\u67e5\u627e\u7a7a\u95f4\u7c7b\u522b\u2026\u2026\u0022,\u0022search.ui.filter.clear.selected\u0022:\u0022\u6e05\u9664\u6240\u9009\u9879\u76ee\u0022,\u0022search.ui.search.results.empty\u0022:\u0022\u6211\u4eec\u627e\u4e0d\u5230\u4efb\u4f55\u5339\u914d\u201c{0}\u201d\u7684\u5185\u5bb9\u3002\u0022,\u0022search.ui.content.name.search.items.panel.load.all.top.items.button.text\u0022:\u0022\u663e\u793a\u66f4\u591a\u5e94\u7528\u7ed3\u679c......\u0022,\u0022search.ui.filter.space.archive.label\u0022:\u0022\u641c\u7d22\u5df2\u7ecf\u5f52\u6863\u7684\u7a7a\u95f4\u0022,\u0022search.ui.filter.label\u0022:\u0022\u7b5b\u9009\u5668\u0022,\u0022search.ui.filter.contributor.button.text\u0022:\u0022\u8d21\u732e\u8005\u0022,\u0022search.ui.filter.date.all.text\u0022:\u0022\u968f\u65f6\u0022,\u0022search.ui.filter.space.current.label\u0022:\u0022\u5f53\u524d\u0022,\u0022search.ui.clear.input.button.text\u0022:\u0022\u6e05\u9664\u6587\u672c\u0022,\u0022help.search.ui.link.title\u0022:\u0022\u641c\u7d22\u6280\u5de7\u0022,\u0022search.ui.search.results.clear.button\u0022:\u0022\u6e05\u7a7a\u7b5b\u9009\u5668\u3002\u0022,\u0022search.ui.filter.date.hour.text\u0022:\u0022\u8fc7\u53bb\u4e00\u5929\u0022,\u0022search.ui.filters.heading\u0022:\u0022\u7b5b\u9009\u65b9\u5f0f\u0022,\u0022search.ui.filter.label.input.label\u0022:\u0022\u67e5\u627e\u6807\u7b7e\u2026\u2026\u0022,\u0022search.ui.filter.date.month.text\u0022:\u0022\u8fc7\u53bb\u4e00\u4e2a\u6708\u0022,\u0022search.ui.recent.items.anonymous\u0022:\u0022\u5f00\u59cb\u63a2\u7d22\u3002 \u60a8\u7684\u641c\u7d22\u7ed3\u679c\u5c06\u663e\u793a\u5728\u6b64\u5904\u3002\u0022,\u0022search.ui.input.label\u0022:\u0022\u641c\u7d22\u0022,\u0022search.ui.search.result\u0022:\u0022{0,choice,1#{0}\u4e2a\u641c\u7d22\u7ed3\u679c|1\u005Cu003c{0}\u4e2a\u641c\u7d22\u7ed3\u679c}\u0022,\u0022search.ui.infinite.scroll.button.text\u0022:\u0022\u66f4\u591a\u7ed3\u679c\u0022,\u0022search.ui.filter.date.button.text\u0022:\u0022\u65e5\u671f\u0022,\u0022search.ui.filter.date.week.text\u0022:\u0022\u8fc7\u53bb\u4e00\u5468\u0022,\u0022search.ui.filter.label.button.text\u0022:\u0022\u6807\u7b7e\u0022,\u0022search.ui.input.alert\u0022:\u0022\u6309\u56de\u8f66\u952e(Enter)\u641c\u7d22\u0022,\u0022search.ui.filter.no.result.text\u0022:\u0022\u6211\u4eec\u627e\u4e0d\u5230\u4efb\u4f55\u7b26\u5408\u60a8\u641c\u7d22\u6761\u4ef6\u7684\u5185\u5bb9\u0022,\u0022search.ui.result.subtitle.calendar\u0022:\u0022\u56e2\u961f\u65e5\u7a0b\u8868\u0022,\u0022search.ui.filter.date.heading\u0022:\u0022\u4e0a\u6b21\u4fee\u6539\u0022,\u0022search.ui.result.subtitle.user\u0022:\u0022\u7528\u6237\u8d44\u6599\u0022,\u0022search.ui.filter.contributor.input.label\u0022:\u0022\u67e5\u627e\u4eba\u5458\u2026\u2026\u0022,\u0022search.ui.filter.content.type.button.text\u0022:\u0022\u7c7b\u578b\u0022,\u0022search.ui.filter.space.input.label\u0022:\u0022\u67e5\u627e\u7a7a\u95f4\u0022,\u0022search.ui.filter.date.year.text\u0022:\u0022\u8fc7\u53bb\u4e00\u5e74\u0022,\u0022search.ui.filter.space.button.text\u0022:\u0022\u7a7a\u95f4\u0022,\u0022search.ui.advanced.search.link.text\u0022:\u0022\u9ad8\u7ea7\u641c\u7d22\u0022,\u0022search.ui.generic.error\u0022:\u0022\u51fa\u9519\u4e86\u3002\u5237\u65b0\u9875\u9762\uff0c\u6216\u8005\u5982\u679c\u6301\u7eed\u53d1\u751f\u8fd9\u79cd\u60c5\u51b5\uff0c\u8bf7\u8054\u7cfb\u60a8\u7684\u7ba1\u7406\u5458\u3002\u0022,\u0022search.ui.recent.spaces\u0022:\u0022\u6700\u8fd1\u7a7a\u95f4\u0022,\u0022search.ui.search.results.clear.line2\u0022:\u0022\u8bf7\u5c1d\u8bd5\u4e0d\u540c\u7684\u641c\u7d22\u5173\u952e\u5b57\u6216\u8005\u0022,\u0022search.ui.filter.space.category.button.text\u0022:\u0022\u7a7a\u95f4\u7c7b\u522b\u0022,\u0022search.ui.search.results.clear.line1\u0022:\u0022\u627e\u4e0d\u5230\u5339\u914d\u7684\u641c\u7d22\u7ed3\u679c\u0022,\u0022search.ui.content.name.search.items.panel.load.all.top.items.admin.button.text\u0022:\u0022\u663e\u793a\u66f4\u591a\u8bbe\u7f6e\u548c\u5e94\u7528\u7ed3\u679c...\u0022,\u0022search.ui.recent.pages\u0022:\u0022\u6700\u8fd1\u8bbf\u95ee\u0022,\u0022search.ui.search.result.anonymous\u0022:\u0022{0,choice,1#{0}\u4e2a\u641c\u7d22\u7ed3\u679c| 1 \u005Cu003c{0}\u4e2a\u641c\u7d22\u7ed3\u679c}\u3002 \u60a8\u6709\u5e10\u6237\u5417\uff1f{1}\u767b\u5f55{2}\u641c\u7d22\u66f4\u591a\u7ed3\u679c\u3002\u0022,\u0022search.ui.recent.items.empty\u0022:\u0022\u5f00\u59cb\u63a2\u7d22\u3002 \u60a8\u6700\u8fd1\u8bbf\u95ee\u8fc7\u7684\u9875\u9762\u548c\u7a7a\u95f4\u5c06\u663e\u793a\u5728\u6b64\u5904\u3002\u0022,\u0022search.ui.result.subtitle.space\u0022:\u0022\u7a7a\u95f4\u0022,\u0022search.ui.filter.space.init.heading\u0022:\u0022\u6700\u8fd1\u7a7a\u95f4\u0022}";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script>
+<link type="text/css" rel="stylesheet" href="static/css/batch.css" data-wrm-key="_super" data-wrm-batch-type="context" media="all">
+<link type="text/css" rel="stylesheet" href="static/css/batch-true_true_true.css" data-wrm-key="atl.confluence.plugins.pagetree-desktop,main,viewcontent,atl.general,page,atl.comments,-_super" data-wrm-batch-type="context" media="all">
+<script type="text/javascript" src="static/js/batch-zh-CN.js" data-wrm-key="_super" data-wrm-batch-type="context" data-initially-rendered=""></script>
+<script type="text/javascript" src="static/js/batch-true_true_true_zh-CN.js" data-wrm-key="atl.confluence.plugins.pagetree-desktop,main,viewcontent,atl.general,page,atl.comments,-_super" data-wrm-batch-type="context" data-initially-rendered=""></script>
+
+    
+
+        
+    
+
+        
+        <meta name="ajs-site-title" content="Apache Software Foundation">
+            
+    
+
+    
+                <link rel="canonical" href="https://cwiki.apache.org/confluence/display/WW/File+Upload">
+        <link rel="shortlink" href="https://cwiki.apache.org/confluence/x/SlIB">
+    <meta name="wikilink" content="[WW:File Upload]">
+    <meta name="page-version" content="31">
+    <meta name="ajs-page-version" content="31">
+
+</head>
+
+    
+<body id="com-atlassian-confluence" class="theme-default  aui-layout aui-theme-default">
+
+        
+            <div id='stp-licenseStatus-banner'></div>
+    <ul id="assistive-skip-links" class="assistive">
+    <li><a href="#title-heading">转至内容</a></li>
+    <li><a href="#breadcrumbs">转至导航栏</a></li>
+    <li><a href="#header-menu-bar">转至主菜单</a></li>
+    <li><a href="#navigation">转至动作菜单</a></li>
+    <li><a href="#quick-search-query">转至快速搜索</a></li>
+</ul>
+<div id="page">
+<div id="full-height-container">
+    <div id="header-precursor">
+        <div class="cell">
+            
+                            </div>
+    </div>
+        
+
+
+
+
+
+<header id="header" role="banner">
+    <nav class="aui-header aui-dropdown2-trigger-group" role="navigation"><div class="aui-header-inner"><div class="aui-header-before"><a class=" aui-dropdown2-trigger app-switcher-trigger" aria-controls="app-switcher" aria-haspopup="true" role="button" tabindex="0" data-aui-trigger="" href="#app-switcher"><span class="aui-icon aui-icon-small aui-iconfont-appswitcher">已链接应用程序</span></a><div id="app-switcher" class="aui-dropdown2 aui-style-default" role="menu" aria-hidden="true" data-is-switcher="true" data-environment="{&quot;isUserAdmin&quot;:false,&quot;isAppSuggestionAvailable&quot;:false,&quot;isSiteAdminUser&quot;:false}"><div role="application"><div class="app-switcher-loading">正在上传和乱码；</div></div></div></div><div class="aui-header-primary"><h1 id="logo" class="aui-header-logo aui-header-logo-confluence"><a href="index.html"><span class="aui-header-logo-device">Apache Software Foundation</span></a></h1><ul class="aui-nav">
+                            <li>
+            
+        
+        
+<a id="space-directory-link" href="view.html" class=" aui-nav-imagelink" title="空间">
+            <span>空间</span>
+    </a>
+        </li>
+                                <li class="aui-buttons">
+            </li>
+</ul>
+</div><div class="aui-header-secondary"><ul class="aui-nav">
+                        <li>
+        <div id="search-ui" class="aui-quicksearch dont-default-focus header-quicksearch"><input id="quick-search-query" aria-label="搜索" placeholder="搜索" type="text"><div id="quick-search-alert" role="alert">按回车键(Enter)搜索</div><aui-spinner size="small"></aui-spinner></div>
+    </li>
+        <li>
+            
+        <a id="help-menu-link" class="aui-nav-link aui-dropdown2-trigger aui-dropdown2-trigger-arrowless" href="#" aria-haspopup="true" aria-owns="help-menu-link-content" title="帮助">
+        <span class="aui-icon aui-icon-small aui-iconfont-question-filled">帮助</span>
+    </a>
+    <nav id="help-menu-link-content" class="aui-dropdown2 aui-style-default" aria-hidden="true">
+                    <div class="aui-dropdown2-section">
+                                <ul id="help-menu-link-leading" class="aui-list-truncate section-leading first">
+                                            <li>
+        
+            
+<a id="confluence-help-link" href="javascript:;" class="    " title="访问Confluence文档首页" target="_blank">
+        在线帮助
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="keyboard-shortcuts-link" href="confluence.html" class="    " title="查看可用的键盘快捷方式">
+        快捷键
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="feed-builder-link" href="configurerssfeed.html" class="    " title="创建个性化的 RSS源。">
+        RSS源建立器
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="whats-new-menu-link" href="javascript:;" class="    " title="">
+        新功能
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="gadget-directory-link" href="confluence.html" class="   user-item administration-link " title="浏览小工具">
+        可用的小工具
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="confluence-about-link" href="aboutconfluencepage.html" class="    " title="获取关于Confluence的更多信息">
+        关于Confluence
+</a>
+</li>
+                                    </ul>
+            </div>
+            </nav>
+    
+    </li>
+        <li>
+                
+    
+    </li>
+        <li>
+            
+    </li>
+        <li>
+                                            <li>
+        
+            
+<a id="login-link" href="javascript:;" class="   user-item login-link " title="">
+        登录
+</a>
+</li>
+                        <li>
+    
+            
+<a id="signup-link" href="signup.html" class="   user-item signup-link " title="">
+        注册
+</a>
+</li>
+                        
+    
+    </ul>
+</div></div><!-- .aui-header-inner--></nav><!-- .aui-header -->
+    <br class="clear">
+</header>
+    
+
+    
+    	<div class="ia-splitter">
+    		<div class="ia-splitter-left">
+    			<div class="ia-fixed-sidebar">
+                                            
+                            <div class="acs-side-bar ia-scrollable-section"><div class="acs-side-bar-space-info tipsy-enabled" data-configure-tooltip="编辑空间详情"><div class="avatar"><div class="space-logo" data-key="WW" data-name="Apache Struts 2 Wiki" data-entity-type="confluence.space"><div class="avatar-img-container"><div class="avatar-img-wrapper"><a href="home.html" title="Apache Struts 2 Wiki"><img class="avatar-img" src="static/picture/default-space-logo.svg" alt="Apache Struts 2 Wiki"></a></div></div></div></div><div class="space-information-container"><div class="name"><a href="home.html" title="Apache Struts 2 Wiki">Apache Struts 2 Wiki</a></div><div class="flyout-handle icon aui-icon aui-icon-small aui-iconfont-edit"></div></div></div><div class="acs-side-bar-content"><div class="acs-nav-wrapper"><div class="acs-nav" data-has-create-permission="false" data-quick-links-state="null" data-page-tree-state="null" data-nav-type="pages"><div class="acs-nav-sections"><div class="quick-links-wrapper"></div></div></div></div><div class="ia-secondary-container tipsy-enabled" data-tree-type="pages"><div class="ia-secondary-header"><h5 class="ia-secondary-header-title pages"><span class="label">子页面</span></h5></div><div class="ia-secondary-parent-content"><ul class="parent ia-secondary-header-title wiki"><li class="parent-item"><a class="parent-item-link" href="javascript:;" title="Interceptors"><span class="icon"></span><span class="label">Interceptors</span></a></li></ul></div><div class="ia-secondary-current-content"><ul class="ia-secondary-currentPage-title wiki current-item"><li><span class="icon"></span><span class="label">File Upload</span></li></ul></div><div class="ia-secondary-content"><div class="contextual-nav-child-pages"></div></div></div></div><div class="hidden"><a href="pages-ww.html" id="space-pages-link"></a><script type="text/x-template" title="logo-config-content"><h2>空间详情</h2><div class="personal-space-logo-hint">您的个人头像被作为您的个人空间的logo使用。<a href="/confluence/users/profile/editmyprofilepicture.action" target="_blank">更改您的个人头像</a>.</div></script></div></div><div class="space-tools-section"><div id="space-tools-menu-additional-items" class="hidden"><div data-label="浏览页面" data-class="" data-href="/confluence/pages/reorderpages.action?key=WW">浏览页面</div></div><button id="space-tools-menu-trigger" class=" aui-dropdown2-trigger aui-button aui-button-subtle tipsy-enabled aui-dropdown2-trigger-arrowless " aria-controls="space-tools-menu" aria-haspopup="true" role="button" data-aui-trigger=""><span class="aui-icon aui-icon-small aui-iconfont-configure">设置</span><span class="aui-button-label">空间管理</span><span class="aui-icon "></span></button><div id="space-tools-menu" class="aui-dropdown2 aui-style-default space-tools-dropdown" role="menu" aria-hidden="true" data-aui-alignment="top left"><div role="application"></div></div><a class="expand-collapse-trigger aui-icon aui-icon-small aui-iconfont-chevron-double-left"></a></div>
+                    
+                        			</div>
+    		</div>
+        <!-- \#header -->
+
+            
+    
+        <div id="main" class=" aui-page-panel">
+                        <div id="main-header">
+                        
+    <div id="navigation" class="content-navigation view">
+                    <ul class="ajs-menu-bar">
+                                            
+        <li class="normal ajs-menu-item">
+        <a id="action-menu-link" class="action aui-dropdown2-trigger-arrowless aui-button aui-button-subtle ajs-menu-title aui-dropdown2-trigger" href="#" aria-haspopup="true" aria-label="更多选项" aria-owns="action-menu" data-container="#navigation">
+            <span>
+                                    <span class="aui-icon aui-icon-small aui-iconfont-more" aria-label="更多选项"></span>
+                                
+            </span>
+        </a>         <div id="action-menu" class="aui-dropdown2 aui-style-default" aria-hidden="true">
+                            <div class="aui-dropdown2-section">
+                    <ul id="action-menu-primary" class="section-primary first">
+                                                    <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="view-attachments-link" href="javascript:;" rel="nofollow" class="action-view-attachments" accesskey="t" title="查看附件">
+                        <span>
+                                <u>t</u>附件(0)
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="action-view-history-link" href="javascript:;" rel="nofollow" class="action-view-history" title="">
+                        <span>
+                                页面历史
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="who-can-view-button-ak-button" href="confluence.html" rel="nofollow" class="who-can-view-link" title="">
+                        <span>
+                                可以查看的人
+            </span>        </a>
+    </li>
+                                        </ul>
+                </div>
+                            <div class="aui-dropdown2-section">
+                    <ul id="action-menu-secondary" class="section-secondary">
+                                                    <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="view-resolved-comments" href="confluence.html" rel="nofollow" class="" title="">
+                        <span>
+                                已解决评论
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="view-page-info-link" href="javascript:;" rel="nofollow" class="action-view-info" title="">
+                        <span>
+                                页面信息
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="view-in-hierarchy-link" href="javascript:;" rel="nofollow" class="" title="">
+                        <span>
+                                以层级方式查看
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="action-view-source-link" href="javascript:;" rel="nofollow" class="action-view-source popup-link" title="">
+                        <span>
+                                查看页面源代码
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="delete-all-comments-link-link" href="javascript:;" rel="nofollow" class="" title="">
+                        <span>
+                                Delete comments
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="action-export-pdf-link" href="javascript:;" rel="nofollow" class="" title="">
+                        <span>
+                                导出为PDF
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="com-k15t-confluence-scroll-epub-launcher" href="javascript:;" rel="nofollow" class="" title="">
+                        <span>
+                                Export to EPUB
+            </span>        </a>
+    </li>
+                                                <li>
+
+    
+        
+    
+                                                        
+    
+    
+            <a id="action-export-word-link" href="javascript:;" rel="nofollow" class="action-export-word" title="">
+                        <span>
+                                导出为Word
+            </span>        </a>
+    </li>
+                                        </ul>
+                </div>
+                    </div>
+    </li>
+            </ul>
+    </div>
+
+            
+            <div id="title-heading" class="pagetitle with-breadcrumbs">
+                
+                                    <div id="breadcrumb-section">
+                        
+    
+    
+    <ol id="breadcrumbs">
+                                        
+                        
+        <li class="first">
+                        
+                            <span class=""><a href="pages-ww.html">页面</a></span>
+                                                                                                            <li id="ellipsis" title="显示全部导航项"><span><strong>&#8230;</strong></span></li>
+                                                
+                        
+        <li class="hidden-crumb">
+                        
+                            <span class=""><a href="home.html">Home</a></span>
+                                                                                                    
+                        
+        <li class="hidden-crumb">
+                        
+                            <span class=""><a href="guides.html">Guides</a></span>
+                                                                                                    
+                        
+        <li class="hidden-crumb">
+                        
+                            <span class=""><a href="javascript:;">Core Developers Guide</a></span>
+                                                                                    
+                        
+        <li>
+                        
+                            <span class=""><a href="javascript:;">Interceptors</a></span>
+                                                                    </li></ol>
+
+
+                    </div>
+                
+                
+        <a href="#page-banner-end" class="assistive">跳到banner的尾部</a>
+<div id="page-banner-start" class="assistive"></div>
+
+                    
+            <div id="page-metadata-banner"><ul class="banner"><li id="system-content-items" class="noprint"><a href="" title="未限制" id="content-metadata-page-restrictions-hidden" class="hidden"></a></li><li class="page-metadata-item noprinthas-button" id="content-metadata-jira-wrapper"><a href="" title="" id="content-metadata-jira" class="aui-button aui-button-subtle content-metadata-jira tipsy-disabled hidden"><span>JIRA 链接</span></a></li></ul></div>
+            
+
+<a href="#page-banner-start" class="assistive">回到标题开始</a>
+<div id="page-banner-end" class="assistive"></div>
+    
+
+                <h1 id="title-text" class="with-breadcrumbs">
+                                                <a href="javascript:;">File Upload</a>
+                                    </h1>
+            </div>
+        </div><!-- \#main-header -->
+        
+        
+
+        <div id="sidebar-container">
+                                                </div><!-- \#sidebar-container -->
+
+        
+    
+
+        
+
+
+
+
+            
+    
+
+                                
+    
+
+    
+    
+        
+    
+    
+                    
+    
+
+    
+
+    
+            
+        
+
+    
+    
+
+    
+            
+        
+
+
+
+    
+<div id="content" class="page view">
+    
+
+
+<div id="action-messages">
+                        </div>
+
+
+
+            <script type="text/x-template" title="searchResultsGrid">
+    <table class="aui">
+        <thead>
+            <tr class="header">
+                <th class="search-result-title">页面标题</th>
+                <th class="search-result-space">空间</th>
+                <th class="search-result-date">更新于</th>
+            </tr>
+        </thead>
+    </table>
+</script>
+<script type="text/x-template" title="searchResultsGridCount">
+    <p class="search-result-count">{0}</p>
+</script>
+<script type="text/x-template" title="searchResultsGridRow">
+    <tr class="search-result">
+        <td class="search-result-title"><a href="{1}" class="content-type-{2}"><span>{0}</span></a></td>
+        <td class="search-result-space"><a class="space" href="/confluence/display/{4}/" title="{3}">{3}</a></td>
+        <td class="search-result-date"><span class="date" title="{6}">{5}</span></td>
+    </tr>
+</script>
+        
+    
+            
+
+        
+                            
+    
+
+                    
+
+        
+        <a href="#page-metadata-end" class="assistive">转至元数据结尾</a>
+<div id="page-metadata-start" class="assistive"></div>
+
+    <div class="page-metadata">
+        <ul>
+            <li class="page-metadata-modification-info">
+                
+        
+    
+        
+    
+        
+            
+            由<span class='author'>     <a href="javascript:;" class="url fn">Matthieu Chase Heimer</a></span>创建, 最终由<span class='editor'>     <a href="~lukaszlenart.html" class="url fn">Lukasz Lenart</a></span>修改于 <a class='last-modified' title='查看变更' href='javascript:;'>四月 18, 2017</a>
+                </li>
+        </ul>
+    </div>
+
+
+<a href="#page-metadata-start" class="assistive">转至元数据起始</a>
+<div id="page-metadata-end" class="assistive"></div>
+
+        
+                                            
+        <div id="main-content" class="wiki-content">
+                           
+        <p>The Struts 2 framework provides built-in support for processing file uploads that conform to <a href="javascript:;" class="external-link" rel="nofollow">RFC 1867</a>, &quot;Form-based File Upload in HTML&quot;. When correctly configured the framework will pass uploaded file(s) into your Action class. Support for individual and multiple file uploads are provided. When a file is uploaded it will typically be stored in a temporary directory. Uploaded files should be processed or moved by your Action class to ensure the data is not lost. Be aware that servers may have a security policy in place that prohibits you from writing to directories other than the temporary directory and the directories that belong to your web application.</p><p><ac:parameter ac:name="minLevel">2</ac:parameter></p><h2 id="FileUpload-Dependencies">Dependencies</h2><p>The Struts 2 framework leverages add-on libraries to handle the parsing of uploaded files. These libraries are not included in the Struts distribution, you must add them into your project. The libraries needed are:</p><div class="table-wrap"><table class="confluenceTable"><tbody><tr><th class="confluenceTh"><p>Library</p></th><th class="confluenceTh"><p>URL</p></th><th class="confluenceTh"><p>Struts 2.0.x</p></th><th class="confluenceTh"><p>Struts 2.1.x</p></th><th colspan="1" class="confluenceTh">Struts 2.5.x</th></tr><tr><td class="confluenceTd"><p>Commons-FileUpload</p></td><td class="confluenceTd"><a class="external-link" href="javascript:;" rel="nofollow">http://commons.apache.org/fileupload/</a></td><td class="confluenceTd"><p>1.1.1</p></td><td class="confluenceTd"><p>1.2.1</p></td><td colspan="1" class="confluenceTd">1.3.2</td></tr><tr><td class="confluenceTd"><p>Commons-IO</p></td><td class="confluenceTd"><a class="external-link" href="javascript:;" rel="nofollow">http://commons.apache.org/io/</a></td><td class="confluenceTd"><p>1.0</p></td><td class="confluenceTd"><p>1.3.2</p></td><td colspan="1" class="confluenceTd">2.4</td></tr></tbody></table></div><p>If you are using Maven then you can add these libraries as dependencies in your project's pom.xml.</p><ac:parameter ac:name="lang">xml</ac:parameter><ac:parameter ac:name="title">Struts 2.0.x File Upload Dependencies</ac:parameter><ac:plain-text-body>&lt;dependency&gt;
+    &lt;groupId&gt;commons-fileupload&lt;/groupId&gt;
+    &lt;artifactId&gt;commons-fileupload&lt;/artifactId&gt;
+    &lt;version&gt;1.1.1&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;commons-io&lt;/groupId&gt;
+    &lt;artifactId&gt;commons-io&lt;/artifactId&gt;
+    &lt;version&gt;1.0&lt;/version&gt;
+&lt;/dependency&gt;
+</ac:plain-text-body><ac:parameter ac:name="lang">xml</ac:parameter><ac:parameter ac:name="title">Struts 2.1.x File Upload Dependencies</ac:parameter><ac:plain-text-body>&lt;dependency&gt;
+    &lt;groupId&gt;commons-fileupload&lt;/groupId&gt;
+    &lt;artifactId&gt;commons-fileupload&lt;/artifactId&gt;
+    &lt;version&gt;1.2.1&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;commons-io&lt;/groupId&gt;
+    &lt;artifactId&gt;commons-io&lt;/artifactId&gt;
+    &lt;version&gt;1.3.2&lt;/version&gt;
+&lt;/dependency&gt;
+</ac:plain-text-body><h2 id="FileUpload-BasicUsage">Basic Usage</h2><p>The <code>org.apache.struts2.interceptor.FileUploadInterceptor</code> class is included as part of the <code>defaultStack</code>. As long as the required libraries are added to your project you will be able to take advantage of of the Struts 2 fileUpload capability. Configure an Action mapping for your Action class as you typically would.</p><p><strong>Example action mapping:</strong></p><ac:parameter ac:name="lang">xml</ac:parameter><ac:plain-text-body>&lt;action name=&quot;doUpload&quot; class=&quot;com.example.UploadAction&quot;&gt;
+    &lt;result name=&quot;success&quot;&gt;good_result.jsp&lt;/result&gt;
+&lt;/action&gt;
+</ac:plain-text-body><p>A form must be create with a form field of type file, <code>&lt;INPUT type=&quot;file&quot; name=&quot;upload&quot;&gt;</code>. The form used to upload the file must have its encoding type set to multipart/form-data, <code>&lt;FORM action=&quot;doUpload&quot; enctype=&quot;multipart/form-data&quot; method=&quot;post&quot;&gt;</code>. The standard procedure for adding these elements is by using the Struts 2 tag libraries as shown in the following example:</p><p><strong>Example JSP form tags:</strong><ac:plain-text-body>{snippet:id=example-form|lang=xml|javadoc=true|url=org.apache.struts2.interceptor.FileUploadInterceptor}</ac:plain-text-body>The fileUpload interceptor will use setter injection to insert the uploaded file and related data into your Action class. For a form field named <strong>upload</strong> you would provide the three setter methods shown in the following example:</p><p><strong>Example Action class:</strong></p><ac:parameter ac:name="lang">java</ac:parameter><ac:plain-text-body>package com.example;
+
+   import java.io.File;
+   import com.opensymphony.xwork2.ActionSupport;
+
+   public class UploadAction extends ActionSupport {
+      private File file;
+      private String contentType;
+      private String filename;
+
+      public void setUpload(File file) {
+         this.file = file;
+      }
+
+      public void setUploadContentType(String contentType) {
+         this.contentType = contentType;
+      }
+
+      public void setUploadFileName(String filename) {
+         this.filename = filename;
+      }
+
+      public String execute() {
+         //...
+         return SUCCESS;
+      }
+ }
+</ac:plain-text-body><p>The purpose of each one of these methods is described in the table below. Notice that if you have multiple file form elements with different names you would be required to have another corresponding set of these methods for each file uploaded.</p><div class="table-wrap"><table class="confluenceTable"><tbody><tr><th class="confluenceTh"><p>Method Signature</p></th><th class="confluenceTh"><p>Description</p></th></tr><tr><td class="confluenceTd"><p>setX(File file)</p></td><td class="confluenceTd"><p>The file that contains the content of the uploaded file. This is a temporary file and <code>file.getName()</code> will not return the original name of the file</p></td></tr><tr><td class="confluenceTd"><p>setXContentType(String contentType)</p></td><td class="confluenceTd"><p>The mime type of the uploaded file</p></td></tr><tr><td class="confluenceTd"><p>setXFileName(String fileName)</p></td><td class="confluenceTd"><p>The actual file name of the uploaded file (not the HTML name)</p></td></tr></tbody></table></div><h2 id="FileUpload-UploadingMultipleFiles">Uploading Multiple Files</h2><p>As mentioned in the previous section one technique for uploading multiple files would be to simply have multiple form input elements of type file all with different names. This would require a number of setter methods that was equal to 3 times the number of files being uploaded. Another option is to use Arrays or java.util.Lists. The following examples are taken from the Showcase example application that is part sample applications you can download at <a class="external-link" href="download.html" rel="nofollow">http://struts.apache.org/download.cgi</a>. For the Action mapping details see <code>struts-fileupload.xml</code> in the sample application download.</p><h3 id="FileUpload-UploadingMultipleFilesusingArrays">Uploading Multiple Files using Arrays</h3><p><strong>multipleUploadUsingArray.jsp</strong> Notice all file input types have the same name.</p><ac:parameter ac:name="">html</ac:parameter><ac:plain-text-body>&lt;s:form action=&quot;doMultipleUploadUsingArray&quot; method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot;&gt;
+  &lt;s:file label=&quot;File (1)&quot; name=&quot;upload&quot; /&gt;
+  &lt;s:file label=&quot;File (2)&quot; name=&quot;upload&quot; /&gt;
+  &lt;s:file label=&quot;FIle (3)&quot; name=&quot;upload&quot; /&gt;
+  &lt;s:submit cssClass=&quot;btn btn-primary&quot;/&gt;
+&lt;/s:form&gt;</ac:plain-text-body><p><strong>MultipleFileUploadUsingArrayAction.java</strong></p><p> </p><p><strong><br></strong></p><ac:parameter ac:name="">java</ac:parameter><ac:plain-text-body>public class MultipleFileUploadUsingArrayAction extends ActionSupport {
+	private File[] uploads;
+	private String[] uploadFileNames;
+	private String[] uploadContentTypes;
+
+	public String upload() throws Exception {
+		System.out.println(&quot;\n\n upload2&quot;);
+		System.out.println(&quot;files:&quot;);
+		for (File u : uploads) {
+			System.out.println(&quot;*** &quot; + u + &quot;\t&quot; + u.length());
+		}
+		System.out.println(&quot;filenames:&quot;);
+		for (String n : uploadFileNames) {
+			System.out.println(&quot;*** &quot; + n);
+		}
+		System.out.println(&quot;content types:&quot;);
+		for (String c : uploadContentTypes) {
+			System.out.println(&quot;*** &quot; + c);
+		}
+		System.out.println(&quot;\n\n&quot;);
+		return SUCCESS;
+	}
+	public File[] getUpload() {
+		return this.uploads;
+	}
+	public void setUpload(File[] upload) {
+		this.uploads = upload;
+	}
+	public String[] getUploadFileName() {
+		return this.uploadFileNames;
+	}
+	public void setUploadFileName(String[] uploadFileName) {
+		this.uploadFileNames = uploadFileName;
+	}
+	public String[] getUploadContentType() {
+		return this.uploadContentTypes;
+	}
+	public void setUploadContentType(String[] uploadContentType) {
+		this.uploadContentTypes = uploadContentType;
+	}
+}</ac:plain-text-body><p> </p><h3 id="FileUpload-UploadingMultipleFilesusingLists">Uploading Multiple Files using Lists</h3><p><strong>multipleUploadUsingList.jsp</strong> Notice all file input types have the same name.</p><ac:parameter ac:name="">xml</ac:parameter><ac:plain-text-body>&lt;s:form action=&quot;doMultipleUploadUsingList&quot; method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot;&gt;
+  &lt;s:file label=&quot;File (1)&quot; name=&quot;upload&quot; /&gt;
+  &lt;s:file label=&quot;File (2)&quot; name=&quot;upload&quot; /&gt;
+  &lt;s:file label=&quot;FIle (3)&quot; name=&quot;upload&quot; /&gt;
+  &lt;s:submit cssClass=&quot;btn btn-primary&quot;/&gt;
+&lt;/s:form&gt;</ac:plain-text-body><p><strong>MultipleFileUploadUsingListAction.java</strong></p><ac:parameter ac:name="">java</ac:parameter><ac:plain-text-body>public class MultipleFileUploadUsingListAction extends ActionSupport {
+	private List&lt;File&gt; uploads = new ArrayList&lt;File&gt;();
+	private List&lt;String&gt; uploadFileNames = new ArrayList&lt;String&gt;();
+	private List&lt;String&gt; uploadContentTypes = new ArrayList&lt;String&gt;();
+
+	public List&lt;File&gt; getUpload() {
+		return this.uploads;
+	}
+	public void setUpload(List&lt;File&gt; uploads) {
+		this.uploads = uploads;
+	}
+	public List&lt;String&gt; getUploadFileName() {
+		return this.uploadFileNames;
+	}
+	public void setUploadFileName(List&lt;String&gt; uploadFileNames) {
+		this.uploadFileNames = uploadFileNames;
+	}
+	public List&lt;String&gt; getUploadContentType() {
+		return this.uploadContentTypes;
+	}
+	public void setUploadContentType(List&lt;String&gt; contentTypes) {
+		this.uploadContentTypes = contentTypes;
+	}
+	public String upload() throws Exception {
+		System.out.println(&quot;\n\n upload1&quot;);
+		System.out.println(&quot;files:&quot;);
+		for (File u : uploads) {
+			System.out.println(&quot;*** &quot; + u + &quot;\t&quot; + u.length());
+		}
+		System.out.println(&quot;filenames:&quot;);
+		for (String n : uploadFileNames) {
+			System.out.println(&quot;*** &quot; + n);
+		}
+		System.out.println(&quot;content types:&quot;);
+		for (String c : uploadContentTypes) {
+			System.out.println(&quot;*** &quot; + c);
+		}
+		System.out.println(&quot;\n\n&quot;);
+		return SUCCESS;
+	}
+}</ac:plain-text-body><h2 id="FileUpload-AdvancedConfiguration">Advanced Configuration</h2><p>The Struts 2 <code>default.properties</code> file defines several settings that affect the behavior of file uploading. You may find in necessary to change these values. The names and default values are:</p><ac:parameter ac:name="lang">none</ac:parameter><ac:plain-text-body>struts.multipart.parser=jakarta
+struts.multipart.saveDir=
+struts.multipart.maxSize=2097152
+</ac:plain-text-body><ac:rich-text-body><p>Please remember that the <strong>struts.multipart.maxSize</strong> is the size limit of the whole request, which means when you uploading multiple files, the sum of their size must be below the <strong>struts.multipart.maxSize</strong>!</p></ac:rich-text-body><p>In order to change theses settings you define a constant in your applications <code>struts.xml</code> file like so:</p><ac:parameter ac:name="lang">xml</ac:parameter><ac:plain-text-body>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE struts PUBLIC 
+	&quot;-//Apache Software Foundation//DTD Struts Configuration 2.0//EN&quot; 
+	&quot;http://struts.apache.org/dtds/struts-2.0.dtd&quot;&gt;
+&lt;struts&gt;
+    &lt;constant name=&quot;struts.multipart.maxSize&quot; value=&quot;1000000&quot; /&gt;
+    ...
+&lt;/struts&gt;
+</ac:plain-text-body><p>Additionally the <code>fileUpload</code> interceptor has settings that can be put in place for individual action mappings by customizing your interceptor stack.</p><ac:parameter ac:name="lang">xml</ac:parameter><ac:plain-text-body>&lt;action name=&quot;doUpload&quot; class=&quot;com.example.UploadAction&quot;&gt;
+    &lt;interceptor-ref name=&quot;basicStack&quot;/&gt;
+    &lt;interceptor-ref name=&quot;fileUpload&quot;&gt;
+        &lt;param name=&quot;allowedTypes&quot;&gt;text/plain&lt;/param&gt;
+    &lt;/interceptor-ref&gt; 
+    &lt;interceptor-ref name=&quot;validation&quot;/&gt;
+    &lt;interceptor-ref name=&quot;workflow&quot;/&gt;
+
+    &lt;result name=&quot;success&quot;&gt;good_result.jsp&lt;/result&gt;
+&lt;/action&gt;
+</ac:plain-text-body><h3 id="FileUpload-FileSizeLimits">File Size Limits</h3><p>There are two separate file size limits. First is <code>struts.multipart.maxSize</code> which comes from the Struts 2 <code>default.properties</code> file. This setting exists for security reasons to prohibit a malicious user from uploading extremely large files to file up your servers disk space. This setting defaults to approximately 2 megabytes and should be adjusted to the maximum size file (2 gigs max) that your will need the framework to receive. If you are uploading more than one file on a form the <code>struts.multipart.maxSize</code> applies to the combined total, not the individual file sizes. The other setting, <code>maximumSize</code>, is an interceptor setting that is used to ensure a particular Action does not receive a file that is too large. Notice the locations of both settings in the following example:</p><ac:parameter ac:name="lang">xml</ac:parameter><ac:plain-text-body>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE struts PUBLIC 
+	&quot;-//Apache Software Foundation//DTD Struts Configuration 2.0//EN&quot; 
+	&quot;http://struts.apache.org/dtds/struts-2.0.dtd&quot;&gt;
+&lt;struts&gt;
+    &lt;constant name=&quot;struts.multipart.maxSize&quot; value=&quot;1000000&quot; /&gt;
+    
+    &lt;action name=&quot;doUpload&quot; class=&quot;com.example.UploadAction&quot;&gt;
+        &lt;interceptor-ref name=&quot;basicStack&quot;/&gt;
+        &lt;interceptor-ref name=&quot;fileUpload&quot;&gt;
+            &lt;param name=&quot;maximumSize&quot;&gt;500000&lt;/param&gt;
+        &lt;/interceptor-ref&gt; 
+        &lt;interceptor-ref name=&quot;validation&quot;/&gt;
+        &lt;interceptor-ref name=&quot;workflow&quot;/&gt;
+
+        &lt;result name=&quot;success&quot;&gt;good_result.jsp&lt;/result&gt;
+    &lt;/action&gt;
+&lt;/struts&gt;
+</ac:plain-text-body><h3 id="FileUpload-FileTypes">File Types</h3><p>There are two ways to limit the uploaded file type, declaratively and programmatically. To declaratively limit the file type a comma separated list of allowedTypes can be specified as a fileUpload interceptor param as shown in the following example:</p><ac:parameter ac:name="lang">xml</ac:parameter><ac:plain-text-body>&lt;action name=&quot;doUpload&quot; class=&quot;com.example.UploadAction&quot;&gt;
+    &lt;interceptor-ref name=&quot;basicStack&quot;/&gt;
+    &lt;interceptor-ref name=&quot;fileUpload&quot;&gt;
+        &lt;param name=&quot;allowedTypes&quot;&gt;image/jpeg,image/gif&lt;/param&gt;
+    &lt;/interceptor-ref&gt; 
+    &lt;interceptor-ref name=&quot;validation&quot;/&gt;
+    &lt;interceptor-ref name=&quot;workflow&quot;/&gt;
+
+    &lt;result name=&quot;success&quot;&gt;good_result.jsp&lt;/result&gt;
+&lt;/action&gt;
+</ac:plain-text-body><p>When the uploaded file type does not match one of the MIME types specified a field error will be created as described in the next section entitled Error Messages. Programmatically limiting the file type means using the information passed in to your Action class via the <code>setXContentType(String contentType)</code> method. The benefit to this type of approach would be that it's more flexible and no interceptor configuration would be needed if file sizes are keep under 2 megs.</p><h3 id="FileUpload-ErrorMessages">Error Messages</h3><p>If an error occurs several field errors will be added assuming that the action implements <code>com.opensymphony.xwork2.ValidationAware</code> or extends <code>com.opensymphony.xwork2.ActionSupport</code>. These error messages are based on several i18n values stored in struts-messages.properties, a default i18n file processed for all i18n requests. You can override the text of these messages by providing text for the following keys:</p><div class="table-wrap"><table class="confluenceTable"><tbody><tr><th class="confluenceTh"><p>Error Key</p></th><th class="confluenceTh"><p>Description</p></th></tr><tr><td class="confluenceTd"><p>struts.messages.error.uploading</p></td><td class="confluenceTd"><p>A general error that occurs when the file could not be uploaded</p></td></tr><tr><td class="confluenceTd"><p>struts.messages.error.file.too.large</p></td><td class="confluenceTd"><p>Occurs when the uploaded file is too large as specified by maximumSize.</p></td></tr><tr><td class="confluenceTd"><p>struts.messages.error.content.type.not.allowed</p></td><td class="confluenceTd"><p>Occurs when the uploaded file does not match the expected content types specified</p></td></tr><tr><td class="confluenceTd"><p>struts.messages.error.file.extension.not.allowed</p></td><td class="confluenceTd"><p>Occurs when uploaded file has disallowed extension</p></td></tr><tr><td class="confluenceTd"><p>struts.messages.upload.error.SizeLimitExceededException</p></td><td class="confluenceTd"><p>Occurs when the upload request (as a whole) exceed configured <strong>struts.multipart.maxSize</strong></p></td></tr><tr><td class="confluenceTd"><p>struts.messages.upload.error.&lt;Exception class SimpleName&gt;</p></td><td class="confluenceTd"><p>Occurs when any other exception took place during file upload process</p></td></tr></tbody></table></div><h3 id="FileUpload-TemporaryDirectories">Temporary Directories</h3><p>All uploaded files are saved to a temporary directory by the framework before being passed in to an Action. Depending on the allowed file sizes it may be necessary to have the framework store these temporary files in an alternate location. To do this change <code>struts.multipart.saveDir</code> to the directory where the uploaded files will be placed. If this property is not set it defaults to <code>javax.servlet.context.tempdir</code>. Keep in mind that on some operating systems, like Solaris, <code>/tmp</code> is memory based and files stored in that directory would consume an amount of RAM approximately equal to the size of the uploaded file.</p><h3 id="FileUpload-AlternateLibraries">Alternate Libraries</h3><p>The <code>struts.multipart.parser</code> used by the fileUpload interceptor to handle HTTP POST requests, encoded using the MIME-type multipart/form-data, can be changed out. Currently there are two choices, jakarta and pell. The jakarta parser is a standard part of the Struts 2 framework needing only its required libraries added to a project. The pell parser uses Jason Pell's multipart parser instead of the Commons-FileUpload library. The pell parser is a Struts 2 plugin, for more details see: <a href="javascript:;">pell multipart plugin</a>. There was a third alternative, cos, but it was removed due to licensing incompatibilities.</p><p>As from Struts version 2.3.18 a new implementation of <code>MultiPartRequest</code> was added - <code>JakartaStreamMultiPartRequest</code>. It can be used to handle large files, see <a href="javascript:;" class="external-link" rel="nofollow">WW-3025</a> for more details, but you can simple set</p><pre>&lt;constant name=&quot;struts.multipart.parser&quot; value=&quot;jakarta-stream&quot; /&gt;</pre><p>in struts.xml to start using it.</p><h3 id="FileUpload-Requestvalidation">Request validation</h3><p>The <code>struts.multipart.validationRegex</code> is used to define a RegEx to be used to validate if the incoming request is a multipart request. The request must use the <code>POST</code> method and match the RegEx, by default the RegEx is defined as follow:</p><ac:plain-text-body>^multipart\\/form-data(; boundary=[a-zA-Z0-9]{1,70})?</ac:plain-text-body><p>Please read <a href="javascript:;" class="external-link" rel="nofollow">RFC1341</a> the <strong>Multipart section</strong> for more details, existing Struts <code>Multipart</code> parsers support only <code>multipart/form-data</code> content type. This option is available since Struts 2.3.11.</p><h3 id="FileUpload-Disablingfileuploadsupport">Disabling file upload support</h3><p>You can alternatively disable the whole file upload mechanism defining a constant in <code>struts.xml</code>:</p><ac:parameter ac:name="">xml</ac:parameter><ac:plain-text-body>&lt;constant name=&quot;struts.multipart.enabled&quot; value=&quot;false&quot;/&gt;</ac:plain-text-body><p>With this constant in place, Struts will ignore a <code>Content-Type</code> header and will treat each request as an ordinary http request. This option is available since Struts 2.3.11.</p><p> </p>
+
+                
+        
+    
+        </div>
+
+                        
+    
+
+
+
+<div id="labels-section" class="pageSection group">
+    <div class="labels-section-content content-column" entityid="86602" entitytype="page">
+	<div class="labels-content">
+		
+    <ul class="label-list label-list-right ">
+            <li class="no-labels-message">
+            无标签
+        </li>
+            </ul>
+
+    </div>
+</div>
+</div>
+        
+		
+            
+
+
+
+
+            
+        
+
+
+
+
+
+
+
+
+                        
+    
+<div id="comments-section" class="pageSection group">
+                <div class="section-header">
+            <h2 id="comments-section-title" class="section-title">
+                                    2 评论
+                            </h2>
+        </div>
+    
+    
+
+            <ol class="comment-threads top-level" id="page-comments">
+                    <li id="comment-thread-116674" class="comment-thread">
+        <div class="comment  " id="comment-116674">
+        <p class="comment-user-logo">
+            <img class="userLogo logo anonymous" src="static/picture/anonymous.svg" alt="用户图标: cedriclevasseur" title="cedriclevasseur">        </p>
+        <div class="comment-header">
+            <h4 class="author">    <a href="javascript:;" class="url fn">Cedric Levasseur</a> 发表：</h4>
+        </div>
+        <div class="comment-body">
+            <div class="comment-content wiki-content">
+                <p>please replace &quot;public UploadAction extends ActionSupport {&quot; by <br>
+&quot;public class UploadAction extends ActionSupport {&quot;</p>
+            </div>
+            <div class="comment-actions">
+                                                <ul class="comment-actions-secondary">
+                                                              <li class="first comment-permalink"><a title="指向此评论的永久链接" href="javascript:;" id="comment-permalink-116674"><span>永久链接</span></a></li>
+            </ul>
+                                    <ul class="comment-actions-primary">
+                                                              <li class="first comment-date"><a title="五月 04, 2009 02:12" href="javascript:;"><span>五月 04, 2009</span></a></li>
+                                                              <li class=" "><a href="javascript:;" id="delete-all-comments-link-comment-link-116674"><span>Delete comments</span></a></li>
+            </ul>
+                </div>
+        </div>
+    </div>
+
+    
+            <ol class="comment-threads">
+                                <li id="comment-thread-116785" class="comment-thread">
+        <div class="comment  " id="comment-116785">
+        <p class="comment-user-logo">
+            <img class="userLogo logo anonymous" src="static/picture/anonymous.svg" alt="用户图标: phil" title="phil">        </p>
+        <div class="comment-header">
+            <h4 class="author">    <a href="javascript:;" class="url fn">Philip Luppens</a> 发表：</h4>
+        </div>
+        <div class="comment-body">
+            <div class="comment-content wiki-content">
+                <p>Fixed - thanks for reporting !</p>
+            </div>
+            <div class="comment-actions">
+                                                <ul class="comment-actions-secondary">
+                                                              <li class="first comment-permalink"><a title="指向此评论的永久链接" href="javascript:;" id="comment-permalink-116785"><span>永久链接</span></a></li>
+            </ul>
+                                    <ul class="comment-actions-primary">
+                                                              <li class="first comment-date"><a title="五月 05, 2009 01:44" href="javascript:;"><span>五月 05, 2009</span></a></li>
+                                                              <li class=" "><a href="javascript:;" id="delete-all-comments-link-comment-link-116785"><span>Delete comments</span></a></li>
+            </ul>
+                </div>
+        </div>
+    </div>
+
+    
+    </li>
+                        </ol>
+    </li>
+            </ol>
+
+
+</div>
+        
+
+
+                
+    
+            
+</div>
+
+    
+
+    
+
+
+
+
+    
+    
+
+    
+    
+    
+
+
+    
+<div id="space-tools-web-items" class="hidden">
+                <div data-label="概览" data-href="/confluence/spaces/viewspacesummary.action?key=WW">概览</div>
+            <div data-label="内容工具" data-href="/confluence/pages/reorderpages.action?key=WW">内容工具</div>
+            <div data-label="应用" data-href="/confluence/spaces/snippeterrors.action?key=WW">应用</div>
+    </div>
+        
+
+
+
+            </div><!-- \#main -->
+            
+    
+    
+        
+            
+            
+
+<div id="footer" role="contentinfo">
+    <section class="footer-body">
+
+                                                            <p class="license license-opensource">
+                    本站点免费授予 Apache Software Foundation<b> Atlassian Confluence 开源项目授权</b>。<a href="javascript:;">今天开始评估 Confluence</a>。<br>
+                </p>
+                    
+        
+
+        <ul id="poweredby">
+            <li class="noprint">基于 <a href="javascript:;" class="hover-footer-link" rel="nofollow">Atlassian Confluence</a> <span id='footer-build-information'>7.5.0</span> 技术构建</li>
+            <li class="print-only">由 Atlassian 合流7.5.0 打印</li>
+            <li class="noprint"><a href="javascript:;" class="hover-footer-link" rel="nofollow">报告缺陷</a></li>
+            <li class="noprint"><a href="javascript:;" class="hover-footer-link" rel="nofollow">Atlassian 新闻</a></li>
+        </ul>
+
+        
+
+        <div id="footer-logo"><a href="javascript:;" rel="nofollow">Atlassian</a></div>
+
+                    
+        
+    </section>
+</div>
+
+    
+</div>
+
+</div><!-- \#full-height-container -->
+</div><!-- \#page -->
+
+    <span style="display:none;" id="confluence-server-performance">{"serverDuration": 91, "requestCorrelationId": "c272ad6436a5ac9e"}</span>
+</body>
+</html>
+    

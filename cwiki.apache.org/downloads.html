@@ -1,0 +1,1757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Date-Revision-yyyymmdd" content="20140918">
+  <meta http-equiv="Content-Language" content="en">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Releases</title>
+
+  <link href="static/css/css-SourceSansPro300400600700400.css" rel="stylesheet" type="text/css">
+  <link href="static/css/font-awesome.css" rel="stylesheet">
+  <link href="static/css/main.css" rel="stylesheet">
+  <link href="static/css/custom.css" rel="stylesheet">
+  <link href="static/css/github-theme.css" rel="stylesheet">
+
+  <script src="static/js/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="static/js/bootstrap1.js"></script>
+  <script type="text/javascript" src="static/js/community.js"></script>
+</head>
+<body>
+
+<a href="javascript:;" class="github-ribbon">
+  <img style="position: absolute; right: 0; border: 0;" src="static/picture/forkme_right_red_aa0000.png" alt="Fork me on GitHub">
+</a>
+
+<header>
+  <nav>
+    <div role="navigation" class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target="#struts-menu" class="navbar-toggle">
+            Menu
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="javascript:;" class="navbar-brand logo"><img src="static/picture/struts-logo.svg"></a>
+        </div>
+        <div id="struts-menu" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a data-toggle="dropdown" href="javascript:;" class="dropdown-toggle">
+                Home<b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="javascript:;">Welcome</a></li>
+                <li><a href="javascript:;">Download</a></li>
+                <li><a href="javascript:;">Releases</a></li>
+                <li><a href="javascript:;">Announcements</a></li>
+                <li><a href="javascript:;">License</a></li>
+                <li><a href="javascript:;">Thanks!</a></li>
+                <li><a href="javascript:;">Sponsorship</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a data-toggle="dropdown" href="javascript:;" class="dropdown-toggle">
+                Support<b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="javascript:;">User Mailing List</a></li>
+                <li><a href="ww.html">Issue Tracker</a></li>
+                <li><a href="javascript:;">Reporting Security Issues</a></li>
+                <li class="divider"></li>
+                <li><a href="javascript:;">Version Notes</a></li>
+                <li><a href="SecurityBulletins.html">Security Bulletins</a></li>
+                <li class="divider"></li>
+                <li><a href="javascript:;">Maven Project Info</a></li>
+                <li><a href="javascript:;">Struts Core Dependencies</a></li>
+                <li><a href="javascript:;">Plugin Dependencies</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a data-toggle="dropdown" href="javascript:;" class="dropdown-toggle">
+                Documentation<b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="javascript:;">Birds Eye</a></li>
+                <li><a href="javascript:;">Key Technologies</a></li>
+                <li><a href="javascript:;">Kickstart FAQ</a></li>
+                <li><a href="home.html">Wiki</a></li>
+                <li class="divider"></li>
+                <li><a href="javascript:;">Getting Started</a></li>
+                <li><a href="javascript:;">Security Guide</a></li>
+                <li><a href="javascript:;">Core Developers Guide</a></li>
+                <li><a href="javascript:;">Tag Developers Guide</a></li>
+                <li><a href="index3.html">Maven Archetypes</a></li>
+                <li><a href="index4.html">Plugins</a></li>
+                <li><a href="javascript:;">Struts Core API</a></li>
+                <li><a href="javascript:;">Tag reference</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="javascript:;">Plugin registry</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a data-toggle="dropdown" href="javascript:;" class="dropdown-toggle">
+                Contributing<b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="javascript:;">You at Struts</a></li>
+                <li><a href="javascript:;">How to Help FAQ</a></li>
+                <li><a href="javascript:;">Development Lists</a></li>
+                <li class="divider"></li>
+                <li><a href="javascript:;">Submitting patches</a></li>
+                <li><a href="javascript:;">Source Code and Builds</a></li>
+                <li><a href="javascript:;">Coding standards</a></li>
+                <li><a href="javascript:;">Contributors Guide</a></li>
+                <li class="divider"></li>
+                <li><a href="javascript:;">Release Guidelines</a></li>
+                <li><a href="javascript:;">PMC Charter</a></li>
+                <li><a href="javascript:;">Volunteers</a></li>
+                <li><a href="javascript:;">Source Repository</a></li>
+                <li><a href="javascript:;">Updating the website</a></li>
+              </ul>
+            </li>
+            <li class="apache"><a href="index1.html"><img src="static/picture/apache.png"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<article class="container">
+  <section class="col-md-12">
+    <a class="edit-on-gh" href="javascript:;" title="Edit this page on GitHub">Edit on GitHub</a>
+    
+    <h1>Apache Struts Releases</h1>
+
+<p>
+  The Apache Struts web framework is a free open-source solution for creating Java web applications.
+</p>
+
+<p>
+  Releases of the Apache Struts framework are made available to the general public at no charge,
+  under the <a href="javascript:;">Apache License,</a> in both binary and source distributions.
+  Full releases for current version are listed at <a href="javascript:;">Download page</a>.
+  Individual JARs are also made available through <a href="javascript:;">Apache Maven</a>
+  repositories, like <a href="javascript:;">ibiblio.</a>
+</p>
+
+<ul>
+  <li>
+    <strong>General Availability (GA) Releases</strong> - <em>Ready for Prime Time!</em>
+    <ul>
+      <li>
+        <a href="javascript:;">
+          Struts 2.5.22
+        </a> ("best available")
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>Extras</strong> - <em>Additional plugins and quick-fix solutions!</em>
+    <ul>
+      <li>
+        <a href="javascript:;">
+          Struts Extras
+        </a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>Trunk Snapshots</strong> - <em>Get involved with the latest and greatest fixes and improvements</em>
+    <ul>
+      <li>
+        <a href="javascript:;">
+          Struts 2 Latest Snapshots from Jenkins CI
+        </a>
+      </li>
+      <li>
+        Maven Snapshots are available from the
+        <a href="javascript:;">
+          Apache Maven Repository
+        </a>.
+      </li>
+    </ul>
+  </li>
+  <li>
+    <strong>Older Releases</strong> are available here
+    <ul>
+      <li>
+        <a href="javascript:;">
+          Struts 1.3.10
+        </a> (latest Struts 1 release before <a href="javascript:;">EOL</a>)
+      </li>
+      <li>
+        <a href="javascript:;">
+          Archive Site
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>
+  Project releases are approved by vote of the Apache Struts <a href="javascript:;">Project Management Committee.</a>
+  Support for a release is provided by <a href="javascript:;">project volunteers</a>
+  on the <a href="javascript:;">User mailing list.</a> Additional free support is provided by many other
+  volunteer subscribers to the list. Issues with a release may be discussed on the list and reported through the
+  <a href="ww.html">issue tracker.</a>
+</p>
+
+<p>
+  The user mailing list and issue tracker are the <strong>only</strong> support options hosted by the Apache Struts
+  project.
+</p>
+
+<p>
+  <a href="javascript:;"><strong>Why are some version numbers missing?</strong></a>
+</p>
+
+<h2 id="prior-releases">Prior Releases</h2>
+
+<p>
+  As a courtesy, we retain archival copies of the website for releases that initially were considered
+  "General Availability" but which has been reclassified as "Not recommended" since they contain security issues
+</p>
+
+<table class="table table-condensed table-striped table-hover">
+  <thead>
+  <tr>
+    <th>Release</th>
+    <th class="no-wrap">Release Date</th>
+    <th>Vulnerability</th>
+    <th>Version Notes</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.5.20
+    </td>
+    <td class="no-wrap">14 January 2019</td>
+    <td>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.5.18
+    </td>
+    <td class="no-wrap">26 September 2018</td>
+    <td>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.5.17
+    </td>
+    <td class="no-wrap">22 August 2018</td>
+    <td>
+    </td>
+    <td>
+      <a href="versionnotes2.53.html">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.3.35
+    </td>
+    <td class="no-wrap">22 August 2018</td>
+    <td>
+    </td>
+    <td>
+      <a href="versionnotes2.33.html">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.5.16
+    </td>
+    <td class="no-wrap">16 March 2018</td>
+    <td>
+      <a href="s2-057.html">S2-057</a>
+    </td>
+    <td>
+      <a href="versionnotes2.52.html">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.5.14.1
+    </td>
+    <td class="no-wrap">30 November 2017</td>
+    <td>
+      <br>
+    </td>
+    <td>
+      <a href="versionnotes2.5.14.html">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.5.14
+    </td>
+    <td class="no-wrap">23 November 2017</td>
+    <td>
+      <a href="s2-055.html">S2-055</a>,
+      <a href="s2-054.html">S2-054</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.3.34
+    </td>
+    <td class="no-wrap">7 September 2017</td>
+    <td>
+      <a href="s2-057.html">S2-057</a>
+    </td>
+    <td>
+      <a href="versionnotes2.32.html">Version notes</a>
+    </td>
+  </tr>
+  
+  <tr>
+    <td class="no-wrap">
+      Struts 2.5.13
+    </td>
+    <td class="no-wrap">5 September 2017</td>
+    <td>
+      <a href="s2-055.html">S2-055</a>,
+      <a href="s2-054.html">S2-054</a>
+    </td>
+    <td>
+      <a href="versionnotes2.5.html">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.5.12
+    </td>
+    <td class="no-wrap">6 July 2017</td>
+    <td>
+      <a href="s2-055.html">S2-055</a>,
+      <a href="s2-054.html">S2-054</a>,
+      <a href="s2-052.html">S2-052</a>,
+      <a href="s2-051.html">S2-051</a>,
+      <a href="s2-050.html">S2-050</a>,
+    </td>
+    <td>
+      <a href="versionnotes2.51.html">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.3.33
+    </td>
+    <td class="no-wrap">7 July 2017</td>
+    <td>
+    </td>
+    <td>
+      <a href="versionnotes2.31.html">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.5.10.1
+    </td>
+    <td class="no-wrap">7 March 2017</td>
+    <td>
+      <a href="s2-055.html">S2-055</a>,
+      <a href="s2-054.html">S2-054</a>,
+      <a href="s2-053.html">S2-053</a>,
+      <a href="s2-052.html">S2-052</a>,
+      <a href="s2-051.html">S2-051</a>,
+      <a href="s2-050.html">S2-050</a>,
+      <a href="javascript:;">S2-049</a>,
+      <a href="javascript:;">S2-047</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.3.32
+    </td>
+    <td class="no-wrap">7 March 2017</td>
+    <td>
+      <a href="javascript:;">S2-048</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.5.10
+    </td>
+    <td class="no-wrap">3 February 2017</td>
+    <td>
+      <a href="s2-055.html">S2-055</a>,
+      <a href="s2-054.html">S2-054</a>,
+      <a href="s2-053.html">S2-053</a>,
+      <a href="s2-052.html">S2-052</a>,
+      <a href="s2-051.html">S2-051</a>,
+      <a href="s2-050.html">S2-050</a>,
+      <a href="javascript:;">S2-049</a>,
+      <a href="javascript:;">S2-047</a>,
+      <a href="javascript:;">S2-045</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.5.8
+    </td>
+    <td class="no-wrap">19 December 2016</td>
+    <td>
+      <a href="s2-055.html">S2-055</a>,
+      <a href="s2-054.html">S2-054</a>,
+      <a href="s2-053.html">S2-053</a>,
+      <a href="s2-052.html">S2-052</a>,
+      <a href="s2-051.html">S2-051</a>,
+      <a href="s2-050.html">S2-050</a>,
+      <a href="javascript:;">S2-049</a>,
+      <a href="javascript:;">S2-047</a>,
+      <a href="javascript:;">S2-045</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.5.5
+    </td>
+    <td class="no-wrap">21 October 2016</td>
+    <td>
+      <a href="s2-055.html">S2-055</a>,
+      <a href="s2-054.html">S2-054</a>,
+      <a href="s2-053.html">S2-053</a>,
+      <a href="s2-052.html">S2-052</a>,
+      <a href="s2-051.html">S2-051</a>,
+      <a href="s2-050.html">S2-050</a>,
+      <a href="javascript:;">S2-049</a>,
+      <a href="javascript:;">S2-047</a>,
+      <a href="javascript:;">S2-045</a>,
+      <a href="javascript:;">S2-044</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.3.31
+    </td>
+    <td class="no-wrap">18 Oct 2016</td>
+    <td>
+      <a href="javascript:;">S2-048</a>,
+      <a href="javascript:;">S2-045</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.5.2
+    </td>
+    <td class="no-wrap">7 Jul 2016</td>
+    <td>
+      <a href="s2-055.html">S2-055</a>,
+      <a href="s2-054.html">S2-054</a>,
+      <a href="s2-053.html">S2-053</a>,
+      <a href="s2-052.html">S2-052</a>,
+      <a href="s2-051.html">S2-051</a>,
+      <a href="s2-050.html">S2-050</a>,
+      <a href="javascript:;">S2-049</a>,
+      <a href="javascript:;">S2-047</a>,
+      <a href="javascript:;">S2-045</a>,
+      <a href="javascript:;">S2-044</a>,
+      <a href="javascript:;">S2-043</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.3.30
+    </td>
+    <td class="no-wrap">7 Jul 2016</td>
+    <td>
+      <a href="javascript:;">S2-048</a>,
+      <a href="javascript:;">S2-045</a>,
+      <a href="javascript:;">S2-043</a>,
+      <a href="javascript:;">S2-042</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.5.1
+    </td>
+    <td class="no-wrap">18 Jun 2016</td>
+    <td>
+      <a href="s2-055.html">S2-055</a>,
+      <a href="s2-054.html">S2-054</a>,
+      <a href="s2-053.html">S2-053</a>,
+      <a href="s2-052.html">S2-052</a>,
+      <a href="s2-051.html">S2-051</a>,
+      <a href="s2-050.html">S2-050</a>,
+      <a href="javascript:;">S2-049</a>,
+      <a href="javascript:;">S2-047</a>,
+      <a href="javascript:;">S2-045</a>,
+      <a href="javascript:;">S2-044</a>,
+      <a href="javascript:;">S2-043</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.5
+    </td>
+    <td class="no-wrap">9 May 2016</td>
+    <td>
+      <a href="s2-055.html">S2-055</a>,
+      <a href="s2-054.html">S2-054</a>,
+      <a href="s2-053.html">S2-053</a>,
+      <a href="s2-052.html">S2-052</a>,
+      <a href="s2-051.html">S2-051</a>,
+      <a href="s2-050.html">S2-050</a>,
+      <a href="javascript:;">S2-049</a>,
+      <a href="javascript:;">S2-047</a>,
+      <a href="javascript:;">S2-045</a>,
+      <a href="javascript:;">S2-044</a>,
+      <a href="javascript:;">S2-043</a>,
+      <a href="javascript:;">S2-041</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.3.28.1
+    </td>
+    <td class="no-wrap">19 April 2016</td>
+    <td>
+      <a href="javascript:;">S2-048</a>,
+      <a href="javascript:;">S2-045</a>,
+      <a href="javascript:;">S2-043</a>,
+      <a href="javascript:;">S2-042</a>,
+      <a href="javascript:;">S2-041</a>,
+      <a href="javascript:;">S2-040</a>,
+      <a href="javascript:;">S2-039</a>,
+      <a href="javascript:;">S2-038</a>,
+      <a href="javascript:;">S2-037</a>,
+      <a href="javascript:;">S2-036</a>,
+      <a href="javascript:;">S2-035</a>,
+      <a href="javascript:;">S2-032</a>,
+      <a href="javascript:;">S2-031</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.3.28
+    </td>
+    <td class="no-wrap">18 March 2016</td>
+    <td>
+      <a href="javascript:;">S2-048</a>,
+      <a href="javascript:;">S2-045</a>,
+      <a href="javascript:;">S2-043</a>,
+      <a href="javascript:;">S2-042</a>,
+      <a href="javascript:;">S2-041</a>,
+      <a href="javascript:;">S2-040</a>,
+      <a href="javascript:;">S2-039</a>,
+      <a href="javascript:;">S2-038</a>,
+      <a href="javascript:;">S2-037</a>,
+      <a href="javascript:;">S2-036</a>,
+      <a href="javascript:;">S2-035</a>,
+      <a href="javascript:;">S2-032</a>,
+      <a href="javascript:;">S2-031</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.3.24.3
+    </td>
+    <td class="no-wrap">19 April 2016</td>
+    <td>
+      <a href="javascript:;">S2-048</a>,
+      <a href="javascript:;">S2-045</a>,
+      <a href="javascript:;">S2-043</a>,
+      <a href="javascript:;">S2-042</a>,
+      <a href="javascript:;">S2-041</a>,
+      <a href="javascript:;">S2-040</a>,
+      <a href="javascript:;">S2-039</a>,
+      <a href="javascript:;">S2-038</a>,
+      <a href="javascript:;">S2-037</a>,
+      <a href="javascript:;">S2-036</a>,
+      <a href="javascript:;">S2-035</a>,
+      <a href="javascript:;">S2-030</a>,
+      <a href="javascript:;">S2-028</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.3.20.3
+    </td>
+    <td class="no-wrap">19 April 2016</td>
+    <td>
+      <a href="javascript:;">S2-048</a>,
+      <a href="javascript:;">S2-045</a>,
+      <a href="javascript:;">S2-043</a>,
+      <a href="javascript:;">S2-042</a>,
+      <a href="javascript:;">S2-041</a>,
+      <a href="javascript:;">S2-040</a>,
+      <a href="javascript:;">S2-039</a>,
+      <a href="javascript:;">S2-038</a>,
+      <a href="javascript:;">S2-037</a>,
+      <a href="javascript:;">S2-036</a>,
+      <a href="javascript:;">S2-035</a>,
+      <a href="javascript:;">S2-030</a>,
+      <a href="javascript:;">S2-028</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.3.24.1
+    </td>
+    <td class="no-wrap">24 September 2015</td>
+    <td>
+      <a href="javascript:;">S2-048</a>,
+      <a href="javascript:;">S2-045</a>,
+      <a href="javascript:;">S2-043</a>,
+      <a href="javascript:;">S2-042</a>,
+      <a href="javascript:;">S2-041</a>,
+      <a href="javascript:;">S2-040</a>,
+      <a href="javascript:;">S2-039</a>,
+      <a href="javascript:;">S2-038</a>,
+      <a href="javascript:;">S2-037</a>,
+      <a href="javascript:;">S2-036</a>,
+      <a href="javascript:;">S2-035</a>,
+      <a href="javascript:;">S2-032</a>,
+      <a href="javascript:;">S2-031</a>,
+      <a href="javascript:;">S2-030</a>,
+      <a href="javascript:;">S2-029</a>,
+      <a href="javascript:;">S2-028</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.3.24
+    </td>
+    <td class="no-wrap">7 May 2015</td>
+    <td>
+      <a href="javascript:;">S2-048</a>,
+      <a href="javascript:;">S2-045</a>,
+      <a href="javascript:;">S2-043</a>,
+      <a href="javascript:;">S2-042</a>,
+      <a href="javascript:;">S2-041</a>,
+      <a href="javascript:;">S2-040</a>,
+      <a href="javascript:;">S2-039</a>,
+      <a href="javascript:;">S2-038</a>,
+      <a href="javascript:;">S2-037</a>,
+      <a href="javascript:;">S2-036</a>,
+      <a href="javascript:;">S2-035</a>,
+      <a href="javascript:;">S2-032</a>,
+      <a href="javascript:;">S2-031</a>,
+      <a href="javascript:;">S2-030</a>,
+      <a href="javascript:;">S2-029</a>,
+      <a href="javascript:;">S2-028</a>,
+      <a href="javascript:;">S2-026</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.3.20.1
+    </td>
+    <td class="no-wrap">6 May 2015</td>
+    <td>
+      <a href="javascript:;">S2-048</a>,
+      <a href="javascript:;">S2-045</a>,
+      <a href="javascript:;">S2-043</a>,
+      <a href="javascript:;">S2-042</a>,
+      <a href="javascript:;">S2-041</a>,
+      <a href="javascript:;">S2-040</a>,
+      <a href="javascript:;">S2-039</a>,
+      <a href="javascript:;">S2-038</a>,
+      <a href="javascript:;">S2-037</a>,
+      <a href="javascript:;">S2-036</a>,
+      <a href="javascript:;">S2-035</a>,
+      <a href="javascript:;">S2-032</a>,
+      <a href="javascript:;">S2-031</a>,
+      <a href="javascript:;">S2-030</a>,
+      <a href="javascript:;">S2-029</a>,
+      <a href="javascript:;">S2-028</a>,
+      <a href="javascript:;">S2-026</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.3.20
+    </td>
+    <td class="no-wrap">7 December 2014</td>
+    <td>
+      <a href="javascript:;">S2-048</a>,
+      <a href="javascript:;">S2-045</a>,
+      <a href="javascript:;">S2-043</a>,
+      <a href="javascript:;">S2-042</a>,
+      <a href="javascript:;">S2-041</a>,
+      <a href="javascript:;">S2-040</a>,
+      <a href="javascript:;">S2-039</a>,
+      <a href="javascript:;">S2-038</a>,
+      <a href="javascript:;">S2-037</a>,
+      <a href="javascript:;">S2-036</a>,
+      <a href="javascript:;">S2-035</a>,
+      <a href="javascript:;">S2-032</a>,
+      <a href="javascript:;">S2-031</a>,
+      <a href="javascript:;">S2-030</a>,
+      <a href="javascript:;">S2-029</a>,
+      <a href="javascript:;">S2-028</a>,
+      <a href="javascript:;">S2-026</a>,
+      <a href="javascript:;">S2-024</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.3.16.3
+    </td>
+    <td class="no-wrap">2 May 2014</td>
+    <td>
+      <a href="javascript:;">S2-048</a>,
+      <a href="javascript:;">S2-045</a>,
+      <a href="javascript:;">S2-026</a>,
+      <a href="javascript:;">S2-023</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.3.16.2
+    </td>
+    <td class="no-wrap">24 March 2014</td>
+    <td>
+      <a href="javascript:;">S2-048</a>,
+      <a href="javascript:;">S2-045</a>,
+      <a href="javascript:;">S2-023</a>,
+      <a href="javascript:;">S2-022</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.3.16.1
+    </td>
+    <td class="no-wrap">2 March 2014</td>
+    <td>
+      <a href="javascript:;">S2-048</a>,
+      <a href="javascript:;">S2-045</a>,
+      <a href="javascript:;">S2-023</a>,
+      <a href="javascript:;">S2-022</a>,
+      <a href="javascript:;">S2-021</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.3.16
+    </td>
+    <td class="no-wrap">8 December 2013</td>
+    <td>
+      <a href="javascript:;">S2-048</a>,
+      <a href="javascript:;">S2-045</a>,
+      <a href="javascript:;">S2-023</a>,
+      <a href="javascript:;">S2-022</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-019</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="no-wrap">
+      Struts 2.3.15.3
+    </td>
+    <td class="no-wrap">15 October 2013</td>
+    <td>
+      <a href="javascript:;">S2-048</a>,
+      <a href="javascript:;">S2-045</a>,
+      <a href="javascript:;">S2-023</a>,
+      <a href="javascript:;">S2-022</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-019</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.3.15.2
+    </td>
+    <td class="no-wrap">16 July 2013</td>
+    <td>
+      <a href="javascript:;">S2-048</a>,
+      <a href="javascript:;">S2-045</a>,
+      <a href="javascript:;">S2-023</a>,
+      <a href="javascript:;">S2-022</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-019</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.3.15.1
+    </td>
+    <td>16 July 2013</td>
+    <td>
+      <a href="javascript:;">S2-048</a>,
+      <a href="javascript:;">S2-045</a>,
+      <a href="javascript:;">S2-023</a>,
+      <a href="javascript:;">S2-022</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-019</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.3.15
+    </td>
+    <td>22 June 2013</td>
+    <td>
+      <a href="javascript:;">S2-048</a>,
+      <a href="javascript:;">S2-045</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-022</a>,
+      <a href="javascript:;">S2-023</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.3.14.3
+    </td>
+    <td>3 June 2013</td>
+    <td>
+      <a href="javascript:;">S2-048</a>,
+      <a href="javascript:;">S2-045</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>
+      <a href="javascript:;">S2-022</a>,
+      <a href="javascript:;">S2-023</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.3.14.2
+    </td>
+    <td>22 May 2013</td>
+    <td>
+      <a href="javascript:;">S2-048</a>,
+      <a href="javascript:;">S2-045</a>,
+      <a href="javascript:;">S2-015</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-022</a>,
+      <a href="javascript:;">S2-023</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.3.14.1
+    </td>
+    <td>22 May 2013</td>
+    <td>
+      <a href="javascript:;">S2-048</a>,
+      <a href="javascript:;">S2-045</a>,
+      <a href="javascript:;">S2-014</a>,
+      <a href="javascript:;">S2-015</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-022</a>,
+      <a href="javascript:;">S2-023</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.3.14
+    </td>
+    <td>11 April 2013</td>
+    <td>
+      <a href="javascript:;">S2-048</a>,
+      <a href="javascript:;">S2-045</a>,
+      <a href="javascript:;">S2-012</a>,
+      <a href="javascript:;">S2-013</a>,
+      <a href="javascript:;">S2-014</a>,
+      <a href="javascript:;">S2-015</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-022</a>,
+      <a href="javascript:;">S2-023</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.3.12
+    </td>
+    <td>6 March 2013</td>
+    <td>
+      <a href="javascript:;">S2-048</a>,
+      <a href="javascript:;">S2-045</a>,
+      <a href="javascript:;">S2-012</a>,
+      <a href="javascript:;">S2-013</a>,
+      <a href="javascript:;">S2-014</a>,
+      <a href="javascript:;">S2-015</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-022</a>,
+      <a href="javascript:;">S2-023</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.3.8
+    </td>
+    <td class="no-wrap">22 December 2012</td>
+    <td>
+      <a href="javascript:;">S2-048</a>,
+      <a href="javascript:;">S2-045</a>,
+      <a href="javascript:;">S2-012</a>,
+      <a href="javascript:;">S2-013</a>,
+      <a href="javascript:;">S2-014</a>,
+      <a href="javascript:;">S2-015</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-022</a>,
+      <a href="javascript:;">S2-023</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.3.7
+    </td>
+    <td>19 November 2012</td>
+    <td>
+      <a href="javascript:;">S2-048</a>,
+      <a href="javascript:;">S2-045</a>,
+      <a href="javascript:;">S2-012</a>,
+      <a href="javascript:;">S2-013</a>,
+      <a href="javascript:;">S2-014</a>,
+      <a href="javascript:;">S2-015</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-022</a>,
+      <a href="javascript:;">S2-023</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.3.4.1
+    </td>
+    <td>13 August 2012</td>
+    <td>
+      <a href="javascript:;">S2-012</a>,
+      <a href="javascript:;">S2-013</a>,
+      <a href="javascript:;">S2-014</a>,
+      <a href="javascript:;">S2-015</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-022</a>,
+      <a href="javascript:;">S2-023</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.3.4
+    </td>
+    <td>12 May 2012</td>
+    <td>
+      <a href="javascript:;">S2-010</a>,
+      <a href="javascript:;">S2-011</a>,
+      <a href="javascript:;">S2-012</a>,
+      <a href="javascript:;">S2-013</a>,
+      <a href="javascript:;">S2-014</a>,
+      <a href="javascript:;">S2-015</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-022</a>,
+      <a href="javascript:;">S2-023</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.3.3
+    </td>
+    <td>16 April 2012</td>
+    <td>
+      <a href="javascript:;">S2-010</a>,
+      <a href="javascript:;">S2-011</a>,
+      <a href="javascript:;">S2-012</a>,
+      <a href="javascript:;">S2-013</a>,
+      <a href="javascript:;">S2-014</a>,
+      <a href="javascript:;">S2-015</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-022</a>,
+      <a href="javascript:;">S2-023</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.3.1.2
+    </td>
+    <td>22 January 2012</td>
+    <td>
+      <a href="javascript:;">S2-010</a>,
+      <a href="javascript:;">S2-011</a>,
+      <a href="javascript:;">S2-012</a>,
+      <a href="javascript:;">S2-013</a>,
+      <a href="javascript:;">S2-014</a>,
+      <a href="javascript:;">S2-015</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-022</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.3.1.1
+    </td>
+    <td>25 December 2011</td>
+    <td>
+      <a href="javascript:;">S2-009</a>
+      <a href="javascript:;">S2-010</a>,
+      <a href="javascript:;">S2-011</a>,
+      <a href="javascript:;">S2-012</a>,
+      <a href="javascript:;">S2-013</a>,
+      <a href="javascript:;">S2-014</a>,
+      <a href="javascript:;">S2-015</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-022</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.3.1
+    </td>
+    <td>12 December 2011</td>
+    <td>
+      <a href="javascript:;">S2-008</a>,
+      <a href="javascript:;">S2-009</a>,
+      <a href="javascript:;">S2-010</a>,
+      <a href="javascript:;">S2-011</a>,
+      <a href="javascript:;">S2-012</a>,
+      <a href="javascript:;">S2-013</a>,
+      <a href="javascript:;">S2-014</a>,
+      <a href="javascript:;">S2-015</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-022</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.2.3.1
+    </td>
+    <td>7 September 2011</td>
+    <td>
+      likely:
+      <a href="javascript:;">S2-008</a>,
+      <a href="javascript:;">S2-009</a>,
+      <a href="javascript:;">S2-010</a>,
+      <a href="javascript:;">S2-011</a>,
+      <a href="javascript:;">S2-012</a>,
+      <a href="javascript:;">S2-013</a>,
+      <a href="javascript:;">S2-014</a>,
+      <a href="javascript:;">S2-015</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-022</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.2.3
+    </td>
+    <td>7 September 2011</td>
+    <td>
+      <a href="javascript:;">S2-007</a>,
+      likely:
+      <a href="javascript:;">S2-008</a>,
+      <a href="javascript:;">S2-009</a>,
+      <a href="javascript:;">S2-010</a>,
+      <a href="javascript:;">S2-011</a>,
+      <a href="javascript:;">S2-012</a>,
+      <a href="javascript:;">S2-013</a>,
+      <a href="javascript:;">S2-014</a>,
+      <a href="javascript:;">S2-015</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-022</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.2.1.1
+    </td>
+    <td>20 December 2010</td>
+    <td>
+      <a href="javascript:;">S2-006</a>,
+      likely:
+      <a href="javascript:;">S2-007</a>,
+      <a href="javascript:;">S2-008</a>,
+      <a href="javascript:;">S2-009</a>,
+      <a href="javascript:;">S2-010</a>,
+      <a href="javascript:;">S2-011</a>,
+      <a href="javascript:;">S2-012</a>,
+      <a href="javascript:;">S2-013</a>,
+      <a href="javascript:;">S2-014</a>,
+      <a href="javascript:;">S2-015</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-022</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.2.1
+    </td>
+    <td>16 August 2010</td>
+    <td>
+      likely:
+      <a href="javascript:;">S2-006</a>,
+      <a href="javascript:;">S2-007</a>,
+      <a href="javascript:;">S2-008</a>,
+      <a href="javascript:;">S2-009</a>,
+      <a href="javascript:;">S2-010</a>,
+      <a href="javascript:;">S2-011</a>,
+      <a href="javascript:;">S2-012</a>,
+      <a href="javascript:;">S2-013</a>,
+      <a href="javascript:;">S2-014</a>,
+      <a href="javascript:;">S2-015</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-022</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.1.8.1
+    </td>
+    <td>16 November 2009</td>
+    <td>
+      <a href="javascript:;">S2-005</a>,
+      likely:
+      <a href="javascript:;">S2-006</a>,
+      <a href="javascript:;">S2-007</a>,
+      <a href="javascript:;">S2-008</a>,
+      <a href="javascript:;">S2-009</a>,
+      <a href="javascript:;">S2-010</a>,
+      <a href="javascript:;">S2-011</a>,
+      <a href="javascript:;">S2-012</a>,
+      <a href="javascript:;">S2-013</a>,
+      <a href="javascript:;">S2-014</a>,
+      <a href="javascript:;">S2-015</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-022</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.1.8
+    </td>
+    <td class="no-wrap">30 September 2009</td>
+    <td>
+      likely:
+      <a href="javascript:;">S2-005</a>,
+      <a href="javascript:;">S2-006</a>,
+      <a href="javascript:;">S2-007</a>,
+      <a href="javascript:;">S2-008</a>,
+      <a href="javascript:;">S2-009</a>,
+      <a href="javascript:;">S2-010</a>,
+      <a href="javascript:;">S2-011</a>,
+      <a href="javascript:;">S2-012</a>,
+      <a href="javascript:;">S2-013</a>,
+      <a href="javascript:;">S2-014</a>,
+      <a href="javascript:;">S2-015</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-022</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.1.6
+    </td>
+    <td>5 January 2009</td>
+    <td>
+      likely:
+      <a href="javascript:;">S2-005</a>,
+      <a href="javascript:;">S2-006</a>,
+      <a href="javascript:;">S2-007</a>,
+      <a href="javascript:;">S2-008</a>,
+      <a href="javascript:;">S2-009</a>,
+      <a href="javascript:;">S2-010</a>,
+      <a href="javascript:;">S2-011</a>,
+      <a href="javascript:;">S2-012</a>,
+      <a href="javascript:;">S2-013</a>,
+      <a href="javascript:;">S2-014</a>,
+      <a href="javascript:;">S2-015</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-022</a>
+    </td>
+    <td>
+      <a href="javascript:;">Version notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.0.14
+    </td>
+    <td>24 November 2008</td>
+    <td>
+      likely:
+      <a href="javascript:;">S2-005</a>,
+      <a href="javascript:;">S2-006</a>,
+      <a href="javascript:;">S2-007</a>,
+      <a href="javascript:;">S2-008</a>,
+      <a href="javascript:;">S2-009</a>,
+      <a href="javascript:;">S2-010</a>,
+      <a href="javascript:;">S2-011</a>,
+      <a href="javascript:;">S2-012</a>,
+      <a href="javascript:;">S2-013</a>,
+      <a href="javascript:;">S2-014</a>,
+      <a href="javascript:;">S2-015</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-022</a>
+    </td>
+    <td>
+      <a href="javascript:;">Release notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.0.12
+    </td>
+    <td>20 October 2008</td>
+    <td>
+      likely:
+      <a href="javascript:;">S2-005</a>,
+      <a href="javascript:;">S2-006</a>,
+      <a href="javascript:;">S2-007</a>,
+      <a href="javascript:;">S2-008</a>,
+      <a href="javascript:;">S2-009</a>,
+      <a href="javascript:;">S2-010</a>,
+      <a href="javascript:;">S2-011</a>,
+      <a href="javascript:;">S2-012</a>,
+      <a href="javascript:;">S2-013</a>,
+      <a href="javascript:;">S2-014</a>,
+      <a href="javascript:;">S2-015</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-022</a>
+    </td>
+    <td class="no-wrap">
+      <a href="javascript:;">Release notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.0.11.2
+    </td>
+    <td>22 June 2008</td>
+    <td>
+      <a href="javascript:;">S2-003</a>,
+      <a href="javascript:;">S2-004</a>,
+      likely:
+      <a href="javascript:;">S2-005</a>,
+      <a href="javascript:;">S2-006</a>,
+      <a href="javascript:;">S2-007</a>,
+      <a href="javascript:;">S2-008</a>,
+      <a href="javascript:;">S2-009</a>,
+      <a href="javascript:;">S2-010</a>,
+      <a href="javascript:;">S2-011</a>,
+      <a href="javascript:;">S2-012</a>,
+      <a href="javascript:;">S2-013</a>,
+      <a href="javascript:;">S2-014</a>,
+      <a href="javascript:;">S2-015</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-022</a>
+    </td>
+    <td>
+      <a href="javascript:;">Release notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.0.11.1
+    </td>
+    <td>2 March 2008</td>
+    <td>
+      likely:
+      <a href="javascript:;">S2-003</a>,
+      <a href="javascript:;">S2-004</a>,
+      <a href="javascript:;">S2-005</a>,
+      <a href="javascript:;">S2-006</a>,
+      <a href="javascript:;">S2-007</a>,
+      <a href="javascript:;">S2-008</a>,
+      <a href="javascript:;">S2-009</a>,
+      <a href="javascript:;">S2-010</a>,
+      <a href="javascript:;">S2-011</a>,
+      <a href="javascript:;">S2-012</a>,
+      <a href="javascript:;">S2-013</a>,
+      <a href="javascript:;">S2-014</a>,
+      <a href="javascript:;">S2-015</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-022</a>
+    </td>
+    <td>
+      <a href="javascript:;">Release notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.0.11
+    </td>
+    <td>23 October 2007</td>
+    <td>
+      <a href="javascript:;">S2-002</a>,
+      likely:
+      <a href="javascript:;">S2-003</a>,
+      <a href="javascript:;">S2-004</a>,
+      <a href="javascript:;">S2-005</a>,
+      <a href="javascript:;">S2-006</a>,
+      <a href="javascript:;">S2-007</a>,
+      <a href="javascript:;">S2-008</a>,
+      <a href="javascript:;">S2-009</a>,
+      <a href="javascript:;">S2-010</a>,
+      <a href="javascript:;">S2-011</a>,
+      <a href="javascript:;">S2-012</a>,
+      <a href="javascript:;">S2-013</a>,
+      <a href="javascript:;">S2-014</a>,
+      <a href="javascript:;">S2-015</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-022</a>
+    </td>
+    <td>
+      <a href="javascript:;">Release notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.0.9
+    </td>
+    <td>24 July 2007</td>
+    <td>
+      likely:
+      <a href="javascript:;">S2-002</a>,
+      <a href="javascript:;">S2-003</a>,
+      <a href="javascript:;">S2-004</a>,
+      <a href="javascript:;">S2-005</a>,
+      <a href="javascript:;">S2-006</a>,
+      <a href="javascript:;">S2-007</a>,
+      <a href="javascript:;">S2-008</a>,
+      <a href="javascript:;">S2-009</a>,
+      <a href="javascript:;">S2-010</a>,
+      <a href="javascript:;">S2-011</a>,
+      <a href="javascript:;">S2-012</a>,
+      <a href="javascript:;">S2-013</a>,
+      <a href="javascript:;">S2-014</a>,
+      <a href="javascript:;">S2-015</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-022</a>
+    </td>
+    <td>
+      <a href="javascript:;">Release notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.0.8
+    </td>
+    <td>12 June 2007</td>
+    <td>
+      <a href="javascript:;">S2-001</a>,
+      likely:
+      <a href="javascript:;">S2-002</a>,
+      <a href="javascript:;">S2-003</a>,
+      <a href="javascript:;">S2-004</a>,
+      <a href="javascript:;">S2-005</a>,
+      <a href="javascript:;">S2-006</a>,
+      <a href="javascript:;">S2-007</a>,
+      <a href="javascript:;">S2-008</a>,
+      <a href="javascript:;">S2-009</a>,
+      <a href="javascript:;">S2-010</a>,
+      <a href="javascript:;">S2-011</a>,
+      <a href="javascript:;">S2-012</a>,
+      <a href="javascript:;">S2-013</a>,
+      <a href="javascript:;">S2-014</a>,
+      <a href="javascript:;">S2-015</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-022</a>
+    </td>
+    <td>
+      <a href="javascript:;">Release notes</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Struts 2.0.6
+    </td>
+    <td>22 February 2007</td>
+    <td>
+      <a href="javascript:;">S2-001</a>,
+      likely:
+      <a href="javascript:;">S2-002</a>,
+      <a href="javascript:;">S2-003</a>,
+      <a href="javascript:;">S2-004</a>,
+      <a href="javascript:;">S2-005</a>,
+      <a href="javascript:;">S2-006</a>,
+      <a href="javascript:;">S2-007</a>,
+      <a href="javascript:;">S2-008</a>,
+      <a href="javascript:;">S2-009</a>,
+      <a href="javascript:;">S2-010</a>,
+      <a href="javascript:;">S2-011</a>,
+      <a href="javascript:;">S2-012</a>,
+      <a href="javascript:;">S2-013</a>,
+      <a href="javascript:;">S2-014</a>,
+      <a href="javascript:;">S2-015</a>,
+      <a href="javascript:;">S2-016</a>,
+      <a href="javascript:;">S2-017</a>,
+      <a href="javascript:;">S2-018</a>,
+      <a href="javascript:;">S2-019</a>,
+      <a href="javascript:;">S2-020</a>,
+      <a href="javascript:;">S2-021</a>,
+      <a href="javascript:;">S2-022</a>
+    </td>
+    <td>
+      <a href="javascript:;">Release notes</a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<p>
+  The documentation is bundled with each <a href="javascript:;">
+  distribution.</a> We <strong>strongly recommend</strong> installing the documentation
+  for a release locally, so as to conserve bandwidth.
+</p>
+
+<h2>Licensing of Apache Struts Releases</h2>
+<p>
+  Apache Struts 2 source code and documentation is
+  licensed to the Apache Software Foundation (ASF) under one
+  or more contributor license agreements. See the NOTICE file
+  included in any distribution for additional information
+  regarding copyright ownership. The ASF licenses the source
+  code and documentation files in our Apache Struts distribution
+  to you under the Apache License, Version 2.0 (the "License");
+  you may not use the Apache Struts product except in compliance
+  with the License.
+</p>
+
+<p>
+  You may obtain a copy of the License at
+  <a href="javascript:;">
+    http://www.apache.org/licenses/LICENSE-2.0</a>.
+</p>
+
+<p>
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied. See the License for the
+  specific language governing permissions and limitations
+  under the License.
+</p>
+
+<p class="pull-right">
+  Next: <a href="javascript:;">Announcements</a>
+</p>
+
+  </section>
+</article>
+
+
+<footer class="container">
+  <div class="col-md-12">
+    Copyright &copy; 2000-2018 <a href="index1.html">The Apache Software Foundation </a>.
+    All Rights Reserved.
+  </div>
+  <div class="col-md-12">
+    Apache Struts, Struts, Apache, the Apache feather logo, and the Apache Struts project logos are
+    trademarks of The Apache Software Foundation.
+  </div>
+  <div class="col-md-12">Logo and website design donated by <a href="javascript:;">SoftwareMill</a>.</div>
+</footer>
+
+<script>!function (d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (!d.getElementById(id)) {
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }
+}(document, "script", "twitter-wjs");</script>
+<script src="static/js/platform.js" async="async" defer="defer"></script>
+
+<div id="fb-root"></div>
+
+<script>(function (d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+</body>
+</html>
