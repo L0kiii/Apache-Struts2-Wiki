@@ -1,23 +1,18 @@
 # Apache-Struts-2-Wiki
-Apache Struts 2 漏洞WiKi
+Apache Struts 2 Vulnerability WiKi
 
-已经更新至☞`https://github.com/L0kiii/Apache-Struts2-Wiki/wiki`
+Updated to ☞ `https://github.com/L0kiii/Apache-Struts2-Wiki/wiki`
 
-搬运不易😢,欢迎star🌟
+Feel free to star🌟
 
-`@author: L0ki`
+Crawling HTML pages from `cwiki.apache.org/confluence/display/ww/`
 
-`@blog: https://l0ki.top`
+**Used for learning, recording, continuously updating s20day**
 
-爬取html页面`cwiki.apache.org/confluence/display/ww/ `
+**Only stores s1-s58, all source code in cwiki.apache.org files, deploy as needed**
 
-**用于学习、记录、不断更新s20day**
-
-**仅存s1-s58、全部源码在cwiki.apache.org文件、根据需求部署**
-
-### 效果图
+### Screenshots
 
 ![img1](https://l0ki-town.oss-cn-beijing.aliyuncs.com/l0ki.top/image-20200814133157603.png)
 
 ![img2](https://l0ki-town.oss-cn-beijing.aliyuncs.com/l0ki.top/image-20200814132436305.png)
-
